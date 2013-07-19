@@ -30,6 +30,10 @@
 		D39DDBEA1799B42900E9D0C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39DDBE91799B42900E9D0C5 /* Security.framework */; };
 		D39DDBEC1799B43000E9D0C5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39DDBEB1799B43000E9D0C5 /* MobileCoreServices.framework */; };
 		D39DDBF21799B90600E9D0C5 /* PeopleBasicTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBF11799B90600E9D0C5 /* PeopleBasicTheme.m */; };
+		D39DDBF61799C57D00E9D0C5 /* PeopleSearchProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBF51799C57D00E9D0C5 /* PeopleSearchProvider.m */; };
+		D39DDBFC1799C5CA00E9D0C5 /* PeopleJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBF91799C5CA00E9D0C5 /* PeopleJSONParser.m */; };
+		D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBFF1799C6F300E9D0C5 /* PeopleColaborador.m */; };
+		D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDC021799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m */; };
 		D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */; };
 		D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81B1798A0C300F05FD5 /* PeopleInitialViewController.m */; };
 		D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */; };
@@ -79,6 +83,14 @@
 		D39DDBEF1799B8E700E9D0C5 /* PeopleTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleTheme.h; path = Classes/PeopleTheme.h; sourceTree = "<group>"; };
 		D39DDBF01799B90600E9D0C5 /* PeopleBasicTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleBasicTheme.h; path = Classes/Themes/PeopleBasicTheme.h; sourceTree = "<group>"; };
 		D39DDBF11799B90600E9D0C5 /* PeopleBasicTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleBasicTheme.m; path = Classes/Themes/PeopleBasicTheme.m; sourceTree = "<group>"; };
+		D39DDBF41799C57D00E9D0C5 /* PeopleSearchProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleSearchProvider.h; sourceTree = "<group>"; };
+		D39DDBF51799C57D00E9D0C5 /* PeopleSearchProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleSearchProvider.m; sourceTree = "<group>"; };
+		D39DDBF81799C5CA00E9D0C5 /* PeopleJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleJSONParser.h; sourceTree = "<group>"; };
+		D39DDBF91799C5CA00E9D0C5 /* PeopleJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleJSONParser.m; sourceTree = "<group>"; };
+		D39DDBFE1799C6F300E9D0C5 /* PeopleColaborador.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PeopleColaborador.h; path = Classes/PeopleColaborador.h; sourceTree = "<group>"; };
+		D39DDBFF1799C6F300E9D0C5 /* PeopleColaborador.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PeopleColaborador.m; path = Classes/PeopleColaborador.m; sourceTree = "<group>"; };
+		D39DDC011799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PeopleColaborador+PopulateFromServiceResponse.h"; path = "Classes/PeopleColaborador+PopulateFromServiceResponse.h"; sourceTree = "<group>"; };
+		D39DDC021799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PeopleColaborador+PopulateFromServiceResponse.m"; path = "Classes/PeopleColaborador+PopulateFromServiceResponse.m"; sourceTree = "<group>"; };
 		D3A9D8161798A08000F05FD5 /* PeopleBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleBaseViewController.h; path = Classes/PeopleBaseViewController.h; sourceTree = "<group>"; };
 		D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleBaseViewController.m; path = Classes/PeopleBaseViewController.m; sourceTree = "<group>"; };
 		D3A9D81A1798A0C300F05FD5 /* PeopleInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialViewController.h; path = Classes/PeopleInitialViewController.h; sourceTree = "<group>"; };
@@ -164,6 +176,8 @@
 		D38B3481179898BB00E2AF26 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				D39DDC031799C73300E9D0C5 /* Entities */,
+				D39DDBF71799C5CA00E9D0C5 /* Parsers */,
 				D39DDBF31799B90F00E9D0C5 /* Theme */,
 				D39DDBE81799B31300E9D0C5 /* Segues */,
 				D39DDBE41799B30C00E9D0C5 /* Connection */,
@@ -214,6 +228,8 @@
 			children = (
 				D39DDBE51799B30C00E9D0C5 /* PeopleHTTPClient.h */,
 				D39DDBE61799B30C00E9D0C5 /* PeopleHTTPClient.m */,
+				D39DDBF41799C57D00E9D0C5 /* PeopleSearchProvider.h */,
+				D39DDBF51799C57D00E9D0C5 /* PeopleSearchProvider.m */,
 			);
 			name = Connection;
 			path = Classes/Connection;
@@ -236,6 +252,27 @@
 				D39DDBF11799B90600E9D0C5 /* PeopleBasicTheme.m */,
 			);
 			name = Theme;
+			sourceTree = "<group>";
+		};
+		D39DDBF71799C5CA00E9D0C5 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				D39DDBF81799C5CA00E9D0C5 /* PeopleJSONParser.h */,
+				D39DDBF91799C5CA00E9D0C5 /* PeopleJSONParser.m */,
+			);
+			name = Parsers;
+			path = Classes/Parsers;
+			sourceTree = "<group>";
+		};
+		D39DDC031799C73300E9D0C5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D39DDBFE1799C6F300E9D0C5 /* PeopleColaborador.h */,
+				D39DDBFF1799C6F300E9D0C5 /* PeopleColaborador.m */,
+				D39DDC011799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.h */,
+				D39DDC021799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 		D3A9D8191798A08600F05FD5 /* View Controllers */ = {
@@ -390,17 +427,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39DDBFC1799C5CA00E9D0C5 /* PeopleJSONParser.m in Sources */,
 				D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */,
 				D371D2C11798B8FF009C9D9E /* PeopleTutorialViewController.m in Sources */,
 				D39DDBF21799B90600E9D0C5 /* PeopleBasicTheme.m in Sources */,
 				D371D2B21798A554009C9D9E /* PeoplePreferences.m in Sources */,
 				D38B3488179898BB00E2AF26 /* main.m in Sources */,
 				D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */,
+				D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */,
 				D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */,
 				D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */,
 				D38B348C179898BB00E2AF26 /* PeopleAppDelegate.m in Sources */,
 				D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */,
+				D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */,
 				D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */,
+				D39DDBF61799C57D00E9D0C5 /* PeopleSearchProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
