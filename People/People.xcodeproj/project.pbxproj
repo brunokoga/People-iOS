@@ -26,6 +26,9 @@
 		D38B349F179898BB00E2AF26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D38B349D179898BB00E2AF26 /* InfoPlist.strings */; };
 		D38B34A1179898BB00E2AF26 /* PeopleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D38B34A0179898BB00E2AF26 /* PeopleTests.m */; };
 		D38B34AB1798991200E2AF26 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38B34AA1798991200E2AF26 /* MainStoryboard_iPhone.storyboard */; };
+		D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBE61799B30C00E9D0C5 /* PeopleHTTPClient.m */; };
+		D39DDBEA1799B42900E9D0C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39DDBE91799B42900E9D0C5 /* Security.framework */; };
+		D39DDBEC1799B43000E9D0C5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39DDBEB1799B43000E9D0C5 /* MobileCoreServices.framework */; };
 		D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */; };
 		D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81B1798A0C300F05FD5 /* PeopleInitialViewController.m */; };
 		D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */; };
@@ -68,6 +71,10 @@
 		D38B349E179898BB00E2AF26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D38B34A0179898BB00E2AF26 /* PeopleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeopleTests.m; sourceTree = "<group>"; };
 		D38B34AA1798991200E2AF26 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		D39DDBE51799B30C00E9D0C5 /* PeopleHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleHTTPClient.h; sourceTree = "<group>"; };
+		D39DDBE61799B30C00E9D0C5 /* PeopleHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleHTTPClient.m; sourceTree = "<group>"; };
+		D39DDBE91799B42900E9D0C5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D39DDBEB1799B43000E9D0C5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D3A9D8161798A08000F05FD5 /* PeopleBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleBaseViewController.h; path = Classes/PeopleBaseViewController.h; sourceTree = "<group>"; };
 		D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleBaseViewController.m; path = Classes/PeopleBaseViewController.m; sourceTree = "<group>"; };
 		D3A9D81A1798A0C300F05FD5 /* PeopleInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialViewController.h; path = Classes/PeopleInitialViewController.h; sourceTree = "<group>"; };
@@ -84,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39DDBEC1799B43000E9D0C5 /* MobileCoreServices.framework in Frameworks */,
+				D39DDBEA1799B42900E9D0C5 /* Security.framework in Frameworks */,
 				D38B347E179898BB00E2AF26 /* CoreGraphics.framework in Frameworks */,
 				D38B3480179898BB00E2AF26 /* UIKit.framework in Frameworks */,
 				D38B347C179898BB00E2AF26 /* Foundation.framework in Frameworks */,
@@ -137,6 +146,8 @@
 		D38B347A179898BB00E2AF26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D39DDBEB1799B43000E9D0C5 /* MobileCoreServices.framework */,
+				D39DDBE91799B42900E9D0C5 /* Security.framework */,
 				D38B347B179898BB00E2AF26 /* Foundation.framework */,
 				D38B347D179898BB00E2AF26 /* CoreGraphics.framework */,
 				D38B347F179898BB00E2AF26 /* UIKit.framework */,
@@ -149,8 +160,8 @@
 		D38B3481179898BB00E2AF26 /* People */ = {
 			isa = PBXGroup;
 			children = (
-				D3F213FA1798BEA800E19338 /* PeopleInitialTransitionSegue.h */,
-				D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */,
+				D39DDBE81799B31300E9D0C5 /* Segues */,
+				D39DDBE41799B30C00E9D0C5 /* Connection */,
 				D3A9D8191798A08600F05FD5 /* View Controllers */,
 				D38B3482179898BB00E2AF26 /* Supporting Files */,
 				D327A4C917989A8D0042FF8B /* Images.xcassets */,
@@ -191,6 +202,25 @@
 				D38B349D179898BB00E2AF26 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D39DDBE41799B30C00E9D0C5 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				D39DDBE51799B30C00E9D0C5 /* PeopleHTTPClient.h */,
+				D39DDBE61799B30C00E9D0C5 /* PeopleHTTPClient.m */,
+			);
+			name = Connection;
+			path = Classes/Connection;
+			sourceTree = "<group>";
+		};
+		D39DDBE81799B31300E9D0C5 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				D3F213FA1798BEA800E19338 /* PeopleInitialTransitionSegue.h */,
+				D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */,
+			);
+			name = Segues;
 			sourceTree = "<group>";
 		};
 		D3A9D8191798A08600F05FD5 /* View Controllers */ = {
@@ -350,6 +380,7 @@
 				D371D2B21798A554009C9D9E /* PeoplePreferences.m in Sources */,
 				D38B3488179898BB00E2AF26 /* main.m in Sources */,
 				D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */,
+				D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */,
 				D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */,
 				D38B348C179898BB00E2AF26 /* PeopleAppDelegate.m in Sources */,
 				D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */,
@@ -412,6 +443,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -449,7 +481,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
