@@ -1,10 +1,13 @@
 PODS:
+  - AFNetworking (1.3.1)
   - SSKeychain (1.1.0)
 
 DEPENDENCIES:
+  - AFNetworking
   - SSKeychain
 
 SPEC CHECKSUMS:
+  AFNetworking: 9ec8aafb9269236a7630bd8d9838ce2ba30fa2a0
   SSKeychain: 54b6daee1d95af968beebef07522b583ff9a809c
 
 COCOAPODS: 0.22.2
