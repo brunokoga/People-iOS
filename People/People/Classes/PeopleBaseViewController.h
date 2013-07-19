@@ -10,4 +10,9 @@
 
 @interface PeopleBaseViewController : UIViewController
 
+/*
+ called on viewDidLoad
+ intended to be overriden
+ */
+- (void)alignUIElements;
 @end

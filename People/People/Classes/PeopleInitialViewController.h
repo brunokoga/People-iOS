@@ -10,4 +10,6 @@
 
 @interface PeopleInitialViewController : PeopleBaseViewController
 
+- (void)performInitialAnimationWithCompletion:(void(^)(void))completion;
+
 @end

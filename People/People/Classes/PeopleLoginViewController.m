@@ -1,18 +1,18 @@
 //
-//  PeopleBaseViewController.m
+//  PeopleLoginViewController.m
 //  People
 //
 //  Created by Bruno Koga on 7/18/13.
 //  Copyright (c) 2013 CI&T. All rights reserved.
 //
 
-#import "PeopleBaseViewController.h"
+#import "PeopleLoginViewController.h"
 
-@interface PeopleBaseViewController ()
+@interface PeopleLoginViewController ()
 
 @end
 
-@implementation PeopleBaseViewController
+@implementation PeopleLoginViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self alignUIElements];
 	// Do any additional setup after loading the view.
 }
 
@@ -34,11 +33,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)alignUIElements
-{
-    //overriden
 }
 
 @end
