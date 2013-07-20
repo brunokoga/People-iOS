@@ -72,18 +72,21 @@
             XCTAssertEqualObjects(skillDictionary[@"years"], years, @"Wrong colaborador skill years");
         }
         
+        XCTAssert([colaborador.pastProjects count] == 13, @"Unexpected value for colaborador past projects");
         for (int i = 1; i <= [colaborador.pastProjectsNames count]; i++)
         {
             NSString *project = [@"Nome do Projeto Passado " stringByAppendingFormat:@"%d", i];
             XCTAssertEqualObjects(colaborador.pastProjectsNames[i], project, @"Wrong colaborador past project name");
         }
 
+        XCTAssert([colaborador.currentProjects count] == 2, @"Unexpected value for colaborador current projects");
         for (int i = 1; i <= [colaborador.currentProjectsNames count]; i++)
         {
             NSString *project = [@"Nome do Projeto Atual " stringByAppendingFormat:@"%d", i];
             XCTAssertEqualObjects(colaborador.currentProjectsNames[i-1], project, @"Wrong colaborador current project name");
         }
         
+        XCTAssert([colaborador.teammates count] == 10, @"Unexpected value for colaborador teammates");
         NSMutableSet *teammates = [NSMutableSet set];
         for (int i = 1; i <= [colaborador.teammates count]; i++)
         {
@@ -93,6 +96,31 @@
                                    @"name" : teammateName}];
         }
         XCTAssertEqualObjects(colaborador.teammates, [NSSet setWithSet:teammates], @"Wrong colaborador teammates");
+        
+        XCTAssert([colaborador.socialNetworks count] == 3, @"Unexpected value for colaborador social networks");
+        
+        for (NSString *key in colaborador.socialNetworks)
+        {
+            NSString *socialNetworkLink;
+            if ([key isEqualToString:@"linkedin"])
+            {
+                socialNetworkLink = @"www.linkdosociallink1.com";
+            }
+            else if ([key isEqualToString:@"twitter"])
+            {
+             socialNetworkLink = @"twitter.com/#!/twitter_username";
+            }
+            else if ([key isEqualToString:@"facebook"])
+            {
+                socialNetworkLink = @"www.facebook.com/facebook_username";
+            }
+            else
+            {
+                XCTFail(@"Should never be here");
+            }
+            XCTAssertEqualObjects(socialNetworkLink, [[colaborador.socialNetworks objectForKey:key] objectForKey:@"link"], @"Wrong colaborador social networks");
+        }
+        
     }
 }
 

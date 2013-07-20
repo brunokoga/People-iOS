@@ -29,7 +29,7 @@
 @property (nonatomic, strong) NSDictionary *pastProjects;
 @property (nonatomic, strong) NSString *birthday;
 @property (nonatomic, strong) NSString *joiningDate;
-@property (nonatomic, strong) NSArray *socialNetworks;
+@property (nonatomic, strong) NSDictionary *socialNetworks;
 
 @property (nonatomic, readonly) NSArray *currentProjectsNames;
 @property (nonatomic, readonly) NSArray *pastProjectsNames;

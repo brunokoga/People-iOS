@@ -35,9 +35,6 @@
     
     PeopleColaborador *colaborador = [[PeopleColaborador alloc] init];
 
-    NSArray *socialNetworks = [responseDictionary objectForKey:@"employee_sociallinks"];
-    colaborador.socialNetworks = socialNetworks;
-    
     NSDictionary *colaboradorDictionary = [responseDictionary objectForKey:@"personal_info"];
     
     colaborador.birthday = [colaboradorDictionary objectForKey:@"birthday"];
@@ -61,6 +58,34 @@
     colaborador.currentProjects = [projectsDictionary objectForKey:@"current"];
     colaborador.pastProjects = [projectsDictionary objectForKey:@"past"];
     colaborador.teammates = [NSSet setWithArray:[[responseDictionary objectForKey:@"teammates"] allValues]];
+    
+    NSArray *socialNetworksArray = [[responseDictionary objectForKey:@"employee_sociallinks"] allObjects];
+    NSMutableDictionary *socialNetworks = [NSMutableDictionary dictionary];
+    for (NSDictionary *socialNetwork in socialNetworksArray)
+    {
+        NSString *socialNetworkName = [socialNetwork objectForKey:@"name"];
+        NSString *socialNetworkLink = [socialNetwork objectForKey:@"link"];
+        NSString *socialNetworkLogo = [socialNetwork objectForKey:@"logo"];
+        
+        [socialNetworks setObject:@{@"link" : socialNetworkLink,
+                                    @"logo" : socialNetworkLogo}
+                           forKey:socialNetworkName];
+    }
+    colaborador.socialNetworks = [NSDictionary dictionaryWithDictionary:socialNetworks];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
     
     return colaborador;
     
