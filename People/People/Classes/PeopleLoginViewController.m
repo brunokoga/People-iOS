@@ -103,9 +103,7 @@
     PeopleServices *sharedServices = [PeopleServices sharedServices];
     [sharedServices loginWithUsername:username
                              password:password
-                              success:^(PeopleColaborador *colaborador) {
-                                  //save colaborador
-                                  //go to next screen
+                              success:^(PeopleColaborador *colaborador) {                                  
                           
                       } failure:^(NSError *error) {
                           [self loginErrorWithError:error];
@@ -119,8 +117,8 @@
 
 - (IBAction)loginButtonPressed:(id)sender
 {
-    NSString *username;
-    NSString *password;
+    NSString *username = self.usernameTextField.text;
+    NSString *password = self.passwordTextField.text;
     PeopleValidation *validation = [[PeopleValidation alloc] init];
     NSError *validationError = nil;
     if ([validation validUsername:username password:password error:&validationError])

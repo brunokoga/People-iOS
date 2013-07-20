@@ -68,12 +68,12 @@
                          password:password
                           success:^(AFHTTPRequestOperation *operation, id responseObject) {
                               PeopleJSONParser *jsonParser = [[PeopleJSONParser alloc] init];
-                              NSArray *colaboradores = [jsonParser colaboradoresArrayFromSearchResponse:responseObject];
+                              PeopleColaborador *colaborador = [jsonParser colaboradorFromProfileResponse:responseObject];
                               
                               //if there is no colaboradores or more than 1, something went wrong
-                              if ([colaboradores count] == 1)
+                              if (colaborador)
                               {
-                                  success(colaboradores[0]);
+                                  success(colaborador);
                               }
                               else
                               {
@@ -82,7 +82,7 @@
                               }
                               
                           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                              
+                              failure(error);
                           }];
 }
 
