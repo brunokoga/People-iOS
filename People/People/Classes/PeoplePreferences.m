@@ -24,6 +24,7 @@
 {
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     [standardUserDefaults setBool:value forKey:key];
+    [standardUserDefaults synchronize];
 }
 
 #pragma mark - Public Methods
