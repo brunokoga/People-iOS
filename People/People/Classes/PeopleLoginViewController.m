@@ -20,20 +20,34 @@
 
 @implementation PeopleLoginViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillAppear:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillDisappear:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Load Methods
 
 - (void)adjustUIElements
 {
@@ -68,11 +82,7 @@
     self.passwordTextField.placeholder = NSLocalizedString(@"password", @"");
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - Functionality
 
 - (void)loginWithUsername:(NSString *)username password:(NSString *)password
 {
@@ -109,5 +119,125 @@
     }
 }
 
+#pragma mark - UITextFieldDelegates
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.usernameTextField) {
+        [self.usernameTextField becomeFirstResponder];
+    }
+    else if (textField == self.passwordTextField) {
+        if (([self.usernameTextField.text length] > 0) &&
+            ([self.passwordTextField.text length] > 0))
+        {
+            if (YES) {
+                [self loginButtonPressed:textField];
+            }
+        }
+    }
+    [textField resignFirstResponder];
+    return YES;
+}
+
+#pragma mark - Keyboard animations
+
+
+- (void)keyboardWillHide:(BOOL)willHide animationDuration:(NSTimeInterval)animationDuration
+{
+    /*
+    CGPoint titleViewCenter;
+    CGPoint fieldsViewCenter;
+    CGPoint btnLoginCenter;
+    
+    if (!willHide)
+    {
+        titleViewCenter = CGPointMake(165, 50);
+        fieldsViewCenter = CGPointMake(160, 130);
+        btnLoginCenter = CGPointMake(160, 205);
+        
+        [UIView animateWithDuration:animationDuration+0.2f delay:0
+                            options:UIViewAnimationCurveEaseOut
+                         animations:^{
+                             
+                             //                             self.titleView.transform = CGAffineTransformMakeScale(0.6f, 0.6f);
+                             self.titleView.center = titleViewCenter;
+                         }
+                         completion:^(BOOL finished) {
+                             
+                         }];
+        
+        [UIView animateWithDuration:animationDuration+0.2f delay:0.1
+                            options:UIViewAnimationCurveEaseOut
+                         animations:^{
+                             
+                             self.fieldView.center = fieldsViewCenter;
+                         }
+                         completion:^(BOOL finished) {
+                             
+                         }];
+        
+        [UIView animateWithDuration:animationDuration+0.2f delay:0.2
+                            options:UIViewAnimationCurveEaseOut
+                         animations:^{
+                             
+                             self.btnLogin.center = btnLoginCenter;
+                         }
+                         completion:^(BOOL finished) {
+                             
+                         }];
+    }
+    else
+    {
+        titleViewCenter = CGPointMake(165, 110);
+        fieldsViewCenter = CGPointMake(160, 221);
+        btnLoginCenter = CGPointMake(160, 295);
+        
+        [UIView animateWithDuration:animationDuration+0.5f delay:0
+                            options:UIViewAnimationCurveEaseIn
+                         animations:^{
+                             
+                             self.btnLogin.center = btnLoginCenter;
+                         }
+                         completion:^(BOOL finished) {
+                             
+                         }];
+        
+        [UIView animateWithDuration:animationDuration+0.5f delay:0.1
+                            options:UIViewAnimationCurveEaseIn
+                         animations:^{
+                             
+                             self.fieldView.center = fieldsViewCenter;
+                         }
+                         completion:^(BOOL finished) {
+                             
+                         }];
+        
+        [UIView animateWithDuration:animationDuration+0.5f delay:0.2
+                            options:UIViewAnimationCurveEaseIn
+                         animations:^{
+                             
+                             //                             self.titleView.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
+                             self.titleView.center = titleViewCenter;
+                         }
+                         completion:^(BOOL finished) {
+                             
+                         }];
+    }
+     */
+}
+
+
+
+- (void)keyboardWillAppear:(NSNotification*)notification
+{
+    NSTimeInterval animationDuration = [(NSNumber*)[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    [self keyboardWillHide:NO animationDuration:animationDuration];
+}
+
+- (void)keyboardWillDisappear:(NSNotification*)notification
+{
+    NSTimeInterval animationDuration = [(NSNumber*)[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    [self keyboardWillHide:YES animationDuration:animationDuration];
+}
 
 @end

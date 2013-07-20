@@ -8,6 +8,6 @@
 
 #import "PeopleBaseViewController.h"
 
-@interface PeopleLoginViewController : PeopleBaseViewController
+@interface PeopleLoginViewController : PeopleBaseViewController <UITextFieldDelegate>
 
 @end
