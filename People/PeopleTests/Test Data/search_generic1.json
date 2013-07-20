@@ -1,0 +1,24 @@
+{
+  "data": [
+    [
+      "Nome 1",
+      "Login 1",
+      "Telefone 1",
+      "Celular 1",
+      "Role 1",
+      "Mentor 1",
+      "Manager 1",
+      "Base 1"
+    ],
+    [
+      "Nome 2",
+      "Login 2",
+      "Telefone 2",
+      "Celular 2",
+      "Role 2",
+      "Mentor 2",
+      "Manager 2",
+      "Base 2"
+    ]
+  ]
+}
