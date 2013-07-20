@@ -10,4 +10,15 @@
 
 @implementation PeopleColaborador
 
+- (NSArray *)currentProjectsNames
+{
+    return [self.currentProjects allKeys];
+}
+
+- (NSArray *)pastProjecstNames
+{
+    return [self.pastProjects allKeys];
+    
+}
+
 @end

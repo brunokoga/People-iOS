@@ -58,6 +58,41 @@
         XCTAssertEqualObjects(colaborador.birthday, @[], @"Wrong colaborador birthday");
         XCTAssertEqualObjects(colaborador.joiningDate, @"03-01-11", @"Wrong colaborador joining date");
         XCTAssertNil(colaborador.building, @"Wrong colaborador building");
+        
+        XCTAssert([colaborador.skills count] == 6, @"Unexpected value for colaborador skills count");
+        for (int i = 1; i <= [colaborador.skills count]; i++)
+        {
+            NSString *skill = [@"Skill " stringByAppendingFormat:@"%d", i];
+            NSDictionary *skillDictionary = colaborador.skills[skill];
+            NSString *level = [@"Level da Skill " stringByAppendingFormat:@"%d", i];
+            NSString *skillName = [@"Nome da Skill " stringByAppendingFormat:@"%d", i];
+            NSString *years = [@"Anos da Skill " stringByAppendingFormat:@"%d", i];
+            XCTAssertEqualObjects(skillDictionary[@"level"], level, @"Wrong colaborador skill level");
+            XCTAssertEqualObjects(skillDictionary[@"skill"], skillName, @"Wrong colaborador skill name");
+            XCTAssertEqualObjects(skillDictionary[@"years"], years, @"Wrong colaborador skill years");
+        }
+        
+        for (int i = 1; i <= [colaborador.pastProjectsNames count]; i++)
+        {
+            NSString *project = [@"Nome do Projeto Passado " stringByAppendingFormat:@"%d", i];
+            XCTAssertEqualObjects(colaborador.pastProjectsNames[i], project, @"Wrong colaborador past project name");
+        }
+
+        for (int i = 1; i <= [colaborador.currentProjectsNames count]; i++)
+        {
+            NSString *project = [@"Nome do Projeto Atual " stringByAppendingFormat:@"%d", i];
+            XCTAssertEqualObjects(colaborador.currentProjectsNames[i-1], project, @"Wrong colaborador current project name");
+        }
+        
+        NSMutableSet *teammates = [NSMutableSet set];
+        for (int i = 1; i <= [colaborador.teammates count]; i++)
+        {
+            NSString *teammateLogin = [@"login_tm" stringByAppendingFormat:@"%d", i];
+            NSString *teammateName = [@"Nome do Teammate " stringByAppendingFormat:@"%d", i];
+            [teammates addObject:@{@"login" : teammateLogin,
+                                   @"name" : teammateName}];
+        }
+        XCTAssertEqualObjects(colaborador.teammates, [NSSet setWithSet:teammates], @"Wrong colaborador teammates");
     }
 }
 

@@ -60,19 +60,7 @@
     NSDictionary *projectsDictionary = [responseDictionary objectForKey:@"projects"];
     colaborador.currentProjects = [projectsDictionary objectForKey:@"current"];
     colaborador.pastProjects = [projectsDictionary objectForKey:@"past"];
-    
-    // teammates
-    NSMutableArray *teammatesNames = [[NSMutableArray alloc] init];
-    NSMutableArray *teammatesLogins = [[NSMutableArray alloc] init];
-    NSDictionary *teammates = [responseDictionary objectForKey:@"teammates"];
-    
-    for (NSString *login in teammates) {
-        NSDictionary *teamMember = [teammates objectForKey:login];
-        [teammatesNames addObject:[teamMember objectForKey:@"name"]];
-        [teammatesLogins addObject:[teamMember objectForKey:@"login"]];
-    }
-    colaborador.teammatesNames = [NSArray arrayWithArray:teammatesNames];
-    colaborador.teammatesLogins = [NSArray arrayWithArray:teammatesLogins];
+    colaborador.teammates = [NSSet setWithArray:[[responseDictionary objectForKey:@"teammates"] allValues]];
     
     return colaborador;
     
