@@ -10,7 +10,7 @@
 
 @interface PeopleColaborador (PopulateFromServiceResponse)
 
-+ (instancetype)colaboradorFromSearchResponse:(NSArray *)responseArray;
++ (NSArray *)colaboradoresFromSearchResponse:(NSArray *)responseArray;
 + (instancetype)colaboradorFromProfileResponse:(NSDictionary *)responseDictionary;
 
 @end

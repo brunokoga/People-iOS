@@ -11,20 +11,26 @@
 
 @implementation PeopleColaborador (PopulateFromServiceResponse)
 
-+ (instancetype)colaboradorFromSearchResponse:(NSArray *)responseArray
++ (NSArray *)colaboradoresFromSearchResponse:(NSArray *)responseArray
 {
-    PeopleColaborador *colaborador = [[PeopleColaborador alloc] init];
+    NSMutableArray *colaboradoresArray = [NSMutableArray array];
+    for (NSArray *colaboradorArray in responseArray)
+    {
+        PeopleColaborador *colaborador = [[PeopleColaborador alloc] init];
+        
+        colaborador.name = [colaboradorArray objectAtIndex:0];
+        colaborador.login = [colaboradorArray objectAtIndex:1];
+        colaborador.phone = [colaboradorArray objectAtIndex:2];
+        colaborador.mobile = [colaboradorArray objectAtIndex:3];
+        colaborador.role = [colaboradorArray objectAtIndex:4];
+        colaborador.mentorLogin = [colaboradorArray objectAtIndex:5];
+        colaborador.managerLogin = [colaboradorArray objectAtIndex:6];
+        colaborador.location = [colaboradorArray objectAtIndex:7];
+        
+        [colaboradoresArray addObject:colaborador];
+    }
     
-    colaborador.name = [responseArray objectAtIndex:0];
-    colaborador.login = [responseArray objectAtIndex:1];
-    colaborador.phone = [responseArray objectAtIndex:2];
-    colaborador.mobile = [responseArray objectAtIndex:3];
-    colaborador.role = [responseArray objectAtIndex:4];
-    colaborador.mentorLogin = [responseArray objectAtIndex:5];
-    colaborador.managerLogin = [responseArray objectAtIndex:6];
-    colaborador.location = [responseArray objectAtIndex:7];
-    
-    return colaborador;
+    return [NSArray arrayWithArray:colaboradoresArray];
 }
 
 + (instancetype)colaboradorFromProfileResponse:(NSDictionary *)dirtyResponseDictionary

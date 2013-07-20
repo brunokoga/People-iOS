@@ -7,14 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PeopleColaborador.h"
 
-@interface PeopleSearchProvider : NSObject
+@interface PeopleServices : NSObject
 
 + (instancetype)sharedProvider;
 
 - (void)colaboradoresForSearchTerm:(NSString *)searchTerm
                         downloadSuccess:(void(^)(NSArray *colaboradores))success
                                 failure:(void(^)(NSError *error))failure;
+
+- (void)colaboradorProfileForLogin:(NSString *)login
+                                  downloadSuccess:(void(^)(PeopleColaborador *colaborador))success
+                                          failure:(void(^)(NSError *error))failure;
 
 
 @end

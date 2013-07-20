@@ -31,7 +31,7 @@
 		D39DDBEA1799B42900E9D0C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39DDBE91799B42900E9D0C5 /* Security.framework */; };
 		D39DDBEC1799B43000E9D0C5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39DDBEB1799B43000E9D0C5 /* MobileCoreServices.framework */; };
 		D39DDBF21799B90600E9D0C5 /* PeopleBasicTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBF11799B90600E9D0C5 /* PeopleBasicTheme.m */; };
-		D39DDBF61799C57D00E9D0C5 /* PeopleSearchProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBF51799C57D00E9D0C5 /* PeopleSearchProvider.m */; };
+		D39DDBF61799C57D00E9D0C5 /* PeopleServices.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBF51799C57D00E9D0C5 /* PeopleServices.m */; };
 		D39DDBFC1799C5CA00E9D0C5 /* PeopleJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBF91799C5CA00E9D0C5 /* PeopleJSONParser.m */; };
 		D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBFF1799C6F300E9D0C5 /* PeopleColaborador.m */; };
 		D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDC021799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m */; };
@@ -86,8 +86,8 @@
 		D39DDBEF1799B8E700E9D0C5 /* PeopleTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleTheme.h; path = Classes/PeopleTheme.h; sourceTree = "<group>"; };
 		D39DDBF01799B90600E9D0C5 /* PeopleBasicTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleBasicTheme.h; path = Classes/Themes/PeopleBasicTheme.h; sourceTree = "<group>"; };
 		D39DDBF11799B90600E9D0C5 /* PeopleBasicTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleBasicTheme.m; path = Classes/Themes/PeopleBasicTheme.m; sourceTree = "<group>"; };
-		D39DDBF41799C57D00E9D0C5 /* PeopleSearchProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleSearchProvider.h; sourceTree = "<group>"; };
-		D39DDBF51799C57D00E9D0C5 /* PeopleSearchProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleSearchProvider.m; sourceTree = "<group>"; };
+		D39DDBF41799C57D00E9D0C5 /* PeopleServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleServices.h; sourceTree = "<group>"; };
+		D39DDBF51799C57D00E9D0C5 /* PeopleServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleServices.m; sourceTree = "<group>"; };
 		D39DDBF81799C5CA00E9D0C5 /* PeopleJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleJSONParser.h; sourceTree = "<group>"; };
 		D39DDBF91799C5CA00E9D0C5 /* PeopleJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleJSONParser.m; sourceTree = "<group>"; };
 		D39DDBFE1799C6F300E9D0C5 /* PeopleColaborador.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PeopleColaborador.h; path = Classes/PeopleColaborador.h; sourceTree = "<group>"; };
@@ -234,8 +234,8 @@
 			children = (
 				D39DDBE51799B30C00E9D0C5 /* PeopleHTTPClient.h */,
 				D39DDBE61799B30C00E9D0C5 /* PeopleHTTPClient.m */,
-				D39DDBF41799C57D00E9D0C5 /* PeopleSearchProvider.h */,
-				D39DDBF51799C57D00E9D0C5 /* PeopleSearchProvider.m */,
+				D39DDBF41799C57D00E9D0C5 /* PeopleServices.h */,
+				D39DDBF51799C57D00E9D0C5 /* PeopleServices.m */,
 			);
 			name = Connection;
 			path = Classes/Connection;
@@ -457,7 +457,7 @@
 				D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */,
 				D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */,
 				D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */,
-				D39DDBF61799C57D00E9D0C5 /* PeopleSearchProvider.m in Sources */,
+				D39DDBF61799C57D00E9D0C5 /* PeopleServices.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

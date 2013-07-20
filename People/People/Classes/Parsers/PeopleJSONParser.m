@@ -7,32 +7,19 @@
 //
 
 #import "PeopleJSONParser.h"
-#import "PeopleColaborador+PopulateFromServiceResponse.h"
 
 @implementation PeopleJSONParser
 
-- (NSArray *)colaboradoresArrayFromDictionary:(NSDictionary *)dictionary forResource:(PeopleResource)resource;
+- (NSArray *)colaboradoresArrayFromSearchResponseDictionary:(NSDictionary *)responseDictionary
 {
-    NSArray *json;
-    NSMutableArray *listOfCollaborators = [[NSMutableArray alloc] init];
-    
-    switch (resource) {
-        case PeopleResourceSearch:
-            json = [dictionary objectForKey:@"data"];
-                for (NSArray *array in json)
-                {
-                    [listOfCollaborators addObject:[PeopleColaborador colaboradorFromSearchResponse:array]];
-                }
-            break;
-        case PeopleResourceProfile:
-            [listOfCollaborators addObject:[PeopleColaborador colaboradorFromProfileResponse:dictionary]];
-            break;
-        default:
-            break;
-    }
-    
-    NSArray *collaboratorsToReturn = [NSArray arrayWithArray:listOfCollaborators];
-    return collaboratorsToReturn;
+    NSArray *colaboradores = [PeopleColaborador colaboradoresFromSearchResponse:[responseDictionary objectForKey:@"data"]];
+    return colaboradores;
+}
+
+- (PeopleColaborador *)colaboradorFromProfileResponseDictionary:(NSDictionary *)responseDictionary
+{
+    PeopleColaborador *colaborador = [PeopleColaborador colaboradorFromProfileResponse:responseDictionary];
+    return colaborador;
 }
 
 
