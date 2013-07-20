@@ -59,7 +59,6 @@
 {
     self.profiles = nil;
     self.searches = nil;
-    // Put teardown code here; it will be run once, after the last test case.
     [super tearDown];
 }
 

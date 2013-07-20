@@ -12,7 +12,7 @@
 
 @implementation PeopleServices
 
-+ (instancetype)sharedProvider
++ (instancetype)sharedServices
 {
     static dispatch_once_t once;
     static id sharedInstance;
@@ -23,8 +23,8 @@
 }
 
 - (void)colaboradoresForSearchTerm:(NSString *)searchTerm
-                        downloadSuccess:(void(^)(NSArray *colaboradores))success
-                                failure:(void(^)(NSError *error))failure
+                           success:(void(^)(NSArray *colaboradores))success
+                           failure:(void(^)(NSError *error))failure
 {
     PeopleHTTPClient *httpClient = [PeopleHTTPClient sharedClient];
     
@@ -41,8 +41,8 @@
 }
 
 - (void)colaboradorProfileForLogin:(NSString *)login
-                                  downloadSuccess:(void(^)(PeopleColaborador *colaborador))success
-                                          failure:(void(^)(NSError *error))failure
+                           success:(void(^)(PeopleColaborador *colaborador))success
+                           failure:(void(^)(NSError *error))failure
 {
     PeopleHTTPClient *httpClient = [PeopleHTTPClient sharedClient];
 
@@ -58,6 +58,32 @@
                        }];
 }
 
-
+- (void)loginWithUsername:(NSString *)user
+                 password:(NSString *)password
+                  success:(void(^)(PeopleColaborador *colaborador))success
+                  failure:(void(^)(NSError *error))failure
+{
+    PeopleHTTPClient *httpClient = [PeopleHTTPClient sharedClient];
+    [httpClient loginWithUsername:user
+                         password:password
+                          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                              PeopleJSONParser *jsonParser = [[PeopleJSONParser alloc] init];
+                              NSArray *colaboradores = [jsonParser colaboradoresArrayFromSearchResponse:responseObject];
+                              
+                              //if there is no colaboradores or more than 1, something went wrong
+                              if ([colaboradores count] == 1)
+                              {
+                                  success(colaboradores[0]);
+                              }
+                              else
+                              {
+                                  NSError *error = [NSError errorWithDomain:@"com.ciant.people.login" code:0 userInfo:nil];
+                                  failure(error);
+                              }
+                              
+                          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                              
+                          }];
+}
 
 @end

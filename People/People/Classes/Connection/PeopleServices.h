@@ -11,15 +11,19 @@
 
 @interface PeopleServices : NSObject
 
-+ (instancetype)sharedProvider;
++ (instancetype)sharedServices;
+
+- (void)loginWithUsername:(NSString *)user
+                 password:(NSString *)password
+                  success:(void(^)(PeopleColaborador *colaborador))success
+                  failure:(void(^)(NSError *error))failure;
 
 - (void)colaboradoresForSearchTerm:(NSString *)searchTerm
-                        downloadSuccess:(void(^)(NSArray *colaboradores))success
-                                failure:(void(^)(NSError *error))failure;
+                           success:(void(^)(NSArray *colaboradores))success
+                           failure:(void(^)(NSError *error))failure;
 
 - (void)colaboradorProfileForLogin:(NSString *)login
-                                  downloadSuccess:(void(^)(PeopleColaborador *colaborador))success
-                                          failure:(void(^)(NSError *error))failure;
-
+                           success:(void(^)(PeopleColaborador *colaborador))success
+                           failure:(void(^)(NSError *error))failure;
 
 @end

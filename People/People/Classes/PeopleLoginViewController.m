@@ -7,6 +7,7 @@
 //
 
 #import "PeopleLoginViewController.h"
+#import "PeopleServices.h"
 
 @interface PeopleLoginViewController ()
 
@@ -34,5 +35,21 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)doLogin
+{
+    PeopleServices *sharedServices = [PeopleServices sharedServices];
+    [sharedServices loginWithUsername:@""
+                             password:@""
+                              success:^(PeopleColaborador *colaborador) {
+                                  //save colaborador
+                                  //go to next screen
+                          
+                      } failure:^(NSError *error) {
+                          //analyse error message and display error
+                      }];
+    
+}
+
 
 @end

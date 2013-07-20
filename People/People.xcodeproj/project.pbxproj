@@ -12,6 +12,8 @@
 		D329173A179A217D00140214 /* PeopleColaboradorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3291739179A217D00140214 /* PeopleColaboradorTests.m */; };
 		D34C56D9179AEBE500706AFF /* search_generic1.json in Resources */ = {isa = PBXBuildFile; fileRef = D34C56D7179AEBE500706AFF /* search_generic1.json */; };
 		D34C56DA179AEBE500706AFF /* search_generic2.json in Resources */ = {isa = PBXBuildFile; fileRef = D34C56D8179AEBE500706AFF /* search_generic2.json */; };
+		D34C56DD179AF4A200706AFF /* PeopleValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = D34C56DC179AF4A200706AFF /* PeopleValidation.m */; };
+		D34C56DF179AF6CC00706AFF /* PeopleValidationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D34C56DE179AF6CC00706AFF /* PeopleValidationTest.m */; };
 		D371D2B21798A554009C9D9E /* PeoplePreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */; };
 		D371D2B81798AA8C009C9D9E /* PeoplePreferencesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2B71798AA8C009C9D9E /* PeoplePreferencesTest.m */; };
 		D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BA1798B8DF009C9D9E /* PeopleLoginViewController.m */; };
@@ -59,6 +61,9 @@
 		D3291739179A217D00140214 /* PeopleColaboradorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleColaboradorTests.m; sourceTree = "<group>"; };
 		D34C56D7179AEBE500706AFF /* search_generic1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search_generic1.json; sourceTree = "<group>"; };
 		D34C56D8179AEBE500706AFF /* search_generic2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search_generic2.json; sourceTree = "<group>"; };
+		D34C56DB179AF4A200706AFF /* PeopleValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleValidation.h; path = People/PeopleValidation.h; sourceTree = "<group>"; };
+		D34C56DC179AF4A200706AFF /* PeopleValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleValidation.m; path = People/PeopleValidation.m; sourceTree = "<group>"; };
+		D34C56DE179AF6CC00706AFF /* PeopleValidationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleValidationTest.m; sourceTree = "<group>"; };
 		D371D2B31798A994009C9D9E /* PeoplePreferences_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeoplePreferences_Private.h; path = "PeopleTests/Private Headers/PeoplePreferences_Private.h"; sourceTree = SOURCE_ROOT; };
 		D371D2B71798AA8C009C9D9E /* PeoplePreferencesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeoplePreferencesTest.m; sourceTree = "<group>"; };
 		D371D2B91798B8DF009C9D9E /* PeopleLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleLoginViewController.h; path = Classes/PeopleLoginViewController.h; sourceTree = "<group>"; };
@@ -149,6 +154,8 @@
 		D38B346F179898BB00E2AF26 = {
 			isa = PBXGroup;
 			children = (
+				D34C56DB179AF4A200706AFF /* PeopleValidation.h */,
+				D34C56DC179AF4A200706AFF /* PeopleValidation.m */,
 				D38B3481179898BB00E2AF26 /* People */,
 				D371D2B41798AA19009C9D9E /* Private Headers */,
 				D39DDC051799E77D00E9D0C5 /* Test Data */,
@@ -219,6 +226,7 @@
 				D371D2B71798AA8C009C9D9E /* PeoplePreferencesTest.m */,
 				D38B34A0179898BB00E2AF26 /* PeopleTests.m */,
 				D3291739179A217D00140214 /* PeopleColaboradorTests.m */,
+				D34C56DE179AF6CC00706AFF /* PeopleValidationTest.m */,
 				D38B349B179898BB00E2AF26 /* Supporting Files */,
 			);
 			path = PeopleTests;
@@ -464,6 +472,7 @@
 				D38B348C179898BB00E2AF26 /* PeopleAppDelegate.m in Sources */,
 				D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */,
 				D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */,
+				D34C56DD179AF4A200706AFF /* PeopleValidation.m in Sources */,
 				D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */,
 				D39DDBF61799C57D00E9D0C5 /* PeopleServices.m in Sources */,
 			);
@@ -474,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D329173A179A217D00140214 /* PeopleColaboradorTests.m in Sources */,
+				D34C56DF179AF6CC00706AFF /* PeopleValidationTest.m in Sources */,
 				D38B34A1179898BB00E2AF26 /* PeopleTests.m in Sources */,
 				D371D2B81798AA8C009C9D9E /* PeoplePreferencesTest.m in Sources */,
 			);
