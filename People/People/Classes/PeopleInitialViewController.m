@@ -82,7 +82,7 @@ static NSString * const kSearchSegueIdentifier = @"Search Segue";
 - (void)transitionToLoginViewController:(UIViewController *)destinationViewController
 {
     CGPoint convertedCenter = [self.view convertPoint:self.logoImageView.center toView:nil];
-    CGPoint newLogoCenter = CGPointMake(convertedCenter.x, convertedCenter.y - 100);
+    CGPoint newLogoCenter = CGPointMake(convertedCenter.x, convertedCenter.y - self.view.frame.size.height/4);
     [UIView animateWithDuration:2.0
                           delay:0
                         options:UIViewAnimationOptionCurveEaseInOut

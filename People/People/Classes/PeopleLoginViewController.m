@@ -52,7 +52,7 @@
 
 - (void)adjustUIElements
 {
-    CGPoint logoImageViewCenter = CGPointMake(self.view.center.x, self.view.center.y - 114);
+    CGPoint logoImageViewCenter = CGPointMake(self.view.center.x, self.view.center.y - self.view.frame.size.height/4 - 14);
     [self.logoImageView setCenter:logoImageViewCenter];
     [self animateViewsIn];
     
