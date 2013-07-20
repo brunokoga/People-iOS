@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -57,20 +58,33 @@
     
 }
 
+- (void)adjustColors
+{
+    UIColor *color = [PeopleBasicTheme peopleColorPrimaryLight];
+    self.usernameTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.usernameTextField.placeholder
+                                                                                   attributes:@{NSForegroundColorAttributeName : color}];
+    self.passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.passwordTextField.placeholder
+                                                                                   attributes:@{NSForegroundColorAttributeName : color}];
+}
+
 - (void)adjustFonts
 {
     self.usernameTextField.font = [PeopleBasicTheme peopleFontLightWithSize:self.usernameTextField.font.pointSize];
     self.passwordTextField.font = [PeopleBasicTheme peopleFontLightWithSize:self.passwordTextField.font.pointSize];
+    self.loginButton.titleLabel.font = [PeopleBasicTheme peopleFontLightWithSize:self.loginButton.titleLabel.font.pointSize];
 }
 
 - (void)animateViewsIn
 {
     self.usernameTextField.alpha = 0.0;
     self.passwordTextField.alpha = 0.0;
+    self.loginButton.alpha = 0.0;
     [UIView animateWithDuration:1.0
                      animations:^{
                          self.usernameTextField.alpha = 1.0;
                          self.passwordTextField.alpha = 1.0;
+                         self.loginButton.alpha = 1.0;
+                         
                      } completion:^(BOOL finished) {
                          
                      }];
@@ -124,7 +138,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     if (textField == self.usernameTextField) {
-        [self.usernameTextField becomeFirstResponder];
+        [self.passwordTextField becomeFirstResponder];
     }
     else if (textField == self.passwordTextField) {
         if (([self.usernameTextField.text length] > 0) &&
