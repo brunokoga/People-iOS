@@ -30,9 +30,8 @@
     
     [httpClient searchTerm:searchTerm
                    success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                       NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:NSUTF8StringEncoding error:nil];
                        PeopleJSONParser *jsonParser = [[PeopleJSONParser alloc] init];
-                       NSArray *colaboradores = [jsonParser colaboradoresArrayFromSearchResponseDictionary:jsonDictionary];
+                       NSArray *colaboradores = [jsonParser colaboradoresArrayFromSearchResponse:responseObject];
                        success(colaboradores);
                        
                    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -49,9 +48,8 @@
 
     [httpClient profileForUser:login
                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                           NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:NSUTF8StringEncoding error:nil];
                            PeopleJSONParser *jsonParser = [[PeopleJSONParser alloc] init];
-                           PeopleColaborador *colaborador = [jsonParser colaboradorFromProfileResponseDictionary:jsonDictionary];
+                           PeopleColaborador *colaborador = [jsonParser colaboradorFromProfileResponse:responseObject];
                            success(colaborador);
                            
                        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

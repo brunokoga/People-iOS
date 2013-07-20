@@ -8,10 +8,11 @@
 
 #import <XCTest/XCTest.h>
 #import "PeopleColaborador+PopulateFromServiceResponse.h"
+#import "PeopleJSONParser.h"
 
 @interface PeopleColaboradorTest : XCTestCase
-@property (nonatomic, strong) NSArray *profileJSONs;
-@property (nonatomic, strong) NSArray *searchResultJSONs;
+@property (nonatomic, strong) NSArray *profiles;
+@property (nonatomic, strong) NSArray *searches;
 
 @end
 
@@ -20,28 +21,72 @@
 - (void)setUp
 {
     [super setUp];
+    
+    [self setUpProfileResults];
+    [self setUpSearchResults];
+}
+
+- (void)setUpSearchResults
+{
+    PeopleJSONParser *parser = [[PeopleJSONParser alloc] init];
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    
+    NSString *searchJSON1Path = [bundle pathForResource:@"search_generic1" ofType:@"json"];
+    NSData *searchJSON1Data = [NSData dataWithContentsOfFile:searchJSON1Path];
+    NSArray *searchColaboradoresArray1 = [parser colaboradoresArrayFromSearchResponse:searchJSON1Data];
+    
+    NSString *searchJSON2Path = [bundle pathForResource:@"search_generic2" ofType:@"json"];
+    NSData *searchJSON2Data = [NSData dataWithContentsOfFile:searchJSON2Path];
+    NSArray *searchColaboradoresArray2 = [parser colaboradoresArrayFromSearchResponse:searchJSON2Data];
+    
+    self.searches = @[searchColaboradoresArray1, searchColaboradoresArray2];
+    
+}
+
+- (void)setUpProfileResults
+{
+    PeopleJSONParser *parser = [[PeopleJSONParser alloc] init];
+    
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     NSString *profileJSON1Path = [bundle pathForResource:@"profile_generic1" ofType:@"json"];
     NSData *profileJSON1Data = [NSData dataWithContentsOfFile:profileJSON1Path];
-    NSDictionary *profileJSON1 = [NSJSONSerialization JSONObjectWithData:profileJSON1Data options:NSJSONReadingAllowFragments error:nil];
+    PeopleColaborador *colaborador1 = [parser colaboradorFromProfileResponse:profileJSON1Data];
     
-    self.profileJSONs = @[profileJSON1];
-    
+    self.profiles = @[colaborador1];
 }
 
 - (void)tearDown
 {
-    self.profileJSONs = nil;
-    self.searchResultJSONs = nil;
+    self.profiles = nil;
+    self.searches = nil;
     // Put teardown code here; it will be run once, after the last test case.
     [super tearDown];
 }
 
+- (void)testColaboradoresFromSearchResponse
+{
+    for (NSArray *searchResult in self.searches)
+    {
+        for (PeopleColaborador *colaborador in searchResult)
+        {
+            XCTAssertNotNil(colaborador, @"Colaborador expected to be not nil");
+            XCTAssertEqualObjects(colaborador.name, @"Nome", @"Wrong colaborador name");
+            XCTAssertEqualObjects(colaborador.login, @"Login", @"Wrong colaborador login");
+            XCTAssertEqualObjects(colaborador.mentorLogin, @"Mentor", @"Wrong colaborador's mentor login");
+            XCTAssertEqualObjects(colaborador.role, @"Role", @"Wrong colaborador role");
+            XCTAssertEqualObjects(colaborador.phone, @"Telefone", @"Wrong colaborador phone");
+            XCTAssertEqualObjects(colaborador.mobile, @"Celular", @"Wrong colaborador mobile");
+            XCTAssertEqualObjects(colaborador.location, @"Base", @"Wrong colaborador location");
+            XCTAssertEqualObjects(colaborador.managerLogin, @"Manager", @"Wrong colaborador's manager login");
+        }
+    }
+    
+}
+
 - (void)testColaboradorFromProfileResponse
 {
-    for (NSDictionary *jsonDictionary in self.profileJSONs)
+    for (PeopleColaborador *colaborador in self.profiles)
     {
-        PeopleColaborador *colaborador = [PeopleColaborador colaboradorFromProfileResponse:jsonDictionary];
         XCTAssertNotNil(colaborador, @"Colaborador expected to be not nil");
         XCTAssertEqualObjects(colaborador.name, @"Nome do Colaborador", @"Wrong colaborador name");
         XCTAssertEqualObjects(colaborador.login, @"Login do Colaborador", @"Wrong colaborador login");

@@ -21,4 +21,9 @@
     
 }
 
+- (NSString *)description
+{
+    return self.login;
+}
+
 @end

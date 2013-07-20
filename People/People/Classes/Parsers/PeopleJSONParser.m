@@ -10,14 +10,18 @@
 
 @implementation PeopleJSONParser
 
-- (NSArray *)colaboradoresArrayFromSearchResponseDictionary:(NSDictionary *)responseDictionary
+- (NSArray *)colaboradoresArrayFromSearchResponse:(id)serviceResponse;
 {
+    NSError *serializationError = nil;
+    NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:serviceResponse options:NSUTF8StringEncoding error:&serializationError];
     NSArray *colaboradores = [PeopleColaborador colaboradoresFromSearchResponse:[responseDictionary objectForKey:@"data"]];
     return colaboradores;
 }
 
-- (PeopleColaborador *)colaboradorFromProfileResponseDictionary:(NSDictionary *)responseDictionary
+- (PeopleColaborador *)colaboradorFromProfileResponse:(id)serviceResponse;
 {
+    NSError *serializationError = nil;
+    NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:serviceResponse options:NSUTF8StringEncoding error:&serializationError];
     PeopleColaborador *colaborador = [PeopleColaborador colaboradorFromProfileResponse:responseDictionary];
     return colaborador;
 }

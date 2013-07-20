@@ -11,7 +11,7 @@
 
 @interface PeopleJSONParser : NSObject
 
-- (NSArray *)colaboradoresArrayFromSearchResponseDictionary:(NSDictionary *)responseDictionary;
-- (PeopleColaborador *)colaboradorFromProfileResponseDictionary:(NSDictionary *)responseDictionary;
+- (NSArray *)colaboradoresArrayFromSearchResponse:(id)serviceResponse;
+- (PeopleColaborador *)colaboradorFromProfileResponse:(id)serviceResponse;
 
 @end
