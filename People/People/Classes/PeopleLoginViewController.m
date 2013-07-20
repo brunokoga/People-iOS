@@ -11,6 +11,7 @@
 #import "PeopleValidation.h"
 
 @interface PeopleLoginViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 
 @end
 
@@ -29,6 +30,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+- (void)alignUIElements
+{
+    CGPoint logoImageViewCenter = CGPointMake(self.view.center.x, self.view.center.y - 114);
+    [self.logoImageView setCenter:logoImageViewCenter];
 }
 
 - (void)didReceiveMemoryWarning

@@ -59,9 +59,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="People - White Logo" id="SGq-Kz-c4o">
+                                <rect key="frame" x="73" y="249" width="174" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="SGq-Kz-c4o" id="Luu-UJ-9ul"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lyv-eh-4O0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

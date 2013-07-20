@@ -35,7 +35,6 @@
 
 - (void)alignUIElements
 {
-    [super alignUIElements];
     [self.logoPlusPhraseView setCenter:self.view.center];
 }
 /*
