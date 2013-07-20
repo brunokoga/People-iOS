@@ -38,6 +38,13 @@
 {
     CGPoint logoImageViewCenter = CGPointMake(self.view.center.x, self.view.center.y - 114);
     [self.logoImageView setCenter:logoImageViewCenter];
+    
+    
+}
+
+- (void)adjustLocalizationItems
+{
+    
 }
 
 - (void)didReceiveMemoryWarning

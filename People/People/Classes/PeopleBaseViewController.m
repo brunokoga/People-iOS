@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     [self adjustUIElements];
+    [self adjustLocalizationItems];
 	// Do any additional setup after loading the view.
 }
 
@@ -39,6 +40,11 @@
 - (void)adjustUIElements
 {
     //overriden
+}
+
+- (void)adjustLocalizationItems
+{
+    //overriden    
 }
 
 @end
