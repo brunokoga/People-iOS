@@ -11,6 +11,8 @@
 
 @interface PeopleInitialViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+@property (weak, nonatomic) IBOutlet UIView *logoPlusPhraseView;
+@property (weak, nonatomic) IBOutlet UIImageView *phraseImageView;
 
 @end
 
@@ -34,7 +36,7 @@
 - (void)alignUIElements
 {
     [super alignUIElements];
-    [self.logoImageView setCenter:self.view.center];
+    [self.logoPlusPhraseView setCenter:self.view.center];
 }
 /*
  This method will call:
@@ -42,9 +44,16 @@
     - PeopleLoginViewController - if the user has logged out
     - PeopleSearchViewController - if the user has already logged in
  */
+
+static NSString * const kLoginSegueIdentifier = @"Login Segue";
+static NSString * const kTutorialSegueIdentifier = @"Tutorial Segue";
+static NSString * const kSearchSegueIdentifier = @"Search Segue";
+
+
 - (void)loadFirstViewController
 {
-    NSString *segueIdentifier = @"Login Segue";
+    NSString *segueIdentifier = kLoginSegueIdentifier;
+    /*
     BOOL isRunningForTheFirstTime = [PeoplePreferences isRunningForTheFirstTime];
     if (isRunningForTheFirstTime)
     {
@@ -57,20 +66,55 @@
             segueIdentifier = @"Search Segue";
         }
     }
+     */
  
     [self performSegueWithIdentifier:segueIdentifier sender:self];
 }
 
-- (void)performInitialAnimationWithCompletion:(void(^)(void))completion
+- (void)performInitialAnimationTransitioningToViewController:(UIViewController *)destinationViewController
+                                              withIdentifier:(NSString *)identifier
 {
-  
-    [UIView animateWithDuration:5.0 animations:^{
-        CGPoint logoNewCenter = CGPointMake(self.view.center.x, self.view.center.y/3);
-        [self.logoImageView setCenter:logoNewCenter];
-        
-    } completion:^(BOOL finished) {
-        completion();
-    }];
+    if ([identifier isEqualToString:kLoginSegueIdentifier])
+    {
+        [self transitionToLoginViewController:destinationViewController];
+    }
+    else if ([identifier isEqualToString:kTutorialSegueIdentifier])
+    {
+        [self transitionToTutorialViewController:destinationViewController];
+    }
+    else if ([identifier isEqualToString:kSearchSegueIdentifier])
+    {
+        [self transitionToSearchViewController:destinationViewController];
+    }
+    
+}
+
+- (void)transitionToLoginViewController:(UIViewController *)destinationViewController
+{
+    CGPoint convertedCenter = [self.view convertPoint:self.logoImageView.center toView:nil];
+    CGPoint newLogoCenter = CGPointMake(convertedCenter.x, convertedCenter.y - 100);
+    [UIView animateWithDuration:2.0
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [self.phraseImageView setAlpha:0.0];
+                         [self.logoImageView setCenter:newLogoCenter];
+                     } completion:^(BOOL finished) {
+                         [self.phraseImageView removeFromSuperview];
+                         [self.navigationController setViewControllers:@[destinationViewController]];
+                     }];
+
+    
+}
+
+- (void)transitionToTutorialViewController:(UIViewController *)destinationViewController
+{
+    
+}
+
+- (void)transitionToSearchViewController:(UIViewController *)destinationViewController
+{
+    
 }
 
 @end

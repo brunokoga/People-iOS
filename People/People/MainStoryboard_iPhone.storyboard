@@ -12,20 +12,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultBackground" id="KTu-zl-0bX">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="DefaultBackground" id="C56-fi-p8U">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="175" placeholderIntrinsicHeight="59" image="People - White Logo" id="CBW-0M-hpr" userLabel="Image View - Logo">
-                                <rect key="frame" x="73" y="254" width="175" height="59"/>
+                            <view contentMode="scaleToFill" id="4ao-hO-ggV">
+                                <rect key="frame" x="73" y="239" width="174" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="People - White Logo" id="neJ-dZ-Owa">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="get" id="5iN-Gd-Ce4">
+                                        <rect key="frame" x="38" y="88" width="98" height="10"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="C7g-r2-9XJ"/>
                     <connections>
-                        <outlet property="logoImageView" destination="CBW-0M-hpr" id="oL7-pO-5hi"/>
+                        <outlet property="logoImageView" destination="neJ-dZ-Owa" id="3i2-Rc-9D4"/>
+                        <outlet property="logoPlusPhraseView" destination="4ao-hO-ggV" id="Cm5-KD-qDE"/>
+                        <outlet property="phraseImageView" destination="5iN-Gd-Ce4" id="yfm-1J-jzu"/>
                         <segue destination="deK-8d-dvB" kind="custom" identifier="Tutorial Segue" customClass="PeopleInitialTransitionSegue" id="0KG-io-CY2"/>
                         <segue destination="cXe-pJ-l83" kind="custom" identifier="Login Segue" customClass="PeopleInitialTransitionSegue" id="eFc-dR-0q4"/>
                         <segue destination="QOm-jz-V29" kind="custom" identifier="Search Segue" customClass="PeopleInitialTransitionSegue" id="YFJ-pG-dwf"/>
@@ -43,12 +55,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultBackground" id="g8B-Xp-Xyt">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="DefaultBackground" id="sYU-6e-Fm7">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lyv-eh-4O0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -120,7 +132,8 @@
     </scenes>
     <resources>
         <image name="DefaultBackground" width="320" height="480"/>
-        <image name="People - White Logo" width="175" height="59"/>
+        <image name="People - White Logo" width="174" height="70"/>
+        <image name="get" width="98" height="10"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

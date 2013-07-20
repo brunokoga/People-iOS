@@ -10,10 +10,13 @@
 
 @implementation PeopleBasicTheme
 
-NSString * const kPeopleBoldFontName = @"VAGRoundedStd-Bold";
-NSString * const kPeopleThinFontName = @"VAGRoundedStd-Thin";
-NSString * const kPeopleBlackFontName = @"VAGRoundedStd-Black";
-NSString * const kPeopleLightFontName = @"VAGRoundedStd-Light";
+NSString * const kPeopleFontName = @"Dosis-Bold";
+NSString * const kPeopleFontBookName = @"Dosis-Book";
+NSString * const kPeopleFontExtraBoldName = @"Dosis-ExtraBold";
+NSString * const kPeopleFontExtraLightName = @"Dosis-ExtraLight";
+NSString * const kPeopleFontLightName = @"Dosis-Light";
+NSString * const kPeopleFontMediumName = @"Dosis-Medium";
+NSString * const kPeopleFontSemiBoldName = @"Dosis-SemiBold";
 
 + (void)configureTheme
 {
@@ -22,22 +25,37 @@ NSString * const kPeopleLightFontName = @"VAGRoundedStd-Light";
 
 + (UIFont *)peopleFontBoldWithSize:(CGFloat)size
 {
-    return [UIFont fontWithName:kPeopleBoldFontName size:size];
+    return [UIFont fontWithName:kPeopleFontName size:size];
 }
 
-+ (UIFont *)peopleFontThinWithSize:(CGFloat)size
++ (UIFont *)peopleFontBookWithSize:(CGFloat)size
 {
-    return [UIFont fontWithName:kPeopleThinFontName size:size];
+    return [UIFont fontWithName:kPeopleFontBookName size:size];
 }
 
-+ (UIFont *)peopleFontBlackWithSize:(CGFloat)size
++ (UIFont *)peopleFontExtraBoldWithSize:(CGFloat)size
 {
-    return [UIFont fontWithName:kPeopleBlackFontName size:size];
+    return [UIFont fontWithName:kPeopleFontExtraBoldName size:size];
+}
+
++ (UIFont *)peopleFontExtraLightWithSize:(CGFloat)size
+{
+    return [UIFont fontWithName:kPeopleFontExtraLightName size:size];
 }
 
 + (UIFont *)peopleFontLightWithSize:(CGFloat)size
 {
-    return [UIFont fontWithName:kPeopleLightFontName size:size];
+    return [UIFont fontWithName:kPeopleFontLightName size:size];
+}
+
++ (UIFont *)peopleFontMediumWithSize:(CGFloat)size
+{
+    return [UIFont fontWithName:kPeopleFontMediumName size:size];
+}
+
++ (UIFont *)peopleFontSemiBoldWithSize:(CGFloat)size
+{
+    return [UIFont fontWithName:kPeopleFontSemiBoldName size:size];
 }
 
 + (UIColor *)peopleColorPrimaryLight

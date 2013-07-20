@@ -13,9 +13,12 @@
 + (void)configureTheme;
 
 + (UIFont *)peopleFontBoldWithSize:(CGFloat)size;
-+ (UIFont *)peopleFontThinWithSize:(CGFloat)size;
-+ (UIFont *)peopleFontBlackWithSize:(CGFloat)size;
++ (UIFont *)peopleFontBookWithSize:(CGFloat)size;
++ (UIFont *)peopleFontExtraBoldWithSize:(CGFloat)size;
++ (UIFont *)peopleFontExtraLightWithSize:(CGFloat)size;
 + (UIFont *)peopleFontLightWithSize:(CGFloat)size;
++ (UIFont *)peopleFontMediumWithSize:(CGFloat)size;
++ (UIFont *)peopleFontSemiBoldWithSize:(CGFloat)size;
 
 + (UIColor *)peopleColorPrimaryLight;
 + (UIColor *)peopleColorPrimaryNormal;

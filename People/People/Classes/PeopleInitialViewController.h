@@ -10,6 +10,7 @@
 
 @interface PeopleInitialViewController : PeopleBaseViewController
 
-- (void)performInitialAnimationWithCompletion:(void(^)(void))completion;
+- (void)performInitialAnimationTransitioningToViewController:(UIViewController *)destinationViewController
+                                              withIdentifier:(NSString *)identifier;
 
 @end

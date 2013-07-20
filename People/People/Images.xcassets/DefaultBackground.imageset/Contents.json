@@ -3,16 +3,16 @@
     {
       "idiom" : "iphone",
       "scale" : "1x",
-      "filename" : "DefaultBackground.png"
+      "filename" : "background.png"
     },
     {
       "idiom" : "iphone",
       "scale" : "2x",
-      "filename" : "DefaultBackground@2x.png"
+      "filename" : "background@2x.png"
     },
     {
       "idiom" : "iphone",
-      "filename" : "DefaultBackground-R4.png",
+      "filename" : "background-r4.png",
       "subtype" : "retina4",
       "scale" : "2x"
     }

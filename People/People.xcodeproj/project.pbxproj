@@ -15,6 +15,13 @@
 		D34C56DD179AF4A200706AFF /* PeopleValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = D34C56DC179AF4A200706AFF /* PeopleValidation.m */; };
 		D34C56DF179AF6CC00706AFF /* PeopleValidationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D34C56DE179AF6CC00706AFF /* PeopleValidationTest.m */; };
 		D34C56E2179B06B300706AFF /* PeopleFavorites.m in Sources */ = {isa = PBXBuildFile; fileRef = D34C56E1179B06B300706AFF /* PeopleFavorites.m */; };
+		D34C56EB179B29EA00706AFF /* Dosis-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34C56E4179B29EA00706AFF /* Dosis-Bold.otf */; };
+		D34C56EC179B29EA00706AFF /* Dosis-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34C56E5179B29EA00706AFF /* Dosis-Book.otf */; };
+		D34C56ED179B29EA00706AFF /* Dosis-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34C56E6179B29EA00706AFF /* Dosis-ExtraBold.otf */; };
+		D34C56EE179B29EA00706AFF /* Dosis-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34C56E7179B29EA00706AFF /* Dosis-ExtraLight.otf */; };
+		D34C56EF179B29EA00706AFF /* Dosis-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34C56E8179B29EA00706AFF /* Dosis-Light.otf */; };
+		D34C56F0179B29EA00706AFF /* Dosis-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34C56E9179B29EA00706AFF /* Dosis-Medium.otf */; };
+		D34C56F1179B29EA00706AFF /* Dosis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34C56EA179B29EA00706AFF /* Dosis-SemiBold.otf */; };
 		D371D2B21798A554009C9D9E /* PeoplePreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */; };
 		D371D2B81798AA8C009C9D9E /* PeoplePreferencesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2B71798AA8C009C9D9E /* PeoplePreferencesTest.m */; };
 		D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BA1798B8DF009C9D9E /* PeopleLoginViewController.m */; };
@@ -67,6 +74,13 @@
 		D34C56DE179AF6CC00706AFF /* PeopleValidationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleValidationTest.m; sourceTree = "<group>"; };
 		D34C56E0179B06B300706AFF /* PeopleFavorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleFavorites.h; path = Classes/PeopleFavorites.h; sourceTree = "<group>"; };
 		D34C56E1179B06B300706AFF /* PeopleFavorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleFavorites.m; path = Classes/PeopleFavorites.m; sourceTree = "<group>"; };
+		D34C56E4179B29EA00706AFF /* Dosis-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Bold.otf"; sourceTree = "<group>"; };
+		D34C56E5179B29EA00706AFF /* Dosis-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Book.otf"; sourceTree = "<group>"; };
+		D34C56E6179B29EA00706AFF /* Dosis-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-ExtraBold.otf"; sourceTree = "<group>"; };
+		D34C56E7179B29EA00706AFF /* Dosis-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-ExtraLight.otf"; sourceTree = "<group>"; };
+		D34C56E8179B29EA00706AFF /* Dosis-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Light.otf"; sourceTree = "<group>"; };
+		D34C56E9179B29EA00706AFF /* Dosis-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Medium.otf"; sourceTree = "<group>"; };
+		D34C56EA179B29EA00706AFF /* Dosis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-SemiBold.otf"; sourceTree = "<group>"; };
 		D371D2B31798A994009C9D9E /* PeoplePreferences_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeoplePreferences_Private.h; path = "PeopleTests/Private Headers/PeoplePreferences_Private.h"; sourceTree = SOURCE_ROOT; };
 		D371D2B71798AA8C009C9D9E /* PeoplePreferencesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeoplePreferencesTest.m; sourceTree = "<group>"; };
 		D371D2B91798B8DF009C9D9E /* PeopleLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleLoginViewController.h; path = Classes/PeopleLoginViewController.h; sourceTree = "<group>"; };
@@ -145,6 +159,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D34C56E3179B29EA00706AFF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D34C56E4179B29EA00706AFF /* Dosis-Bold.otf */,
+				D34C56E5179B29EA00706AFF /* Dosis-Book.otf */,
+				D34C56E6179B29EA00706AFF /* Dosis-ExtraBold.otf */,
+				D34C56E7179B29EA00706AFF /* Dosis-ExtraLight.otf */,
+				D34C56E8179B29EA00706AFF /* Dosis-Light.otf */,
+				D34C56E9179B29EA00706AFF /* Dosis-Medium.otf */,
+				D34C56EA179B29EA00706AFF /* Dosis-SemiBold.otf */,
+			);
+			name = Fonts;
+			path = UX/Fonts;
+			sourceTree = SOURCE_ROOT;
+		};
+		D34C56F2179B29ED00706AFF /* UX */ = {
+			isa = PBXGroup;
+			children = (
+				D34C56E3179B29EA00706AFF /* Fonts */,
+			);
+			name = UX;
+			sourceTree = "<group>";
+		};
 		D371D2B41798AA19009C9D9E /* Private Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +230,7 @@
 		D38B3481179898BB00E2AF26 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				D34C56F2179B29ED00706AFF /* UX */,
 				D34C56E0179B06B300706AFF /* PeopleFavorites.h */,
 				D34C56E1179B06B300706AFF /* PeopleFavorites.m */,
 				D34C56DB179AF4A200706AFF /* PeopleValidation.h */,
@@ -408,8 +446,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D327A4CA17989A8D0042FF8B /* Images.xcassets in Resources */,
+				D34C56EE179B29EA00706AFF /* Dosis-ExtraLight.otf in Resources */,
+				D34C56EB179B29EA00706AFF /* Dosis-Bold.otf in Resources */,
+				D34C56F1179B29EA00706AFF /* Dosis-SemiBold.otf in Resources */,
 				D38B34AB1798991200E2AF26 /* MainStoryboard_iPhone.storyboard in Resources */,
+				D34C56F0179B29EA00706AFF /* Dosis-Medium.otf in Resources */,
 				D38B3486179898BB00E2AF26 /* InfoPlist.strings in Resources */,
+				D34C56EF179B29EA00706AFF /* Dosis-Light.otf in Resources */,
+				D34C56ED179B29EA00706AFF /* Dosis-ExtraBold.otf in Resources */,
+				D34C56EC179B29EA00706AFF /* Dosis-Book.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
