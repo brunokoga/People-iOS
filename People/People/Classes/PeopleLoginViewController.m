@@ -8,6 +8,7 @@
 
 #import "PeopleLoginViewController.h"
 #import "PeopleServices.h"
+#import "PeopleValidation.h"
 
 @interface PeopleLoginViewController ()
 
@@ -36,19 +37,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)doLogin
+- (void)loginWithUsername:(NSString *)username password:(NSString *)password
 {
     PeopleServices *sharedServices = [PeopleServices sharedServices];
-    [sharedServices loginWithUsername:@""
-                             password:@""
+    [sharedServices loginWithUsername:username
+                             password:password
                               success:^(PeopleColaborador *colaborador) {
                                   //save colaborador
                                   //go to next screen
                           
                       } failure:^(NSError *error) {
-                          //analyse error message and display error
+                          [self loginErrorWithError:error];
                       }];
-    
+}
+
+- (void)loginErrorWithError:(NSError *)error
+{
+ 
+}
+
+- (IBAction)loginButtonPressed:(id)sender
+{
+    NSString *username;
+    NSString *password;
+    PeopleValidation *validation = [[PeopleValidation alloc] init];
+    NSError *validationError = nil;
+    if ([validation validUsername:username password:password error:&validationError])
+    {
+        [self loginWithUsername:username password:password];
+    }
+    else
+    {
+        [self loginErrorWithError:validationError];
+    }
 }
 
 
