@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9AED62FE459640D98CC80172 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAB2C557C6B42DE9192D9C5 /* libPods.a */; };
 		D327A4CA17989A8D0042FF8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D327A4C917989A8D0042FF8B /* Images.xcassets */; };
+		D329173A179A217D00140214 /* PeopleColaboradorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3291739179A217D00140214 /* PeopleColaboradorTests.m */; };
 		D371D2B21798A554009C9D9E /* PeoplePreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */; };
 		D371D2B81798AA8C009C9D9E /* PeoplePreferencesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2B71798AA8C009C9D9E /* PeoplePreferencesTest.m */; };
 		D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BA1798B8DF009C9D9E /* PeopleLoginViewController.m */; };
@@ -34,6 +35,7 @@
 		D39DDBFC1799C5CA00E9D0C5 /* PeopleJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBF91799C5CA00E9D0C5 /* PeopleJSONParser.m */; };
 		D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBFF1799C6F300E9D0C5 /* PeopleColaborador.m */; };
 		D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDC021799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m */; };
+		D39DDC071799E77D00E9D0C5 /* profile_generic1.json in Resources */ = {isa = PBXBuildFile; fileRef = D39DDC061799E77D00E9D0C5 /* profile_generic1.json */; };
 		D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */; };
 		D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81B1798A0C300F05FD5 /* PeopleInitialViewController.m */; };
 		D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */; };
@@ -52,6 +54,7 @@
 /* Begin PBXFileReference section */
 		B1B65C1B01294229848DAD83 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		D327A4C917989A8D0042FF8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D3291739179A217D00140214 /* PeopleColaboradorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleColaboradorTests.m; sourceTree = "<group>"; };
 		D371D2B31798A994009C9D9E /* PeoplePreferences_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeoplePreferences_Private.h; path = "PeopleTests/Private Headers/PeoplePreferences_Private.h"; sourceTree = SOURCE_ROOT; };
 		D371D2B71798AA8C009C9D9E /* PeoplePreferencesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeoplePreferencesTest.m; sourceTree = "<group>"; };
 		D371D2B91798B8DF009C9D9E /* PeopleLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleLoginViewController.h; path = Classes/PeopleLoginViewController.h; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		D39DDBFF1799C6F300E9D0C5 /* PeopleColaborador.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PeopleColaborador.m; path = Classes/PeopleColaborador.m; sourceTree = "<group>"; };
 		D39DDC011799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PeopleColaborador+PopulateFromServiceResponse.h"; path = "Classes/PeopleColaborador+PopulateFromServiceResponse.h"; sourceTree = "<group>"; };
 		D39DDC021799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PeopleColaborador+PopulateFromServiceResponse.m"; path = "Classes/PeopleColaborador+PopulateFromServiceResponse.m"; sourceTree = "<group>"; };
+		D39DDC061799E77D00E9D0C5 /* profile_generic1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profile_generic1.json; sourceTree = "<group>"; };
 		D3A9D8161798A08000F05FD5 /* PeopleBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleBaseViewController.h; path = Classes/PeopleBaseViewController.h; sourceTree = "<group>"; };
 		D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleBaseViewController.m; path = Classes/PeopleBaseViewController.m; sourceTree = "<group>"; };
 		D3A9D81A1798A0C300F05FD5 /* PeopleInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialViewController.h; path = Classes/PeopleInitialViewController.h; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 			children = (
 				D38B3481179898BB00E2AF26 /* People */,
 				D371D2B41798AA19009C9D9E /* Private Headers */,
+				D39DDC051799E77D00E9D0C5 /* Test Data */,
 				D38B349A179898BB00E2AF26 /* PeopleTests */,
 				D38B347A179898BB00E2AF26 /* Frameworks */,
 				D38B3479179898BB00E2AF26 /* Products */,
@@ -176,6 +181,8 @@
 		D38B3481179898BB00E2AF26 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				D3A9D81D1798A3AD00F05FD5 /* PeoplePreferences.h */,
+				D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */,
 				D39DDC031799C73300E9D0C5 /* Entities */,
 				D39DDBF71799C5CA00E9D0C5 /* Parsers */,
 				D39DDBF31799B90F00E9D0C5 /* Theme */,
@@ -184,8 +191,6 @@
 				D3A9D8191798A08600F05FD5 /* View Controllers */,
 				D38B3482179898BB00E2AF26 /* Supporting Files */,
 				D327A4C917989A8D0042FF8B /* Images.xcassets */,
-				D3A9D81D1798A3AD00F05FD5 /* PeoplePreferences.h */,
-				D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 			children = (
 				D371D2B71798AA8C009C9D9E /* PeoplePreferencesTest.m */,
 				D38B34A0179898BB00E2AF26 /* PeopleTests.m */,
+				D3291739179A217D00140214 /* PeopleColaboradorTests.m */,
 				D38B349B179898BB00E2AF26 /* Supporting Files */,
 			);
 			path = PeopleTests;
@@ -273,6 +279,15 @@
 				D39DDC021799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		D39DDC051799E77D00E9D0C5 /* Test Data */ = {
+			isa = PBXGroup;
+			children = (
+				D39DDC061799E77D00E9D0C5 /* profile_generic1.json */,
+			);
+			name = "Test Data";
+			path = "PeopleTests/Test Data";
 			sourceTree = "<group>";
 		};
 		D3A9D8191798A08600F05FD5 /* View Controllers */ = {
@@ -384,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D38B349F179898BB00E2AF26 /* InfoPlist.strings in Resources */,
+				D39DDC071799E77D00E9D0C5 /* profile_generic1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D329173A179A217D00140214 /* PeopleColaboradorTests.m in Sources */,
 				D38B34A1179898BB00E2AF26 /* PeopleTests.m in Sources */,
 				D371D2B81798AA8C009C9D9E /* PeoplePreferencesTest.m in Sources */,
 			);

@@ -1,13 +1,16 @@
 PODS:
   - AFNetworking (1.3.1)
+  - ARSafeJSON (0.0.7)
   - SSKeychain (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - ARSafeJSON
   - SSKeychain
 
 SPEC CHECKSUMS:
   AFNetworking: 9ec8aafb9269236a7630bd8d9838ce2ba30fa2a0
+  ARSafeJSON: 737d05b66a51376fcc7c548569c457a77a70bd2c
   SSKeychain: 54b6daee1d95af968beebef07522b583ff9a809c
 
 COCOAPODS: 0.22.2

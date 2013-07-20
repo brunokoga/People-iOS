@@ -7,6 +7,7 @@
 //
 
 #import "PeopleColaborador+PopulateFromServiceResponse.h"
+#import <ARSafeJSON/ARSafeJSON.h>
 
 @implementation PeopleColaborador (PopulateFromServiceResponse)
 
@@ -26,8 +27,12 @@
     return colaborador;
 }
 
-+ (instancetype)colaboradorFromProfileResponse:(NSDictionary *)responseDictionary
++ (instancetype)colaboradorFromProfileResponse:(NSDictionary *)dirtyResponseDictionary
 {
+    //removing empty strings and [NSNull null] values
+    ARSafeJSON *safeJSON = [[ARSafeJSON alloc] init];
+    NSDictionary *responseDictionary = [safeJSON cleanUpJson:dirtyResponseDictionary];
+    
     PeopleColaborador *colaborador = [[PeopleColaborador alloc] init];
 
     NSArray *socialNetworks = [responseDictionary objectForKey:@"employee_sociallinks"];
