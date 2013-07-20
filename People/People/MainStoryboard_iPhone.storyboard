@@ -60,14 +60,28 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="People - White Logo" id="SGq-Kz-c4o">
-                                <rect key="frame" x="73" y="249" width="174" height="70"/>
+                                <rect key="frame" x="73" y="62" width="174" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="6Kc-th-eup">
+                                <rect key="frame" x="112" y="242" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Dlf-Il-s1O">
+                                <rect key="frame" x="112" y="280" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="logoImageView" destination="SGq-Kz-c4o" id="Luu-UJ-9ul"/>
+                        <outlet property="passwordTextField" destination="Dlf-Il-s1O" id="sHN-vs-rPS"/>
+                        <outlet property="usernameTextField" destination="6Kc-th-eup" id="bdd-jZ-S8D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lyv-eh-4O0" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -33,7 +33,7 @@
     [self loadFirstViewController];
 }
 
-- (void)alignUIElements
+- (void)adjustUIElements
 {
     [self.logoPlusPhraseView setCenter:self.view.center];
 }

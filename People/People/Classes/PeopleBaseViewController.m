@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self alignUIElements];
+    [self adjustUIElements];
 	// Do any additional setup after loading the view.
 }
 
@@ -36,7 +36,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)alignUIElements
+- (void)adjustUIElements
 {
     //overriden
 }

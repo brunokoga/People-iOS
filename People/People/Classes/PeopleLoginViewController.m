@@ -12,6 +12,8 @@
 
 @interface PeopleLoginViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
@@ -32,7 +34,7 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)alignUIElements
+- (void)adjustUIElements
 {
     CGPoint logoImageViewCenter = CGPointMake(self.view.center.x, self.view.center.y - 114);
     [self.logoImageView setCenter:logoImageViewCenter];
