@@ -9,6 +9,7 @@
 #import "PeopleLoginViewController.h"
 #import "PeopleServices.h"
 #import "PeopleValidation.h"
+#import "PeopleBasicTheme.h"
 
 @interface PeopleLoginViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
@@ -38,13 +39,33 @@
 {
     CGPoint logoImageViewCenter = CGPointMake(self.view.center.x, self.view.center.y - 114);
     [self.logoImageView setCenter:logoImageViewCenter];
+    [self animateViewsIn];
     
-    
+}
+
+- (void)adjustFonts
+{
+    self.usernameTextField.font = [PeopleBasicTheme peopleFontLightWithSize:self.usernameTextField.font.pointSize];
+    self.passwordTextField.font = [PeopleBasicTheme peopleFontLightWithSize:self.passwordTextField.font.pointSize];
+}
+
+- (void)animateViewsIn
+{
+    self.usernameTextField.alpha = 0.0;
+    self.passwordTextField.alpha = 0.0;
+    [UIView animateWithDuration:1.0
+                     animations:^{
+                         self.usernameTextField.alpha = 1.0;
+                         self.passwordTextField.alpha = 1.0;
+                     } completion:^(BOOL finished) {
+                         
+                     }];
 }
 
 - (void)adjustLocalizationItems
 {
-    
+    self.usernameTextField.placeholder = NSLocalizedString(@"username", @"");
+    self.passwordTextField.placeholder = NSLocalizedString(@"password", @"");
 }
 
 - (void)didReceiveMemoryWarning

@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     [self adjustUIElements];
+    [self adjustFonts];
     [self adjustLocalizationItems];
 	// Do any additional setup after loading the view.
 }
@@ -45,6 +46,11 @@
 - (void)adjustLocalizationItems
 {
     //overriden    
+}
+
+- (void)adjustFonts
+{
+    //overriden
 }
 
 @end
