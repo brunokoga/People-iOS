@@ -48,6 +48,7 @@
 		D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBFF1799C6F300E9D0C5 /* PeopleColaborador.m */; };
 		D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDC021799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m */; };
 		D39DDC071799E77D00E9D0C5 /* profile_generic1.json in Resources */ = {isa = PBXBuildFile; fileRef = D39DDC061799E77D00E9D0C5 /* profile_generic1.json */; };
+		D3A3083E179C438D0010FE51 /* PeopleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3083D179C438D0010FE51 /* PeopleTableViewDataSource.m */; };
 		D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */; };
 		D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81B1798A0C300F05FD5 /* PeopleInitialViewController.m */; };
 		D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */; };
@@ -121,6 +122,8 @@
 		D39DDC011799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PeopleColaborador+PopulateFromServiceResponse.h"; path = "Classes/PeopleColaborador+PopulateFromServiceResponse.h"; sourceTree = "<group>"; };
 		D39DDC021799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PeopleColaborador+PopulateFromServiceResponse.m"; path = "Classes/PeopleColaborador+PopulateFromServiceResponse.m"; sourceTree = "<group>"; };
 		D39DDC061799E77D00E9D0C5 /* profile_generic1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profile_generic1.json; sourceTree = "<group>"; };
+		D3A3083C179C438D0010FE51 /* PeopleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleTableViewDataSource.h; path = Classes/PeopleTableViewDataSource.h; sourceTree = "<group>"; };
+		D3A3083D179C438D0010FE51 /* PeopleTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleTableViewDataSource.m; path = Classes/PeopleTableViewDataSource.m; sourceTree = "<group>"; };
 		D3A9D8161798A08000F05FD5 /* PeopleBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleBaseViewController.h; path = Classes/PeopleBaseViewController.h; sourceTree = "<group>"; };
 		D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleBaseViewController.m; path = Classes/PeopleBaseViewController.m; sourceTree = "<group>"; };
 		D3A9D81A1798A0C300F05FD5 /* PeopleInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialViewController.h; path = Classes/PeopleInitialViewController.h; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 				D3A9D8191798A08600F05FD5 /* View Controllers */,
 				D38B3482179898BB00E2AF26 /* Supporting Files */,
 				D327A4C917989A8D0042FF8B /* Images.xcassets */,
+				D3A3083C179C438D0010FE51 /* PeopleTableViewDataSource.h */,
+				D3A3083D179C438D0010FE51 /* PeopleTableViewDataSource.m */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 				D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */,
 				D34C56E2179B06B300706AFF /* PeopleFavorites.m in Sources */,
 				D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */,
+				D3A3083E179C438D0010FE51 /* PeopleTableViewDataSource.m in Sources */,
 				D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */,
 				D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */,
 				D38B348C179898BB00E2AF26 /* PeopleAppDelegate.m in Sources */,
