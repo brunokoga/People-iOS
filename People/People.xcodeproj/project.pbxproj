@@ -51,6 +51,7 @@
 		D3A3083E179C438D0010FE51 /* PeopleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3083D179C438D0010FE51 /* PeopleTableViewDataSource.m */; };
 		D3A30841179C4AA70010FE51 /* PeopleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A30840179C4AA70010FE51 /* PeopleTableViewCell.m */; };
 		D3A30845179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A30844179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m */; };
+		D3A30847179C4B750010FE51 /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A30846179C4B750010FE51 /* PeopleTableViewCell.xib */; };
 		D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */; };
 		D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81B1798A0C300F05FD5 /* PeopleInitialViewController.m */; };
 		D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */; };
@@ -130,6 +131,7 @@
 		D3A30840179C4AA70010FE51 /* PeopleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleTableViewCell.m; path = Classes/PeopleTableViewCell.m; sourceTree = "<group>"; };
 		D3A30843179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PeopleTableViewCell+ConfigureForColaborador.h"; path = "Classes/PeopleTableViewCell+ConfigureForColaborador.h"; sourceTree = "<group>"; };
 		D3A30844179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PeopleTableViewCell+ConfigureForColaborador.m"; path = "Classes/PeopleTableViewCell+ConfigureForColaborador.m"; sourceTree = "<group>"; };
+		D3A30846179C4B750010FE51 /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PeopleTableViewCell.xib; path = Classes/PeopleTableViewCell.xib; sourceTree = "<group>"; };
 		D3A9D8161798A08000F05FD5 /* PeopleBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleBaseViewController.h; path = Classes/PeopleBaseViewController.h; sourceTree = "<group>"; };
 		D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleBaseViewController.m; path = Classes/PeopleBaseViewController.m; sourceTree = "<group>"; };
 		D3A9D81A1798A0C300F05FD5 /* PeopleInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialViewController.h; path = Classes/PeopleInitialViewController.h; sourceTree = "<group>"; };
@@ -361,11 +363,12 @@
 			isa = PBXGroup;
 			children = (
 				D3A3083C179C438D0010FE51 /* PeopleTableViewDataSource.h */,
-				D3A30843179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.h */,
-				D3A30844179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m */,
 				D3A3083D179C438D0010FE51 /* PeopleTableViewDataSource.m */,
 				D3A3083F179C4AA70010FE51 /* PeopleTableViewCell.h */,
 				D3A30840179C4AA70010FE51 /* PeopleTableViewCell.m */,
+				D3A30846179C4B750010FE51 /* PeopleTableViewCell.xib */,
+				D3A30843179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.h */,
+				D3A30844179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				D34C56EF179B29EA00706AFF /* Dosis-Light.otf in Resources */,
 				D34C56ED179B29EA00706AFF /* Dosis-ExtraBold.otf in Resources */,
 				D34C56EC179B29EA00706AFF /* Dosis-Book.otf in Resources */,
+				D3A30847179C4B750010FE51 /* PeopleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
