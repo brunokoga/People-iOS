@@ -61,25 +61,25 @@ static NSString * const kSearchSegueIdentifier = @"Search Segue";
     [self performSegueWithIdentifier:segueIdentifier sender:self];
 }
 
-- (void)performInitialAnimationTransitioningToViewController:(UIViewController *)destinationViewController
-                                              withIdentifier:(NSString *)identifier
+- (void)performTransitionWithSegueIdentifier:(NSString *)identifier
+                                  completion:(void (^)(void))completion
 {
     if ([identifier isEqualToString:kLoginSegueIdentifier])
     {
-        [self transitionToLoginViewController:destinationViewController];
+        [self transitionToLoginWithCompletion:completion];
     }
     else if ([identifier isEqualToString:kTutorialSegueIdentifier])
     {
-        [self transitionToTutorialViewController:destinationViewController];
+        [self transitionToTutorialWithCompletion:completion];
     }
     else if ([identifier isEqualToString:kSearchSegueIdentifier])
     {
-        [self transitionToSearchViewController:destinationViewController];
+        [self transitionToSearchWithCompletion:completion];
     }
     
 }
 
-- (void)transitionToLoginViewController:(UIViewController *)destinationViewController
+- (void)transitionToLoginWithCompletion:(void (^)(void))completion
 {
     CGPoint convertedCenter = [self.view convertPoint:self.logoImageView.center toView:nil];
     CGPoint newLogoCenter = CGPointMake(convertedCenter.x, convertedCenter.y - self.view.frame.size.height/4);
@@ -91,18 +91,16 @@ static NSString * const kSearchSegueIdentifier = @"Search Segue";
                          [self.logoImageView setCenter:newLogoCenter];
                      } completion:^(BOOL finished) {
                          [self.phraseImageView removeFromSuperview];
-                         [self.navigationController setViewControllers:@[destinationViewController]];
+                         completion();
                      }];
-
-    
 }
 
-- (void)transitionToTutorialViewController:(UIViewController *)destinationViewController
+- (void)transitionToTutorialWithCompletion:(void (^)(void))completion
 {
     
 }
 
-- (void)transitionToSearchViewController:(UIViewController *)destinationViewController
+- (void)transitionToSearchWithCompletion:(void (^)(void))completion
 {
     
 }

@@ -45,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DfS-NP-LA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832" y="-2"/>
+            <point key="canvasLocation" x="812" y="10"/>
         </scene>
         <!--People Login View Controller-->
         <scene sceneID="7Rq-8D-Ryu">
@@ -108,11 +108,12 @@
                         <outlet property="logoImageView" destination="SGq-Kz-c4o" id="Luu-UJ-9ul"/>
                         <outlet property="passwordTextField" destination="Dlf-Il-s1O" id="sHN-vs-rPS"/>
                         <outlet property="usernameTextField" destination="6Kc-th-eup" id="bdd-jZ-S8D"/>
+                        <segue destination="QOm-jz-V29" kind="custom" identifier="Login To Search Segue" customClass="PeopleInitialTransitionSegue" id="cKw-ch-Hgu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lyv-eh-4O0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="201"/>
+            <point key="canvasLocation" x="2034" y="-23"/>
         </scene>
         <!--People Search View Controller-->
         <scene sceneID="Osl-xG-D1d">
@@ -134,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xx8-3g-lbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="915"/>
+            <point key="canvasLocation" x="2582" y="1475"/>
         </scene>
         <!--People Tutorial View Controller-->
         <scene sceneID="PwN-wJ-non">
@@ -153,10 +154,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="cXe-pJ-l83" kind="custom" identifier="Tutorial To Login Segue" customClass="PeopleInitialTransitionSegue" id="1Rx-nz-rNy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pmh-Ku-bZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="-515"/>
+            <point key="canvasLocation" x="1338" y="-915"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CyF-yN-eyO">
@@ -187,4 +191,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="eFc-dR-0q4"/>
+        <segue reference="cKw-ch-Hgu"/>
+    </inferredMetricsTieBreakers>
 </document>

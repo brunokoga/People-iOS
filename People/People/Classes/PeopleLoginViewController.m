@@ -104,10 +104,10 @@
     [sharedServices loginWithUsername:username
                              password:password
                               success:^(PeopleColaborador *colaborador) {
-                          
-                      } failure:^(NSError *error) {
-                          [self loginErrorWithError:error];
-                      }];
+                                  [self performLoginSucceededOperationsWithColaborador:colaborador];
+                              } failure:^(NSError *error) {
+                                  [self loginErrorWithError:error];
+                              }];
 }
 
 - (void)loginErrorWithError:(NSError *)error
@@ -251,5 +251,21 @@
     NSTimeInterval animationDuration = [(NSNumber*)[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     [self keyboardWillHide:YES animationDuration:animationDuration];
 }
+
+#pragma mark - Transitions
+
+static NSString * const kLoginToSearchSegue = @"Login To Search Segue";
+
+- (void)performLoginSucceededOperationsWithColaborador:(PeopleColaborador *)colaborador
+{
+    [self performSegueWithIdentifier:kLoginToSearchSegue sender:self];
+}
+
+- (void)performTransitionWithSegueIdentifier:(NSString *)identifier
+                                  completion:(void (^)(void))completion
+{
+    completion();
+}
+
 
 @end

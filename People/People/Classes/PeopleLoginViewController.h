@@ -10,4 +10,7 @@
 
 @interface PeopleLoginViewController : PeopleBaseViewController <UITextFieldDelegate>
 
+- (void)performTransitionWithSegueIdentifier:(NSString *)identifier
+                                  completion:(void (^)(void))completion;
+
 @end

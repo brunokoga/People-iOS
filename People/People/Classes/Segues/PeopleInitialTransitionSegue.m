@@ -16,6 +16,9 @@
     PeopleInitialViewController *source = self.sourceViewController;
     UIViewController *destination = self.destinationViewController;
 
-    [source performInitialAnimationTransitioningToViewController:destination withIdentifier:self.identifier];
+    [source performTransitionWithSegueIdentifier:self.identifier
+                                      completion:^{
+                                          [source.navigationController setViewControllers:@[destination]];
+                                      }];
 }
 @end
