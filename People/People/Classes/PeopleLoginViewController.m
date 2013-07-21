@@ -103,7 +103,7 @@
     PeopleServices *sharedServices = [PeopleServices sharedServices];
     [sharedServices loginWithUsername:username
                              password:password
-                              success:^(PeopleColaborador *colaborador) {                                  
+                              success:^(PeopleColaborador *colaborador) {
                           
                       } failure:^(NSError *error) {
                           [self loginErrorWithError:error];

@@ -8,10 +8,10 @@
 
 #import <AFNetworking/AFHTTPClient.h>
 
-typedef enum PeopleConnectionError2 {
+typedef enum PeopleConnectionError {
     ErrorOperationCouldntBePerformed = 256,
     ErrorCouldntCreate = 3840
-} PeopleConnectionError2;
+} PeopleConnectionError;
 
 typedef void (^PeopleRequestOperationBlockSuccess) (AFHTTPRequestOperation *operation, id responseObject);
 typedef void (^PeopleRequestOperationBlockFailure) (AFHTTPRequestOperation *operation, NSError *error);
