@@ -2,3 +2,4 @@ platform :ios, "7.0"
 pod 'AFNetworking'
 pod 'SSKeychain'
 pod 'ARSafeJSON'
+pod 'PeopleSwipeTableViewCell', :git => 'https://github.com/brunokoga/PeopleSwipeTableViewCell.git'
