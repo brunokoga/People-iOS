@@ -49,6 +49,8 @@
 		D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDC021799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m */; };
 		D39DDC071799E77D00E9D0C5 /* profile_generic1.json in Resources */ = {isa = PBXBuildFile; fileRef = D39DDC061799E77D00E9D0C5 /* profile_generic1.json */; };
 		D3A3083E179C438D0010FE51 /* PeopleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3083D179C438D0010FE51 /* PeopleTableViewDataSource.m */; };
+		D3A30841179C4AA70010FE51 /* PeopleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A30840179C4AA70010FE51 /* PeopleTableViewCell.m */; };
+		D3A30845179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A30844179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m */; };
 		D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */; };
 		D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81B1798A0C300F05FD5 /* PeopleInitialViewController.m */; };
 		D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */; };
@@ -124,6 +126,10 @@
 		D39DDC061799E77D00E9D0C5 /* profile_generic1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profile_generic1.json; sourceTree = "<group>"; };
 		D3A3083C179C438D0010FE51 /* PeopleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleTableViewDataSource.h; path = Classes/PeopleTableViewDataSource.h; sourceTree = "<group>"; };
 		D3A3083D179C438D0010FE51 /* PeopleTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleTableViewDataSource.m; path = Classes/PeopleTableViewDataSource.m; sourceTree = "<group>"; };
+		D3A3083F179C4AA70010FE51 /* PeopleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleTableViewCell.h; path = Classes/PeopleTableViewCell.h; sourceTree = "<group>"; };
+		D3A30840179C4AA70010FE51 /* PeopleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleTableViewCell.m; path = Classes/PeopleTableViewCell.m; sourceTree = "<group>"; };
+		D3A30843179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PeopleTableViewCell+ConfigureForColaborador.h"; path = "Classes/PeopleTableViewCell+ConfigureForColaborador.h"; sourceTree = "<group>"; };
+		D3A30844179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PeopleTableViewCell+ConfigureForColaborador.m"; path = "Classes/PeopleTableViewCell+ConfigureForColaborador.m"; sourceTree = "<group>"; };
 		D3A9D8161798A08000F05FD5 /* PeopleBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleBaseViewController.h; path = Classes/PeopleBaseViewController.h; sourceTree = "<group>"; };
 		D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleBaseViewController.m; path = Classes/PeopleBaseViewController.m; sourceTree = "<group>"; };
 		D3A9D81A1798A0C300F05FD5 /* PeopleInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialViewController.h; path = Classes/PeopleInitialViewController.h; sourceTree = "<group>"; };
@@ -248,8 +254,7 @@
 				D3A9D8191798A08600F05FD5 /* View Controllers */,
 				D38B3482179898BB00E2AF26 /* Supporting Files */,
 				D327A4C917989A8D0042FF8B /* Images.xcassets */,
-				D3A3083C179C438D0010FE51 /* PeopleTableViewDataSource.h */,
-				D3A3083D179C438D0010FE51 /* PeopleTableViewDataSource.m */,
+				D3A30842179C4AB10010FE51 /* TableView */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -350,6 +355,19 @@
 			);
 			name = "Test Data";
 			path = "PeopleTests/Test Data";
+			sourceTree = "<group>";
+		};
+		D3A30842179C4AB10010FE51 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D3A3083C179C438D0010FE51 /* PeopleTableViewDataSource.h */,
+				D3A30843179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.h */,
+				D3A30844179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m */,
+				D3A3083D179C438D0010FE51 /* PeopleTableViewDataSource.m */,
+				D3A3083F179C4AA70010FE51 /* PeopleTableViewCell.h */,
+				D3A30840179C4AA70010FE51 /* PeopleTableViewCell.m */,
+			);
+			name = TableView;
 			sourceTree = "<group>";
 		};
 		D3A9D8191798A08600F05FD5 /* View Controllers */ = {
@@ -526,10 +544,12 @@
 				D3A3083E179C438D0010FE51 /* PeopleTableViewDataSource.m in Sources */,
 				D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */,
 				D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */,
+				D3A30845179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m in Sources */,
 				D38B348C179898BB00E2AF26 /* PeopleAppDelegate.m in Sources */,
 				D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */,
 				D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */,
 				D34C56DD179AF4A200706AFF /* PeopleValidation.m in Sources */,
+				D3A30841179C4AA70010FE51 /* PeopleTableViewCell.m in Sources */,
 				D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */,
 				D39DDBF61799C57D00E9D0C5 /* PeopleServices.m in Sources */,
 			);
