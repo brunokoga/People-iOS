@@ -34,4 +34,7 @@
 + (UIColor *)peopleColorBasicExtraDark;
 
 + (UIColor *)peopleColorTertiary;
+
++ (UIColor *)primaryButtonColorForState:(UIControlState)state;
+
 @end

@@ -19,7 +19,26 @@
     
     if (!valid)
     {
-        *error = [[NSError alloc] init];
+        PeopleValidationError errorCode;
+        if (usernameError)
+        {
+            if (passwordError)
+            {
+                errorCode = PeopleValidationErrorBlankUsernameAndPassword;
+            }
+            else
+            {
+                errorCode = PeopleValidationErrorBlankUsernameOnly;
+            }
+        }
+        else
+        {
+            errorCode = PeopleValidationErrorBlankPasswordOnly;
+        }
+        
+        *error = [NSError errorWithDomain:@"com.ciandt.people.validationError"
+                                     code:errorCode
+                                 userInfo:nil];
     }
     
     return valid;

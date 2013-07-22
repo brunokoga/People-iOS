@@ -10,13 +10,16 @@
 #import "PeopleServices.h"
 #import "PeopleValidation.h"
 #import "PeopleBasicTheme.h"
+#import "PeopleRegularButton.h"
 
 @interface PeopleLoginViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *phraseImageView;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet PeopleRegularButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIImageView *usernamePadImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *passwordPadImageView;
 
 @end
 
@@ -59,6 +62,7 @@
     CGPoint phraseImageViewCenter = CGPointMake(self.view.center.x, 5*self.view.frame.size.height/6);
     [self.phraseImageView setCenter:phraseImageViewCenter];
     [self animateViewsIn];
+    [self setLoginButtonToNormalState];
     
 }
 
@@ -69,6 +73,9 @@
                                                                                    attributes:@{NSForegroundColorAttributeName : color}];
     self.passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.passwordTextField.placeholder
                                                                                    attributes:@{NSForegroundColorAttributeName : color}];
+    
+    [self.loginButton applyPrimaryColor];
+    
 }
 
 - (void)adjustFonts
@@ -116,7 +123,35 @@
 
 - (void)loginErrorWithError:(NSError *)error
 {
- 
+    NSString *loginButtonTitle;
+    NSString *userPadImageName;
+    NSString *passPadImageName;
+    switch (error.code) {
+        case PeopleValidationErrorBlankUsernameOnly:
+            userPadImageName = @"ico-user-error";
+            passPadImageName = @"ico-pass-normal";
+            loginButtonTitle = NSLocalizedString(@"Blank username!", @"");
+            break;
+        case PeopleValidationErrorBlankPasswordOnly:
+            userPadImageName = @"ico-user-normal";
+            passPadImageName = @"ico-pass-error";
+            loginButtonTitle = NSLocalizedString(@"Blank password!", @"");
+            break;
+        case PeopleValidationErrorBlankUsernameAndPassword:
+            userPadImageName = @"ico-user-error";
+            passPadImageName = @"ico-pass-error";
+            loginButtonTitle = NSLocalizedString(@"Blank username and password!", @"");
+            break;
+            
+        default:
+            break;
+    }
+    
+    self.usernamePadImageView.image = [UIImage imageNamed:userPadImageName];
+    self.passwordPadImageView.image = [UIImage imageNamed:passPadImageName];
+    [self.loginButton setTitle:loginButtonTitle forState:UIControlStateNormal];
+    [self.loginButton applyErrorTitleColorForPrimaryColor];
+
 }
 
 - (IBAction)loginButtonPressed:(id)sender
@@ -133,9 +168,40 @@
     {
         [self loginErrorWithError:validationError];
     }
+    
+    [self.usernameTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+}
+
+- (void)setLoginButtonToNormalState
+{
+    NSString *loginButtonTitle = NSLocalizedString(@"Login", @"");
+    [self.loginButton setTitle:loginButtonTitle forState:UIControlStateNormal];
+    [self.loginButton applyNormalTitleColorForPrimaryColor];
 }
 
 #pragma mark - UITextFieldDelegates
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    NSString *userPadImageName;
+    NSString *passPadImageName;
+
+    if (textField == self.usernameTextField)
+    {
+        userPadImageName = @"ico-user-active";
+        passPadImageName = @"ico-pass-normal";
+    }
+    else if (textField == self.passwordTextField)
+    {
+        userPadImageName = @"ico-user-normal";
+        passPadImageName = @"ico-pass-active";
+    }
+    self.usernamePadImageView.image = [UIImage imageNamed:userPadImageName];
+    self.passwordPadImageView.image = [UIImage imageNamed:passPadImageName];
+
+    [self setLoginButtonToNormalState];
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -143,13 +209,7 @@
         [self.passwordTextField becomeFirstResponder];
     }
     else if (textField == self.passwordTextField) {
-        if (([self.usernameTextField.text length] > 0) &&
-            ([self.passwordTextField.text length] > 0))
-        {
-            if (YES) {
-                [self loginButtonPressed:textField];
-            }
-        }
+        [self loginButtonPressed:textField];
     }
     [textField resignFirstResponder];
     return YES;

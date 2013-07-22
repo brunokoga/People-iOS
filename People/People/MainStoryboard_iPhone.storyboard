@@ -89,7 +89,7 @@
                                     <outlet property="delegate" destination="cXe-pJ-l83" id="2sP-hV-0Ug"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UgX-iR-rNX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UgX-iR-rNX" customClass="PeopleRegularButton">
                                 <rect key="frame" x="42" y="332" width="236" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
@@ -104,7 +104,7 @@
                                     <action selector="loginButtonPressed:" destination="cXe-pJ-l83" eventType="touchUpInside" id="QZp-mZ-ExY"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ico-pass-normal" id="Ep9-n6-9gJ">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ico-user-normal" id="Ep9-n6-9gJ">
                                 <rect key="frame" x="42" y="252" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -118,8 +118,10 @@
                     <connections>
                         <outlet property="loginButton" destination="UgX-iR-rNX" id="0xZ-xn-Wke"/>
                         <outlet property="logoImageView" destination="SGq-Kz-c4o" id="Luu-UJ-9ul"/>
+                        <outlet property="passwordPadImageView" destination="Iq9-9s-FVu" id="VO3-ls-Y8n"/>
                         <outlet property="passwordTextField" destination="Dlf-Il-s1O" id="sHN-vs-rPS"/>
                         <outlet property="phraseImageView" destination="hU4-ii-OrD" id="clu-pe-2fM"/>
+                        <outlet property="usernamePadImageView" destination="Ep9-n6-9gJ" id="zPL-w7-JVu"/>
                         <outlet property="usernameTextField" destination="6Kc-th-eup" id="bdd-jZ-S8D"/>
                         <segue destination="QOm-jz-V29" kind="custom" identifier="Login To Search Segue" customClass="PeopleInitialTransitionSegue" id="cKw-ch-Hgu"/>
                     </connections>
@@ -204,6 +206,7 @@
         <image name="People - White Logo" width="174" height="70"/>
         <image name="get" width="98" height="10"/>
         <image name="ico-pass-normal" width="25" height="25"/>
+        <image name="ico-user-normal" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

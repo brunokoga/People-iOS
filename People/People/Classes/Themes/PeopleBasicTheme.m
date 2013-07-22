@@ -113,5 +113,23 @@ NSString * const kPeopleFontSemiBoldName = @"Dosis-SemiBold";
     return [UIColor colorWithRed:241.0/255.0 green:210.0/255.0 blue:0.0/255.0 alpha:1.0];
 }
 
++ (UIColor *)primaryButtonColorForState:(UIControlState)state
+{
+    UIColor *returnColor;
+    switch (state) {
+        case UIControlStateNormal:
+            returnColor = [UIColor whiteColor];
+            break;
+        case UIControlStateHighlighted:
+            returnColor = [UIColor grayColor];
+            break;
+            
+        default:
+            break;
+    }
+    return returnColor;
+}
+
+
 
 @end
