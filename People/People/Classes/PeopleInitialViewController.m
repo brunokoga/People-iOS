@@ -83,7 +83,7 @@ static NSString * const kSearchSegueIdentifier = @"Search Segue";
 {
     CGPoint convertedCenter = [self.logoPlusPhraseView convertPoint:self.view.center toView:nil];
     
-    CGPoint convertedLogoCenter = CGPointMake(convertedCenter.x, self.view.frame.size.height/4);
+    CGPoint convertedLogoCenter = CGPointMake(convertedCenter.x, self.view.frame.size.height/5);
     CGPoint convertedPhraseCenter = CGPointMake(convertedCenter.x, 5*self.view.frame.size.height/6);
     
     convertedLogoCenter =  [self.view convertPoint:convertedLogoCenter toView:self.logoPlusPhraseView];

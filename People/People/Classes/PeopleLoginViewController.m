@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet PeopleRegularButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIImageView *usernamePadImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *passwordPadImageView;
+@property (weak, nonatomic) IBOutlet UIView *fieldsContainerView;
 
 @end
 
@@ -56,13 +57,14 @@
 
 - (void)adjustUIElements
 {
-    CGPoint logoImageViewCenter = CGPointMake(self.view.center.x, self.view.frame.size.height/4);
+    CGPoint logoImageViewCenter = CGPointMake(self.view.center.x, self.view.frame.size.height/5);
     [self.logoImageView setCenter:logoImageViewCenter];
     
     CGPoint phraseImageViewCenter = CGPointMake(self.view.center.x, 5*self.view.frame.size.height/6);
     [self.phraseImageView setCenter:phraseImageViewCenter];
     [self animateViewsIn];
     [self setLoginButtonToNormalState];
+    [self.fieldsContainerView setCenter:self.view.center];
     
 }
 
