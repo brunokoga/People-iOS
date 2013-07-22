@@ -13,6 +13,7 @@
 
 @interface PeopleLoginViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *phraseImageView;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -52,8 +53,11 @@
 
 - (void)adjustUIElements
 {
-    CGPoint logoImageViewCenter = CGPointMake(self.view.center.x, self.view.center.y - self.view.frame.size.height/4 - 14);
+    CGPoint logoImageViewCenter = CGPointMake(self.view.center.x, self.view.frame.size.height/4);
     [self.logoImageView setCenter:logoImageViewCenter];
+    
+    CGPoint phraseImageViewCenter = CGPointMake(self.view.center.x, 5*self.view.frame.size.height/6);
+    [self.phraseImageView setCenter:phraseImageViewCenter];
     [self animateViewsIn];
     
 }

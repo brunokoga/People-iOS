@@ -81,16 +81,21 @@ static NSString * const kSearchSegueIdentifier = @"Search Segue";
 
 - (void)transitionToLoginWithCompletion:(void (^)(void))completion
 {
-    CGPoint convertedCenter = [self.view convertPoint:self.logoImageView.center toView:nil];
-    CGPoint newLogoCenter = CGPointMake(convertedCenter.x, convertedCenter.y - self.view.frame.size.height/4);
+    CGPoint convertedCenter = [self.logoPlusPhraseView convertPoint:self.view.center toView:nil];
+    
+    CGPoint convertedLogoCenter = CGPointMake(convertedCenter.x, self.view.frame.size.height/4);
+    CGPoint convertedPhraseCenter = CGPointMake(convertedCenter.x, 5*self.view.frame.size.height/6);
+    
+    convertedLogoCenter =  [self.view convertPoint:convertedLogoCenter toView:self.logoPlusPhraseView];
+    convertedPhraseCenter =  [self.view convertPoint:convertedPhraseCenter toView:self.logoPlusPhraseView];
+    
     [UIView animateWithDuration:2.0
                           delay:0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         [self.phraseImageView setAlpha:0.0];
-                         [self.logoImageView setCenter:newLogoCenter];
+                         [self.logoImageView setCenter:convertedLogoCenter];
+                         [self.phraseImageView setCenter:convertedPhraseCenter];
                      } completion:^(BOOL finished) {
-                         [self.phraseImageView removeFromSuperview];
                          completion();
                      }];
 }

@@ -59,12 +59,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="get" id="hU4-ii-OrD">
+                                <rect key="frame" x="111" y="424" width="98" height="10"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="People - White Logo" id="SGq-Kz-c4o">
                                 <rect key="frame" x="73" y="62" width="174" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" id="6Kc-th-eup">
-                                <rect key="frame" x="112" y="181" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" id="6Kc-th-eup">
+                                <rect key="frame" x="73" y="250" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,8 +78,8 @@
                                     <outlet property="delegate" destination="cXe-pJ-l83" id="aea-Mh-um5"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" id="Dlf-Il-s1O">
-                                <rect key="frame" x="112" y="219" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" id="Dlf-Il-s1O">
+                                <rect key="frame" x="73" y="285" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,7 +90,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UgX-iR-rNX">
-                                <rect key="frame" x="124" y="257" width="73" height="44"/>
+                                <rect key="frame" x="42" y="332" width="236" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Login">
@@ -100,6 +104,14 @@
                                     <action selector="loginButtonPressed:" destination="cXe-pJ-l83" eventType="touchUpInside" id="QZp-mZ-ExY"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ico-pass-normal" id="Ep9-n6-9gJ">
+                                <rect key="frame" x="42" y="252" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ico-pass-normal" id="Iq9-9s-FVu">
+                                <rect key="frame" x="42" y="290" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -107,6 +119,7 @@
                         <outlet property="loginButton" destination="UgX-iR-rNX" id="0xZ-xn-Wke"/>
                         <outlet property="logoImageView" destination="SGq-Kz-c4o" id="Luu-UJ-9ul"/>
                         <outlet property="passwordTextField" destination="Dlf-Il-s1O" id="sHN-vs-rPS"/>
+                        <outlet property="phraseImageView" destination="hU4-ii-OrD" id="clu-pe-2fM"/>
                         <outlet property="usernameTextField" destination="6Kc-th-eup" id="bdd-jZ-S8D"/>
                         <segue destination="QOm-jz-V29" kind="custom" identifier="Login To Search Segue" customClass="PeopleInitialTransitionSegue" id="cKw-ch-Hgu"/>
                     </connections>
@@ -190,6 +203,7 @@
         <image name="DefaultBackground" width="320" height="480"/>
         <image name="People - White Logo" width="174" height="70"/>
         <image name="get" width="98" height="10"/>
+        <image name="ico-pass-normal" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -198,6 +212,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="eFc-dR-0q4"/>
-        <segue reference="YFJ-pG-dwf"/>
+        <segue reference="cKw-ch-Hgu"/>
     </inferredMetricsTieBreakers>
 </document>
