@@ -71,8 +71,18 @@
                                 <rect key="frame" x="0.0" y="195" width="320" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" id="YSi-uc-pKV" userLabel="Separador">
+                                        <rect key="frame" x="35" y="54" width="243" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="EWA-a3-sy3" userLabel="Separador">
+                                        <rect key="frame" x="35" y="92" width="243" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UgX-iR-rNX" customClass="PeopleRegularButton">
-                                        <rect key="frame" x="42" y="126" width="236" height="44"/>
+                                        <rect key="frame" x="38" y="132" width="236" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                         <state key="normal" title="Login">
@@ -87,7 +97,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" id="Dlf-Il-s1O">
-                                        <rect key="frame" x="73" y="64" width="205" height="30"/>
+                                        <rect key="frame" x="73" y="58" width="205" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -98,15 +108,15 @@
                                         </connections>
                                     </textField>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ico-pass-normal" id="Iq9-9s-FVu">
-                                        <rect key="frame" x="42" y="69" width="25" height="25"/>
+                                        <rect key="frame" x="42" y="60" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ico-user-normal" id="Ep9-n6-9gJ">
-                                        <rect key="frame" x="42" y="31" width="25" height="25"/>
+                                        <rect key="frame" x="42" y="25" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" id="6Kc-th-eup">
-                                        <rect key="frame" x="73" y="29" width="205" height="30"/>
+                                        <rect key="frame" x="73" y="23" width="205" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
