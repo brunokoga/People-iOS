@@ -253,7 +253,7 @@
 
     if (!willHide)
     {
-        logoViewCenter = CGPointMake(self.view.center.x, self.view.frame.size.height/8);
+        logoViewCenter = CGPointMake(self.view.center.x, self.view.frame.size.height/7);
         fieldsViewCenter = CGPointMake(self.view.center.x, 2*self.view.frame.size.height/5);
         
         
@@ -272,7 +272,10 @@
                          animations:^{
                              
                              self.fieldsContainerView.center = fieldsViewCenter;
-                             self.loginButton.center = CGPointMake(self.loginButton.center.x, self.loginButton.center.y - 20.0);
+                             if ([[UIScreen mainScreen] bounds].size.height == 480.0)
+                             {
+                                 self.loginButton.center = CGPointMake(self.loginButton.center.x, self.loginButton.center.y - 20.0);
+                             }
                          }
                          completion:^(BOOL finished) {
                              
@@ -290,7 +293,10 @@
                          animations:^{
                              
                              self.fieldsContainerView.center = fieldsViewCenter;
-                             self.loginButton.center = CGPointMake(self.loginButton.center.x, self.loginButton.center.y + 20.0);
+                             if ([[UIScreen mainScreen] bounds].size.height == 480.0)
+                             {
+                                 self.loginButton.center = CGPointMake(self.loginButton.center.x, self.loginButton.center.y + 20.0);
+                             }
                          }
                          completion:^(BOOL finished) {
                              
