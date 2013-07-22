@@ -9,6 +9,7 @@
 #import "PeopleSearchViewController.h"
 
 @interface PeopleSearchViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundLogo;
 
 @end
 
@@ -29,10 +30,22 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)adjustUIElements
+{
+    [self.backgroundLogo setCenter:self.view.center];
 }
 
 @end

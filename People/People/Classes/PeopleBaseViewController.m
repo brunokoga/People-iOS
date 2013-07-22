@@ -59,4 +59,10 @@
     //overriden    
 }
 
+- (void)performTransitionWithSegueIdentifier:(NSString *)identifier
+                                  completion:(void (^)(void))completion
+{
+    //overriden
+}
+
 @end

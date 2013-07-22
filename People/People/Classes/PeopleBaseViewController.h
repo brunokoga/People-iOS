@@ -10,4 +10,7 @@
 
 @interface PeopleBaseViewController : UIViewController
 
+- (void)performTransitionWithSegueIdentifier:(NSString *)identifier
+                                  completion:(void (^)(void))completion;
+
 @end

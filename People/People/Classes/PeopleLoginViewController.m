@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *usernamePadImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *passwordPadImageView;
 @property (weak, nonatomic) IBOutlet UIView *fieldsContainerView;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 @end
 
@@ -340,8 +341,46 @@ static NSString * const kLoginToSearchSegue = @"Login To Search Segue";
 - (void)performTransitionWithSegueIdentifier:(NSString *)identifier
                                   completion:(void (^)(void))completion
 {
-    completion();
+    [UIView animateWithDuration:1.0
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [self.fieldsContainerView setAlpha:0.0];
+                         [self.phraseImageView setAlpha:0.0];
+                     } completion:^(BOOL finished) {
+
+                     }];
+
+    [UIView animateWithDuration:2.0
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [self.logoImageView setCenter:self.view.center];
+                     } completion:^(BOOL finished) {
+
+                         UIImageView *logoTransitionImageView = [self logoTransitionImaveView];
+                         [UIView animateWithDuration:1.0
+                                               delay:0
+                                             options:UIViewAnimationOptionCurveEaseInOut
+                                          animations:^{
+                                              self.logoImageView.alpha = 0.0;
+                                              logoTransitionImageView.alpha = 1.0;
+                                              [self.backgroundImageView setAlpha:0.0];
+                                          } completion:^(BOOL finished) {
+                                              completion();
+                                          }];
+
+                     }];
+
 }
 
+- (UIImageView *)logoTransitionImaveView
+{
+    UIImageView *logoTransitionImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"People - White Logo"]];
+    [logoTransitionImageView setAlpha:0.0];
+    [self.view addSubview:logoTransitionImageView];
+    logoTransitionImageView.frame = self.logoImageView.frame;
+    return logoTransitionImageView;
+}
 
 @end

@@ -7,13 +7,13 @@
 //
 
 #import "PeopleInitialTransitionSegue.h"
-#import "PeopleInitialViewController.h"
+#import "PeopleBaseViewController.h"
 
 @implementation PeopleInitialTransitionSegue
 
 - (void)perform
 {
-    PeopleInitialViewController *source = self.sourceViewController;
+    PeopleBaseViewController *source = self.sourceViewController;
     UIViewController *destination = self.destinationViewController;
 
     [source performTransitionWithSegueIdentifier:self.identifier
