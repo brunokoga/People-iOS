@@ -52,15 +52,26 @@
     [super viewDidDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+#pragma mark - Positioning
+
+- (CGPoint)logoViewInitialCenter
+{
+    return CGPointMake(self.view.center.x, self.view.frame.size.height/5);
+}
+
+- (CGPoint)phraseViewInitialCenter
+{
+    return CGPointMake(self.view.center.x, 5*self.view.frame.size.height/6);
+}
 
 #pragma mark - Load Methods
 
 - (void)adjustUIElements
 {
-    CGPoint logoImageViewCenter = CGPointMake(self.view.center.x, self.view.frame.size.height/5);
+    CGPoint logoImageViewCenter = [self logoViewInitialCenter];
     [self.logoImageView setCenter:logoImageViewCenter];
     
-    CGPoint phraseImageViewCenter = CGPointMake(self.view.center.x, 5*self.view.frame.size.height/6);
+    CGPoint phraseImageViewCenter = [self phraseViewInitialCenter];
     [self.phraseImageView setCenter:phraseImageViewCenter];
     [self animateViewsIn];
     [self setLoginButtonToNormalState];
@@ -144,8 +155,10 @@
             passPadImageName = @"ico-pass-error";
             loginButtonTitle = NSLocalizedString(@"Blank username and password!", @"");
             break;
-            
         default:
+            userPadImageName = @"ico-user-normal";
+            passPadImageName = @"ico-pass-normal";
+            loginButtonTitle = NSLocalizedString(@"Server Error!", @"");
             break;
     }
     
@@ -156,14 +169,25 @@
 
 }
 
+- (void)setPadsImageViewsToNormalState
+{
+    NSString *userPadImageName = @"ico-user-normal";
+    NSString *passPadImageName = passPadImageName = @"ico-pass-normal";
+    
+    self.usernamePadImageView.image = [UIImage imageNamed:userPadImageName];
+    self.passwordPadImageView.image = [UIImage imageNamed:passPadImageName];
+
+}
 - (IBAction)loginButtonPressed:(id)sender
 {
+    
     NSString *username = self.usernameTextField.text;
     NSString *password = self.passwordTextField.text;
     PeopleValidation *validation = [[PeopleValidation alloc] init];
     NSError *validationError = nil;
     if ([validation validUsername:username password:password error:&validationError])
     {
+        [self setPadsImageViewsToNormalState];
         [self loginWithUsername:username password:password];
     }
     else
@@ -223,86 +247,65 @@
 
 - (void)keyboardWillHide:(BOOL)willHide animationDuration:(NSTimeInterval)animationDuration
 {
-    /*
-    CGPoint titleViewCenter;
-    CGPoint fieldsViewCenter;
-    CGPoint btnLoginCenter;
     
+    CGPoint logoViewCenter;
+    CGPoint fieldsViewCenter;
+
     if (!willHide)
     {
-        titleViewCenter = CGPointMake(165, 50);
-        fieldsViewCenter = CGPointMake(160, 130);
-        btnLoginCenter = CGPointMake(160, 205);
+        logoViewCenter = CGPointMake(self.view.center.x, self.view.frame.size.height/8);
+        fieldsViewCenter = CGPointMake(self.view.center.x, 2*self.view.frame.size.height/5);
+        
         
         [UIView animateWithDuration:animationDuration+0.2f delay:0
-                            options:UIViewAnimationCurveEaseOut
+                            options:UIViewAnimationOptionCurveEaseOut
                          animations:^{
                              
-                             //                             self.titleView.transform = CGAffineTransformMakeScale(0.6f, 0.6f);
-                             self.titleView.center = titleViewCenter;
+                             self.logoImageView.center = logoViewCenter;
                          }
-l                         completion:^(BOOL finished) {
+                         completion:^(BOOL finished) {
                              
                          }];
         
         [UIView animateWithDuration:animationDuration+0.2f delay:0.1
-                            options:UIViewAnimationCurveEaseOut
+                            options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
                              
-                             self.fieldView.center = fieldsViewCenter;
+                             self.fieldsContainerView.center = fieldsViewCenter;
+                             self.loginButton.center = CGPointMake(self.loginButton.center.x, self.loginButton.center.y - 20.0);
                          }
                          completion:^(BOOL finished) {
                              
                          }];
         
-        [UIView animateWithDuration:animationDuration+0.2f delay:0.2
-                            options:UIViewAnimationCurveEaseOut
-                         animations:^{
-                             
-                             self.btnLogin.center = btnLoginCenter;
-                         }
-                         completion:^(BOOL finished) {
-                             
-                         }];
     }
     else
     {
-        titleViewCenter = CGPointMake(165, 110);
-        fieldsViewCenter = CGPointMake(160, 221);
-        btnLoginCenter = CGPointMake(160, 295);
+        logoViewCenter = [self logoViewInitialCenter];
+        fieldsViewCenter = self.view.center;
         
-        [UIView animateWithDuration:animationDuration+0.5f delay:0
-                            options:UIViewAnimationCurveEaseIn
+
+        [UIView animateWithDuration:animationDuration+0.2f delay:0.1
+                            options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
                              
-                             self.btnLogin.center = btnLoginCenter;
+                             self.fieldsContainerView.center = fieldsViewCenter;
+                             self.loginButton.center = CGPointMake(self.loginButton.center.x, self.loginButton.center.y + 20.0);
                          }
                          completion:^(BOOL finished) {
                              
                          }];
         
-        [UIView animateWithDuration:animationDuration+0.5f delay:0.1
-                            options:UIViewAnimationCurveEaseIn
+        [UIView animateWithDuration:animationDuration+0.2f delay:0
+                            options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
                              
-                             self.fieldView.center = fieldsViewCenter;
-                         }
-                         completion:^(BOOL finished) {
-                             
-                         }];
-        
-        [UIView animateWithDuration:animationDuration+0.5f delay:0.2
-                            options:UIViewAnimationCurveEaseIn
-                         animations:^{
-                             
-                             //                             self.titleView.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
-                             self.titleView.center = titleViewCenter;
+                             self.logoImageView.center = logoViewCenter;
                          }
                          completion:^(BOOL finished) {
                              
                          }];
     }
-     */
 }
 
 
