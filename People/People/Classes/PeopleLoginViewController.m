@@ -218,6 +218,7 @@
 #pragma mark - Keyboard animations
 
 
+
 - (void)keyboardWillHide:(BOOL)willHide animationDuration:(NSTimeInterval)animationDuration
 {
     /*
@@ -238,7 +239,7 @@
                              //                             self.titleView.transform = CGAffineTransformMakeScale(0.6f, 0.6f);
                              self.titleView.center = titleViewCenter;
                          }
-                         completion:^(BOOL finished) {
+l                         completion:^(BOOL finished) {
                              
                          }];
         
