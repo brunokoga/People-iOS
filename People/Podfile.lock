@@ -1,22 +1,27 @@
 PODS:
   - AFNetworking (1.3.1)
   - ARSafeJSON (0.0.7)
+  - BKUIAdditions (1.0)
   - PeopleSwipeTableViewCell (1.0)
   - SSKeychain (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking
   - ARSafeJSON
+  - BKUIAdditions (from `https://github.com/brunokoga/BKUIAdditions.git`)
   - PeopleSwipeTableViewCell (from `https://github.com/brunokoga/PeopleSwipeTableViewCell.git`)
   - SSKeychain
 
 EXTERNAL SOURCES:
+  BKUIAdditions:
+    :git: https://github.com/brunokoga/BKUIAdditions.git
   PeopleSwipeTableViewCell:
     :git: https://github.com/brunokoga/PeopleSwipeTableViewCell.git
 
 SPEC CHECKSUMS:
   AFNetworking: 9ec8aafb9269236a7630bd8d9838ce2ba30fa2a0
   ARSafeJSON: 737d05b66a51376fcc7c548569c457a77a70bd2c
+  BKUIAdditions: 77a86d349bfc570c7fa920991d12b2a91932903a
   PeopleSwipeTableViewCell: fbd4456e677bb19d32577973b1582d757c46f31b
   SSKeychain: 54b6daee1d95af968beebef07522b583ff9a809c
 
