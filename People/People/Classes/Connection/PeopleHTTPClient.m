@@ -7,6 +7,8 @@
 //
 
 #import "PeopleHTTPClient.h"
+#import <FormatterKit/TTTURLRequestFormatter.h>
+#import <AFNetworking/AFHTTPRequestOperation.h>
 
 @implementation PeopleHTTPClient
 
@@ -28,6 +30,14 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
 {
     NSURL *baseURL = [NSURL URLWithString:kPeopleBaseURL];
     return  baseURL;
+}
+
+- (void)enqueueHTTPRequestOperation:(AFHTTPRequestOperation *)operation
+{
+#ifdef DEBUG
+    NSLog(@"%@\n\n", [TTTURLRequestFormatter cURLCommandFromURLRequest:operation.request]);
+#endif
+    [super enqueueHTTPRequestOperation:operation];
 }
 
 #pragma mark - Authentication
