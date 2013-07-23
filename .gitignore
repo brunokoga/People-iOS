@@ -18,3 +18,5 @@ DerivedData
 .idea/
 Pods/
 
+
+People/Podfile.lock
