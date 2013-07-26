@@ -83,10 +83,13 @@
 - (void)adjustColors
 {
     UIColor *color = [PeopleBasicTheme peopleColor1Secondary];
+    UIFont *font = [PeopleBasicTheme peopleFontBookWithSize:self.usernameTextField.font.pointSize];
     self.usernameTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.usernameTextField.placeholder
-                                                                                   attributes:@{NSForegroundColorAttributeName : color}];
+                                                                                   attributes:@{NSForegroundColorAttributeName : color,
+                                                                                                NSFontAttributeName : font }];
     self.passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.passwordTextField.placeholder
-                                                                                   attributes:@{NSForegroundColorAttributeName : color}];
+                                                                                   attributes:@{NSForegroundColorAttributeName : color,
+                                                                                                NSFontAttributeName : font }];
     
     [self.loginButton applyPrimaryColor];
     
@@ -94,9 +97,9 @@
 
 - (void)adjustFonts
 {
-    self.usernameTextField.font = [PeopleBasicTheme peopleFontLightWithSize:self.usernameTextField.font.pointSize];
-    self.passwordTextField.font = [PeopleBasicTheme peopleFontLightWithSize:self.passwordTextField.font.pointSize];
-    self.loginButton.titleLabel.font = [PeopleBasicTheme peopleFontLightWithSize:self.loginButton.titleLabel.font.pointSize];
+    self.usernameTextField.font = [PeopleBasicTheme peopleFontBookWithSize:self.usernameTextField.font.pointSize];
+    self.passwordTextField.font = [PeopleBasicTheme peopleFontBookWithSize:self.passwordTextField.font.pointSize];
+    self.loginButton.titleLabel.font = [PeopleBasicTheme peopleFontBookWithSize:self.loginButton.titleLabel.font.pointSize];
 }
 
 - (void)animateViewsIn
@@ -244,7 +247,29 @@
 
 #pragma mark - Keyboard animations
 
-
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    BOOL enabled = YES;
+    
+    if (([textField.text length] <=1) && ([string length] == 0)) {
+        enabled = NO;
+    }
+    
+    if (textField != self.usernameTextField && [self.usernameTextField.text length] == 0)
+    {
+        enabled = NO;
+    }
+    
+    if (textField != self.passwordTextField && [self.passwordTextField.text length] == 0)
+    {
+        enabled = NO;
+    }
+    
+    
+    [self.loginButton setEnabled:enabled];
+    
+    return YES;
+}
 
 - (void)keyboardWillHide:(BOOL)willHide animationDuration:(NSTimeInterval)animationDuration
 {
