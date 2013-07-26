@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9AED62FE459640D98CC80172 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAB2C557C6B42DE9192D9C5 /* libPods.a */; };
+		D31FEBFB17A20769007F4712 /* PeopleProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D31FEBFA17A20769007F4712 /* PeopleProfileViewController.m */; };
 		D327A4CA17989A8D0042FF8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D327A4C917989A8D0042FF8B /* Images.xcassets */; };
 		D329173A179A217D00140214 /* PeopleColaboradorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3291739179A217D00140214 /* PeopleColaboradorTests.m */; };
 		D34C56D9179AEBE500706AFF /* search_generic1.json in Resources */ = {isa = PBXBuildFile; fileRef = D34C56D7179AEBE500706AFF /* search_generic1.json */; };
@@ -55,7 +56,6 @@
 		D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */; };
 		D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81B1798A0C300F05FD5 /* PeopleInitialViewController.m */; };
 		D3DA46D8179D8C170061809D /* PeopleRegularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DA46D7179D8C170061809D /* PeopleRegularButton.m */; };
-		D3DA46DB179D8CE50061809D /* UIButton+BKColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DA46DA179D8CE50061809D /* UIButton+BKColorAdditions.m */; };
 		D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +71,8 @@
 
 /* Begin PBXFileReference section */
 		B1B65C1B01294229848DAD83 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleProfileViewController.h; path = Classes/PeopleProfileViewController.h; sourceTree = "<group>"; };
+		D31FEBFA17A20769007F4712 /* PeopleProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleProfileViewController.m; path = Classes/PeopleProfileViewController.m; sourceTree = "<group>"; };
 		D327A4C917989A8D0042FF8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D3291739179A217D00140214 /* PeopleColaboradorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleColaboradorTests.m; sourceTree = "<group>"; };
 		D34C56D7179AEBE500706AFF /* search_generic1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search_generic1.json; sourceTree = "<group>"; };
@@ -142,8 +144,6 @@
 		D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PeoplePreferences.m; path = Classes/PeoplePreferences.m; sourceTree = "<group>"; };
 		D3DA46D6179D8C170061809D /* PeopleRegularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleRegularButton.h; path = People/Classes/PeopleRegularButton.h; sourceTree = "<group>"; };
 		D3DA46D7179D8C170061809D /* PeopleRegularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleRegularButton.m; path = People/Classes/PeopleRegularButton.m; sourceTree = "<group>"; };
-		D3DA46D9179D8CE50061809D /* UIButton+BKColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+BKColorAdditions.h"; path = "People/UIButton+BKColorAdditions.h"; sourceTree = "<group>"; };
-		D3DA46DA179D8CE50061809D /* UIButton+BKColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+BKColorAdditions.m"; path = "People/UIButton+BKColorAdditions.m"; sourceTree = "<group>"; };
 		D3F213FA1798BEA800E19338 /* PeopleInitialTransitionSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialTransitionSegue.h; path = Classes/Segues/PeopleInitialTransitionSegue.h; sourceTree = "<group>"; };
 		D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleInitialTransitionSegue.m; path = Classes/Segues/PeopleInitialTransitionSegue.m; sourceTree = "<group>"; };
 		ECAB2C557C6B42DE9192D9C5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +176,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D31FEBFC17A208A9007F4712 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				D3DA46D6179D8C170061809D /* PeopleRegularButton.h */,
+				D3DA46D7179D8C170061809D /* PeopleRegularButton.m */,
+			);
+			name = "UI Components";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		D34C56E3179B29EA00706AFF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,10 +221,6 @@
 		D38B346F179898BB00E2AF26 = {
 			isa = PBXGroup;
 			children = (
-				D3DA46D9179D8CE50061809D /* UIButton+BKColorAdditions.h */,
-				D3DA46DA179D8CE50061809D /* UIButton+BKColorAdditions.m */,
-				D3DA46D6179D8C170061809D /* PeopleRegularButton.h */,
-				D3DA46D7179D8C170061809D /* PeopleRegularButton.m */,
 				D38B3481179898BB00E2AF26 /* People */,
 				D371D2B41798AA19009C9D9E /* Private Headers */,
 				D39DDC051799E77D00E9D0C5 /* Test Data */,
@@ -251,6 +257,7 @@
 		D38B3481179898BB00E2AF26 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				D31FEBFC17A208A9007F4712 /* UI Components */,
 				D34C56F2179B29ED00706AFF /* UX */,
 				D34C56E0179B06B300706AFF /* PeopleFavorites.h */,
 				D34C56E1179B06B300706AFF /* PeopleFavorites.m */,
@@ -396,6 +403,8 @@
 				D371D2BD1798B8ED009C9D9E /* PeopleTutorialViewController.m */,
 				D371D2BE1798B8FC009C9D9E /* PeopleSearchViewController.h */,
 				D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */,
+				D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */,
+				D31FEBFA17A20769007F4712 /* PeopleProfileViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -552,7 +561,6 @@
 				D39DDBF21799B90600E9D0C5 /* PeopleBasicTheme.m in Sources */,
 				D3DA46D8179D8C170061809D /* PeopleRegularButton.m in Sources */,
 				D371D2B21798A554009C9D9E /* PeoplePreferences.m in Sources */,
-				D3DA46DB179D8CE50061809D /* UIButton+BKColorAdditions.m in Sources */,
 				D38B3488179898BB00E2AF26 /* main.m in Sources */,
 				D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */,
 				D34C56E2179B06B300706AFF /* PeopleFavorites.m in Sources */,
@@ -560,6 +568,7 @@
 				D3A3083E179C438D0010FE51 /* PeopleTableViewDataSource.m in Sources */,
 				D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */,
 				D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */,
+				D31FEBFB17A20769007F4712 /* PeopleProfileViewController.m in Sources */,
 				D3A30845179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m in Sources */,
 				D38B348C179898BB00E2AF26 /* PeopleAppDelegate.m in Sources */,
 				D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */,
