@@ -20,20 +20,21 @@
 + (UIFont *)peopleFontMediumWithSize:(CGFloat)size;
 + (UIFont *)peopleFontSemiBoldWithSize:(CGFloat)size;
 
-+ (UIColor *)peopleColorPrimaryLight;
-+ (UIColor *)peopleColorPrimaryNormal;
-+ (UIColor *)peopleColorPrimaryDark;
++ (UIColor *)peopleColor1Primary;
++ (UIColor *)peopleColor1Secondary;
++ (UIColor *)peopleColor1Tertiary;
 
-+ (UIColor *)peopleColorSecondaryLight;
-+ (UIColor *)peopleColorSecondaryDark;
++ (UIColor *)peopleColor2Primary;
++ (UIColor *)peopleColor2Secondary;
++ (UIColor *)peopleColor2Tertiary;
 
-+ (UIColor *)peopleColorBasicExtraLight;
-+ (UIColor *)peopleColorBasicLight;
-+ (UIColor *)peopleColorBasicNormal;
-+ (UIColor *)peopleColorBasicDark;
-+ (UIColor *)peopleColorBasicExtraDark;
++ (UIColor *)peopleColor3Primary;
++ (UIColor *)peopleColor3Secondary;
++ (UIColor *)peopleColor3Tertiary;
 
-+ (UIColor *)peopleColorTertiary;
++ (UIColor *)peopleColor4Primary;
++ (UIColor *)peopleColor4Secondary;
++ (UIColor *)peopleColor4Tertiary;
 
 + (UIColor *)primaryButtonColorForState:(UIControlState)state;
 

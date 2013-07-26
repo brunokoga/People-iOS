@@ -49,7 +49,7 @@
 
 - (void)applyNormalTitleColorForPrimaryColor
 {
-    [self setTitleColor:[PeopleBasicTheme peopleColorBasicNormal] forState:UIControlStateNormal];
+    [self setTitleColor:[PeopleBasicTheme peopleColor1Primary] forState:UIControlStateNormal];
 }
 
 - (void)applyErrorTitleColorForPrimaryColor

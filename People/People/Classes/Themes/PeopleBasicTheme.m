@@ -58,60 +58,72 @@ NSString * const kPeopleFontSemiBoldName = @"Dosis-SemiBold";
     return [UIFont fontWithName:kPeopleFontSemiBoldName size:size];
 }
 
-+ (UIColor *)peopleColorPrimaryLight
+
+//1 = Blue
+//2 = Gray
+//3 = Red
+//4 = Yellow
++ (UIColor *)peopleColor1Primary
 {
-    return [UIColor colorWithRed:44.0/255.0 green:128.0/255.0 blue:213.0/255.0 alpha:1.0];
+    return [UIColor colorWithRed:53.0/255.0 green:136.0/255.0 blue:220.0/255.0 alpha:1.0];
 }
 
-+ (UIColor *)peopleColorPrimaryNormal
++ (UIColor *)peopleColor1Secondary
 {
-    return [UIColor colorWithRed:25.0/255.0 green:92.0/255.0 blue:159.0/255.0 alpha:1.0];
+    return [UIColor colorWithRed:115.0/255.0 green:177.0/255.0 blue:239.0/255.0 alpha:1.0];
 }
 
-+ (UIColor *)peopleColorPrimaryDark
++ (UIColor *)peopleColor1Tertiary
 {
-    return [UIColor colorWithRed:19.0/255.0 green:80.0/255.0 blue:138.0/255.0 alpha:1.0];
+    return nil;
 }
 
-+ (UIColor *)peopleColorSecondaryLight
++ (UIColor *)peopleColor2Primary
 {
-    return [UIColor colorWithRed:255.0/255.0 green:30.0/255.0 blue:100.0/255.0 alpha:1.0];
+    return [UIColor colorWithRed:91.0/255.0 green:98.0/255.0 blue:107.0/255.0 alpha:1.0];
 }
 
-+ (UIColor *)peopleColorSecondaryDark
++ (UIColor *)peopleColor2Secondary
 {
-    return [UIColor colorWithRed:147.0/255.0 green:11.0/255.0 blue:65.0/255.0 alpha:1.0];
+    return [UIColor colorWithRed:151.0/255.0 green:159.0/255.0 blue:167.0/255.0 alpha:1.0];
 }
 
-+ (UIColor *)peopleColorBasicExtraLight
++ (UIColor *)peopleColor2Tertiary
 {
-    return [UIColor colorWithRed:205.0/255.0 green:210.0/255.0 blue:220.0/255.0 alpha:1.0];
+    return [UIColor colorWithRed:217.0/255.0 green:220.0/255.0 blue:223.0/255.0 alpha:1.0];}
+
++ (UIColor *)peopleColor3Primary
+{
+    return [UIColor colorWithRed:255.0/255.0 green:78.0/255.0 blue:99.0/255.0 alpha:1.0];
 }
 
-+ (UIColor *)peopleColorBasicLight
++ (UIColor *)peopleColor3Secondary
 {
-    return [UIColor colorWithRed:155.0/255.0 green:163.0/255.0 blue:180.0/255.0 alpha:1.0];
+    return [UIColor colorWithRed:163.0/255.0 green:63.0/255.0 blue:75.0/255.0 alpha:1.0];
 }
 
-+ (UIColor *)peopleColorBasicNormal
++ (UIColor *)peopleColor3Tertiary
 {
-    return [UIColor colorWithRed:80.0/255.0 green:84.0/255.0 blue:99.0/255.0 alpha:1.0];
+    return nil;
 }
 
-+ (UIColor *)peopleColorBasicDark
+
++ (UIColor *)peopleColor4Primary
 {
-    return [UIColor colorWithRed:34.0/255.0 green:39.0/255.0 blue:46.0/255.0 alpha:1.0];
+    return [UIColor colorWithRed:255.0/255.0 green:222.0/255.0 blue:120.0/255.0 alpha:1.0];
 }
 
-+ (UIColor *)peopleColorBasicExtraDark
++ (UIColor *)peopleColor4Secondary
 {
-    return [UIColor colorWithRed:28.0/255.0 green:33.0/255.0 blue:43.0/255.0 alpha:1.0];
+    return [UIColor colorWithRed:231.0/255.0 green:194.0/255.0 blue:82.0/255.0 alpha:1.0];
 }
 
-+ (UIColor *)peopleColorTertiary
++ (UIColor *)peopleColor4Tertiary
 {
-    return [UIColor colorWithRed:241.0/255.0 green:210.0/255.0 blue:0.0/255.0 alpha:1.0];
+    return nil;
 }
+
+
 
 + (UIColor *)primaryButtonColorForState:(UIControlState)state
 {

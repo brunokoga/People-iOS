@@ -82,7 +82,7 @@
 
 - (void)adjustColors
 {
-    UIColor *color = [PeopleBasicTheme peopleColorPrimaryLight];
+    UIColor *color = [PeopleBasicTheme peopleColor1Secondary];
     self.usernameTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.usernameTextField.placeholder
                                                                                    attributes:@{NSForegroundColorAttributeName : color}];
     self.passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.passwordTextField.placeholder
