@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9AED62FE459640D98CC80172 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAB2C557C6B42DE9192D9C5 /* libPods.a */; };
+		AA73A0F217A6218300229CE3 /* PeopleSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73A0F117A6218300229CE3 /* PeopleSearchTableViewController.m */; };
+		AA73A0F617A62A4E00229CE3 /* PeopleSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */; };
 		D31FEBFB17A20769007F4712 /* PeopleProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D31FEBFA17A20769007F4712 /* PeopleProfileViewController.m */; };
 		D327A4CA17989A8D0042FF8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D327A4C917989A8D0042FF8B /* Images.xcassets */; };
 		D329173A179A217D00140214 /* PeopleColaboradorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3291739179A217D00140214 /* PeopleColaboradorTests.m */; };
@@ -70,6 +72,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA73A0F017A6218300229CE3 /* PeopleSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchTableViewController.h; path = Classes/PeopleSearchTableViewController.h; sourceTree = "<group>"; };
+		AA73A0F117A6218300229CE3 /* PeopleSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchTableViewController.m; path = Classes/PeopleSearchTableViewController.m; sourceTree = "<group>"; };
+		AA73A0F417A62A4E00229CE3 /* PeopleSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchTableViewCell.h; path = Classes/PeopleSearchTableViewCell.h; sourceTree = "<group>"; };
+		AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchTableViewCell.m; path = Classes/PeopleSearchTableViewCell.m; sourceTree = "<group>"; };
 		B1B65C1B01294229848DAD83 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleProfileViewController.h; path = Classes/PeopleProfileViewController.h; sourceTree = "<group>"; };
 		D31FEBFA17A20769007F4712 /* PeopleProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleProfileViewController.m; path = Classes/PeopleProfileViewController.m; sourceTree = "<group>"; };
@@ -176,6 +182,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA73A0E517A61CAE00229CE3 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA73A0EF17A6214500229CE3 /* TableView */,
+				AA73A0EE17A61EDA00229CE3 /* Cell */,
+				AA73A0E617A61CC400229CE3 /* Container */,
+			);
+			name = SearchViewController;
+			sourceTree = "<group>";
+		};
+		AA73A0E617A61CC400229CE3 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				D371D2BE1798B8FC009C9D9E /* PeopleSearchViewController.h */,
+				D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */,
+			);
+			name = Container;
+			sourceTree = "<group>";
+		};
+		AA73A0EE17A61EDA00229CE3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AA73A0F417A62A4E00229CE3 /* PeopleSearchTableViewCell.h */,
+				AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		AA73A0EF17A6214500229CE3 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				AA73A0F017A6218300229CE3 /* PeopleSearchTableViewController.h */,
+				AA73A0F117A6218300229CE3 /* PeopleSearchTableViewController.m */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
 		D31FEBFC17A208A9007F4712 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +436,7 @@
 		D3A9D8191798A08600F05FD5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AA73A0E517A61CAE00229CE3 /* SearchViewController */,
 				D3A9D8161798A08000F05FD5 /* PeopleBaseViewController.h */,
 				D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */,
 				D3A9D81A1798A0C300F05FD5 /* PeopleInitialViewController.h */,
@@ -401,8 +445,6 @@
 				D371D2BA1798B8DF009C9D9E /* PeopleLoginViewController.m */,
 				D371D2BC1798B8ED009C9D9E /* PeopleTutorialViewController.h */,
 				D371D2BD1798B8ED009C9D9E /* PeopleTutorialViewController.m */,
-				D371D2BE1798B8FC009C9D9E /* PeopleSearchViewController.h */,
-				D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */,
 				D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */,
 				D31FEBFA17A20769007F4712 /* PeopleProfileViewController.m */,
 			);
@@ -555,6 +597,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA73A0F217A6218300229CE3 /* PeopleSearchTableViewController.m in Sources */,
 				D39DDBFC1799C5CA00E9D0C5 /* PeopleJSONParser.m in Sources */,
 				D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */,
 				D371D2C11798B8FF009C9D9E /* PeopleTutorialViewController.m in Sources */,
@@ -566,6 +609,7 @@
 				D34C56E2179B06B300706AFF /* PeopleFavorites.m in Sources */,
 				D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */,
 				D3A3083E179C438D0010FE51 /* PeopleTableViewDataSource.m in Sources */,
+				AA73A0F617A62A4E00229CE3 /* PeopleSearchTableViewCell.m in Sources */,
 				D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */,
 				D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */,
 				D31FEBFB17A20769007F4712 /* PeopleProfileViewController.m in Sources */,

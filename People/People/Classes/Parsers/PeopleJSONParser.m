@@ -14,7 +14,13 @@
 {
     NSError *serializationError = nil;
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:serviceResponse options:NSUTF8StringEncoding error:&serializationError];
-    NSArray *colaboradores = [PeopleColaborador colaboradoresFromSearchResponse:[responseDictionary objectForKey:@"data"]];
+    
+    NSArray *responseData = [responseDictionary objectForKey:@"data"];
+    NSArray *colaboradores = @[];
+    if ([responseData isKindOfClass:[NSArray class]])
+    {
+        colaboradores = [PeopleColaborador colaboradoresFromSearchResponse:responseData];
+    }
     return colaboradores;
 }
 

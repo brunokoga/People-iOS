@@ -8,6 +8,6 @@
 
 #import "PeopleBaseViewController.h"
 
-@interface PeopleSearchViewController : PeopleBaseViewController
+@interface PeopleSearchViewController : PeopleBaseViewController <UITextFieldDelegate, UITableViewDataSource>
 
 @end

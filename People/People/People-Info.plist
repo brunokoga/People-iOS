@@ -2,16 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Dosis-Book.otf</string>
-		<string>Dosis-Bold.otf</string>
-		<string>Dosis-ExtraBold.otf</string>
-		<string>Dosis-ExtraLight.otf</string>
-		<string>Dosis-Light.otf</string>
-		<string>Dosis-Medium.otf</string>
-		<string>Dosis-SemiBold.otf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -34,6 +24,16 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Dosis-Book.otf</string>
+		<string>Dosis-Bold.otf</string>
+		<string>Dosis-ExtraBold.otf</string>
+		<string>Dosis-ExtraLight.otf</string>
+		<string>Dosis-Light.otf</string>
+		<string>Dosis-Medium.otf</string>
+		<string>Dosis-SemiBold.otf</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -41,7 +41,7 @@
 		<string>armv7</string>
 	</array>
 	<key>UIStatusBarHidden</key>
-	<false/>
+	<true/>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleDefault</string>
 	<key>UISupportedInterfaceOrientations</key>
