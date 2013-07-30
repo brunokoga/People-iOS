@@ -11,8 +11,9 @@
 #import "PeopleColaborador.h"
 #import "PeopleServices.h"
 #import "PeopleSearchTableViewCell.h"
+#import "PeopleSearchTableViewHeader.h"
 
-@interface PeopleSearchViewController ()
+@interface PeopleSearchViewController () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundLogo;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextfield;
@@ -22,6 +23,7 @@
 @end
 
 static NSString * const kPeopleSearchCellIdentifier = @"kPeopleSearchCellIdentifier";
+static NSString * const kPeopleSearchHeaderIdentifier = @"kPeopleSearchHeaderIdentifier";
 
 @implementation PeopleSearchViewController
 
@@ -33,7 +35,7 @@ static NSString * const kPeopleSearchCellIdentifier = @"kPeopleSearchCellIdentif
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.resultTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kPeopleSearchCellIdentifier];
+//    [self.resultTableView registerClass:[PeopleSearchTableViewCell class] forCellReuseIdentifier:kPeopleSearchCellIdentifier];
     self.resultTableView.dataSource = self;
     self.searchTextfield.delegate = self;
     
@@ -53,7 +55,10 @@ static NSString * const kPeopleSearchCellIdentifier = @"kPeopleSearchCellIdentif
     [[PeopleServices sharedServices] colaboradoresForSearchTerm:self.searchTextfield.text
                                                         success:^(NSArray *colaboradores) {
                                                             self.resultCollaborators = [colaboradores copy];
-                                                            [self.resultTableView reloadData];
+                                                            
+                                                            dispatch_async(dispatch_get_main_queue(), ^{
+                                                                                                                            [self.resultTableView reloadData];
+                                                            });
                                                             
                                                         } failure:^(NSError *error) {
                                                             //handle error
@@ -77,14 +82,44 @@ static NSString * const kPeopleSearchCellIdentifier = @"kPeopleSearchCellIdentif
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kPeopleSearchCellIdentifier];
+    PeopleSearchTableViewCell *cell = (PeopleSearchTableViewCell *)[tableView dequeueReusableCellWithIdentifier:kPeopleSearchCellIdentifier];
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPeopleSearchCellIdentifier];
+        cell = [[PeopleSearchTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPeopleSearchCellIdentifier];
     }
-    cell.textLabel.text = [self.resultCollaborators[indexPath.row] name];
+    cell.collaboratorNameLabel.text = [self.resultCollaborators[indexPath.row] name];
+    [cell addButton:[UIButton buttonWithType:UIButtonTypeRoundedRect] toCellSide:MCSwipeTableViewCellSideLeft];
     
     return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = nil;
+    NSInteger count = self.resultCollaborators.count;
+    if (count)
+    {
+        PeopleSearchTableViewHeader *headerView = [tableView dequeueReusableCellWithIdentifier:kPeopleSearchHeaderIdentifier];
+        [headerView updateTitleWithCount:count];
+        headerView.headerTitleLabel.textColor = [PeopleBasicTheme peopleColor2Secondary];
+        
+//        NSString *titleString = @"";
+//        NSString *singularString = [NSString stringWithFormat:NSLocalizedString(@"%d result", @""), count];
+//        NSString *pluralString = [NSString stringWithFormat:NSLocalizedString(@"%d results", @""), count];
+//        titleString = count == 1 ? singularString : pluralString;
+//        headerLabel.textColor = [PeopleBasicTheme peopleColor2Secondary];
+//        headerLabel.text = [self tableView:tableView titleForHeaderInSection:section];
+//        headerLabel.textAlignment = NSTextAlignmentCenter;
+    }
+
+    return headerView;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSInteger count = self.resultCollaborators.count;
+    NSString *titleString = [NSString stringWithFormat:NSLocalizedString(@"%d results", @""), count];
+    return titleString;
 }
 
 #pragma mark UI adjustments
