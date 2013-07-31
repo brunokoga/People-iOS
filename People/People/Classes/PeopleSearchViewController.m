@@ -7,6 +7,7 @@
 //
 
 #import "PeopleSearchViewController.h"
+#import "PeopleProfileViewController.h"
 
 @interface PeopleSearchViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundLogo;
@@ -14,6 +15,8 @@
 @end
 
 @implementation PeopleSearchViewController
+
+#pragma mar - View Controller Lifecycle and Adjustments
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,15 +40,25 @@
     
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)adjustUIElements
 {
     [self.backgroundLogo setCenter:self.view.center];
+}
+
+static NSString * const kSearchToProfileSegue = @"Search To Profile Segue";
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:kSearchToProfileSegue])
+    {
+        PeopleProfileViewController *profileViewController = (PeopleProfileViewController *)segue.destinationViewController;
+        profileViewController.colaborador = nil;
+    }
+    
+}
+
+- (IBAction)testButtonTouched:(id)sender {
+    [self performSegueWithIdentifier:kSearchToProfileSegue sender:self];
 }
 
 @end

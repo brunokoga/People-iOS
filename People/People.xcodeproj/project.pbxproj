@@ -218,6 +218,15 @@
 			path = People;
 			sourceTree = "<group>";
 		};
+		D3816AD217A962A3004C0FFC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */,
+				D31FEBFA17A20769007F4712 /* PeopleProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		D38B346F179898BB00E2AF26 = {
 			isa = PBXGroup;
 			children = (
@@ -403,8 +412,7 @@
 				D371D2BD1798B8ED009C9D9E /* PeopleTutorialViewController.m */,
 				D371D2BE1798B8FC009C9D9E /* PeopleSearchViewController.h */,
 				D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */,
-				D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */,
-				D31FEBFA17A20769007F4712 /* PeopleProfileViewController.m */,
+				D3816AD217A962A3004C0FFC /* Profile */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
