@@ -171,15 +171,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="kPeopleSearchCellIdentifier" rowHeight="42" id="Zmw-Id-7jk" customClass="PeopleSearchTableViewHeader">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="42"/>
+                                    <tableViewCell alpha="0.79999999999999982" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="kPeopleSearchHeaderIdentifier" rowHeight="30" id="Zmw-Id-7jk" customClass="PeopleSearchTableViewHeader">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zmw-Id-7jk" id="EJk-ZO-3rM">
-                                            <rect key="frame" x="0.0" y="0.0" width="322" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="322" height="29"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uAy-y1-BQN">
-                                                    <rect key="frame" x="20" y="11" width="282" height="20"/>
+                                                    <rect key="frame" x="20" y="5" width="282" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -187,12 +187,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="headerTitleLabel" destination="uAy-y1-BQN" id="0SG-8Z-Kwn"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="kPeopleSearchCellIdentifier" rowHeight="75" id="fmV-rS-3fE" customClass="PeopleSearchTableViewCell">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="75"/>
+                                        <rect key="frame" x="0.0" y="52" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fmV-rS-3fE" id="DnU-Ol-3IY">
                                             <rect key="frame" x="0.0" y="0.0" width="322" height="74"/>
@@ -223,6 +224,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
+                                    <view contentMode="scaleToFill" id="1K3-tw-J2d">
+                                        <rect key="frame" x="20" y="60" width="280" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.41176470588235292" green="0.66666666666666663" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1764705882352941" green="0.50980392156862742" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                             </view>

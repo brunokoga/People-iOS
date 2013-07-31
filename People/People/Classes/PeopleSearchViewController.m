@@ -37,6 +37,7 @@ static NSString * const kPeopleSearchHeaderIdentifier = @"kPeopleSearchHeaderIde
 {
 //    [self.resultTableView registerClass:[PeopleSearchTableViewCell class] forCellReuseIdentifier:kPeopleSearchCellIdentifier];
     self.resultTableView.dataSource = self;
+    self.resultTableView.delegate = self;
     self.searchTextfield.delegate = self;
     
     [super viewWillAppear:animated];
@@ -88,6 +89,7 @@ static NSString * const kPeopleSearchHeaderIdentifier = @"kPeopleSearchHeaderIde
         cell = [[PeopleSearchTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPeopleSearchCellIdentifier];
     }
     cell.collaboratorNameLabel.text = [self.resultCollaborators[indexPath.row] name];
+    cell.collaboratorNameLabel.font = [PeopleBasicTheme peopleFontBookWithSize:22.0f];
     [cell addButton:[UIButton buttonWithType:UIButtonTypeRoundedRect] toCellSide:MCSwipeTableViewCellSideLeft];
     
     return cell;
@@ -95,31 +97,31 @@ static NSString * const kPeopleSearchHeaderIdentifier = @"kPeopleSearchHeaderIde
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *headerView = nil;
+    PeopleSearchTableViewHeader *headerView = nil;
     NSInteger count = self.resultCollaborators.count;
     if (count)
     {
-        PeopleSearchTableViewHeader *headerView = [tableView dequeueReusableCellWithIdentifier:kPeopleSearchHeaderIdentifier];
+        headerView = [tableView dequeueReusableCellWithIdentifier:kPeopleSearchHeaderIdentifier];
         [headerView updateTitleWithCount:count];
         headerView.headerTitleLabel.textColor = [PeopleBasicTheme peopleColor2Secondary];
-        
-//        NSString *titleString = @"";
-//        NSString *singularString = [NSString stringWithFormat:NSLocalizedString(@"%d result", @""), count];
-//        NSString *pluralString = [NSString stringWithFormat:NSLocalizedString(@"%d results", @""), count];
-//        titleString = count == 1 ? singularString : pluralString;
-//        headerLabel.textColor = [PeopleBasicTheme peopleColor2Secondary];
-//        headerLabel.text = [self tableView:tableView titleForHeaderInSection:section];
-//        headerLabel.textAlignment = NSTextAlignmentCenter;
+        headerView.headerTitleLabel.font = [PeopleBasicTheme peopleFontBookWithSize:20.0f];
     }
 
     return headerView;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
+    CGFloat headerHeight = 0.0f;
     NSInteger count = self.resultCollaborators.count;
-    NSString *titleString = [NSString stringWithFormat:NSLocalizedString(@"%d results", @""), count];
-    return titleString;
+    if (count)
+    {
+        PeopleSearchTableViewHeader *headerView = [tableView dequeueReusableCellWithIdentifier:kPeopleSearchHeaderIdentifier];
+        headerHeight = headerView.frame.size.height;
+        return headerHeight;
+    }
+    
+    return headerHeight;
 }
 
 #pragma mark UI adjustments
@@ -131,6 +133,7 @@ static NSString * const kPeopleSearchHeaderIdentifier = @"kPeopleSearchHeaderIde
     self.searchTextfield.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.searchTextfield.placeholder
                                                                                    attributes:@{NSForegroundColorAttributeName : color,
                                                                                                 NSFontAttributeName : font }];
+    self.searchTextfield.font = [PeopleBasicTheme peopleFontBookWithSize:22.0f];
 }
 
 - (void)adjustUIElements

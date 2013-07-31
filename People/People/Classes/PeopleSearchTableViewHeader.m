@@ -16,6 +16,7 @@
     NSString *singularString = [NSString stringWithFormat:NSLocalizedString(@"%d result", @""), count];
     NSString *pluralString = [NSString stringWithFormat:NSLocalizedString(@"%d results", @""), count];
     titleString = count > 1 ? pluralString : singularString;
+    self.headerTitleLabel.text = titleString;
 }
 
 @end
