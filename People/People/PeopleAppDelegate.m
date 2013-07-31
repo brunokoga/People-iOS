@@ -7,11 +7,13 @@
 //
 
 #import "PeopleAppDelegate.h"
+#import "PeopleBasicTheme.h"
 
 @implementation PeopleAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [PeopleBasicTheme configureTheme];
     return YES;
 }
 

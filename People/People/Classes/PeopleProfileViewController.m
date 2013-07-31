@@ -7,8 +7,11 @@
 //
 
 #import "PeopleProfileViewController.h"
+#import <BKUIAdditions/UIButton+CircularFrame.h>
 
 @interface PeopleProfileViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *pictureButton;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 
 @end
 
@@ -18,6 +21,27 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+- (void)adjustUIElements
+{
+    [self.pictureButton makeCircular];
+    [self.favoriteButton makeCircular];
+}
+
+- (void)adjustLocalizationItems
+{
+    //overriden
+}
+
+- (void)adjustFonts
+{
+    //overriden
+}
+
+- (void)adjustColors
+{
+    //overriden
 }
 
 @end

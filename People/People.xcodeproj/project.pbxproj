@@ -40,6 +40,7 @@
 		D38B349F179898BB00E2AF26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D38B349D179898BB00E2AF26 /* InfoPlist.strings */; };
 		D38B34A1179898BB00E2AF26 /* PeopleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D38B34A0179898BB00E2AF26 /* PeopleTests.m */; };
 		D38B34AB1798991200E2AF26 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38B34AA1798991200E2AF26 /* MainStoryboard_iPhone.storyboard */; };
+		D398D6B917A9968600120394 /* PeopleNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D398D6B817A9968600120394 /* PeopleNavigationController.m */; };
 		D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBE61799B30C00E9D0C5 /* PeopleHTTPClient.m */; };
 		D39DDBEA1799B42900E9D0C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39DDBE91799B42900E9D0C5 /* Security.framework */; };
 		D39DDBEC1799B43000E9D0C5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39DDBEB1799B43000E9D0C5 /* MobileCoreServices.framework */; };
@@ -113,6 +114,8 @@
 		D38B349E179898BB00E2AF26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D38B34A0179898BB00E2AF26 /* PeopleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeopleTests.m; sourceTree = "<group>"; };
 		D38B34AA1798991200E2AF26 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		D398D6B717A9968600120394 /* PeopleNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleNavigationController.h; path = Classes/PeopleNavigationController.h; sourceTree = "<group>"; };
+		D398D6B817A9968600120394 /* PeopleNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleNavigationController.m; path = Classes/PeopleNavigationController.m; sourceTree = "<group>"; };
 		D39DDBE51799B30C00E9D0C5 /* PeopleHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleHTTPClient.h; sourceTree = "<group>"; };
 		D39DDBE61799B30C00E9D0C5 /* PeopleHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleHTTPClient.m; sourceTree = "<group>"; };
 		D39DDBE91799B42900E9D0C5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -413,6 +416,8 @@
 				D371D2BE1798B8FC009C9D9E /* PeopleSearchViewController.h */,
 				D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */,
 				D3816AD217A962A3004C0FFC /* Profile */,
+				D398D6B717A9968600120394 /* PeopleNavigationController.h */,
+				D398D6B817A9968600120394 /* PeopleNavigationController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -575,6 +580,7 @@
 				D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */,
 				D3A3083E179C438D0010FE51 /* PeopleTableViewDataSource.m in Sources */,
 				D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */,
+				D398D6B917A9968600120394 /* PeopleNavigationController.m in Sources */,
 				D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */,
 				D31FEBFB17A20769007F4712 /* PeopleProfileViewController.m in Sources */,
 				D3A30845179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m in Sources */,

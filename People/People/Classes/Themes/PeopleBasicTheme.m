@@ -20,7 +20,29 @@ NSString * const kPeopleFontSemiBoldName = @"Dosis-SemiBold";
 
 + (void)configureTheme
 {
+    [self configureNavigationBar];
+}
 
++ (void)configureNavigationBar
+{
+    UIImage *backgroundImage = [UIImage imageNamed:@"DefaultBackground"];
+    [[UINavigationBar appearance] setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
+    
+    NSMutableDictionary *navigationBarTitleAttributes = [NSMutableDictionary dictionary];
+    [navigationBarTitleAttributes setValue:[self peopleFontMediumWithSize:24.0] forKey:NSFontAttributeName];
+    [navigationBarTitleAttributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+    [[UINavigationBar appearance] setTitleTextAttributes:navigationBarTitleAttributes];
+    
+    CGRect newFrame = CGRectMake(0, 0, 320, 80);
+    [[UINavigationBar appearance]  setFrame:newFrame];
+    
+    //removing the navigation's bar shadow
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    
+    UIImage *backButtonImage = [[UIImage imageNamed:@"btn-backblue"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage
+                                                      forState:UIControlStateNormal
+                                                    barMetrics:UIBarMetricsDefault];
 }
 
 + (UIFont *)peopleFontBoldWithSize:(CGFloat)size
