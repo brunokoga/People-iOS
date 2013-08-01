@@ -10,6 +10,6 @@
 
 @interface PeopleSearchTableViewCell : MCSwipeTableViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *collaboratorNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *collaboratorNameLabel;
 
 @end

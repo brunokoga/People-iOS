@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundLogo;
 @property (weak, nonatomic) IBOutlet UITextField *searchTextfield;
 @property (weak, nonatomic) IBOutlet UITableView *resultTableView;
-@property (weak, nonatomic) NSArray *resultCollaborators;
+@property (strong, nonatomic) NSArray *resultCollaborators;
 
 @end
 
