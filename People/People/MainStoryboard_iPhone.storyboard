@@ -239,7 +239,7 @@
                         <outlet property="backgroundLogo" destination="hKe-E4-pDK" id="GO8-XZ-dI3"/>
                         <outlet property="resultTableView" destination="ESV-Br-EAh" id="3Zl-a1-dHG"/>
                         <outlet property="searchTextfield" destination="Sbc-P6-o0F" id="uGR-Wp-6KO"/>
-                        <segue destination="xww-W7-HJf" kind="custom" customClass="PeopleInitialTransitionSegue" id="KCu-zx-aGG"/>
+                        <segue destination="xww-W7-HJf" kind="push" identifier="Search to Profile Segue" customClass="PeopleInitialTransitionSegue" id="KCu-zx-aGG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xx8-3g-lbO" userLabel="First Responder" sceneMemberID="firstResponder"/>

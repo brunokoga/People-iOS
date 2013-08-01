@@ -24,6 +24,7 @@
 
 static NSString * const kPeopleSearchCellIdentifier = @"kPeopleSearchCellIdentifier";
 static NSString * const kPeopleSearchHeaderIdentifier = @"kPeopleSearchHeaderIdentifier";
+static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Profile Segue";
 
 @implementation PeopleSearchViewController
 
@@ -35,7 +36,6 @@ static NSString * const kPeopleSearchHeaderIdentifier = @"kPeopleSearchHeaderIde
 
 - (void)viewWillAppear:(BOOL)animated
 {
-//    [self.resultTableView registerClass:[PeopleSearchTableViewCell class] forCellReuseIdentifier:kPeopleSearchCellIdentifier];
     self.resultTableView.dataSource = self;
     self.resultTableView.delegate = self;
     self.searchTextfield.delegate = self;
@@ -90,10 +90,11 @@ static NSString * const kPeopleSearchHeaderIdentifier = @"kPeopleSearchHeaderIde
     }
     cell.collaboratorNameLabel.text = [self.resultCollaborators[indexPath.row] name];
     cell.collaboratorNameLabel.font = [PeopleBasicTheme peopleFontBookWithSize:22.0f];
-    [cell addButton:[UIButton buttonWithType:UIButtonTypeRoundedRect] toCellSide:MCSwipeTableViewCellSideLeft];
     
     return cell;
 }
+
+#pragma mark TableView Delegate
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -124,6 +125,11 @@ static NSString * const kPeopleSearchHeaderIdentifier = @"kPeopleSearchHeaderIde
     return headerHeight;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:kPeopleSearchToProfileSegueIdentifier sender:self];
+}
+
 #pragma mark UI adjustments
 
 - (void)adjustFonts
@@ -146,7 +152,5 @@ static NSString * const kPeopleSearchHeaderIdentifier = @"kPeopleSearchHeaderIde
     self.searchTextfield.leftViewMode = UITextFieldViewModeAlways;
     [self.backgroundLogo setCenter:self.view.center];
 }
-
-#pragma mark Getters/Setters
 
 @end

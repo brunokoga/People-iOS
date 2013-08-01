@@ -195,6 +195,7 @@
 		AA73A0E517A61CAE00229CE3 /* SearchViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AA73A0E617A61CC400229CE3 /* Container */,
 				AA73A0EF17A6214500229CE3 /* TableView */,
 			);
 			name = SearchViewController;
@@ -223,7 +224,6 @@
 			children = (
 				47B9180817A8757A0051FFBE /* Header */,
 				AA73A0EE17A61EDA00229CE3 /* Cell */,
-				AA73A0E617A61CC400229CE3 /* Container */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
