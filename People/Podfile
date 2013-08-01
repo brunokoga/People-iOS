@@ -1,6 +1,6 @@
 platform :ios, "7.0"
 pod 'AFNetworking'
-pod 'SSKeychain'
+pod 'SSKeychain', :git => 'https://github.com/soffes/sskeychain.git'
 pod 'ARSafeJSON'
 pod 'PeopleSwipeTableViewCell', :git => 'https://github.com/brunokoga/PeopleSwipeTableViewCell.git'
 pod 'BKUIAdditions', :git => 'https://github.com/brunokoga/BKUIAdditions.git'

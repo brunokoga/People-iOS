@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47B9180B17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B9180A17A875AD0051FFBE /* PeopleSearchTableViewHeader.m */; };
+		47B9180C17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B9180A17A875AD0051FFBE /* PeopleSearchTableViewHeader.m */; };
 		9AED62FE459640D98CC80172 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAB2C557C6B42DE9192D9C5 /* libPods.a */; };
-		D31FEBFB17A20769007F4712 /* PeopleProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D31FEBFA17A20769007F4712 /* PeopleProfileViewController.m */; };
+		AA73A0F617A62A4E00229CE3 /* PeopleSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */; };
 		D327A4CA17989A8D0042FF8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D327A4C917989A8D0042FF8B /* Images.xcassets */; };
 		D329173A179A217D00140214 /* PeopleColaboradorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3291739179A217D00140214 /* PeopleColaboradorTests.m */; };
 		D34C56D9179AEBE500706AFF /* search_generic1.json in Resources */ = {isa = PBXBuildFile; fileRef = D34C56D7179AEBE500706AFF /* search_generic1.json */; };
@@ -71,9 +73,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47B9180917A875AD0051FFBE /* PeopleSearchTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchTableViewHeader.h; path = Classes/PeopleSearchTableViewHeader.h; sourceTree = "<group>"; };
+		47B9180A17A875AD0051FFBE /* PeopleSearchTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchTableViewHeader.m; path = Classes/PeopleSearchTableViewHeader.m; sourceTree = "<group>"; };
+		AA73A0F417A62A4E00229CE3 /* PeopleSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchTableViewCell.h; path = Classes/PeopleSearchTableViewCell.h; sourceTree = "<group>"; };
+		AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchTableViewCell.m; path = Classes/PeopleSearchTableViewCell.m; sourceTree = "<group>"; };
 		B1B65C1B01294229848DAD83 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleProfileViewController.h; path = Classes/PeopleProfileViewController.h; sourceTree = "<group>"; };
-		D31FEBFA17A20769007F4712 /* PeopleProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleProfileViewController.m; path = Classes/PeopleProfileViewController.m; sourceTree = "<group>"; };
+		D31FEBFA17A20769007F4712 /* PeopleProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleProfileViewController.m; path = "/Users/koga/Projects/People-iOS/People/People/Classes/PeopleProfileViewController.m"; sourceTree = "<absolute>"; };
 		D327A4C917989A8D0042FF8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D3291739179A217D00140214 /* PeopleColaboradorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleColaboradorTests.m; sourceTree = "<group>"; };
 		D34C56D7179AEBE500706AFF /* search_generic1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search_generic1.json; sourceTree = "<group>"; };
@@ -179,6 +185,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47B9180817A8757A0051FFBE /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				47B9180917A875AD0051FFBE /* PeopleSearchTableViewHeader.h */,
+				47B9180A17A875AD0051FFBE /* PeopleSearchTableViewHeader.m */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		AA73A0E517A61CAE00229CE3 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA73A0E617A61CC400229CE3 /* Container */,
+				AA73A0EF17A6214500229CE3 /* TableView */,
+			);
+			name = SearchViewController;
+			sourceTree = "<group>";
+		};
+		AA73A0E617A61CC400229CE3 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				D371D2BE1798B8FC009C9D9E /* PeopleSearchViewController.h */,
+				D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */,
+			);
+			name = Container;
+			sourceTree = "<group>";
+		};
+		AA73A0EE17A61EDA00229CE3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AA73A0F417A62A4E00229CE3 /* PeopleSearchTableViewCell.h */,
+				AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		AA73A0EF17A6214500229CE3 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				47B9180817A8757A0051FFBE /* Header */,
+				AA73A0EE17A61EDA00229CE3 /* Cell */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
 		D31FEBFC17A208A9007F4712 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +456,7 @@
 		D3A9D8191798A08600F05FD5 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AA73A0E517A61CAE00229CE3 /* SearchViewController */,
 				D3A9D8161798A08000F05FD5 /* PeopleBaseViewController.h */,
 				D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */,
 				D3A9D81A1798A0C300F05FD5 /* PeopleInitialViewController.h */,
@@ -418,6 +470,7 @@
 				D3816AD217A962A3004C0FFC /* Profile */,
 				D398D6B717A9968600120394 /* PeopleNavigationController.h */,
 				D398D6B817A9968600120394 /* PeopleNavigationController.m */,
+				D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -575,14 +628,15 @@
 				D3DA46D8179D8C170061809D /* PeopleRegularButton.m in Sources */,
 				D371D2B21798A554009C9D9E /* PeoplePreferences.m in Sources */,
 				D38B3488179898BB00E2AF26 /* main.m in Sources */,
+				47B9180B17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */,
 				D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */,
 				D34C56E2179B06B300706AFF /* PeopleFavorites.m in Sources */,
 				D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */,
 				D3A3083E179C438D0010FE51 /* PeopleTableViewDataSource.m in Sources */,
+				AA73A0F617A62A4E00229CE3 /* PeopleSearchTableViewCell.m in Sources */,
 				D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */,
 				D398D6B917A9968600120394 /* PeopleNavigationController.m in Sources */,
 				D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */,
-				D31FEBFB17A20769007F4712 /* PeopleProfileViewController.m in Sources */,
 				D3A30845179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m in Sources */,
 				D38B348C179898BB00E2AF26 /* PeopleAppDelegate.m in Sources */,
 				D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */,
@@ -601,6 +655,7 @@
 				D329173A179A217D00140214 /* PeopleColaboradorTests.m in Sources */,
 				D34C56DF179AF6CC00706AFF /* PeopleValidationTest.m in Sources */,
 				D38B34A1179898BB00E2AF26 /* PeopleTests.m in Sources */,
+				47B9180C17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */,
 				D371D2B81798AA8C009C9D9E /* PeoplePreferencesTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
