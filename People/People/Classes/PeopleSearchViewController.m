@@ -89,8 +89,8 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
     {
         cell = [[PeopleSearchTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPeopleSearchCellIdentifier];
     }
-    cell.collaboratorNameLabel.text = [self.resultCollaborators[indexPath.row] name];
-    cell.collaboratorNameLabel.font = [PeopleBasicTheme peopleFontBookWithSize:22.0f];
+    PeopleColaborador *collaborator = self.resultCollaborators[indexPath.row];
+    [cell updateLabelsWithCollaborator:collaborator];
     
     return cell;
 }

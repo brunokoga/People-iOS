@@ -8,8 +8,10 @@
 
 #import <PeopleSwipeTableViewCell/MCSwipeTableViewCell.h>
 
+@class PeopleColaborador;
+
 @interface PeopleSearchTableViewCell : MCSwipeTableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *collaboratorNameLabel;
+- (void)updateLabelsWithCollaborator:(PeopleColaborador *)collaborator;
 
 @end
