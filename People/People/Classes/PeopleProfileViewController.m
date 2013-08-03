@@ -12,6 +12,10 @@
 @interface PeopleProfileViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *pictureButton;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (weak, nonatomic) IBOutlet UILabel *baseLabel;
+@property (weak, nonatomic) IBOutlet UILabel *buildingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *roleLabel;
 
 @end
 

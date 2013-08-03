@@ -37,17 +37,17 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
     self.resultTableView.dataSource = self;
     self.resultTableView.delegate = self;
     self.searchTextfield.delegate = self;
-    
-    [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+
 }
 
 #pragma mark UITextFieldDelegate
