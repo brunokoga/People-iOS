@@ -12,8 +12,7 @@
 
 - (NSArray *)colaboradoresArrayFromSearchResponse:(id)serviceResponse;
 {
-    NSError *serializationError = nil;
-    NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:serviceResponse options:NSUTF8StringEncoding error:&serializationError];
+    NSDictionary *responseDictionary = serviceResponse;
     
     NSArray *responseData = [responseDictionary objectForKey:@"data"];
     NSArray *colaboradores = @[];
@@ -26,9 +25,7 @@
 
 - (PeopleColaborador *)colaboradorFromProfileResponse:(id)serviceResponse;
 {
-    NSError *serializationError = nil;
-    NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:serviceResponse options:NSUTF8StringEncoding error:&serializationError];
-    PeopleColaborador *colaborador = [PeopleColaborador colaboradorFromProfileResponse:responseDictionary];
+    PeopleColaborador *colaborador = [PeopleColaborador colaboradorFromProfileResponse:serviceResponse];
     return colaborador;
 }
 

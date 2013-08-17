@@ -45,9 +45,10 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
 - (void)setUsername:(NSString *)username
            password:(NSString *)password;
 {
-    [self clearAuthorizationHeader];    
-    [self setAuthorizationHeaderWithUsername:username
-                                    password:password];
+    AFHTTPSerializer *serializer = [self serializer];
+    [serializer clearAuthorizationHeader];
+    [serializer setAuthorizationHeaderFieldWithUsername:username
+                                               password:password];
 }
 
 - (void)loginWithUsername:(NSString *)username
@@ -65,19 +66,22 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
     [self setUsername:username
              password:password];
     
-    [self getPath:loginProfileUser
-       parameters:nil
-          success:success
-          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-              // if there is an error, we reset the password
-              [self clearAuthorizationHeader];
-              failure(operation, error);
-          }];
+    [self GET:loginProfileUser
+   parameters:nil
+      success:success
+      failure:^(NSError *error) {
+          
+          // if there is an error, we reset the password
+
+          AFHTTPSerializer *serializer = [self serializer];
+          [serializer clearAuthorizationHeader];
+          failure(error);
+      }];
 }
 
 - (void)logout
 {
-    [self clearAuthorizationHeader];
+    [[self serializer] clearAuthorizationHeader];
 }
 
 #pragma mark - Endpoints
@@ -112,10 +116,10 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
 {
     NSString *searchEndpoint = [self searchEndpointForTerm:term];
 
-    [self getPath:searchEndpoint
-       parameters:nil
-          success:success
-          failure:failure];
+    [self GET:searchEndpoint
+   parameters:nil
+      success:success
+      failure:failure];
 }
 
 - (void)profileForUser:(NSString *)user
@@ -124,10 +128,10 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
 {
     NSString *profileEndpoint = [self profileEndpointForUser:user];
     
-    [self getPath:profileEndpoint
-       parameters:nil
-          success:success
-          failure:failure];
+    [self GET:profileEndpoint
+   parameters:nil
+      success:success
+      failure:failure];
 }
 
 - (void)photoForUser:(NSString *)user
@@ -136,10 +140,18 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
 {
     NSString *photoEndpoint = [self photoEndpointForUser:user];
     
-    [self getPath:photoEndpoint
-       parameters:nil
-          success:success
-          failure:failure];
+    [self GET:photoEndpoint
+   parameters:nil
+      success:success
+      failure:failure];
+}
+
+#pragma mark - Utilities
+
+- (AFHTTPSerializer *)serializer
+{
+    AFHTTPSerializer *serializer = (AFHTTPSerializer *)[self requestSerializer];
+    return serializer;
 }
 
 @end
