@@ -13,8 +13,8 @@ typedef enum PeopleConnectionError {
     ErrorCouldntCreate = 3840
 } PeopleConnectionError;
 
-typedef void (^PeopleRequestOperationBlockSuccess) (AFHTTPRequestOperation *operation, id responseObject);
-typedef void (^PeopleRequestOperationBlockFailure) (AFHTTPRequestOperation *operation, NSError *error);
+typedef void (^PeopleRequestOperationBlockSuccess) (NSHTTPURLResponse *response, id responseObject);
+typedef void (^PeopleRequestOperationBlockFailure) (NSError *error);
 
 @interface PeopleHTTPClient : AFHTTPClient
 
