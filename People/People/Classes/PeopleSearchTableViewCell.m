@@ -23,6 +23,18 @@
 
 @implementation PeopleSearchTableViewCell
 
+- (void)awakeFromNib
+{
+    self.collaboratorNameLabel.font = [PeopleBasicTheme peopleFontBookWithSize:self.collaboratorNameLabel.font.pointSize];
+    self.collaboratorRoleLabel.font = [PeopleBasicTheme peopleFontBookWithSize:self.collaboratorRoleLabel.font.pointSize];
+    self.collaboratorPhoneLabel.font = [PeopleBasicTheme peopleFontBookWithSize:self.collaboratorPhoneLabel.font.pointSize];
+    self.collaboratorLoginLabel.font = [PeopleBasicTheme peopleFontBookWithSize:self.collaboratorLoginLabel.font.pointSize];
+    self.collaboratorCellphoneLabel.font = [PeopleBasicTheme peopleFontBookWithSize:self.collaboratorCellphoneLabel.font.pointSize];
+    
+    self.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.layer.borderWidth = 1.0f;
+}
+
 - (void)updateLabelsWithCollaborator:(PeopleColaborador *)collaborator
 {
     self.collaboratorNameLabel.text = collaborator.name;
@@ -31,16 +43,28 @@
     self.collaboratorLoginLabel.text = collaborator.login;
     self.collaboratorCellphoneLabel.text = collaborator.mobile;
     
-    [self addButtons];
+//    [self addButtonsWithCollaborator:collaborator];
 }
 
-- (void)addButtons
+- (void)addButtonsWithCollaborator:(PeopleColaborador *)collaborator
 {
     self.leftMenuColor = [PeopleBasicTheme peopleColor2Secondary];
-    [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-phone-normal"] toCellSide:MCSwipeTableViewCellSideLeft];
-    [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-mobile-normal"] toCellSide:MCSwipeTableViewCellSideLeft];
-    [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-mail-normal"] toCellSide:MCSwipeTableViewCellSideLeft];
-    [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-sms-normal"] toCellSide:MCSwipeTableViewCellSideLeft];
+    if (self.collaboratorPhoneLabel.text.length)
+    {
+        [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-phone-normal"] toCellSide:MCSwipeTableViewCellSideLeft];
+    }
+    
+    if (self.collaboratorCellphoneLabel.text.length)
+    {
+        [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-mobile-normal"] toCellSide:MCSwipeTableViewCellSideLeft];
+        [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-sms-normal"] toCellSide:MCSwipeTableViewCellSideLeft];
+    }
+    
+    if (collaborator.email.length)
+    {
+        [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-mail-normal"] toCellSide:MCSwipeTableViewCellSideLeft];
+    }
+    
 }
 
 - (UIButton *)buttonForMenuWithImageName:(NSString *)imageName
