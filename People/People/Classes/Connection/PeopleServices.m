@@ -29,12 +29,12 @@
     PeopleHTTPClient *httpClient = [PeopleHTTPClient sharedClient];
     
     [httpClient searchTerm:searchTerm
-                   success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                   success:^(NSHTTPURLResponse *response, id responseObject) {
                        PeopleJSONParser *jsonParser = [[PeopleJSONParser alloc] init];
                        NSArray *colaboradores = [jsonParser colaboradoresArrayFromSearchResponse:responseObject];
                        success(colaboradores);
                        
-                   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                   } failure:^(NSError *error) {
                        failure(error);
                        // 1 - offline
                    }];
@@ -47,12 +47,12 @@
     PeopleHTTPClient *httpClient = [PeopleHTTPClient sharedClient];
 
     [httpClient profileForUser:login
-                       success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                       success:^(NSHTTPURLResponse *response, id responseObject) {
                            PeopleJSONParser *jsonParser = [[PeopleJSONParser alloc] init];
                            PeopleColaborador *colaborador = [jsonParser colaboradorFromProfileResponse:responseObject];
                            success(colaborador);
                            
-                       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                       } failure:^(NSError *error) {
                            failure(error);
                            // 1 - offline
                        }];
@@ -66,7 +66,7 @@
     PeopleHTTPClient *httpClient = [PeopleHTTPClient sharedClient];
     [httpClient loginWithUsername:user
                          password:password
-                          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                          success:^(NSHTTPURLResponse *response, id responseObject) {
                               PeopleJSONParser *jsonParser = [[PeopleJSONParser alloc] init];
                               PeopleColaborador *colaborador = [jsonParser colaboradorFromProfileResponse:responseObject];
                               
@@ -81,7 +81,7 @@
                                   failure(error);
                               }
                               
-                          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                          } failure:^(NSError *error) {
                               failure(error);
                           }];
 }

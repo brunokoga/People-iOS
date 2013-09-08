@@ -47,7 +47,6 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-
 }
 
 #pragma mark UITextFieldDelegate
@@ -87,11 +86,11 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
     PeopleSearchTableViewCell *cell = (PeopleSearchTableViewCell *)[tableView dequeueReusableCellWithIdentifier:kPeopleSearchCellIdentifier];
     if (!cell)
     {
-        cell = [[PeopleSearchTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kPeopleSearchCellIdentifier];
+        cell = [[PeopleSearchTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kPeopleSearchCellIdentifier];
     }
     PeopleColaborador *collaborator = self.resultCollaborators[indexPath.row];
     [cell updateLabelsWithCollaborator:collaborator];
-    
+
     return cell;
 }
 
@@ -148,28 +147,15 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
 
 }
 
-static NSString * const kSearchToProfileSegue = @"Search To Profile Segue";
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
 
-    if ([segue.identifier isEqualToString:kSearchToProfileSegue])
+    if ([segue.identifier isEqualToString:kPeopleSearchToProfileSegueIdentifier])
     {
         PeopleProfileViewController *profileViewController = (PeopleProfileViewController *)segue.destinationViewController;
         profileViewController.colaborador = nil;
     }
     
-}
-
-- (IBAction)testButtonTouched:(id)sender {
-    [self performSegueWithIdentifier:kSearchToProfileSegue sender:self];
-    UIImage *searchIcon = [UIImage imageNamed:@"ico-search"];
-    UIImageView *leftImageView = [[UIImageView alloc] initWithImage:searchIcon];
-    leftImageView.contentMode = UIViewContentModeTopLeft;
-    leftImageView.frame = (CGRect){leftImageView.frame.origin, searchIcon.size.width + 5.0f, searchIcon.size.height};
-    self.searchTextfield.leftView = leftImageView;
-    self.searchTextfield.leftViewMode = UITextFieldViewModeAlways;
-    [self.backgroundLogo setCenter:self.view.center];
 }
 
 @end
