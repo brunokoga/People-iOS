@@ -11,6 +11,7 @@
 #import "PeopleValidation.h"
 #import "PeopleBasicTheme.h"
 #import "PeopleRegularButton.h"
+#import "PeoplePreferences.h"
 
 @interface PeopleLoginViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
@@ -360,6 +361,9 @@ static NSString * const kLoginToSearchSegue = @"Login To Search Segue";
 
 - (void)performLoginSucceededOperationsWithColaborador:(PeopleColaborador *)colaborador
 {
+    [PeoplePreferences setAutoLogin:YES];
+    [PeoplePreferences setUsername:self.usernameTextField.text
+                          password:self.passwordTextField.text];
     [self performSegueWithIdentifier:kLoginToSearchSegue sender:self];
 }
 

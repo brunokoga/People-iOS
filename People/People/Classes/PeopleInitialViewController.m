@@ -45,8 +45,8 @@ static NSString * const kSearchSegueIdentifier = @"Search Segue";
 - (void)loadFirstViewController
 {
     NSString *segueIdentifier = kLoginSegueIdentifier;
-    /*
-    BOOL isRunningForTheFirstTime = [PeoplePreferences isRunningForTheFirstTime];
+    
+    BOOL isRunningForTheFirstTime = NO;//[PeoplePreferences isRunningForTheFirstTime];
     if (isRunningForTheFirstTime)
     {
         segueIdentifier = @"Tutorial Segue";
@@ -58,7 +58,7 @@ static NSString * const kSearchSegueIdentifier = @"Search Segue";
             segueIdentifier = @"Search Segue";
         }
     }
-     */
+    
  
     [self performSegueWithIdentifier:segueIdentifier sender:self];
 }
@@ -109,7 +109,7 @@ static NSString * const kSearchSegueIdentifier = @"Search Segue";
 
 - (void)transitionToSearchWithCompletion:(void (^)(void))completion
 {
-    
+    completion();
 }
 
 @end
