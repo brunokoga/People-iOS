@@ -35,6 +35,8 @@
 		D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */; };
 		D371D2C11798B8FF009C9D9E /* PeopleTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BD1798B8ED009C9D9E /* PeopleTutorialViewController.m */; };
 		D38A430417DE0C4B00434161 /* PeopleInitialSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = D38A430317DE0C4B00434161 /* PeopleInitialSetup.m */; };
+		D38A430617DE41D500434161 /* ProfileNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38A430517DE41D500434161 /* ProfileNameView.xib */; };
+		D38A430917DE427600434161 /* ProfileNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = D38A430817DE427600434161 /* ProfileNameView.m */; };
 		D38B347C179898BB00E2AF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38B347B179898BB00E2AF26 /* Foundation.framework */; };
 		D38B347E179898BB00E2AF26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38B347D179898BB00E2AF26 /* CoreGraphics.framework */; };
 		D38B3480179898BB00E2AF26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38B347F179898BB00E2AF26 /* UIKit.framework */; };
@@ -64,6 +66,10 @@
 		D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */; };
 		D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81B1798A0C300F05FD5 /* PeopleInitialViewController.m */; };
 		D3DA46D8179D8C170061809D /* PeopleRegularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DA46D7179D8C170061809D /* PeopleRegularButton.m */; };
+		D3E1D68117DE45B300155E8F /* ProfilePhoneNumbersView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D68017DE45B300155E8F /* ProfilePhoneNumbersView.m */; };
+		D3E1D68417DE470A00155E8F /* BKXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D68317DE470A00155E8F /* BKXibView.m */; };
+		D3E1D68617DE47DD00155E8F /* ProfilePictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E1D68517DE47DD00155E8F /* ProfilePictureView.xib */; };
+		D3E1D68917DE47F900155E8F /* ProfilePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D68817DE47F900155E8F /* ProfilePictureView.m */; };
 		D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +121,9 @@
 		D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchViewController.m; path = Classes/PeopleSearchViewController.m; sourceTree = "<group>"; };
 		D38A430217DE0C4B00434161 /* PeopleInitialSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialSetup.h; path = Classes/PeopleInitialSetup.h; sourceTree = "<group>"; };
 		D38A430317DE0C4B00434161 /* PeopleInitialSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleInitialSetup.m; path = Classes/PeopleInitialSetup.m; sourceTree = "<group>"; };
+		D38A430517DE41D500434161 /* ProfileNameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileNameView.xib; path = People/Classes/Views/ProfileNameView.xib; sourceTree = "<group>"; };
+		D38A430717DE427600434161 /* ProfileNameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileNameView.h; path = People/Classes/Views/ProfileNameView.h; sourceTree = "<group>"; };
+		D38A430817DE427600434161 /* ProfileNameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileNameView.m; path = People/Classes/Views/ProfileNameView.m; sourceTree = "<group>"; };
 		D38B3478179898BB00E2AF26 /* People.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = People.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38B347B179898BB00E2AF26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D38B347D179898BB00E2AF26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -164,6 +173,13 @@
 		D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PeoplePreferences.m; path = Classes/PeoplePreferences.m; sourceTree = "<group>"; };
 		D3DA46D6179D8C170061809D /* PeopleRegularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleRegularButton.h; path = People/Classes/PeopleRegularButton.h; sourceTree = "<group>"; };
 		D3DA46D7179D8C170061809D /* PeopleRegularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleRegularButton.m; path = People/Classes/PeopleRegularButton.m; sourceTree = "<group>"; };
+		D3E1D67F17DE45B300155E8F /* ProfilePhoneNumbersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfilePhoneNumbersView.h; path = People/Classes/Views/ProfilePhoneNumbersView.h; sourceTree = "<group>"; };
+		D3E1D68017DE45B300155E8F /* ProfilePhoneNumbersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfilePhoneNumbersView.m; path = People/Classes/Views/ProfilePhoneNumbersView.m; sourceTree = "<group>"; };
+		D3E1D68217DE470A00155E8F /* BKXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKXibView.h; path = People/Classes/Views/BKXibView.h; sourceTree = "<group>"; };
+		D3E1D68317DE470A00155E8F /* BKXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKXibView.m; path = People/Classes/Views/BKXibView.m; sourceTree = "<group>"; };
+		D3E1D68517DE47DD00155E8F /* ProfilePictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfilePictureView.xib; path = People/Classes/Views/ProfilePictureView.xib; sourceTree = "<group>"; };
+		D3E1D68717DE47F900155E8F /* ProfilePictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfilePictureView.h; path = People/Classes/Views/ProfilePictureView.h; sourceTree = "<group>"; };
+		D3E1D68817DE47F900155E8F /* ProfilePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfilePictureView.m; path = People/Classes/Views/ProfilePictureView.m; sourceTree = "<group>"; };
 		D3F213FA1798BEA800E19338 /* PeopleInitialTransitionSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialTransitionSegue.h; path = Classes/Segues/PeopleInitialTransitionSegue.h; sourceTree = "<group>"; };
 		D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleInitialTransitionSegue.m; path = Classes/Segues/PeopleInitialTransitionSegue.m; sourceTree = "<group>"; };
 		ECAB2C557C6B42DE9192D9C5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +311,16 @@
 		D38B346F179898BB00E2AF26 = {
 			isa = PBXGroup;
 			children = (
+				D3E1D68517DE47DD00155E8F /* ProfilePictureView.xib */,
+				D3E1D68717DE47F900155E8F /* ProfilePictureView.h */,
+				D3E1D68817DE47F900155E8F /* ProfilePictureView.m */,
+				D3E1D68217DE470A00155E8F /* BKXibView.h */,
+				D3E1D68317DE470A00155E8F /* BKXibView.m */,
+				D3E1D67F17DE45B300155E8F /* ProfilePhoneNumbersView.h */,
+				D3E1D68017DE45B300155E8F /* ProfilePhoneNumbersView.m */,
+				D38A430517DE41D500434161 /* ProfileNameView.xib */,
+				D38A430717DE427600434161 /* ProfileNameView.h */,
+				D38A430817DE427600434161 /* ProfileNameView.m */,
 				D38B3481179898BB00E2AF26 /* People */,
 				D371D2B41798AA19009C9D9E /* Private Headers */,
 				D39DDC051799E77D00E9D0C5 /* Test Data */,
@@ -577,12 +603,14 @@
 				D34C56EE179B29EA00706AFF /* Dosis-ExtraLight.otf in Resources */,
 				D34C56EB179B29EA00706AFF /* Dosis-Bold.otf in Resources */,
 				D34C56F1179B29EA00706AFF /* Dosis-SemiBold.otf in Resources */,
+				D38A430617DE41D500434161 /* ProfileNameView.xib in Resources */,
 				D38B34AB1798991200E2AF26 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D34C56F0179B29EA00706AFF /* Dosis-Medium.otf in Resources */,
 				D38B3486179898BB00E2AF26 /* InfoPlist.strings in Resources */,
 				D34C56EF179B29EA00706AFF /* Dosis-Light.otf in Resources */,
 				D34C56ED179B29EA00706AFF /* Dosis-ExtraBold.otf in Resources */,
 				D34C56EC179B29EA00706AFF /* Dosis-Book.otf in Resources */,
+				D3E1D68617DE47DD00155E8F /* ProfilePictureView.xib in Resources */,
 				D3A30847179C4B750010FE51 /* PeopleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,6 +676,7 @@
 				47B9180B17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */,
 				D304D7D617DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m in Sources */,
 				D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */,
+				D3E1D68117DE45B300155E8F /* ProfilePhoneNumbersView.m in Sources */,
 				D34C56E2179B06B300706AFF /* PeopleFavorites.m in Sources */,
 				D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */,
 				D3A3083E179C438D0010FE51 /* PeopleTableViewDataSource.m in Sources */,
@@ -660,9 +689,12 @@
 				D3A30845179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m in Sources */,
 				D38B348C179898BB00E2AF26 /* PeopleAppDelegate.m in Sources */,
 				D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */,
+				D3E1D68917DE47F900155E8F /* ProfilePictureView.m in Sources */,
 				D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */,
 				D34C56DD179AF4A200706AFF /* PeopleValidation.m in Sources */,
+				D38A430917DE427600434161 /* ProfileNameView.m in Sources */,
 				D3A30841179C4AA70010FE51 /* PeopleTableViewCell.m in Sources */,
+				D3E1D68417DE470A00155E8F /* BKXibView.m in Sources */,
 				D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */,
 				D39DDBF61799C57D00E9D0C5 /* PeopleServices.m in Sources */,
 				D38A430417DE0C4B00434161 /* PeopleInitialSetup.m in Sources */,
