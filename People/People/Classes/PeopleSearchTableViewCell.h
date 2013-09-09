@@ -12,6 +12,8 @@
 
 @interface PeopleSearchTableViewCell : MCSwipeTableViewCell
 
+@property (nonatomic, strong) UIImage *image;
+
 - (void)updateLabelsWithCollaborator:(PeopleColaborador *)collaborator;
 
 @end

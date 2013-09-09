@@ -71,6 +71,7 @@
 		D3E1D68617DE47DD00155E8F /* ProfilePictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E1D68517DE47DD00155E8F /* ProfilePictureView.xib */; };
 		D3E1D68917DE47F900155E8F /* ProfilePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D68817DE47F900155E8F /* ProfilePictureView.m */; };
 		D3E1D68B17DE4B2100155E8F /* ProfilePhoneNumbersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E1D68A17DE4B2100155E8F /* ProfilePhoneNumbersView.xib */; };
+		D3E1D69017DE558900155E8F /* PeopleCircularImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D68F17DE558900155E8F /* PeopleCircularImageView.m */; };
 		D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +183,8 @@
 		D3E1D68717DE47F900155E8F /* ProfilePictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfilePictureView.h; path = People/Classes/Views/ProfilePictureView.h; sourceTree = "<group>"; };
 		D3E1D68817DE47F900155E8F /* ProfilePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfilePictureView.m; path = People/Classes/Views/ProfilePictureView.m; sourceTree = "<group>"; };
 		D3E1D68A17DE4B2100155E8F /* ProfilePhoneNumbersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfilePhoneNumbersView.xib; path = People/Classes/Views/ProfilePhoneNumbersView.xib; sourceTree = "<group>"; };
+		D3E1D68E17DE558900155E8F /* PeopleCircularImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleCircularImageView.h; path = Classes/Components/PeopleCircularImageView.h; sourceTree = "<group>"; };
+		D3E1D68F17DE558900155E8F /* PeopleCircularImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleCircularImageView.m; path = Classes/Components/PeopleCircularImageView.m; sourceTree = "<group>"; };
 		D3F213FA1798BEA800E19338 /* PeopleInitialTransitionSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialTransitionSegue.h; path = Classes/Segues/PeopleInitialTransitionSegue.h; sourceTree = "<group>"; };
 		D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleInitialTransitionSegue.m; path = Classes/Segues/PeopleInitialTransitionSegue.m; sourceTree = "<group>"; };
 		ECAB2C557C6B42DE9192D9C5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,6 +352,8 @@
 		D38B3481179898BB00E2AF26 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				D3E1D68E17DE558900155E8F /* PeopleCircularImageView.h */,
+				D3E1D68F17DE558900155E8F /* PeopleCircularImageView.m */,
 				D31FEBFC17A208A9007F4712 /* UI Components */,
 				D34C56F2179B29ED00706AFF /* UX */,
 				D34C56E0179B06B300706AFF /* PeopleFavorites.h */,
@@ -711,6 +716,7 @@
 				D38B348C179898BB00E2AF26 /* PeopleAppDelegate.m in Sources */,
 				D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */,
 				D3E1D68917DE47F900155E8F /* ProfilePictureView.m in Sources */,
+				D3E1D69017DE558900155E8F /* PeopleCircularImageView.m in Sources */,
 				D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */,
 				D34C56DD179AF4A200706AFF /* PeopleValidation.m in Sources */,
 				D38A430917DE427600434161 /* ProfileNameView.m in Sources */,

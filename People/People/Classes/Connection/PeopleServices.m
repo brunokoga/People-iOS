@@ -86,4 +86,20 @@
                           }];
 }
 
+- (void)photoForUser:(NSString *)user
+             success:(void(^)(UIImage *image))success
+             failure:(void(^)(NSError *error))failure
+{
+    PeopleHTTPClient *httpClient = [PeopleHTTPClient sharedClient];
+    [httpClient photoForUser:user
+                     success:^(NSHTTPURLResponse *response, id responseObject) {
+                         UIImage *responseImage = [UIImage imageWithData:responseObject];
+                         success(responseImage);
+                     } failure:^(NSError *error) {
+                         failure(error);
+                     }];
+}
+
+
+
 @end

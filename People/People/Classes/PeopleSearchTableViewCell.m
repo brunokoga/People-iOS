@@ -10,6 +10,7 @@
 #import "PeopleColaborador.h"
 #import "PeopleBasicTheme.h"
 #import <PeopleSwipeTableViewCell/MCSwipeTableViewCell.h>
+#import "PeopleCircularImageView.h"
 
 @interface PeopleSearchTableViewCell()
 
@@ -18,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *collaboratorPhoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *collaboratorLoginLabel;
 @property (weak, nonatomic) IBOutlet UILabel *collaboratorCellphoneLabel;
-
+@property (weak, nonatomic) IBOutlet PeopleCircularImageView *collaboratorImageView;
 @end
 
 @implementation PeopleSearchTableViewCell
@@ -76,5 +77,13 @@
     button.frame = (CGRect){CGPointZero, buttonImage.size};
     return button;
 }
+
+- (void)setImage:(UIImage *)image
+{
+    _image = image;
+    self.collaboratorImageView.imageView.image = image;
+}
+
+
 
 @end

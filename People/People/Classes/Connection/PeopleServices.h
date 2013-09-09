@@ -26,4 +26,8 @@
                            success:(void(^)(PeopleColaborador *colaborador))success
                            failure:(void(^)(NSError *error))failure;
 
+- (void)photoForUser:(NSString *)user
+             success:(void(^)(UIImage *image))success
+             failure:(void(^)(NSError *error))failure;
+
 @end

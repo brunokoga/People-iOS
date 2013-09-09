@@ -107,6 +107,17 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
     }
     PeopleColaborador *collaborator = self.resultCollaborators[indexPath.row];
     [cell updateLabelsWithCollaborator:collaborator];
+    cell.tag = indexPath.row;
+    cell.image = nil;
+    [[PeopleServices sharedServices] photoForUser:collaborator.login
+                                          success:^(UIImage *image) {
+                                              if (cell.tag == indexPath.row)
+                                              {
+                                                  cell.image = image;
+                                              }
+                                          } failure:^(NSError *error) {
+                                              
+                                          }];
 
     return cell;
 }
