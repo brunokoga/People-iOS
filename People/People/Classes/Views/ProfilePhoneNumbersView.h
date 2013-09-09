@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 CI&T. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BKXibView.h"
 
-@interface ProfilePhoneNumbersView : UIView
+@interface ProfilePhoneNumbersView : BKXibView
 
 @end

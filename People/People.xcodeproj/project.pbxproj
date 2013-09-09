@@ -70,6 +70,7 @@
 		D3E1D68417DE470A00155E8F /* BKXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D68317DE470A00155E8F /* BKXibView.m */; };
 		D3E1D68617DE47DD00155E8F /* ProfilePictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E1D68517DE47DD00155E8F /* ProfilePictureView.xib */; };
 		D3E1D68917DE47F900155E8F /* ProfilePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D68817DE47F900155E8F /* ProfilePictureView.m */; };
+		D3E1D68B17DE4B2100155E8F /* ProfilePhoneNumbersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E1D68A17DE4B2100155E8F /* ProfilePhoneNumbersView.xib */; };
 		D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */; };
 /* End PBXBuildFile section */
 
@@ -180,6 +181,7 @@
 		D3E1D68517DE47DD00155E8F /* ProfilePictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfilePictureView.xib; path = People/Classes/Views/ProfilePictureView.xib; sourceTree = "<group>"; };
 		D3E1D68717DE47F900155E8F /* ProfilePictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfilePictureView.h; path = People/Classes/Views/ProfilePictureView.h; sourceTree = "<group>"; };
 		D3E1D68817DE47F900155E8F /* ProfilePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfilePictureView.m; path = People/Classes/Views/ProfilePictureView.m; sourceTree = "<group>"; };
+		D3E1D68A17DE4B2100155E8F /* ProfilePhoneNumbersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfilePhoneNumbersView.xib; path = People/Classes/Views/ProfilePhoneNumbersView.xib; sourceTree = "<group>"; };
 		D3F213FA1798BEA800E19338 /* PeopleInitialTransitionSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialTransitionSegue.h; path = Classes/Segues/PeopleInitialTransitionSegue.h; sourceTree = "<group>"; };
 		D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleInitialTransitionSegue.m; path = Classes/Segues/PeopleInitialTransitionSegue.m; sourceTree = "<group>"; };
 		ECAB2C557C6B42DE9192D9C5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,16 +313,6 @@
 		D38B346F179898BB00E2AF26 = {
 			isa = PBXGroup;
 			children = (
-				D3E1D68517DE47DD00155E8F /* ProfilePictureView.xib */,
-				D3E1D68717DE47F900155E8F /* ProfilePictureView.h */,
-				D3E1D68817DE47F900155E8F /* ProfilePictureView.m */,
-				D3E1D68217DE470A00155E8F /* BKXibView.h */,
-				D3E1D68317DE470A00155E8F /* BKXibView.m */,
-				D3E1D67F17DE45B300155E8F /* ProfilePhoneNumbersView.h */,
-				D3E1D68017DE45B300155E8F /* ProfilePhoneNumbersView.m */,
-				D38A430517DE41D500434161 /* ProfileNameView.xib */,
-				D38A430717DE427600434161 /* ProfileNameView.h */,
-				D38A430817DE427600434161 /* ProfileNameView.m */,
 				D38B3481179898BB00E2AF26 /* People */,
 				D371D2B41798AA19009C9D9E /* Private Headers */,
 				D39DDC051799E77D00E9D0C5 /* Test Data */,
@@ -373,6 +365,7 @@
 				D39DDBE81799B31300E9D0C5 /* Segues and Animations */,
 				D39DDBE41799B30C00E9D0C5 /* Connection */,
 				D3A9D8191798A08600F05FD5 /* View Controllers */,
+				D3E1D68C17DE4BB700155E8F /* Views */,
 				D38B3482179898BB00E2AF26 /* Supporting Files */,
 				D327A4C917989A8D0042FF8B /* Images.xcassets */,
 				D3A30842179C4AB10010FE51 /* TableView */,
@@ -518,6 +511,33 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		D3E1D68C17DE4BB700155E8F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3E1D68217DE470A00155E8F /* BKXibView.h */,
+				D3E1D68317DE470A00155E8F /* BKXibView.m */,
+				D3E1D68D17DE4BCA00155E8F /* Profile */,
+			);
+			name = Views;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D3E1D68D17DE4BCA00155E8F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D3E1D68517DE47DD00155E8F /* ProfilePictureView.xib */,
+				D3E1D68717DE47F900155E8F /* ProfilePictureView.h */,
+				D3E1D68817DE47F900155E8F /* ProfilePictureView.m */,
+				D3E1D68A17DE4B2100155E8F /* ProfilePhoneNumbersView.xib */,
+				D3E1D67F17DE45B300155E8F /* ProfilePhoneNumbersView.h */,
+				D3E1D68017DE45B300155E8F /* ProfilePhoneNumbersView.m */,
+				D38A430517DE41D500434161 /* ProfileNameView.xib */,
+				D38A430717DE427600434161 /* ProfileNameView.h */,
+				D38A430817DE427600434161 /* ProfileNameView.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -599,6 +619,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E1D68B17DE4B2100155E8F /* ProfilePhoneNumbersView.xib in Resources */,
 				D327A4CA17989A8D0042FF8B /* Images.xcassets in Resources */,
 				D34C56EE179B29EA00706AFF /* Dosis-ExtraLight.otf in Resources */,
 				D34C56EB179B29EA00706AFF /* Dosis-Bold.otf in Resources */,
