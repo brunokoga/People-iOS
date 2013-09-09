@@ -163,11 +163,11 @@
                         <subviews>
                             <view contentMode="scaleToFill" id="z8l-1N-ULC" userLabel="ContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="NRK-fE-Vdr" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="People - White Logo" id="hKe-E4-pDK">
                                                 <rect key="frame" x="90" y="219" width="174" height="70"/>
@@ -407,12 +407,7 @@
     </scenes>
     <resources>
         <image name="DefaultBackground" width="320" height="480"/>
-        <image name="DefaultBackground" width="320" height="480"/>
-        <image name="DefaultBackground" width="320" height="480"/>
         <image name="People - White Logo" width="174" height="70"/>
-        <image name="People - White Logo" width="174" height="70"/>
-        <image name="People - White Logo" width="174" height="70"/>
-        <image name="get" width="98" height="10"/>
         <image name="get" width="98" height="10"/>
         <image name="ico-dos-sociallinks" width="23" height="23"/>
         <image name="ico-pass-normal" width="25" height="25"/>
