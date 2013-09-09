@@ -18,14 +18,14 @@
     {
         PeopleColaborador *colaborador = [[PeopleColaborador alloc] init];
         
-        colaborador.name = [colaboradorArray objectAtIndex:0];
-        colaborador.login = [colaboradorArray objectAtIndex:1];
-        colaborador.phone = [colaboradorArray objectAtIndex:2];
-        colaborador.mobile = [colaboradorArray objectAtIndex:3];
-        colaborador.role = [colaboradorArray objectAtIndex:4];
-        colaborador.mentorLogin = [colaboradorArray objectAtIndex:5];
-        colaborador.managerLogin = [colaboradorArray objectAtIndex:6];
-        colaborador.location = [colaboradorArray objectAtIndex:7];
+        colaborador.name = colaboradorArray[0];
+        colaborador.login = colaboradorArray[1];
+        colaborador.phone = colaboradorArray[2];
+        colaborador.mobile = colaboradorArray[3];
+        colaborador.role = colaboradorArray[4];
+        colaborador.mentorLogin = colaboradorArray[5];
+        colaborador.managerLogin = colaboradorArray[6];
+        colaborador.location = colaboradorArray[7];
         
         [colaboradoresArray addObject:colaborador];
     }
@@ -41,57 +41,43 @@
     
     PeopleColaborador *colaborador = [[PeopleColaborador alloc] init];
 
-    NSDictionary *colaboradorDictionary = [responseDictionary objectForKey:@"personal_info"];
+    NSDictionary *colaboradorDictionary = responseDictionary[@"personal_info"];
     
-    colaborador.birthday = [colaboradorDictionary objectForKey:@"birthday"];
-    colaborador.building = [colaboradorDictionary objectForKey:@"building"];
-    colaborador.email = [colaboradorDictionary objectForKey:@"email"];
-    colaborador.joiningDate = [colaboradorDictionary objectForKey:@"joining_date"];
-    colaborador.location = [colaboradorDictionary objectForKey:@"location"];
-    colaborador.login = [colaboradorDictionary objectForKey:@"login"];
-    colaborador.mobile = [colaboradorDictionary objectForKey:@"mobile"];
-    colaborador.name = [colaboradorDictionary objectForKey:@"name"];
-    colaborador.ownWords = [colaboradorDictionary objectForKey:@"own_words"];
-    colaborador.phone = [colaboradorDictionary objectForKey:@"phone"];
-    colaborador.role = [colaboradorDictionary objectForKey:@"role"];
-    colaborador.managerLogin = [colaboradorDictionary objectForKey:@"manager_login"];
-    colaborador.managerName = [colaboradorDictionary objectForKey:@"manager"];
-    colaborador.mentorName = [colaboradorDictionary objectForKey:@"mentor"];
-    colaborador.mentorLogin = [colaboradorDictionary objectForKey:@"mentor_login"];
-    colaborador.skills = [responseDictionary objectForKey:@"skills"];
+    colaborador.birthday = colaboradorDictionary[@"birthday"];
+    colaborador.building = colaboradorDictionary[@"building"];
+    colaborador.email = colaboradorDictionary[@"email"];
+    colaborador.joiningDate = colaboradorDictionary[@"joining_date"];
+    colaborador.location = colaboradorDictionary[@"location"];
+    colaborador.login = colaboradorDictionary[@"login"];
+    colaborador.mobile = colaboradorDictionary[@"mobile"];
+    colaborador.name = colaboradorDictionary[@"name"];
+    colaborador.ownWords = colaboradorDictionary[@"own_words"];
+    colaborador.phone = colaboradorDictionary[@"phone"];
+    colaborador.role = colaboradorDictionary[@"role"];
+    colaborador.managerLogin = colaboradorDictionary[@"manager_login"];
+    colaborador.managerName = colaboradorDictionary[@"manager"];
+    colaborador.mentorName = colaboradorDictionary[@"mentor"];
+    colaborador.mentorLogin = colaboradorDictionary[@"mentor_login"];
+    colaborador.skills = responseDictionary[@"skills"];
     
-    NSDictionary *projectsDictionary = [responseDictionary objectForKey:@"projects"];
-    colaborador.currentProjects = [projectsDictionary objectForKey:@"current"];
-    colaborador.pastProjects = [projectsDictionary objectForKey:@"past"];
-    colaborador.teammates = [NSSet setWithArray:[[responseDictionary objectForKey:@"teammates"] allValues]];
+    NSDictionary *projectsDictionary = responseDictionary[@"projects"];
+    colaborador.currentProjects = projectsDictionary[@"current"];
+    colaborador.pastProjects = projectsDictionary[@"past"];
+    colaborador.teammates = [NSSet setWithArray:[responseDictionary[@"teammates"] allValues]];
     
-    NSArray *socialNetworksArray = [[responseDictionary objectForKey:@"employee_sociallinks"] allObjects];
+    NSArray *socialNetworksArray = [responseDictionary[@"employee_sociallinks"] allObjects];
     NSMutableDictionary *socialNetworks = [NSMutableDictionary dictionary];
     for (NSDictionary *socialNetwork in socialNetworksArray)
     {
-        NSString *socialNetworkName = [socialNetwork objectForKey:@"name"];
-        NSString *socialNetworkLink = [socialNetwork objectForKey:@"link"];
-        NSString *socialNetworkLogo = [socialNetwork objectForKey:@"logo"];
+        NSString *socialNetworkName = socialNetwork[@"name"];
+        NSString *socialNetworkLink = socialNetwork[@"link"];
+        NSString *socialNetworkLogo = socialNetwork[@"logo"];
         
         [socialNetworks setObject:@{@"link" : socialNetworkLink,
                                     @"logo" : socialNetworkLogo}
                            forKey:socialNetworkName];
     }
     colaborador.socialNetworks = [NSDictionary dictionaryWithDictionary:socialNetworks];
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
     
     return colaborador;
     
