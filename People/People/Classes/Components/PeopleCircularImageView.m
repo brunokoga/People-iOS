@@ -34,7 +34,7 @@
     CGRect imageViewFrame = CGRectMake((self.frame.size.width - reducedWidth)/2, (self.frame.size.height - reducedHeight)/2, reducedWidth, reducedHeight);
    _imageView = [[UIImageView alloc] initWithFrame:imageViewFrame];
     [self addSubview:_imageView];
-    self.backgroundColor = [UIColor blackColor];
+    self.backgroundColor = [UIColor clearColor];
     [self setDiameter:self.frame.size.width];
     
     [self makeCircular];

@@ -35,6 +35,8 @@
     
     self.layer.borderColor = [[UIColor grayColor] CGColor];
     self.layer.borderWidth = 1.0f;
+    
+    self.imageView.backgroundColor = [UIColor clearColor];
 }
 
 - (void)updateLabelsWithCollaborator:(PeopleColaborador *)collaborator
@@ -45,7 +47,7 @@
     self.collaboratorLoginLabel.text = collaborator.login;
     self.collaboratorCellphoneLabel.text = collaborator.mobile;
     
-//    [self addButtonsWithCollaborator:collaborator];
+    //    [self addButtonsWithCollaborator:collaborator];
 }
 
 - (void)addButtonsWithCollaborator:(PeopleColaborador *)collaborator
@@ -82,6 +84,13 @@
 {
     _image = image;
     self.collaboratorImageView.imageView.image = image;
+    UIColor *backgroundColor = [UIColor clearColor];
+    if (image)
+    {
+        backgroundColor = [UIColor grayColor];
+    }
+    self.collaboratorImageView.backgroundColor = backgroundColor;
+    
 }
 
 
