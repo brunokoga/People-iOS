@@ -43,7 +43,7 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
 #pragma mark - Authentication
 
 - (void)setUsername:(NSString *)username
-           password:(NSString *)password;
+           password:(NSString *)password
 {
     AFHTTPSerializer *serializer = [self serializer];
     [serializer clearAuthorizationHeader];

@@ -13,6 +13,8 @@
 		47B9180C17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B9180A17A875AD0051FFBE /* PeopleSearchTableViewHeader.m */; };
 		9AED62FE459640D98CC80172 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAB2C557C6B42DE9192D9C5 /* libPods.a */; };
 		AA73A0F617A62A4E00229CE3 /* PeopleSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */; };
+		D304D7D317DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D304D7D217DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m */; };
+		D304D7D617DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D304D7D517DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m */; };
 		D327A4CA17989A8D0042FF8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D327A4C917989A8D0042FF8B /* Images.xcassets */; };
 		D329173A179A217D00140214 /* PeopleColaboradorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3291739179A217D00140214 /* PeopleColaboradorTests.m */; };
 		D34C56D9179AEBE500706AFF /* search_generic1.json in Resources */ = {isa = PBXBuildFile; fileRef = D34C56D7179AEBE500706AFF /* search_generic1.json */; };
@@ -32,6 +34,7 @@
 		D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BA1798B8DF009C9D9E /* PeopleLoginViewController.m */; };
 		D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */; };
 		D371D2C11798B8FF009C9D9E /* PeopleTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BD1798B8ED009C9D9E /* PeopleTutorialViewController.m */; };
+		D38A430417DE0C4B00434161 /* PeopleInitialSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = D38A430317DE0C4B00434161 /* PeopleInitialSetup.m */; };
 		D38B347C179898BB00E2AF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38B347B179898BB00E2AF26 /* Foundation.framework */; };
 		D38B347E179898BB00E2AF26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38B347D179898BB00E2AF26 /* CoreGraphics.framework */; };
 		D38B3480179898BB00E2AF26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38B347F179898BB00E2AF26 /* UIKit.framework */; };
@@ -81,6 +84,10 @@
 		AA73A0F417A62A4E00229CE3 /* PeopleSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchTableViewCell.h; path = Classes/PeopleSearchTableViewCell.h; sourceTree = "<group>"; };
 		AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchTableViewCell.m; path = Classes/PeopleSearchTableViewCell.m; sourceTree = "<group>"; };
 		B1B65C1B01294229848DAD83 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D304D7D117DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleListToProfileTransitionAnimation.h; path = Classes/Segues/PeopleListToProfileTransitionAnimation.h; sourceTree = "<group>"; };
+		D304D7D217DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleListToProfileTransitionAnimation.m; path = Classes/Segues/PeopleListToProfileTransitionAnimation.m; sourceTree = "<group>"; };
+		D304D7D417DD3D8A0068C13C /* PeopleNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleNavigationControllerDelegate.h; path = Classes/PeopleNavigationControllerDelegate.h; sourceTree = "<group>"; };
+		D304D7D517DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleNavigationControllerDelegate.m; path = Classes/PeopleNavigationControllerDelegate.m; sourceTree = "<group>"; };
 		D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleProfileViewController.h; path = Classes/PeopleProfileViewController.h; sourceTree = "<group>"; };
 		D327A4C917989A8D0042FF8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D3291739179A217D00140214 /* PeopleColaboradorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleColaboradorTests.m; sourceTree = "<group>"; };
@@ -106,6 +113,8 @@
 		D371D2BD1798B8ED009C9D9E /* PeopleTutorialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PeopleTutorialViewController.m; path = Classes/PeopleTutorialViewController.m; sourceTree = "<group>"; };
 		D371D2BE1798B8FC009C9D9E /* PeopleSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchViewController.h; path = Classes/PeopleSearchViewController.h; sourceTree = "<group>"; };
 		D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchViewController.m; path = Classes/PeopleSearchViewController.m; sourceTree = "<group>"; };
+		D38A430217DE0C4B00434161 /* PeopleInitialSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialSetup.h; path = Classes/PeopleInitialSetup.h; sourceTree = "<group>"; };
+		D38A430317DE0C4B00434161 /* PeopleInitialSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleInitialSetup.m; path = Classes/PeopleInitialSetup.m; sourceTree = "<group>"; };
 		D38B3478179898BB00E2AF26 /* People.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = People.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38B347B179898BB00E2AF26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D38B347D179898BB00E2AF26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -330,10 +339,12 @@
 				D34C56DC179AF4A200706AFF /* PeopleValidation.m */,
 				D3A9D81D1798A3AD00F05FD5 /* PeoplePreferences.h */,
 				D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */,
+				D38A430217DE0C4B00434161 /* PeopleInitialSetup.h */,
+				D38A430317DE0C4B00434161 /* PeopleInitialSetup.m */,
 				D39DDC031799C73300E9D0C5 /* Entities */,
 				D39DDBF71799C5CA00E9D0C5 /* Parsers */,
 				D39DDBF31799B90F00E9D0C5 /* Theme */,
-				D39DDBE81799B31300E9D0C5 /* Segues */,
+				D39DDBE81799B31300E9D0C5 /* Segues and Animations */,
 				D39DDBE41799B30C00E9D0C5 /* Connection */,
 				D3A9D8191798A08600F05FD5 /* View Controllers */,
 				D38B3482179898BB00E2AF26 /* Supporting Files */,
@@ -390,13 +401,15 @@
 			path = Classes/Connection;
 			sourceTree = "<group>";
 		};
-		D39DDBE81799B31300E9D0C5 /* Segues */ = {
+		D39DDBE81799B31300E9D0C5 /* Segues and Animations */ = {
 			isa = PBXGroup;
 			children = (
 				D3F213FA1798BEA800E19338 /* PeopleInitialTransitionSegue.h */,
 				D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */,
+				D304D7D117DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.h */,
+				D304D7D217DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m */,
 			);
-			name = Segues;
+			name = "Segues and Animations";
 			sourceTree = "<group>";
 		};
 		D39DDBF31799B90F00E9D0C5 /* Theme */ = {
@@ -472,6 +485,8 @@
 				D3816AD217A962A3004C0FFC /* Profile */,
 				D398D6B717A9968600120394 /* PeopleNavigationController.h */,
 				D398D6B817A9968600120394 /* PeopleNavigationController.m */,
+				D304D7D417DD3D8A0068C13C /* PeopleNavigationControllerDelegate.h */,
+				D304D7D517DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m */,
 				D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */,
 			);
 			name = "View Controllers";
@@ -631,6 +646,7 @@
 				D371D2B21798A554009C9D9E /* PeoplePreferences.m in Sources */,
 				D38B3488179898BB00E2AF26 /* main.m in Sources */,
 				47B9180B17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */,
+				D304D7D617DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m in Sources */,
 				D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */,
 				D34C56E2179B06B300706AFF /* PeopleFavorites.m in Sources */,
 				D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */,
@@ -638,6 +654,7 @@
 				AA73A0F617A62A4E00229CE3 /* PeopleSearchTableViewCell.m in Sources */,
 				D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */,
 				D398D6B917A9968600120394 /* PeopleNavigationController.m in Sources */,
+				D304D7D317DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m in Sources */,
 				D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */,
 				474CF5BC17AB202900834C4F /* PeopleProfileViewController.m in Sources */,
 				D3A30845179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m in Sources */,
@@ -648,6 +665,7 @@
 				D3A30841179C4AA70010FE51 /* PeopleTableViewCell.m in Sources */,
 				D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */,
 				D39DDBF61799C57D00E9D0C5 /* PeopleServices.m in Sources */,
+				D38A430417DE0C4B00434161 /* PeopleInitialSetup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

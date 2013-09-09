@@ -12,6 +12,10 @@
 @interface PeopleProfileViewController : PeopleBaseViewController
 
 @property (nonatomic, retain) PeopleColaborador *colaborador;
+@property(nonatomic, strong, readonly) UIView *containerView;
+@property(nonatomic, strong, readonly) UIView *contentView;
+
+- (CGRect)frameForContainerView;
 
 
 @end

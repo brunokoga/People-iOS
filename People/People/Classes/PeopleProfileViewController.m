@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *buildingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *roleLabel;
+@property(nonatomic, strong, readwrite) IBOutlet UIView *containerView;
+@property(nonatomic, strong, readwrite) IBOutlet UIView *contentView;
+
 
 @end
 
@@ -51,7 +54,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+- (CGRect)frameForContainerView {
+    return self.view.bounds;
 }
 
 

@@ -7,12 +7,35 @@
 //
 
 #import "PeopleNavigationController.h"
+#import "PeopleNavigationControllerDelegate.h"
 
 @interface PeopleNavigationController ()
 
+@property (nonatomic, strong) id<UINavigationControllerDelegate> transitionDelegate;
 @end
 
 @implementation PeopleNavigationController
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self setup];
+}
+
+- (void)setup
+{
+    self.transitionDelegate = [PeopleNavigationControllerDelegate new];
+    self.delegate = self.transitionDelegate;
+}
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PeopleNavigationController : UINavigationController
+@interface PeopleNavigationController : UINavigationController<UINavigationControllerDelegate>
 
 @end

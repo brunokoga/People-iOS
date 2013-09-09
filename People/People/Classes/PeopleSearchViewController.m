@@ -21,6 +21,12 @@
 @property (weak, nonatomic) IBOutlet UITableView *resultTableView;
 @property (strong, nonatomic) NSArray *resultCollaborators;
 
+@property(nonatomic, strong, readwrite) IBOutlet UIView *containerView;
+@property(nonatomic, strong, readwrite) IBOutlet UIView *contentView;
+//overriding readonly property
+@property (nonatomic, strong, readwrite) UITableViewCell *selectedCell;
+@property (nonatomic, strong, readwrite) NSIndexPath *selectedIndexPath;
+
 @end
 
 static NSString * const kPeopleSearchCellIdentifier = @"kPeopleSearchCellIdentifier";
@@ -32,13 +38,13 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self createContainerAndContentViews];
 	// Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
     self.resultTableView.dataSource = self;
     self.resultTableView.delegate = self;
     self.searchTextfield.delegate = self;
@@ -47,6 +53,17 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+}
+
+- (void)createContainerAndContentViews
+{
+    [super viewDidLoad];
+}
+
+- (CGRect)frameForContainerView {
+    CGFloat width = self.view.bounds.size.width;
+    CGFloat height = self.view.bounds.size.height;
+    return CGRectMake(0.0f, height/2.0f - width/2.0f, width, height);
 }
 
 #pragma mark UITextFieldDelegate
@@ -131,6 +148,10 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.selectedCell = [self tableView:self.resultTableView
+                  cellForRowAtIndexPath:indexPath];
+    self.selectedIndexPath = indexPath;
+    
     [self performSegueWithIdentifier:kPeopleSearchToProfileSegueIdentifier sender:self];
 }
 
@@ -156,6 +177,14 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
         profileViewController.colaborador = nil;
     }
     
+}
+
+- (CGRect)selectedCellRelativeFrame
+{
+    CGRect rectOfCellInTableView = [self.resultTableView rectForRowAtIndexPath:self.selectedIndexPath];
+    CGRect rectOfCellInSuperview = [self.resultTableView convertRect:rectOfCellInTableView toView:self.view];
+
+    return rectOfCellInSuperview;
 }
 
 @end

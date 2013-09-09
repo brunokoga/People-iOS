@@ -10,4 +10,12 @@
 
 @interface PeopleSearchViewController : PeopleBaseViewController
 
+@property (nonatomic, readonly) UITableViewCell *selectedCell;
+@property(nonatomic, strong, readonly) UIView *containerView;
+@property(nonatomic, strong, readonly) UIView *contentView;
+@property (weak, nonatomic) IBOutlet UIView *searchView;
+
+- (CGRect)frameForContainerView;
+- (CGRect)selectedCellRelativeFrame;
+
 @end

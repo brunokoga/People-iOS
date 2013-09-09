@@ -8,12 +8,15 @@
 
 #import "PeopleAppDelegate.h"
 #import "PeopleBasicTheme.h"
+#import "PeopleInitialSetup.h"
+
 
 @implementation PeopleAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [PeopleBasicTheme configureTheme];
+    [PeopleInitialSetup initialSetup];
     return YES;
 }
 
