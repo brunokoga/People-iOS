@@ -25,6 +25,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.collaboratorNameLabel.font = [PeopleBasicTheme peopleFontBookWithSize:self.collaboratorNameLabel.font.pointSize];
     self.collaboratorRoleLabel.font = [PeopleBasicTheme peopleFontBookWithSize:self.collaboratorRoleLabel.font.pointSize];
     self.collaboratorPhoneLabel.font = [PeopleBasicTheme peopleFontBookWithSize:self.collaboratorPhoneLabel.font.pointSize];

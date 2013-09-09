@@ -322,7 +322,7 @@
                                                 </state>
                                             </button>
                                             <view contentMode="scaleToFill" id="f41-Lg-HsC" customClass="ProfileNameView">
-                                                <rect key="frame" x="0.0" y="142" width="320" height="150"/>
+                                                <rect key="frame" x="0.0" y="118" width="320" height="80"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             </view>
@@ -332,12 +332,12 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             </view>
                                             <view contentMode="scaleToFill" id="Fx3-qI-Mbz" customClass="ProfilePhoneNumbersView">
-                                                <rect key="frame" x="0.0" y="300" width="320" height="102"/>
+                                                <rect key="frame" x="0.0" y="206" width="320" height="45"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
