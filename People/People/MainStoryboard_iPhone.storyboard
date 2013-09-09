@@ -238,7 +238,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" id="0vk-ir-ASe" customClass="PeopleCircularImageView">
-                                                                    <rect key="frame" x="20" y="25" width="49" height="50"/>
+                                                                    <rect key="frame" x="10" y="25" width="49" height="50"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                                 </view>
@@ -407,7 +407,12 @@
     </scenes>
     <resources>
         <image name="DefaultBackground" width="320" height="480"/>
+        <image name="DefaultBackground" width="320" height="480"/>
+        <image name="DefaultBackground" width="320" height="480"/>
         <image name="People - White Logo" width="174" height="70"/>
+        <image name="People - White Logo" width="174" height="70"/>
+        <image name="People - White Logo" width="174" height="70"/>
+        <image name="get" width="98" height="10"/>
         <image name="get" width="98" height="10"/>
         <image name="ico-dos-sociallinks" width="23" height="23"/>
         <image name="ico-pass-normal" width="25" height="25"/>
