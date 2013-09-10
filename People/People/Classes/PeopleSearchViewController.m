@@ -185,7 +185,7 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
     if ([segue.identifier isEqualToString:kPeopleSearchToProfileSegueIdentifier])
     {
         PeopleProfileViewController *profileViewController = (PeopleProfileViewController *)segue.destinationViewController;
-        profileViewController.colaborador = nil;
+        profileViewController.colaborador = self.resultCollaborators[self.selectedIndexPath.row];
     }
     
 }

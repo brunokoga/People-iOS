@@ -10,4 +10,12 @@
 
 @interface ProfilePictureView : BKXibView
 
+@property (nonatomic, strong) UIImage *image;
+
+- (void)hideFavoritos:(BOOL)hide;
+
+- (void)animateCornerRadiusFromFrame:(CGRect)fromFrame
+                             toFrame:(CGRect)toFrame
+                            duration:(NSTimeInterval)duration;
+
 @end

@@ -16,6 +16,11 @@
 @property(nonatomic, strong, readonly) UIView *contentView;
 
 - (CGRect)frameForContainerView;
+- (void)performListToProfileAnimationWithDuration:(NSTimeInterval)duration
+                                     pictureFrame:(CGRect)frame;
+
+- (void)performProfileToListAnimationWithDuration:(NSTimeInterval)duration
+                                     pictureFrame:(CGRect)frame;
 
 
 @end

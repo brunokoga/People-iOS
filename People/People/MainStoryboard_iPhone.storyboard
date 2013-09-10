@@ -238,7 +238,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" id="0vk-ir-ASe" customClass="PeopleCircularImageView">
-                                                                    <rect key="frame" x="10" y="25" width="49" height="50"/>
+                                                                    <rect key="frame" x="10" y="25" width="50" height="50"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                                 </view>
@@ -332,7 +332,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             </view>
-                                            <view contentMode="scaleToFill" id="V4R-NM-eH7" customClass="ProfilePictureView">
+                                            <view clipsSubviews="YES" contentMode="center" id="V4R-NM-eH7" customClass="ProfilePictureView">
                                                 <rect key="frame" x="113" y="16" width="94" height="94"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -343,7 +343,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -354,6 +354,9 @@
                     <connections>
                         <outlet property="containerView" destination="SmV-Kh-f5u" id="629-xK-o2a"/>
                         <outlet property="contentView" destination="KZA-p3-mfm" id="4cM-CV-FW5"/>
+                        <outlet property="moreButton" destination="3qg-TJ-9aO" id="1ty-3K-3J1"/>
+                        <outlet property="pictureView" destination="V4R-NM-eH7" id="U9b-cY-aRJ"/>
+                        <outlet property="topBackgroundImageView" destination="oYk-Vb-yw1" id="UNd-M6-YO1"/>
                         <outlet property="view" destination="8AV-Nv-8Ev" id="pE4-oe-p3i"/>
                     </connections>
                 </viewController>

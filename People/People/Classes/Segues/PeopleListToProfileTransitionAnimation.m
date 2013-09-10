@@ -83,6 +83,9 @@
         
         [transitionContext completeTransition:YES];
     };
+
+    //TODO: change that!!
+
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0.0
          usingSpringWithDamping:1.0
@@ -90,6 +93,11 @@
                         options:0
                      animations:animationBlock
                      completion:completionBlock];
+    
+    CGRect pictureFrame = CGRectMake(10.0f, 25.0f, 50.0f, 50.0f);
+    [toViewController performListToProfileAnimationWithDuration:[self transitionDuration:transitionContext]/2
+                                                   pictureFrame:pictureFrame];
+
 
 }
 
@@ -125,7 +133,6 @@
     fromViewControllerContentView.frame = [fromViewController.view convertRect:[fromViewController frameForContainerView]
                                                                         toView:transitionView];
     
-    
     [UIView animateWithDuration:0.2 animations:^{
         toViewController.view.alpha = 1.0f;
         fromViewController.view.alpha = 0.0f;
@@ -146,11 +153,18 @@
     };
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0.0
-         usingSpringWithDamping:0.8
-          initialSpringVelocity:15.0
+         usingSpringWithDamping:0.9
+          initialSpringVelocity:0.0
                         options:0
                      animations:animationBlock
                      completion:completionBlock];
+    
+    //TODO: change that!!
+    CGRect pictureFrame = CGRectMake(10.0f, 25.0f, 50.0f, 50.0f);
+    
+    [fromViewController performProfileToListAnimationWithDuration:[self transitionDuration:transitionContext]
+                                                     pictureFrame:pictureFrame];
+
      
 
     
