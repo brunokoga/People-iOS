@@ -10,4 +10,7 @@
 
 @interface ProfileCoachView : BKXibView
 
+@property (nonatomic, strong) UIImage *coachPicture;
+@property (nonatomic, strong) NSString *coachName;
+
 @end

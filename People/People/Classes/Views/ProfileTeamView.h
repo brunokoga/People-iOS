@@ -9,5 +9,9 @@
 #import "BKXibView.h"
 
 @interface ProfileTeamView : BKXibView
+@property (nonatomic) NSArray *teamMemberNames;
+
+- (void)setImage:(UIImage *)image
+        forIndex:(NSInteger)index;
 
 @end

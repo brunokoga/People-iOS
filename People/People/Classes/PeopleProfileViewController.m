@@ -9,6 +9,11 @@
 #import "PeopleProfileViewController.h"
 #import "ProfilePictureView.h"
 #import "PeopleServices.h"
+#import "ProfileNameView.h"
+#import "ProfilePhoneNumbersView.h"
+#import "ProfileCoachView.h"
+#import "ProfileTeamView.h"
+#import "ProfileProjectsView.h"
 
 @interface PeopleProfileViewController ()
 @property(nonatomic, strong, readwrite) IBOutlet UIView *containerView;
@@ -17,6 +22,11 @@
 @property (weak, nonatomic) IBOutlet ProfilePictureView *pictureView;
 @property (weak, nonatomic) IBOutlet UIImageView *topBackgroundImageView;
 @property (weak, nonatomic) IBOutlet UIButton *moreButton;
+@property (weak, nonatomic) IBOutlet ProfileNameView *nameView;
+@property (weak, nonatomic) IBOutlet ProfilePhoneNumbersView *phoneNumbersView;
+@property (weak, nonatomic) IBOutlet ProfileCoachView *coachView;
+@property (weak, nonatomic) IBOutlet ProfileTeamView *teamView;
+@property (weak, nonatomic) IBOutlet ProfileProjectsView *projectsView;
 
 @end
 
@@ -98,7 +108,7 @@
 {
     _colaborador = colaborador;
     [self downloadAndSetImage];
-    //TODO: download image and set to pictureView
+    
 }
 
 - (void)downloadAndSetImage
@@ -106,6 +116,8 @@
     [[PeopleServices sharedServices] photoForUser:self.colaborador.login
                                           success:^(UIImage *image) {
                                                   self.pictureView.image = image;
+                                              [self.teamView setTeamMemberNames:@[@"a", @"b", @"c"]];
+
                                           } failure:^(NSError *error) {
                                               
                                           }];

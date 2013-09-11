@@ -78,6 +78,7 @@
 		D3E1D69B17E0C54A00155E8F /* ProfileCoachView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D69A17E0C54A00155E8F /* ProfileCoachView.m */; };
 		D3E1D69E17E0C55900155E8F /* ProfileTeamView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D69D17E0C55900155E8F /* ProfileTeamView.m */; };
 		D3E1D6A117E0C56C00155E8F /* ProfileProjectsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D6A017E0C56C00155E8F /* ProfileProjectsView.m */; };
+		D3E1D6A417E0CE1200155E8F /* PeopleCircularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D6A317E0CE1200155E8F /* PeopleCircularButton.m */; };
 		D3F213FC1798BEA800E19338 /* PeopleInitialTransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */; };
 /* End PBXBuildFile section */
 
@@ -200,6 +201,8 @@
 		D3E1D69D17E0C55900155E8F /* ProfileTeamView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTeamView.m; path = People/Classes/Views/ProfileTeamView.m; sourceTree = "<group>"; };
 		D3E1D69F17E0C56C00155E8F /* ProfileProjectsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileProjectsView.h; path = People/Classes/Views/ProfileProjectsView.h; sourceTree = "<group>"; };
 		D3E1D6A017E0C56C00155E8F /* ProfileProjectsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileProjectsView.m; path = People/Classes/Views/ProfileProjectsView.m; sourceTree = "<group>"; };
+		D3E1D6A217E0CE1200155E8F /* PeopleCircularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleCircularButton.h; path = Classes/Components/PeopleCircularButton.h; sourceTree = "<group>"; };
+		D3E1D6A317E0CE1200155E8F /* PeopleCircularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleCircularButton.m; path = Classes/Components/PeopleCircularButton.m; sourceTree = "<group>"; };
 		D3F213FA1798BEA800E19338 /* PeopleInitialTransitionSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialTransitionSegue.h; path = Classes/Segues/PeopleInitialTransitionSegue.h; sourceTree = "<group>"; };
 		D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleInitialTransitionSegue.m; path = Classes/Segues/PeopleInitialTransitionSegue.m; sourceTree = "<group>"; };
 		ECAB2C557C6B42DE9192D9C5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -367,6 +370,8 @@
 		D38B3481179898BB00E2AF26 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				D3E1D6A217E0CE1200155E8F /* PeopleCircularButton.h */,
+				D3E1D6A317E0CE1200155E8F /* PeopleCircularButton.m */,
 				D3E1D68E17DE558900155E8F /* PeopleCircularImageView.h */,
 				D3E1D68F17DE558900155E8F /* PeopleCircularImageView.m */,
 				D31FEBFC17A208A9007F4712 /* UI Components */,
@@ -721,6 +726,7 @@
 			files = (
 				D39DDBFC1799C5CA00E9D0C5 /* PeopleJSONParser.m in Sources */,
 				D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */,
+				D3E1D6A417E0CE1200155E8F /* PeopleCircularButton.m in Sources */,
 				D371D2C11798B8FF009C9D9E /* PeopleTutorialViewController.m in Sources */,
 				D39DDBF21799B90600E9D0C5 /* PeopleBasicTheme.m in Sources */,
 				D3E1D69E17E0C55900155E8F /* ProfileTeamView.m in Sources */,

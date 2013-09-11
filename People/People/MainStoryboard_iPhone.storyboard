@@ -367,12 +367,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="coachView" destination="KtI-KJ-Vqg" id="yFd-n9-e5r"/>
                         <outlet property="containerView" destination="SmV-Kh-f5u" id="629-xK-o2a"/>
                         <outlet property="contentView" destination="KZA-p3-mfm" id="4cM-CV-FW5"/>
                         <outlet property="moreButton" destination="3qg-TJ-9aO" id="1ty-3K-3J1"/>
+                        <outlet property="nameView" destination="f41-Lg-HsC" id="LvB-ur-abv"/>
+                        <outlet property="phoneNumbersView" destination="Fx3-qI-Mbz" id="fGP-j8-To2"/>
                         <outlet property="pictureView" destination="V4R-NM-eH7" id="U9b-cY-aRJ"/>
+                        <outlet property="projectsView" destination="BoL-vg-R63" id="vet-Dh-gJv"/>
+                        <outlet property="teamView" destination="24f-mi-FOr" id="mwL-4S-o7B"/>
                         <outlet property="topBackgroundImageView" destination="oYk-Vb-yw1" id="UNd-M6-YO1"/>
-                        <outlet property="view" destination="8AV-Nv-8Ev" id="pE4-oe-p3i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2k-U8-MNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -425,12 +429,7 @@
     </scenes>
     <resources>
         <image name="DefaultBackground" width="320" height="480"/>
-        <image name="DefaultBackground" width="320" height="480"/>
-        <image name="DefaultBackground" width="320" height="480"/>
         <image name="People - White Logo" width="174" height="70"/>
-        <image name="People - White Logo" width="174" height="70"/>
-        <image name="People - White Logo" width="174" height="70"/>
-        <image name="get" width="98" height="10"/>
         <image name="get" width="98" height="10"/>
         <image name="ico-dos-sociallinks" width="23" height="23"/>
         <image name="ico-pass-normal" width="25" height="25"/>

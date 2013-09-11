@@ -7,25 +7,49 @@
 //
 
 #import "ProfileCoachView.h"
+#import "PeopleCircularImageView.h"
 
+
+@interface ProfileCoachView ()
+@property (weak, nonatomic) IBOutlet PeopleCircularImageView *pictureView;
+@property (weak, nonatomic) IBOutlet UILabel *coachLabel;
+@property (weak, nonatomic) IBOutlet UILabel *coachNameLabel;
+
+
+@end
 @implementation ProfileCoachView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)init
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
-        // Initialization code
+        [self setup];
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)awakeFromNib
 {
-    // Drawing code
+    [super awakeFromNib];
+    [self setup];
 }
-*/
 
+- (void)setup
+{
+    [super setup];
+    
+}
+
+#pragma mark - Setter overrides
+- (void)setCoachPicture:(UIImage *)coachPicture
+{
+    _coachPicture = coachPicture;
+    [self.pictureView.imageView setImage:coachPicture];
+}
+
+- (void)setCoachName:(NSString *)coachName
+{
+    _coachName = coachName;
+    [self.coachNameLabel setText:coachName];
+}
 @end
