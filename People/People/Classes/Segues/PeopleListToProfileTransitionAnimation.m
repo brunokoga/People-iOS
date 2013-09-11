@@ -84,8 +84,6 @@
         [transitionContext completeTransition:YES];
     };
 
-    //TODO: change that!!
-
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0.0
          usingSpringWithDamping:1.0
@@ -94,6 +92,7 @@
                      animations:animationBlock
                      completion:completionBlock];
     
+    //TODO: Change that!
     CGRect pictureFrame = CGRectMake(10.0f, 25.0f, 50.0f, 50.0f);
     [toViewController performListToProfileAnimationWithDuration:[self transitionDuration:transitionContext]/2
                                                    pictureFrame:pictureFrame];
@@ -161,6 +160,7 @@
     
     //TODO: change that!!
     CGRect pictureFrame = CGRectMake(10.0f, 25.0f, 50.0f, 50.0f);
+    
     
     [fromViewController performProfileToListAnimationWithDuration:[self transitionDuration:transitionContext]
                                                      pictureFrame:pictureFrame];

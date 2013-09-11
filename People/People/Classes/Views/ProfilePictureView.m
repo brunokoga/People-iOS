@@ -94,8 +94,7 @@
     self.frame = toFrame;
     
     [CATransaction commit];
-
-    
 }
+
 
 @end

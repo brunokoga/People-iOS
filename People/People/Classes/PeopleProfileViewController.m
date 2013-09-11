@@ -68,14 +68,10 @@
                          self.topBackgroundImageView.alpha = 1.0f;
                          self.moreButton.alpha = 1.0f;
                          
-//                         [self.pictureView setFrame:oldFrame];
-                         
                          [self.pictureView animateCornerRadiusFromFrame:frame
                                                                 toFrame:oldFrame
                                                                duration:duration];
                         
-
-                         
                          [self.pictureView hideFavoritos:NO];
                      }];
     
@@ -93,10 +89,6 @@
                                                                 toFrame:frame
                                                                duration:duration];
                         
-                         
-//                         [self.pictureView setFrame:frame];
-
-
                          [self.pictureView hideFavoritos:YES];
                      }];
     

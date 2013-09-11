@@ -342,8 +342,23 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             </view>
+                                            <view contentMode="scaleToFill" id="KtI-KJ-Vqg" customClass="ProfileCoachView">
+                                                <rect key="frame" x="0.0" y="260" width="320" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="24f-mi-FOr" customClass="ProfileTeamView">
+                                                <rect key="frame" x="0.0" y="331" width="320" height="120"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="BoL-vg-R63" customClass="ProfileProjectsView">
+                                                <rect key="frame" x="0.0" y="483" width="320" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -410,7 +425,12 @@
     </scenes>
     <resources>
         <image name="DefaultBackground" width="320" height="480"/>
+        <image name="DefaultBackground" width="320" height="480"/>
+        <image name="DefaultBackground" width="320" height="480"/>
         <image name="People - White Logo" width="174" height="70"/>
+        <image name="People - White Logo" width="174" height="70"/>
+        <image name="People - White Logo" width="174" height="70"/>
+        <image name="get" width="98" height="10"/>
         <image name="get" width="98" height="10"/>
         <image name="ico-dos-sociallinks" width="23" height="23"/>
         <image name="ico-pass-normal" width="25" height="25"/>
