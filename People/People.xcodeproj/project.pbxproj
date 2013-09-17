@@ -190,8 +190,8 @@
 		D3E1D68717DE47F900155E8F /* ProfilePictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfilePictureView.h; path = People/Classes/Views/ProfilePictureView.h; sourceTree = "<group>"; };
 		D3E1D68817DE47F900155E8F /* ProfilePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfilePictureView.m; path = People/Classes/Views/ProfilePictureView.m; sourceTree = "<group>"; };
 		D3E1D68A17DE4B2100155E8F /* ProfilePhoneNumbersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfilePhoneNumbersView.xib; path = People/Classes/Views/ProfilePhoneNumbersView.xib; sourceTree = "<group>"; };
-		D3E1D68E17DE558900155E8F /* PeopleCircularImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleCircularImageView.h; path = Classes/Components/PeopleCircularImageView.h; sourceTree = "<group>"; };
-		D3E1D68F17DE558900155E8F /* PeopleCircularImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleCircularImageView.m; path = Classes/Components/PeopleCircularImageView.m; sourceTree = "<group>"; };
+		D3E1D68E17DE558900155E8F /* PeopleCircularImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleCircularImageView.h; path = People/Classes/Components/PeopleCircularImageView.h; sourceTree = "<group>"; };
+		D3E1D68F17DE558900155E8F /* PeopleCircularImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleCircularImageView.m; path = People/Classes/Components/PeopleCircularImageView.m; sourceTree = "<group>"; };
 		D3E1D69317E0C4A900155E8F /* ProfileCoachView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileCoachView.xib; path = People/Classes/Views/ProfileCoachView.xib; sourceTree = "<group>"; };
 		D3E1D69517E0C4C200155E8F /* ProfileTeamView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileTeamView.xib; path = People/Classes/Views/ProfileTeamView.xib; sourceTree = "<group>"; };
 		D3E1D69717E0C4F000155E8F /* ProfileProjectsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileProjectsView.xib; path = People/Classes/Views/ProfileProjectsView.xib; sourceTree = "<group>"; };
@@ -201,8 +201,8 @@
 		D3E1D69D17E0C55900155E8F /* ProfileTeamView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileTeamView.m; path = People/Classes/Views/ProfileTeamView.m; sourceTree = "<group>"; };
 		D3E1D69F17E0C56C00155E8F /* ProfileProjectsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileProjectsView.h; path = People/Classes/Views/ProfileProjectsView.h; sourceTree = "<group>"; };
 		D3E1D6A017E0C56C00155E8F /* ProfileProjectsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileProjectsView.m; path = People/Classes/Views/ProfileProjectsView.m; sourceTree = "<group>"; };
-		D3E1D6A217E0CE1200155E8F /* PeopleCircularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleCircularButton.h; path = Classes/Components/PeopleCircularButton.h; sourceTree = "<group>"; };
-		D3E1D6A317E0CE1200155E8F /* PeopleCircularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleCircularButton.m; path = Classes/Components/PeopleCircularButton.m; sourceTree = "<group>"; };
+		D3E1D6A217E0CE1200155E8F /* PeopleCircularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleCircularButton.h; path = People/Classes/Components/PeopleCircularButton.h; sourceTree = "<group>"; };
+		D3E1D6A317E0CE1200155E8F /* PeopleCircularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleCircularButton.m; path = People/Classes/Components/PeopleCircularButton.m; sourceTree = "<group>"; };
 		D3F213FA1798BEA800E19338 /* PeopleInitialTransitionSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialTransitionSegue.h; path = Classes/Segues/PeopleInitialTransitionSegue.h; sourceTree = "<group>"; };
 		D3F213FB1798BEA800E19338 /* PeopleInitialTransitionSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleInitialTransitionSegue.m; path = Classes/Segues/PeopleInitialTransitionSegue.m; sourceTree = "<group>"; };
 		ECAB2C557C6B42DE9192D9C5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +283,10 @@
 		D31FEBFC17A208A9007F4712 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				D3E1D6A217E0CE1200155E8F /* PeopleCircularButton.h */,
+				D3E1D6A317E0CE1200155E8F /* PeopleCircularButton.m */,
+				D3E1D68E17DE558900155E8F /* PeopleCircularImageView.h */,
+				D3E1D68F17DE558900155E8F /* PeopleCircularImageView.m */,
 				D3DA46D6179D8C170061809D /* PeopleRegularButton.h */,
 				D3DA46D7179D8C170061809D /* PeopleRegularButton.m */,
 			);
@@ -370,20 +374,8 @@
 		D38B3481179898BB00E2AF26 /* People */ = {
 			isa = PBXGroup;
 			children = (
-				D3E1D6A217E0CE1200155E8F /* PeopleCircularButton.h */,
-				D3E1D6A317E0CE1200155E8F /* PeopleCircularButton.m */,
-				D3E1D68E17DE558900155E8F /* PeopleCircularImageView.h */,
-				D3E1D68F17DE558900155E8F /* PeopleCircularImageView.m */,
 				D31FEBFC17A208A9007F4712 /* UI Components */,
-				D34C56F2179B29ED00706AFF /* UX */,
-				D34C56E0179B06B300706AFF /* PeopleFavorites.h */,
-				D34C56E1179B06B300706AFF /* PeopleFavorites.m */,
-				D34C56DB179AF4A200706AFF /* PeopleValidation.h */,
-				D34C56DC179AF4A200706AFF /* PeopleValidation.m */,
-				D3A9D81D1798A3AD00F05FD5 /* PeoplePreferences.h */,
-				D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */,
-				D38A430217DE0C4B00434161 /* PeopleInitialSetup.h */,
-				D38A430317DE0C4B00434161 /* PeopleInitialSetup.m */,
+				D3BDA94B17E7A2E40075E574 /* Settings and Setup */,
 				D39DDC031799C73300E9D0C5 /* Entities */,
 				D39DDBF71799C5CA00E9D0C5 /* Parsers */,
 				D39DDBF31799B90F00E9D0C5 /* Theme */,
@@ -392,8 +384,8 @@
 				D3A9D8191798A08600F05FD5 /* View Controllers */,
 				D3E1D68C17DE4BB700155E8F /* Views */,
 				D38B3482179898BB00E2AF26 /* Supporting Files */,
-				D327A4C917989A8D0042FF8B /* Images.xcassets */,
 				D3A30842179C4AB10010FE51 /* TableView */,
+				D327A4C917989A8D0042FF8B /* Images.xcassets */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -401,6 +393,7 @@
 		D38B3482179898BB00E2AF26 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D34C56F2179B29ED00706AFF /* UX */,
 				D38B34AA1798991200E2AF26 /* MainStoryboard_iPhone.storyboard */,
 				D38B348A179898BB00E2AF26 /* PeopleAppDelegate.h */,
 				D38B348B179898BB00E2AF26 /* PeopleAppDelegate.m */,
@@ -534,6 +527,21 @@
 				D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D3BDA94B17E7A2E40075E574 /* Settings and Setup */ = {
+			isa = PBXGroup;
+			children = (
+				D34C56E0179B06B300706AFF /* PeopleFavorites.h */,
+				D34C56E1179B06B300706AFF /* PeopleFavorites.m */,
+				D34C56DB179AF4A200706AFF /* PeopleValidation.h */,
+				D34C56DC179AF4A200706AFF /* PeopleValidation.m */,
+				D3A9D81D1798A3AD00F05FD5 /* PeoplePreferences.h */,
+				D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */,
+				D38A430217DE0C4B00434161 /* PeopleInitialSetup.h */,
+				D38A430317DE0C4B00434161 /* PeopleInitialSetup.m */,
+			);
+			name = "Settings and Setup";
 			sourceTree = "<group>";
 		};
 		D3E1D68C17DE4BB700155E8F /* Views */ = {
