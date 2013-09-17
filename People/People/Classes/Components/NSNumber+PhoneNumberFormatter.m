@@ -21,13 +21,35 @@
 
     if ([selfString length] == 10) {
     
-        NSString *prefix = [selfString substringToIndex:2];
-        NSString *number = [selfString substringFromIndex:2];
-        NSString *firstNumbers = [number substringToIndex:4];
-        NSString *lastNumbers = [number substringFromIndex:4];
+        NSSet *brPrefixes = [NSSet setWithObjects:
+                             @"11",
+                             @"19",
+                             @"21",
+                             @"31",
+                             nil];
         
-        selfString = [[NSString alloc] initWithFormat:@"%@ %@ %@", prefix, firstNumbers, lastNumbers];
-        returnValue = selfString;
+        NSString *prefix = [selfString substringToIndex:2];
+        NSString *number;
+        NSString *firstNumbers;
+        NSString *lastNumbers;
+
+        if ([brPrefixes containsObject:prefix])
+        {
+            number = [selfString substringFromIndex:2];
+            firstNumbers = [number substringToIndex:4];
+            lastNumbers = [number substringFromIndex:4];
+            
+            selfString = [[NSString alloc] initWithFormat:@"%@ %@ %@", prefix, firstNumbers, lastNumbers];
+            returnValue = selfString;
+        } else {
+            prefix = [selfString substringToIndex:3];
+            number = [selfString substringFromIndex:3];
+            firstNumbers = [number substringToIndex:3];
+            lastNumbers = [number substringFromIndex:3];
+            
+            selfString = [[NSString alloc] initWithFormat:@"%@ %@ %@", prefix, firstNumbers, lastNumbers];
+            returnValue = selfString;
+        }
     }
     
     return returnValue;
