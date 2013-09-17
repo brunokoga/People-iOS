@@ -8,6 +8,7 @@
 
 #import "PeopleColaborador+PopulateFromServiceResponse.h"
 #import <ARSafeJSON/ARSafeJSON.h>
+#import "NSString+PhoneNumberFormatter.h"
 
 @implementation PeopleColaborador (PopulateFromServiceResponse)
 
@@ -20,8 +21,8 @@
         
         colaborador.name = colaboradorArray[0];
         colaborador.login = colaboradorArray[1];
-        colaborador.phone = colaboradorArray[2];
-        colaborador.mobile = colaboradorArray[3];
+        colaborador.phone = @([[colaboradorArray[2] phoneNumberFormat] longLongValue]);
+        colaborador.mobile = @([[colaboradorArray[3] phoneNumberFormat] longLongValue]);
         colaborador.role = colaboradorArray[4];
         colaborador.mentorLogin = colaboradorArray[5];
         colaborador.managerLogin = colaboradorArray[6];

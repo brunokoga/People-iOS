@@ -35,8 +35,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self populate];
 	// Do any additional setup after loading the view.
 }
+
+- (void)populate
+{
+    [self.phoneNumbersView.phone1Button setPhoneNumber:self.colaborador.phone];
+    [self.phoneNumbersView.phone2Button setPhoneNumber:self.colaborador.mobile];
+    [self downloadAndSetImage];
+
+}
+
 
 
 - (void)adjustLocalizationItems
@@ -107,8 +117,6 @@
 - (void)setColaborador:(PeopleColaborador *)colaborador
 {
     _colaborador = colaborador;
-    [self downloadAndSetImage];
-    
 }
 
 - (void)downloadAndSetImage

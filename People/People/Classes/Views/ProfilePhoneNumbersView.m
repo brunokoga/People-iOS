@@ -7,6 +7,9 @@
 //
 
 #import "ProfilePhoneNumbersView.h"
+@interface ProfilePhoneNumbersView ()
+
+@end
 
 @implementation ProfilePhoneNumbersView
 

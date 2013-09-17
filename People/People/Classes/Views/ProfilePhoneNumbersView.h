@@ -7,7 +7,11 @@
 //
 
 #import "BKXibView.h"
+#import "PeoplePhoneButton.h"
 
 @interface ProfilePhoneNumbersView : BKXibView
+
+@property (weak, nonatomic) IBOutlet PeoplePhoneButton *phone1Button;
+@property (weak, nonatomic) IBOutlet PeoplePhoneButton *phone2Button;
 
 @end

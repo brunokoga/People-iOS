@@ -19,8 +19,8 @@
 @property (nonatomic, strong) NSString *location;
 @property (nonatomic, strong) NSString *managerName;
 @property (nonatomic, strong) NSString *managerLogin;
-@property (nonatomic, strong) NSString *phone;
-@property (nonatomic, strong) NSString *mobile;
+@property (nonatomic, strong) NSNumber *phone;
+@property (nonatomic, strong) NSNumber *mobile;
 @property (nonatomic, strong) NSString *building;
 @property (nonatomic, strong) NSString *ownWords;
 @property (nonatomic, strong) NSDictionary *skills;

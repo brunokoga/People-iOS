@@ -11,6 +11,7 @@
 #import "PeopleBasicTheme.h"
 #import <PeopleSwipeTableViewCell/MCSwipeTableViewCell.h>
 #import "PeopleCircularImageView.h"
+#import "NSNumber+PhoneNumberFormatter.h"
 
 @interface PeopleSearchTableViewCell()
 
@@ -43,9 +44,19 @@
 {
     self.collaboratorNameLabel.text = collaborator.name;
     self.collaboratorRoleLabel.text = collaborator.role;
-    self.collaboratorPhoneLabel.text = collaborator.phone;
     self.collaboratorLoginLabel.text = collaborator.login;
-    self.collaboratorCellphoneLabel.text = collaborator.mobile;
+    
+    self.collaboratorPhoneLabel.text = @"";
+    if (! [collaborator.phone isEqualToNumber:@(0)])
+    {
+        self.collaboratorPhoneLabel.text = [collaborator.phone formattedPhoneNumberString];
+    }
+    
+    self.collaboratorCellphoneLabel.text = @"";
+    if (! [collaborator.mobile isEqualToNumber:@(0)])
+    {
+        self.collaboratorCellphoneLabel.text = [collaborator.mobile formattedPhoneNumberString];
+    }
     
     //    [self addButtonsWithCollaborator:collaborator];
 }
