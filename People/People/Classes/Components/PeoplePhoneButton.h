@@ -11,8 +11,4 @@
 @interface PeoplePhoneButton : UIButton
 @property (nonatomic, strong) NSNumber *phoneNumber;
 
-- (void)animateFromFrame:(CGRect)fromFrame
-                 toFrame:(CGRect)toFrame
-                duration:(NSTimeInterval)duration;
-
 @end

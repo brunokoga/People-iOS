@@ -7,17 +7,38 @@
 //
 
 #import "ProfileNameView.h"
+#import "PeopleBasicTheme.h"
 
 @implementation ProfileNameView
 
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (id)init
 {
-    // Drawing code
+    self = [super init];
+    if (self) {
+        [self setup];
+    }
+    return self;
 }
-*/
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self setup];
+}
+
+- (void)setup
+{
+    UIFont *baseFont = [PeopleBasicTheme peopleFontBookWithSize:self.baseLabel.font.pointSize];
+    [self.baseLabel setFont:baseFont];
+    
+    UIFont *buildingFont = [PeopleBasicTheme peopleFontBookWithSize:self.buildingLabel.font.pointSize];
+    [self.buildingLabel setFont:buildingFont];
+    
+    UIFont *roleFont = [PeopleBasicTheme peopleFontBookWithSize:self.roleLabel.font.pointSize];
+    [self.roleLabel setFont:roleFont];
+
+    UIFont *nameFont = [PeopleBasicTheme peopleFontBookWithSize:self.nameLabel.font.pointSize];
+    [self.nameLabel setFont:nameFont];
+}
 
 @end

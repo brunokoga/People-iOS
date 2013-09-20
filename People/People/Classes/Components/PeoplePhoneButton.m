@@ -38,46 +38,25 @@
     
     UIImage *image = [UIImage imageNamed:@"ico-btn-phone-normal-1"];
     [self.imageView setImage:image];
+    self.hidden = YES;
 }
 
 #pragma mark - Setter Override
 
 - (void)setPhoneNumber:(NSNumber *)phoneNumber
 {
+    if ([phoneNumber intValue] == 0)
+    {
+        self.hidden = YES;
+    }
+    else
+    {
+        self.hidden = NO;
+    }
     _phoneNumber = phoneNumber;
     [self setTitle:[@"  " stringByAppendingString:[phoneNumber formattedPhoneNumberString]]
                                          forState:UIControlStateNormal];
 
 }
-
-- (void)animateFromFrame:(CGRect)fromFrame
-                 toFrame:(CGRect)toFrame
-                duration:(NSTimeInterval)duration
-{
-    /*
-    [CATransaction begin];
-    
-    NSString *animationKeyPath = @"frame";
-    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:animationKeyPath];
-    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-    anim.fromValue =  [NSValue valueWithCGRect:fromFrame];
-    anim.toValue = [NSValue valueWithCGRect:toFrame];
-    anim.duration = duration;
-    
-    [self.layer addAnimation:anim forKey:animationKeyPath];
-    
-    self.frame = toFrame;
-    
-    [CATransaction commit];*/
-    
-//    [UIView animateWithDuration:duration animations:^{
-                self.frame = toFrame;
-//    }];
-
-
-}
-
-
-
 
 @end

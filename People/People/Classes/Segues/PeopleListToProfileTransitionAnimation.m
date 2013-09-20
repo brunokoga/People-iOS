@@ -15,16 +15,16 @@
 //TODO: refactor that. Use actual values
 #define kPICTURE_FRAME CGRectMake(10.0f, 25.0f, 50.0f, 50.0f)
 #define kPHONE1_FRAME CGRectMake(20.0f, -137, 160, 30)
-#define kPHONE2_FRAME CGRectMake(161.0f, -147.0f, 150.0f, 50.0f)
-#define kNAME_FRAME CGRectMake(10.0f, 25.0f, 50.0f, 50.0f)
-#define kROLE_FRAME CGRectMake(10.0f, 25.0f, 50.0f, 50.0f)
+#define kPHONE2_FRAME CGRectMake(161.0f, -147.0f, 160.0f, 50.0f)
+#define kNAME_FRAME CGRectMake(0.0f, -130.0f, 280.0f, 50.0f)
+#define kROLE_FRAME CGRectMake(0.0f, -110.0f, 280.0f, 50.0f)
 
 @implementation PeopleListToProfileTransitionAnimation
 
 // transition duration.
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
 {
-    return 1.0;
+    return 0.8;
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
@@ -94,26 +94,22 @@
     };
 
     CGRect pictureFrame = kPICTURE_FRAME;
-    
-    PeopleSearchTableViewCell *selectedCell = [fromViewController selectedCell];
-
     CGRect phone1Frame = kPHONE1_FRAME;
-    
-    //[fromViewController.view convertRect:selectedCell.frame
-    //                                        toView:toViewController.view];
     CGRect phone2Frame = kPHONE2_FRAME;
+    CGRect nameFrame = kNAME_FRAME;
+    CGRect roleFrame = kROLE_FRAME;
     
     [toViewController performListToProfileAnimationWithDuration:[self transitionDuration:transitionContext]/2
                                                    pictureFrame:pictureFrame
                                                     phone1Frame:phone1Frame
                                                     phone2Frame:phone2Frame
-                                                      nameFrame:CGRectZero
-                                                      roleFrame:CGRectZero];
+                                                      nameFrame:nameFrame
+                                                      roleFrame:roleFrame];
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0.0
          usingSpringWithDamping:1.0
-          initialSpringVelocity:15.0
+          initialSpringVelocity:10.0
                         options:0
                      animations:animationBlock
                      completion:completionBlock];
@@ -151,9 +147,10 @@
     selectedCell.alpha = 0.0f;
     fromViewControllerContentView.frame = [fromViewController.view convertRect:[fromViewController frameForContainerView]
                                                                         toView:transitionView];
-    
+
+            toViewController.view.alpha = 1.0f;
     [UIView animateWithDuration:0.2 animations:^{
-        toViewController.view.alpha = 1.0f;
+        
         fromViewController.view.alpha = 0.0f;
     }];
     
@@ -182,14 +179,16 @@
     CGRect pictureFrame = kPICTURE_FRAME;
     CGRect phone1Frame = kPHONE1_FRAME;
     CGRect phone2Frame = kPHONE2_FRAME;
+    CGRect nameFrame = kNAME_FRAME;
+    CGRect roleFrame = kROLE_FRAME;
     
     
     [fromViewController performProfileToListAnimationWithDuration:[self transitionDuration:transitionContext]
                                                      pictureFrame:pictureFrame
                                                       phone1Frame:phone1Frame
                                                       phone2Frame:phone2Frame
-                                                        nameFrame:CGRectZero
-                                                        roleFrame:CGRectZero];
+                                                        nameFrame:nameFrame
+                                                        roleFrame:roleFrame];
 
      
 

@@ -14,23 +14,24 @@
 
 @implementation ProfilePhoneNumbersView
 
-- (void)animatePhone1ButtonFromFrame:(CGRect)fromFrame
-                             toFrame:(CGRect)toFrame
-                            duration:(NSTimeInterval)duration;
+- (id)init
 {
-    [self.phone1Button animateFromFrame:fromFrame
-                                toFrame:toFrame
-                               duration:duration];
+    self = [super init];
+    if (self) {
+        [self setup];
+    }
+    return self;
 }
 
-- (void)animatePhone2ButtonFromFrame:(CGRect)fromFrame
-                             toFrame:(CGRect)toFrame
-                            duration:(NSTimeInterval)duration
+- (void)awakeFromNib
 {
-    [self.phone2Button animateFromFrame:fromFrame
-                                toFrame:toFrame
-                               duration:duration];
+    [super awakeFromNib];
+    [self setup];
 }
 
-
+- (void)setup
+{
+    [self.phone1Button setTitle:@"" forState:UIControlStateNormal];
+    [self.phone2Button setTitle:@"" forState:UIControlStateNormal];
+}
 @end
