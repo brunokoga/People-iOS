@@ -10,4 +10,8 @@
 
 @interface ProfileProjectsView : BKXibView
 
+@property (nonatomic, strong) NSArray *pastProjects;
+@property (nonatomic, strong) NSArray *currentProjects;
+
+
 @end

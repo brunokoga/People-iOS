@@ -67,6 +67,8 @@
     toViewController.view.alpha = 0.0f;
     
     UIView *toViewControllerContentView = toViewController.contentView;
+    UIColor *oldBackgroundColor = toViewController.scrollView.backgroundColor;
+    toViewController.scrollView.backgroundColor = [UIColor clearColor];
     [toViewControllerContentView removeFromSuperview];
     [transitionView addSubview:toViewControllerContentView];
     toViewControllerContentView.frame = [fromViewController.view convertRect:[fromViewController selectedCellRelativeFrame]
@@ -81,6 +83,7 @@
         toViewControllerContentView.frame =
         [toViewController.view convertRect:[toViewController frameForContainerView]
                                     toView:transitionView];
+        toViewController.scrollView.backgroundColor = oldBackgroundColor;
         
     };
     void (^completionBlock)(BOOL) = ^(BOOL finished) {
@@ -158,6 +161,7 @@
         CGRect frame = [toViewController.view convertRect:[toViewController selectedCellRelativeFrame]
                                                    toView:transitionView];
         fromViewControllerContentView.frame = frame;
+        [fromViewController.scrollView setBackgroundColor:[UIColor clearColor]];
     };
     void (^completionBlock)(BOOL) = ^(BOOL finished) {
         [fromViewController.view removeFromSuperview];

@@ -9,11 +9,12 @@
 #import "ProfileTeamView.h"
 #import "PeopleCircularImageView.h"
 #import "PeopleCircularButton.h"
-
+#import "PeopleButton.h"
+#import "PeopleBasicTheme.h"
 @interface ProfileTeamView ()
 @property (weak, nonatomic) IBOutlet UILabel *teamLabel;
 @property (weak, nonatomic) IBOutlet UIView *teamView;
-@property (strong, nonatomic) NSArray *teamMemberViews;
+@property (strong, nonatomic) NSMutableArray *teamMemberViews;
 
 @end
 
@@ -21,6 +22,9 @@
 
 - (void)setup
 {
+    UIFont *teamLabelFont = [PeopleBasicTheme peopleFontBookWithSize:self.teamLabel.font.pointSize];
+    [self.teamLabel setFont:teamLabelFont];
+
 }
 
 - (void)setTeamCount:(NSInteger)count
@@ -37,21 +41,21 @@
     {
         [subview removeFromSuperview];
     }
+    self.teamMemberViews = [NSMutableArray array];
 }
 
-#define kPeopleMaxTeamList 7
+#define kPeopleMaxTeamList 6
 #define kPeopleCircularTeamWidth 45
-#define kPeopleTeamSpace 16
-#define kPeopleTeamListVerticalSpacePercentage 0.15
-#define kPeopleTeamMoreButtonWidth 30.0
+#define kPeopleTeamSpace 19
+#define kPeopleTeamMoreButtonWidth 45.0
 
 - (void)createTeamMemberViewsWithCount:(NSInteger)count
 {
     [self cleanTeamMembersView];
     
     int numberOfFaces = MIN(count, kPeopleMaxTeamList);
-    CGFloat horizontalOffset = self.center.x -(numberOfFaces-1) * (kPeopleTeamSpace) - kPeopleTeamMoreButtonWidth/3 ;
-    CGFloat verticalOffset = self.center.y - self.frame.origin.y + kPeopleTeamListVerticalSpacePercentage*self.frame.size.height;
+    CGFloat horizontalOffset = self.center.x -(numberOfFaces - 1) * (kPeopleTeamSpace) - kPeopleTeamMoreButtonWidth/3 ;
+    CGFloat verticalOffset = self.teamView.frame.origin.y - 10.0;
     for (int i = 0; i < numberOfFaces; i++)
     {
         
@@ -61,8 +65,11 @@
         [circularButton setCenter:center];
         [circularButton addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchUpInside];
         circularButton.tag = i;
+        
         [self.teamView addSubview:circularButton];
         horizontalOffset += 2*kPeopleTeamSpace;
+        
+        [self.teamMemberViews addObject:circularButton];
     }
     UIButton *moreButton = [self createMoreButton];
     [moreButton setCenter:CGPointMake(horizontalOffset - kPeopleTeamMoreButtonWidth/3, verticalOffset)];
@@ -76,7 +83,20 @@
 
 - (UIButton *)createMoreButton
 {
-    return [UIButton buttonWithType:UIButtonTypeCustom];
+    PeopleButton *moreButton = [[PeopleButton alloc] initWithFrame:CGRectMake(0, 0, kPeopleTeamMoreButtonWidth, kPeopleTeamMoreButtonWidth)];
+    [moreButton setImageEdgeInsets:UIEdgeInsetsMake(1.0, 1.0, 0, 0)];
+    UIImage *moreButtonImage = [UIImage imageNamed:@"btn-viewall-team"];
+    //    UIImage *backgroundImage = [UIImage imageWithColor:[PeopleTheme peoplePink]];
+    //    [moreButton setBackgroundImage:backgroundImage
+    //                          forState:UIControlStateNormal];
+    [moreButton setImage:moreButtonImage
+                forState:UIControlStateNormal];
+    
+    [moreButton addTarget:self action:@selector(buttonTouched:) forControlEvents:UIControlEventTouchUpInside];
+
+    return moreButton;
+
+
 }
 
 - (void)setImage:(UIImage *)image
@@ -84,8 +104,10 @@
 {
     if ([self.teamMemberNames count] > index)
     {
+        if ([self.teamMemberViews count] > index) {
         PeopleCircularButton *button = (PeopleCircularButton *)[self.teamMemberViews objectAtIndex:index];
-        [button setImage:image forState:UIControlStateNormal];
+        [button setBackgroundImage:image forState:UIControlStateNormal];
+        }
         
     }
     //throw excp

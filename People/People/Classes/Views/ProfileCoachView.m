@@ -8,6 +8,7 @@
 
 #import "ProfileCoachView.h"
 #import "PeopleCircularImageView.h"
+#import "PeopleBasicTheme.h"
 
 
 @interface ProfileCoachView ()
@@ -37,7 +38,13 @@
 - (void)setup
 {
     [super setup];
+    [self.pictureView setBackgroundColor:[UIColor grayColor]];
+
+    UIFont *coachLabelFont = [PeopleBasicTheme peopleFontBookWithSize:self.coachLabel.font.pointSize];
+    [self.coachLabel setFont:coachLabelFont];
     
+    UIFont *coachNameFont = [PeopleBasicTheme peopleFontBookWithSize:self.coachNameLabel.font.pointSize];
+    [self.coachNameLabel setFont:coachNameFont];
 }
 
 #pragma mark - Setter overrides

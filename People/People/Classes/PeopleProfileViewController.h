@@ -14,6 +14,8 @@
 @property (nonatomic, retain) PeopleColaborador *colaborador;
 @property(nonatomic, strong, readonly) UIView *containerView;
 @property(nonatomic, strong, readonly) UIView *contentView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 
 - (CGRect)frameForContainerView;
 - (void)performListToProfileAnimationWithDuration:(NSTimeInterval)duration

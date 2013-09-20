@@ -315,48 +315,55 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultBackground" id="oYk-Vb-yw1">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Iuh-v7-eYD">
+                                                <rect key="frame" x="0.0" y="0.0" width="360" height="689"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3qg-TJ-9aO">
-                                                <rect key="frame" x="276" y="56" width="44" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" image="ico-dos-sociallinks">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                            <view contentMode="scaleToFill" id="f41-Lg-HsC" customClass="ProfileNameView">
-                                                <rect key="frame" x="0.0" y="118" width="320" height="80"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view clipsSubviews="YES" contentMode="center" id="V4R-NM-eH7" customClass="ProfilePictureView">
-                                                <rect key="frame" x="113" y="16" width="94" height="94"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" id="Fx3-qI-Mbz" customClass="ProfilePhoneNumbersView">
-                                                <rect key="frame" x="0.0" y="206" width="320" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" id="KtI-KJ-Vqg" customClass="ProfileCoachView">
-                                                <rect key="frame" x="0.0" y="260" width="320" height="63"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" id="24f-mi-FOr" customClass="ProfileTeamView">
-                                                <rect key="frame" x="0.0" y="331" width="320" height="120"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" id="BoL-vg-R63" customClass="ProfileProjectsView">
-                                                <rect key="frame" x="0.0" y="483" width="320" height="55"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            </view>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultBackground" id="oYk-Vb-yw1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3qg-TJ-9aO">
+                                                        <rect key="frame" x="276" y="56" width="44" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <state key="normal" image="ico-dos-sociallinks">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" id="f41-Lg-HsC" customClass="ProfileNameView">
+                                                        <rect key="frame" x="0.0" y="100" width="320" height="100"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view clipsSubviews="YES" contentMode="center" id="V4R-NM-eH7" customClass="ProfilePictureView">
+                                                        <rect key="frame" x="113" y="16" width="94" height="94"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" id="Fx3-qI-Mbz" customClass="ProfilePhoneNumbersView">
+                                                        <rect key="frame" x="0.0" y="200" width="320" height="61"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" id="KtI-KJ-Vqg" customClass="ProfileCoachView">
+                                                        <rect key="frame" x="0.0" y="261" width="320" height="80"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" id="24f-mi-FOr" customClass="ProfileTeamView">
+                                                        <rect key="frame" x="0.0" y="341" width="320" height="150"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" id="BoL-vg-R63" customClass="ProfileProjectsView">
+                                                        <rect key="frame" x="0.0" y="491" width="320" height="166"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.23529413339999999" green="0.5411764979" blue="0.85098046059999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </scrollView>
                                         </subviews>
                                     </view>
                                 </subviews>
@@ -374,6 +381,7 @@
                         <outlet property="phoneNumbersView" destination="Fx3-qI-Mbz" id="fGP-j8-To2"/>
                         <outlet property="pictureView" destination="V4R-NM-eH7" id="U9b-cY-aRJ"/>
                         <outlet property="projectsView" destination="BoL-vg-R63" id="vet-Dh-gJv"/>
+                        <outlet property="scrollView" destination="Iuh-v7-eYD" id="ErX-BB-sFq"/>
                         <outlet property="teamView" destination="24f-mi-FOr" id="mwL-4S-o7B"/>
                         <outlet property="topBackgroundImageView" destination="oYk-Vb-yw1" id="UNd-M6-YO1"/>
                     </connections>

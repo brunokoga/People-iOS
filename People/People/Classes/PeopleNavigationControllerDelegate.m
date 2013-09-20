@@ -23,13 +23,13 @@
     if ([fromVC isKindOfClass:[PeopleSearchViewController class]] &&
         [toVC isKindOfClass:[PeopleProfileViewController class]])
     {
-        [navigationController setNavigationBarHidden:NO animated:NO];
+        [navigationController setNavigationBarHidden:NO animated:YES];
         animator = [PeopleListToProfileTransitionAnimation new];
         
     } else if ([fromVC isKindOfClass:[PeopleProfileViewController class]] &&
                [toVC isKindOfClass:[PeopleSearchViewController class]])
     {
-        [navigationController setNavigationBarHidden:YES animated:NO];
+        [navigationController setNavigationBarHidden:YES animated:YES];
         animator = [PeopleListToProfileTransitionAnimation new];
     }
     

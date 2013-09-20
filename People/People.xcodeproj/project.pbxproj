@@ -62,6 +62,7 @@
 		D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBFF1799C6F300E9D0C5 /* PeopleColaborador.m */; };
 		D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDC021799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m */; };
 		D39DDC071799E77D00E9D0C5 /* profile_generic1.json in Resources */ = {isa = PBXBuildFile; fileRef = D39DDC061799E77D00E9D0C5 /* profile_generic1.json */; };
+		D39FCCCC17ECDAD8004B0284 /* PeopleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D39FCCCB17ECDAD8004B0284 /* PeopleButton.m */; };
 		D3A3083E179C438D0010FE51 /* PeopleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3083D179C438D0010FE51 /* PeopleTableViewDataSource.m */; };
 		D3A30841179C4AA70010FE51 /* PeopleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A30840179C4AA70010FE51 /* PeopleTableViewCell.m */; };
 		D3A30845179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A30844179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m */; };
@@ -176,6 +177,8 @@
 		D39DDC011799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PeopleColaborador+PopulateFromServiceResponse.h"; path = "Classes/PeopleColaborador+PopulateFromServiceResponse.h"; sourceTree = "<group>"; };
 		D39DDC021799C72300E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PeopleColaborador+PopulateFromServiceResponse.m"; path = "Classes/PeopleColaborador+PopulateFromServiceResponse.m"; sourceTree = "<group>"; };
 		D39DDC061799E77D00E9D0C5 /* profile_generic1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profile_generic1.json; sourceTree = "<group>"; };
+		D39FCCCA17ECDAD8004B0284 /* PeopleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleButton.h; path = People/Classes/Components/PeopleButton.h; sourceTree = "<group>"; };
+		D39FCCCB17ECDAD8004B0284 /* PeopleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleButton.m; path = People/Classes/Components/PeopleButton.m; sourceTree = "<group>"; };
 		D3A3083C179C438D0010FE51 /* PeopleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleTableViewDataSource.h; path = Classes/PeopleTableViewDataSource.h; sourceTree = "<group>"; };
 		D3A3083D179C438D0010FE51 /* PeopleTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleTableViewDataSource.m; path = Classes/PeopleTableViewDataSource.m; sourceTree = "<group>"; };
 		D3A3083F179C4AA70010FE51 /* PeopleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleTableViewCell.h; path = Classes/PeopleTableViewCell.h; sourceTree = "<group>"; };
@@ -292,6 +295,8 @@
 		D31FEBFC17A208A9007F4712 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				D39FCCCA17ECDAD8004B0284 /* PeopleButton.h */,
+				D39FCCCB17ECDAD8004B0284 /* PeopleButton.m */,
 				D3E1D6A217E0CE1200155E8F /* PeopleCircularButton.h */,
 				D3E1D6A317E0CE1200155E8F /* PeopleCircularButton.m */,
 				D3E1D68E17DE558900155E8F /* PeopleCircularImageView.h */,
@@ -783,6 +788,7 @@
 				D38A430917DE427600434161 /* ProfileNameView.m in Sources */,
 				D3A30841179C4AA70010FE51 /* PeopleTableViewCell.m in Sources */,
 				D3E1D68417DE470A00155E8F /* BKXibView.m in Sources */,
+				D39FCCCC17ECDAD8004B0284 /* PeopleButton.m in Sources */,
 				D313890B17E8B67F00CF8CD7 /* NSString+PhoneNumberFormatter.m in Sources */,
 				D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */,
 				D39DDBF61799C57D00E9D0C5 /* PeopleServices.m in Sources */,

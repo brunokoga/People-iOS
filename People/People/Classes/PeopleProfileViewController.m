@@ -14,6 +14,10 @@
 #import "ProfileCoachView.h"
 #import "ProfileTeamView.h"
 #import "ProfileProjectsView.h"
+#import "PeopleHTTPClient.h"
+
+//FIXME: remove this
+#import "PeopleJSONParser.h"
 
 @interface PeopleProfileViewController ()
 @property(nonatomic, strong, readwrite) IBOutlet UIView *containerView;
@@ -42,11 +46,11 @@
 - (void)populate
 {
     [self downloadAndSetImage];
-    [self populateTeamView];
     [self populatePhoneView];
     [self populateNameView];
     [self populateCoachView];
     [self populateProjectsView];
+    [self.scrollView setContentSize:CGSizeMake(320.0, 900.0)];
 }
 
 - (void)populateProjectsView
@@ -56,12 +60,36 @@
 
 - (void)populateCoachView
 {
+    [[PeopleServices sharedServices] photoForUser:self.colaborador.managerLogin
+                                          success:^(UIImage *image) {
+                                              [self.coachView setCoachPicture:image];
+                                          } failure:^(NSError *error) {
+                                              
+                                          }];
+    
+    [self.coachView setCoachName:self.colaborador.managerLogin];
+
     
 }
 
+//should be called only after the profile is returned from the server
 - (void)populateTeamView
 {
-    [self.teamView setTeamMemberNames:@[@"a", @"b", @"c"]];
+    
+    NSArray *teamMembers = [[self.colaborador.teammates valueForKeyPath:@"login"] allObjects];
+    [self.teamView setTeamMemberNames:teamMembers];
+    
+    for (int i = 0; i < [teamMembers count]; i++)
+    {
+        NSString *login = teamMembers[i];
+        [[PeopleServices sharedServices] photoForUser:login
+                                              success:^(UIImage *image) {
+                                                  [self.teamView setImage:image forIndex:i];
+                                              } failure:^(NSError *error) {
+                                                  
+                                              }];
+    }
+    
 }
 
 - (void)populatePhoneView
@@ -184,7 +212,7 @@
                          self.phoneNumbersView.phone2Button.frame = phone2Frame;
                          self.nameView.nameLabel.frame = nameFrame;
                          self.nameView.roleLabel.frame = roleFrame;
-                         
+                                                  self.teamView.alpha = 0;
                      } completion:^(BOOL finished) {
                      }];
     
@@ -196,6 +224,22 @@
 - (void)setColaborador:(PeopleColaborador *)colaborador
 {
     _colaborador = colaborador;
+    self.title = colaborador.login;
+    PeopleHTTPClient *httpClient = [PeopleHTTPClient sharedClient];
+    
+    [httpClient profileForUser:colaborador.login
+                       success:^(NSHTTPURLResponse *response, id responseObject) {
+
+                           PeopleJSONParser *jsonParser = [[PeopleJSONParser alloc] init];
+                           PeopleColaborador *colaboradorProfile = [jsonParser colaboradorFromProfileResponse:responseObject];
+                           
+                           self.colaborador.teammates = colaboradorProfile.teammates;
+                           [self populateTeamView];
+
+                       } failure:^(NSError *error) {
+                       }];
+
+    
 }
 
 - (void)downloadAndSetImage

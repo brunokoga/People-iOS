@@ -7,25 +7,57 @@
 //
 
 #import "ProfileProjectsView.h"
+#import "PeopleBasicTheme.h"
+
+@interface ProfileProjectsView ()
+@property (weak, nonatomic) IBOutlet UILabel *projectsTitle;
+@property (weak, nonatomic) IBOutlet UILabel *currentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pastLabel;
+
+
+@end
 
 @implementation ProfileProjectsView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)init
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
-        // Initialization code
+        [self setup];
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)awakeFromNib
 {
-    // Drawing code
+    [super awakeFromNib];
+    [self setup];
 }
-*/
 
+- (void)setup
+{
+    [super setup];
+
+    UIFont *projectsTitleFont = [PeopleBasicTheme peopleFontBookWithSize:self.projectsTitle.font.pointSize];
+    [self.projectsTitle setFont:projectsTitleFont];
+}
+
+#pragma mark - Setter Override
+
+- (void)setPastProjects:(NSArray *)pastProjects
+{
+    _pastProjects = pastProjects;
+    [self redraw];
+}
+
+- (void)setCurrentProjects:(NSArray *)currentProjects
+{
+    _currentProjects = currentProjects;
+    [self redraw];
+}
+
+- (void)redraw
+{
+    
+}
 @end

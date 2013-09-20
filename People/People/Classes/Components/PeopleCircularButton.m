@@ -38,7 +38,7 @@
     [_buttonImageView setExclusiveTouch:NO];
     [self addSubview:self.buttonImageView];
     [self setDiameter:self.frame.size.width];
-//    [self setBackgroundColor:[PeopleTheme peopleDarkGray]];
+    [self setBackgroundColor:[UIColor whiteColor]];
     [self makeCircular];
     [self.buttonImageView makeCircular];
 }
