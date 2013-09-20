@@ -15,11 +15,6 @@
 
 @interface PeopleSearchTableViewCell()
 
-@property (weak, nonatomic) IBOutlet UILabel *collaboratorNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *collaboratorRoleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *collaboratorPhoneLabel;
-@property (weak, nonatomic) IBOutlet UILabel *collaboratorLoginLabel;
-@property (weak, nonatomic) IBOutlet UILabel *collaboratorCellphoneLabel;
 @property (weak, nonatomic) IBOutlet PeopleCircularImageView *collaboratorImageView;
 @end
 

@@ -7,10 +7,11 @@
 //
 
 #import "PeopleBaseViewController.h"
+#import "PeopleSearchTableViewCell.h"
 
 @interface PeopleSearchViewController : PeopleBaseViewController
 
-@property (nonatomic, readonly) UITableViewCell *selectedCell;
+@property (nonatomic, readonly) PeopleSearchTableViewCell *selectedCell;
 @property(nonatomic, strong, readonly) UIView *containerView;
 @property(nonatomic, strong, readonly) UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIView *searchView;

@@ -41,8 +41,6 @@
 
 - (void)populate
 {
-    [self.phoneNumbersView.phone1Button setPhoneNumber:self.colaborador.phone];
-    [self.phoneNumbersView.phone2Button setPhoneNumber:self.colaborador.mobile];
     [self downloadAndSetImage];
 
 }
@@ -77,12 +75,26 @@
 
 - (void)performListToProfileAnimationWithDuration:(NSTimeInterval)duration
                                      pictureFrame:(CGRect)frame
+                                      phone1Frame:(CGRect)phone1Frame
+                                      phone2Frame:(CGRect)phone2Frame
+                                        nameFrame:(CGRect)nameFrame
+                                        roleFrame:(CGRect)roleFrame
 {
     CGRect oldFrame = self.pictureView.frame;
     [self.pictureView setFrame:frame];
     self.topBackgroundImageView.alpha = 0.0f;
     self.moreButton.alpha = 0.0f;
     [self.pictureView hideFavoritos:YES];
+    
+    CGRect phone1OldFrame = self.phoneNumbersView.frame;
+    CGRect phone2OldFrame = self.phoneNumbersView.frame;
+    
+    //todo: change that
+    phone1OldFrame = CGRectMake(0, 0, 160, 50);
+    phone2OldFrame = CGRectMake(160, 0, 160, 50);
+    self.phoneNumbersView.phone1Button.frame = phone1Frame;
+    self.phoneNumbersView.phone2Button.frame = phone2Frame;
+    
     [UIView animateWithDuration:duration
                      animations:^{
                          self.topBackgroundImageView.alpha = 1.0f;
@@ -91,6 +103,14 @@
                          [self.pictureView animateCornerRadiusFromFrame:frame
                                                                 toFrame:oldFrame
                                                                duration:duration];
+                         
+                         [self.phoneNumbersView animatePhone1ButtonFromFrame:self.phoneNumbersView.phone1Button.frame
+                                                                     toFrame:phone1OldFrame
+                                                                    duration:duration];
+                         
+                         [self.phoneNumbersView animatePhone2ButtonFromFrame:self.phoneNumbersView.phone2Button.frame
+                                                                     toFrame:phone2OldFrame
+                                                                    duration:duration];
                         
                          [self.pictureView hideFavoritos:NO];
                      }];
@@ -99,18 +119,38 @@
 
 - (void)performProfileToListAnimationWithDuration:(NSTimeInterval)duration
                                      pictureFrame:(CGRect)frame
+                                      phone1Frame:(CGRect)phone1Frame
+                                      phone2Frame:(CGRect)phone2Frame
+                                        nameFrame:(CGRect)nameFrame
+                                        roleFrame:(CGRect)roleFrame
 {
+                             NSLog(@"%@", self.phoneNumbersView.phone1Button.titleLabel.text);
+    [UIView animateWithDuration:2*duration/3
+                          delay:0
+                        options:UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{
+                         self.phoneNumbersView.phone1Button.frame = phone1Frame;
+                         self.phoneNumbersView.phone2Button.frame = phone2Frame;
+                         
+                     } completion:^(BOOL finished) {
+                             NSLog(@"%@", self.phoneNumbersView.phone1Button.titleLabel.text);
+                     }];
+    
     [UIView animateWithDuration:duration
                      animations:^{
                          self.topBackgroundImageView.alpha = 0.0f;
                          self.moreButton.alpha = 0.0f;
+                         self.phoneNumbersView.alpha = 0;
                          
                          [self.pictureView animateCornerRadiusFromFrame:self.pictureView.frame
                                                                 toFrame:frame
                                                                duration:duration];
-                        
+                         
                          [self.pictureView hideFavoritos:YES];
                      }];
+    
+
+
     
 }
 
@@ -123,8 +163,11 @@
 {
     [[PeopleServices sharedServices] photoForUser:self.colaborador.login
                                           success:^(UIImage *image) {
-                                                  self.pictureView.image = image;
+                                              self.pictureView.image = image;
                                               [self.teamView setTeamMemberNames:@[@"a", @"b", @"c"]];
+                                              [self.phoneNumbersView.phone1Button setPhoneNumber:self.colaborador.phone];
+                                              [self.phoneNumbersView.phone2Button setPhoneNumber:self.colaborador.mobile];
+
 
                                           } failure:^(NSError *error) {
                                               

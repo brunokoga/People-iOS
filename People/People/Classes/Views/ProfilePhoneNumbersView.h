@@ -14,4 +14,15 @@
 @property (weak, nonatomic) IBOutlet PeoplePhoneButton *phone1Button;
 @property (weak, nonatomic) IBOutlet PeoplePhoneButton *phone2Button;
 
+- (void)animatePhone1ButtonFromFrame:(CGRect)fromFrame
+                             toFrame:(CGRect)toFrame
+                            duration:(NSTimeInterval)duration;
+
+- (void)animatePhone2ButtonFromFrame:(CGRect)fromFrame
+                             toFrame:(CGRect)toFrame
+                            duration:(NSTimeInterval)duration;
+
+
+
+
 @end

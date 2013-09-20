@@ -17,10 +17,18 @@
 
 - (CGRect)frameForContainerView;
 - (void)performListToProfileAnimationWithDuration:(NSTimeInterval)duration
-                                     pictureFrame:(CGRect)frame;
+                                     pictureFrame:(CGRect)frame
+                                      phone1Frame:(CGRect)phone1Frame
+                                      phone2Frame:(CGRect)phone2Frame
+                                        nameFrame:(CGRect)nameFrame
+                                        roleFrame:(CGRect)roleFrame;
 
 - (void)performProfileToListAnimationWithDuration:(NSTimeInterval)duration
-                                     pictureFrame:(CGRect)frame;
+                                     pictureFrame:(CGRect)frame
+                                      phone1Frame:(CGRect)phone1Frame
+                                      phone2Frame:(CGRect)phone2Frame
+                                        nameFrame:(CGRect)nameFrame
+                                        roleFrame:(CGRect)roleFrame;
 
 
 @end

@@ -45,8 +45,38 @@
 - (void)setPhoneNumber:(NSNumber *)phoneNumber
 {
     _phoneNumber = phoneNumber;
-    self.titleLabel.text = [@"  " stringByAppendingString:[phoneNumber formattedPhoneNumberString]];
+    [self setTitle:[@"  " stringByAppendingString:[phoneNumber formattedPhoneNumberString]]
+                                         forState:UIControlStateNormal];
+
 }
+
+- (void)animateFromFrame:(CGRect)fromFrame
+                 toFrame:(CGRect)toFrame
+                duration:(NSTimeInterval)duration
+{
+    /*
+    [CATransaction begin];
+    
+    NSString *animationKeyPath = @"frame";
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:animationKeyPath];
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    anim.fromValue =  [NSValue valueWithCGRect:fromFrame];
+    anim.toValue = [NSValue valueWithCGRect:toFrame];
+    anim.duration = duration;
+    
+    [self.layer addAnimation:anim forKey:animationKeyPath];
+    
+    self.frame = toFrame;
+    
+    [CATransaction commit];*/
+    
+//    [UIView animateWithDuration:duration animations:^{
+                self.frame = toFrame;
+//    }];
+
+
+}
+
 
 
 

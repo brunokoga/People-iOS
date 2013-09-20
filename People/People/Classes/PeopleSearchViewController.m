@@ -11,7 +11,6 @@
 #import "PeopleBasicTheme.h"
 #import "PeopleColaborador.h"
 #import "PeopleServices.h"
-#import "PeopleSearchTableViewCell.h"
 #import "PeopleSearchTableViewHeader.h"
 
 @interface PeopleSearchViewController () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -24,7 +23,7 @@
 @property(nonatomic, strong, readwrite) IBOutlet UIView *containerView;
 @property(nonatomic, strong, readwrite) IBOutlet UIView *contentView;
 //overriding readonly property
-@property (nonatomic, strong, readwrite) UITableViewCell *selectedCell;
+@property (nonatomic, strong, readwrite) PeopleSearchTableViewCell *selectedCell;
 @property (nonatomic, strong, readwrite) NSIndexPath *selectedIndexPath;
 
 @end
@@ -159,8 +158,8 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedCell = [self tableView:self.resultTableView
-                  cellForRowAtIndexPath:indexPath];
+    self.selectedCell = (PeopleSearchTableViewCell *)[self tableView:self.resultTableView
+                                               cellForRowAtIndexPath:indexPath];
     self.selectedIndexPath = indexPath;
     
     [self performSegueWithIdentifier:kPeopleSearchToProfileSegueIdentifier sender:self];

@@ -12,6 +12,12 @@
 
 @interface PeopleSearchTableViewCell : MCSwipeTableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *collaboratorNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *collaboratorRoleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *collaboratorPhoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *collaboratorLoginLabel;
+@property (weak, nonatomic) IBOutlet UILabel *collaboratorCellphoneLabel;
+
 @property (nonatomic, strong) UIImage *image;
 
 - (void)updateLabelsWithCollaborator:(PeopleColaborador *)collaborator;

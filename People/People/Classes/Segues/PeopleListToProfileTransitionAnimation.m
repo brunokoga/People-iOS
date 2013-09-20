@@ -9,6 +9,15 @@
 #import "PeopleListToProfileTransitionAnimation.h"
 #import "PeopleSearchViewController.h"
 #import "PeopleProfileViewController.h"
+#import "PeopleSearchTableViewCell.h"
+
+
+//TODO: refactor that. Use actual values
+#define kPICTURE_FRAME CGRectMake(10.0f, 25.0f, 50.0f, 50.0f)
+#define kPHONE1_FRAME CGRectMake(20.0f, -137, 160, 30)
+#define kPHONE2_FRAME CGRectMake(161.0f, -147.0f, 150.0f, 50.0f)
+#define kNAME_FRAME CGRectMake(10.0f, 25.0f, 50.0f, 50.0f)
+#define kROLE_FRAME CGRectMake(10.0f, 25.0f, 50.0f, 50.0f)
 
 @implementation PeopleListToProfileTransitionAnimation
 
@@ -84,6 +93,23 @@
         [transitionContext completeTransition:YES];
     };
 
+    CGRect pictureFrame = kPICTURE_FRAME;
+    
+    PeopleSearchTableViewCell *selectedCell = [fromViewController selectedCell];
+
+    CGRect phone1Frame = kPHONE1_FRAME;
+    
+    //[fromViewController.view convertRect:selectedCell.frame
+    //                                        toView:toViewController.view];
+    CGRect phone2Frame = kPHONE2_FRAME;
+    
+    [toViewController performListToProfileAnimationWithDuration:[self transitionDuration:transitionContext]/2
+                                                   pictureFrame:pictureFrame
+                                                    phone1Frame:phone1Frame
+                                                    phone2Frame:phone2Frame
+                                                      nameFrame:CGRectZero
+                                                      roleFrame:CGRectZero];
+    
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0.0
          usingSpringWithDamping:1.0
@@ -91,12 +117,6 @@
                         options:0
                      animations:animationBlock
                      completion:completionBlock];
-    
-    //TODO: Change that!
-    CGRect pictureFrame = CGRectMake(10.0f, 25.0f, 50.0f, 50.0f);
-    [toViewController performListToProfileAnimationWithDuration:[self transitionDuration:transitionContext]/2
-                                                   pictureFrame:pictureFrame];
-
 
 }
 
@@ -127,7 +147,7 @@
     UIView *fromViewControllerContentView = fromViewController.contentView;
     [fromViewControllerContentView removeFromSuperview];
     [transitionView addSubview:fromViewControllerContentView];
-    UITableViewCell *selectedCell = [toViewController selectedCell];
+    PeopleSearchTableViewCell *selectedCell = [toViewController selectedCell];
     selectedCell.alpha = 0.0f;
     fromViewControllerContentView.frame = [fromViewController.view convertRect:[fromViewController frameForContainerView]
                                                                         toView:transitionView];
@@ -159,11 +179,17 @@
                      completion:completionBlock];
     
     //TODO: change that!!
-    CGRect pictureFrame = CGRectMake(10.0f, 25.0f, 50.0f, 50.0f);
+    CGRect pictureFrame = kPICTURE_FRAME;
+    CGRect phone1Frame = kPHONE1_FRAME;
+    CGRect phone2Frame = kPHONE2_FRAME;
     
     
     [fromViewController performProfileToListAnimationWithDuration:[self transitionDuration:transitionContext]
-                                                     pictureFrame:pictureFrame];
+                                                     pictureFrame:pictureFrame
+                                                      phone1Frame:phone1Frame
+                                                      phone2Frame:phone2Frame
+                                                        nameFrame:CGRectZero
+                                                        roleFrame:CGRectZero];
 
      
 
