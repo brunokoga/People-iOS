@@ -42,7 +42,40 @@
 - (void)populate
 {
     [self downloadAndSetImage];
+    [self populateTeamView];
+    [self populatePhoneView];
+    [self populateNameView];
+    [self populateCoachView];
+    [self populateProjectsView];
+}
 
+- (void)populateProjectsView
+{
+    
+}
+
+- (void)populateCoachView
+{
+    
+}
+
+- (void)populateTeamView
+{
+    [self.teamView setTeamMemberNames:@[@"a", @"b", @"c"]];
+}
+
+- (void)populatePhoneView
+{
+    [self.phoneNumbersView.phone1Button setPhoneNumber:self.colaborador.phone];
+    [self.phoneNumbersView.phone2Button setPhoneNumber:self.colaborador.mobile];
+
+}
+
+- (void)populateNameView
+{
+    self.nameView.nameLabel.text = self.colaborador.name;
+    self.nameView.roleLabel.text = self.colaborador.role;
+    self.nameView.baseLabel.text = self.colaborador.location;
 }
 
 
@@ -170,12 +203,6 @@
     [[PeopleServices sharedServices] photoForUser:self.colaborador.login
                                           success:^(UIImage *image) {
                                               self.pictureView.image = image;
-                                              [self.teamView setTeamMemberNames:@[@"a", @"b", @"c"]];
-                                              [self.phoneNumbersView.phone1Button setPhoneNumber:self.colaborador.phone];
-                                              [self.phoneNumbersView.phone2Button setPhoneNumber:self.colaborador.mobile];
-                                              self.nameView.nameLabel.text = self.colaborador.name;
-                                              self.nameView.roleLabel.text = self.colaborador.role;
-                                              self.nameView.baseLabel.text = self.colaborador.location;
                                           } failure:^(NSError *error) {
                                               
                                           }];
