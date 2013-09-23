@@ -31,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.loginButton.enabled = YES;
 	// Do any additional setup after loading the view.
 }
 
@@ -129,6 +130,7 @@
 
 - (void)loginWithUsername:(NSString *)username password:(NSString *)password
 {
+    self.loginButton.enabled = NO;
     PeopleServices *sharedServices = [PeopleServices sharedServices];
     [sharedServices loginWithUsername:username
                              password:password
@@ -171,6 +173,7 @@
     self.passwordPadImageView.image = [UIImage imageNamed:passPadImageName];
     [self.loginButton setTitle:loginButtonTitle forState:UIControlStateNormal];
     [self.loginButton applyErrorTitleColorForPrimaryColor];
+    self.loginButton.enabled = YES;
 
 }
 

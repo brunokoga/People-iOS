@@ -27,11 +27,6 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    //    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
-
 - (void)testPhoneNumberFormat
 {
     NSString *phone = @"4500";
@@ -65,9 +60,6 @@
     phone = @"99999";
     formattedNumber = [phone phoneNumberFormat];
     XCTAssertEqualObjects(formattedNumber, @"99999", @"Wrong!");
-
-
-
     
 }
 
