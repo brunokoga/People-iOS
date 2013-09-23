@@ -38,11 +38,17 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
 {
     [super viewDidLoad];
     [self createContainerAndContentViews];
+    [self bounceSearchView];
+	// Do any additional setup after loading the view.
+}
+
+- (void)bounceSearchView
+{
     CGRect oldFrame = self.searchView.frame;
     [self.searchView setFrame:CGRectMake(oldFrame.origin.x,
-                                               oldFrame.origin.y - oldFrame.size.height,
-                                               oldFrame.size.width,
-                                               oldFrame.size.height)];
+                                         oldFrame.origin.y - oldFrame.size.height,
+                                         oldFrame.size.width,
+                                         oldFrame.size.height)];
     
     [UIView animateWithDuration:1.0 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:25.0 options:0 animations:^{
         
@@ -50,10 +56,7 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
     } completion:^(BOOL finished) {
         
     }];
-
-	// Do any additional setup after loading the view.
 }
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
