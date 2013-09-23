@@ -7,25 +7,48 @@
 //
 
 #import "ProfileSMSEmailView.h"
+@interface ProfileSMSEmailView ()
+@property (weak, nonatomic) IBOutlet UIButton *emailButton;
+@property (weak, nonatomic) IBOutlet UIButton *smsButton;
+
+@end
 
 @implementation ProfileSMSEmailView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)init
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
-        // Initialization code
+        [self setup];
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)awakeFromNib
 {
-    // Drawing code
+    [super awakeFromNib];
+    [self setup];
 }
-*/
+
+- (void)setup
+{
+    [super setup];
+    [self.smsButton setTitle:NSLocalizedString(@"Send iMessage/SMS", @"Send iMessage/SMS button on Profile Screen")
+                    forState:UIControlStateNormal];
+}
+
+- (IBAction)smsButtonTouched:(id)sender {
+
+}
+
+- (IBAction)emailButtonTouched:(id)sender {
+}
+
+- (void)setEmailAttributedString:(NSAttributedString *)emailAttributedString
+{
+    _emailAttributedString = emailAttributedString;
+    [self.emailButton setAttributedTitle:emailAttributedString
+                                forState:UIControlStateNormal];
+}
 
 @end

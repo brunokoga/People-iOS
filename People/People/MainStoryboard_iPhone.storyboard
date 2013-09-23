@@ -352,17 +352,17 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" id="KtI-KJ-Vqg" customClass="ProfileCoachView">
-                                                        <rect key="frame" x="0.0" y="342" width="320" height="80"/>
+                                                        <rect key="frame" x="0.0" y="341" width="320" height="80"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" id="24f-mi-FOr" customClass="ProfileTeamView">
-                                                        <rect key="frame" x="0.0" y="422" width="320" height="150"/>
+                                                        <rect key="frame" x="0.0" y="421" width="320" height="150"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" id="BoL-vg-R63" customClass="ProfileProjectsView">
-                                                        <rect key="frame" x="0.0" y="572" width="320" height="250"/>
+                                                        <rect key="frame" x="0.0" y="571" width="320" height="250"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </view>
@@ -442,12 +442,7 @@
     </scenes>
     <resources>
         <image name="DefaultBackground" width="320" height="480"/>
-        <image name="DefaultBackground" width="320" height="480"/>
-        <image name="DefaultBackground" width="320" height="480"/>
         <image name="People - White Logo" width="174" height="70"/>
-        <image name="People - White Logo" width="174" height="70"/>
-        <image name="People - White Logo" width="174" height="70"/>
-        <image name="get" width="98" height="10"/>
         <image name="get" width="98" height="10"/>
         <image name="ico-dos-sociallinks" width="23" height="23"/>
         <image name="ico-pass-normal" width="25" height="25"/>

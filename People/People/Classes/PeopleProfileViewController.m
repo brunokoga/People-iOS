@@ -16,6 +16,7 @@
 #import "ProfileProjectsView.h"
 #import "PeopleHTTPClient.h"
 #import "ProfileSMSEmailView.h"
+#import "NSString+PhoneNumberFormatter.h"
 
 //FIXME: remove this
 #import "PeopleJSONParser.h"
@@ -51,9 +52,15 @@
     [self populatePhoneView];
     [self populateNameView];
     [self populateCoachView];
+    [self populateSmsEmailView];
     [self.scrollView setContentSize:CGSizeMake(320.0, 900.0)];
 }
 
+- (void)populateSmsEmailView
+{
+    NSAttributedString *emailAttributedString = [self.colaborador.login ciandtEmailWithFocusOnLogin];
+    [self.smsEmailView setEmailAttributedString:emailAttributedString];
+}
 /*
  This is called after the colaborador profile is reached
  */

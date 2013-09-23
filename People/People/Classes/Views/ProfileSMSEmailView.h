@@ -10,4 +10,5 @@
 
 @interface ProfileSMSEmailView : BKXibView
 
+@property (nonatomic, strong) NSAttributedString *emailAttributedString;
 @end

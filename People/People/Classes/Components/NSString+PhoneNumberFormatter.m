@@ -33,8 +33,16 @@
 - (NSAttributedString *)ciandtEmailWithFocusOnLogin
 {
     NSString *string = [self stringByAppendingString:@"@ciandt.com"];
-    NSAttributedString *returnAttributedString = [[NSAttributedString alloc] initWithString:string];
+    NSMutableAttributedString *returnAttributedString = [[NSMutableAttributedString alloc] initWithString:string];
+    
+    [returnAttributedString addAttribute:NSForegroundColorAttributeName
+                                   value:[UIColor grayColor]
+                                   range:NSMakeRange(0, [self length])];
+
+    [returnAttributedString addAttribute:NSForegroundColorAttributeName
+                                   value:[UIColor blackColor]
+                                   range:NSMakeRange([self length], 0)];
+    
     return  returnAttributedString;
-    return nil;
 }
 @end
