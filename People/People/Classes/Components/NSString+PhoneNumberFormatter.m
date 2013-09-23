@@ -23,11 +23,15 @@
     
     if ([self length] == 4)
     {
-        onlyNumbers = [@"192102" stringByAppendingString:onlyNumbers];
+        NSString *ciandtPrefix = @"192102";
+        onlyNumbers = [ciandtPrefix stringByAppendingString:onlyNumbers];
     }
 
     return onlyNumbers;
 }
 
-
+- (NSAttributedString *)ciandtEmailWithFocusOnLogin
+{
+    return nil;
+}
 @end

@@ -32,6 +32,7 @@
 		D34C56EF179B29EA00706AFF /* Dosis-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34C56E8179B29EA00706AFF /* Dosis-Light.otf */; };
 		D34C56F0179B29EA00706AFF /* Dosis-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34C56E9179B29EA00706AFF /* Dosis-Medium.otf */; };
 		D34C56F1179B29EA00706AFF /* Dosis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D34C56EA179B29EA00706AFF /* Dosis-SemiBold.otf */; };
+		D35F4BCF17F0AF9D00ACB5E9 /* NSString+PhoneNumberFormatterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D35F4BCE17F0AF9D00ACB5E9 /* NSString+PhoneNumberFormatterTest.m */; };
 		D371D2B21798A554009C9D9E /* PeoplePreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */; };
 		D371D2B81798AA8C009C9D9E /* PeoplePreferencesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2B71798AA8C009C9D9E /* PeoplePreferencesTest.m */; };
 		D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BA1798B8DF009C9D9E /* PeopleLoginViewController.m */; };
@@ -132,6 +133,7 @@
 		D34C56E8179B29EA00706AFF /* Dosis-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Light.otf"; sourceTree = "<group>"; };
 		D34C56E9179B29EA00706AFF /* Dosis-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Medium.otf"; sourceTree = "<group>"; };
 		D34C56EA179B29EA00706AFF /* Dosis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-SemiBold.otf"; sourceTree = "<group>"; };
+		D35F4BCE17F0AF9D00ACB5E9 /* NSString+PhoneNumberFormatterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PhoneNumberFormatterTest.m"; sourceTree = "<group>"; };
 		D371D2B31798A994009C9D9E /* PeoplePreferences_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeoplePreferences_Private.h; path = "PeopleTests/Private Headers/PeoplePreferences_Private.h"; sourceTree = SOURCE_ROOT; };
 		D371D2B71798AA8C009C9D9E /* PeoplePreferencesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeoplePreferencesTest.m; sourceTree = "<group>"; };
 		D371D2B91798B8DF009C9D9E /* PeopleLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleLoginViewController.h; path = Classes/PeopleLoginViewController.h; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 				D38B34A0179898BB00E2AF26 /* PeopleTests.m */,
 				D3291739179A217D00140214 /* PeopleColaboradorTests.m */,
 				D34C56DE179AF6CC00706AFF /* PeopleValidationTest.m */,
+				D35F4BCE17F0AF9D00ACB5E9 /* NSString+PhoneNumberFormatterTest.m */,
 				D38B349B179898BB00E2AF26 /* Supporting Files */,
 			);
 			path = PeopleTests;
@@ -812,6 +815,7 @@
 			files = (
 				D329173A179A217D00140214 /* PeopleColaboradorTests.m in Sources */,
 				D34C56DF179AF6CC00706AFF /* PeopleValidationTest.m in Sources */,
+				D35F4BCF17F0AF9D00ACB5E9 /* NSString+PhoneNumberFormatterTest.m in Sources */,
 				D38B34A1179898BB00E2AF26 /* PeopleTests.m in Sources */,
 				474CF5BD17AB202900834C4F /* PeopleProfileViewController.m in Sources */,
 				47B9180C17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */,
@@ -955,6 +959,7 @@
 		};
 		D38B34A8179898BB00E2AF26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1B65C1B01294229848DAD83 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/People.app/People";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -977,6 +982,7 @@
 		};
 		D38B34A9179898BB00E2AF26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1B65C1B01294229848DAD83 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/People.app/People";
 				FRAMEWORK_SEARCH_PATHS = (
