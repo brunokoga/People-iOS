@@ -16,7 +16,7 @@
                               [[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
                              componentsJoinedByString:@""];
     
-    if ([self length] < 3)
+    if ([self length] <= 3)
     {
         onlyNumbers = @"";
     }
@@ -32,6 +32,9 @@
 
 - (NSAttributedString *)ciandtEmailWithFocusOnLogin
 {
+    NSString *string = [self stringByAppendingString:@"@ciandt.com"];
+    NSAttributedString *returnAttributedString = [[NSAttributedString alloc] initWithString:string];
+    return  returnAttributedString;
     return nil;
 }
 @end

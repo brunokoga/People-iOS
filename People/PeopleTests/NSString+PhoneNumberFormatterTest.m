@@ -38,13 +38,47 @@
     NSString *formattedNumber = [phone phoneNumberFormat];
     XCTAssertEqualObjects(formattedNumber, @"1921024500", @"Wrong!");
     
+    phone = @"0000";
+    formattedNumber = [phone phoneNumberFormat];
+    XCTAssertEqualObjects(formattedNumber, @"1921020000", @"Wrong!");
+    
+    phone = @"0001";
+    formattedNumber = [phone phoneNumberFormat];
+    XCTAssertEqualObjects(formattedNumber, @"1921020001", @"Wrong!");
+    
+    phone = @"9999";
+    formattedNumber = [phone phoneNumberFormat];
+    XCTAssertEqualObjects(formattedNumber, @"1921029999", @"Wrong!");
+    
+    phone = @"";
+    formattedNumber = [phone phoneNumberFormat];
+    XCTAssertEqualObjects(formattedNumber, @"", @"Wrong!");
+    
+    phone = @"1";
+    formattedNumber = [phone phoneNumberFormat];
+    XCTAssertEqualObjects(formattedNumber, @"", @"Wrong!");
+    
+    phone = @"999";
+    formattedNumber = [phone phoneNumberFormat];
+    XCTAssertEqualObjects(formattedNumber, @"", @"Wrong!");
+
+    phone = @"99999";
+    formattedNumber = [phone phoneNumberFormat];
+    XCTAssertEqualObjects(formattedNumber, @"99999", @"Wrong!");
+
+
+
+    
 }
 
 - (void)testCiandtEmailWithFocusOnLogin
 {
     NSString *login = @"mylogin";
     NSAttributedString *email = [login ciandtEmailWithFocusOnLogin];
-    XCTAssertNil(email, @"Expected to be nil");
+    NSString *emailString = [email string];
+    
+    XCTAssertEqualObjects([emailString substringToIndex:[login length]], login, @"Expected to be equal");
+    
 }
 
 @end
