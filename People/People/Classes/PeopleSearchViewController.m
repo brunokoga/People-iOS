@@ -54,7 +54,7 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
         
         [self.searchView setFrame:oldFrame];
     } completion:^(BOOL finished) {
-        
+        [[self searchTextfield] becomeFirstResponder];
     }];
 }
 - (void)viewWillAppear:(BOOL)animated

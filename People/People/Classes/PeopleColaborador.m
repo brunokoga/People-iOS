@@ -12,12 +12,20 @@
 
 - (NSArray *)currentProjectsNames
 {
-    return [self.currentProjects allKeys];
+    if ([self.currentProjects count] > 0)
+    {
+        return [self.currentProjects allKeys];
+    }
+    return @[];
 }
 
 - (NSArray *)pastProjectsNames
 {
-    return [self.pastProjects allKeys];
+    if ([self.pastProjects count] > 0)
+    {
+        return [self.pastProjects allKeys];
+    }
+    return @[];
     
 }
 
