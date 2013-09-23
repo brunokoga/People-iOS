@@ -171,8 +171,8 @@
     self.phoneNumbersView.phone1Button.frame = phone1Frame;
     self.phoneNumbersView.phone2Button.frame = phone2Frame;
 
-    CGPoint nameOldCenter = CGPointMake(160, 32);
-    CGPoint roleOldCenter = CGPointMake(160, 62);
+    CGPoint nameOldCenter = self.nameView.nameLabel.center;
+    CGPoint roleOldCenter = self.nameView.roleLabel.center;
 
     self.nameView.nameLabel.frame = nameFrame;
     self.nameView.roleLabel.frame = roleFrame;
