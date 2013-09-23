@@ -70,6 +70,8 @@
 		D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */; };
 		D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81B1798A0C300F05FD5 /* PeopleInitialViewController.m */; };
 		D3DA46D8179D8C170061809D /* PeopleRegularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DA46D7179D8C170061809D /* PeopleRegularButton.m */; };
+		D3DEC63017EFCD910065D8B3 /* ProfileSMSEmailView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DEC62F17EFCD910065D8B3 /* ProfileSMSEmailView.m */; };
+		D3DEC63217EFCDF00065D8B3 /* ProfileSMSEmailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DEC63117EFCDF00065D8B3 /* ProfileSMSEmailView.xib */; };
 		D3E1D68117DE45B300155E8F /* ProfilePhoneNumbersView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D68017DE45B300155E8F /* ProfilePhoneNumbersView.m */; };
 		D3E1D68417DE470A00155E8F /* BKXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D68317DE470A00155E8F /* BKXibView.m */; };
 		D3E1D68617DE47DD00155E8F /* ProfilePictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3E1D68517DE47DD00155E8F /* ProfilePictureView.xib */; };
@@ -194,6 +196,9 @@
 		D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PeoplePreferences.m; path = Classes/PeoplePreferences.m; sourceTree = "<group>"; };
 		D3DA46D6179D8C170061809D /* PeopleRegularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleRegularButton.h; path = People/Classes/PeopleRegularButton.h; sourceTree = "<group>"; };
 		D3DA46D7179D8C170061809D /* PeopleRegularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleRegularButton.m; path = People/Classes/PeopleRegularButton.m; sourceTree = "<group>"; };
+		D3DEC62E17EFCD910065D8B3 /* ProfileSMSEmailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileSMSEmailView.h; path = People/Classes/Views/ProfileSMSEmailView.h; sourceTree = "<group>"; };
+		D3DEC62F17EFCD910065D8B3 /* ProfileSMSEmailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileSMSEmailView.m; path = People/Classes/Views/ProfileSMSEmailView.m; sourceTree = "<group>"; };
+		D3DEC63117EFCDF00065D8B3 /* ProfileSMSEmailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileSMSEmailView.xib; path = People/Classes/Views/ProfileSMSEmailView.xib; sourceTree = "<group>"; };
 		D3E1D67F17DE45B300155E8F /* ProfilePhoneNumbersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfilePhoneNumbersView.h; path = People/Classes/Views/ProfilePhoneNumbersView.h; sourceTree = "<group>"; };
 		D3E1D68017DE45B300155E8F /* ProfilePhoneNumbersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfilePhoneNumbersView.m; path = People/Classes/Views/ProfilePhoneNumbersView.m; sourceTree = "<group>"; };
 		D3E1D68217DE470A00155E8F /* BKXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKXibView.h; path = People/Classes/Views/BKXibView.h; sourceTree = "<group>"; };
@@ -596,6 +601,9 @@
 				D38A430817DE427600434161 /* ProfileNameView.m */,
 				D313890317E8A2B200CF8CD7 /* PeoplePhoneButton.h */,
 				D313890417E8A2B200CF8CD7 /* PeoplePhoneButton.m */,
+				D3DEC62E17EFCD910065D8B3 /* ProfileSMSEmailView.h */,
+				D3DEC62F17EFCD910065D8B3 /* ProfileSMSEmailView.m */,
+				D3DEC63117EFCDF00065D8B3 /* ProfileSMSEmailView.xib */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -684,6 +692,7 @@
 				D3E1D69817E0C4F000155E8F /* ProfileProjectsView.xib in Resources */,
 				D3E1D68B17DE4B2100155E8F /* ProfilePhoneNumbersView.xib in Resources */,
 				D327A4CA17989A8D0042FF8B /* Images.xcassets in Resources */,
+				D3DEC63217EFCDF00065D8B3 /* ProfileSMSEmailView.xib in Resources */,
 				D34C56EE179B29EA00706AFF /* Dosis-ExtraLight.otf in Resources */,
 				D34C56EB179B29EA00706AFF /* Dosis-Bold.otf in Resources */,
 				D34C56F1179B29EA00706AFF /* Dosis-SemiBold.otf in Resources */,
@@ -753,6 +762,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D39DDBFC1799C5CA00E9D0C5 /* PeopleJSONParser.m in Sources */,
+				D3DEC63017EFCD910065D8B3 /* ProfileSMSEmailView.m in Sources */,
 				D313890817E8AD7700CF8CD7 /* NSNumber+PhoneNumberFormatter.m in Sources */,
 				D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */,
 				D3E1D6A417E0CE1200155E8F /* PeopleCircularButton.m in Sources */,

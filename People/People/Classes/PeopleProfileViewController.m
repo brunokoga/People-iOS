@@ -15,6 +15,7 @@
 #import "ProfileTeamView.h"
 #import "ProfileProjectsView.h"
 #import "PeopleHTTPClient.h"
+#import "ProfileSMSEmailView.h"
 
 //FIXME: remove this
 #import "PeopleJSONParser.h"
@@ -31,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet ProfileCoachView *coachView;
 @property (weak, nonatomic) IBOutlet ProfileTeamView *teamView;
 @property (weak, nonatomic) IBOutlet ProfileProjectsView *projectsView;
+@property (weak, nonatomic) IBOutlet ProfileSMSEmailView *smsEmailView;
 
 @end
 
@@ -49,13 +51,19 @@
     [self populatePhoneView];
     [self populateNameView];
     [self populateCoachView];
-    [self populateProjectsView];
     [self.scrollView setContentSize:CGSizeMake(320.0, 900.0)];
 }
 
+/*
+ This is called after the colaborador profile is reached
+ */
 - (void)populateProjectsView
 {
-    
+    [self.projectsView setPastProjects:self.colaborador.pastProjectsNames
+                       currentProjects:self.colaborador.currentProjectsNames];
+    [self.scrollView setContentSize:CGSizeMake(320.0, [self.projectsView totalHeight] + 300.0)];
+
+
 }
 
 - (void)populateCoachView
@@ -234,7 +242,10 @@
                            PeopleColaborador *colaboradorProfile = [jsonParser colaboradorFromProfileResponse:responseObject];
                            
                            self.colaborador.teammates = colaboradorProfile.teammates;
+                           self.colaborador.currentProjects = colaboradorProfile.currentProjects;
+                           self.colaborador.pastProjects = colaboradorProfile.pastProjects;
                            [self populateTeamView];
+                           [self populateProjectsView];
 
                        } failure:^(NSError *error) {
                        }];

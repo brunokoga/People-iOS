@@ -10,8 +10,14 @@
 
 @interface ProfileProjectsView : BKXibView
 
+
+
 @property (nonatomic, strong) NSArray *pastProjects;
 @property (nonatomic, strong) NSArray *currentProjects;
 
+//it's prefered to use this instead of properties
+- (void)setPastProjects:(NSArray *)pastProjects currentProjects:(NSArray *)currentProjects;
+
+- (CGFloat)totalHeight;
 
 @end

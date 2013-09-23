@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4504" systemVersion="13A584" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="241-vz-BUL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A584" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="241-vz-BUL">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3734.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--People Initial View Controller-->
@@ -346,18 +346,23 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </view>
-                                                    <view contentMode="scaleToFill" id="KtI-KJ-Vqg" customClass="ProfileCoachView">
+                                                    <view contentMode="scaleToFill" id="QqU-S5-u9t" customClass="ProfileSMSEmailView">
                                                         <rect key="frame" x="0.0" y="261" width="320" height="80"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </view>
+                                                    <view contentMode="scaleToFill" id="KtI-KJ-Vqg" customClass="ProfileCoachView">
+                                                        <rect key="frame" x="0.0" y="342" width="320" height="80"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </view>
                                                     <view contentMode="scaleToFill" id="24f-mi-FOr" customClass="ProfileTeamView">
-                                                        <rect key="frame" x="0.0" y="341" width="320" height="150"/>
+                                                        <rect key="frame" x="0.0" y="422" width="320" height="150"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" id="BoL-vg-R63" customClass="ProfileProjectsView">
-                                                        <rect key="frame" x="0.0" y="491" width="320" height="166"/>
+                                                        <rect key="frame" x="0.0" y="572" width="320" height="250"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </view>
@@ -382,6 +387,7 @@
                         <outlet property="pictureView" destination="V4R-NM-eH7" id="U9b-cY-aRJ"/>
                         <outlet property="projectsView" destination="BoL-vg-R63" id="vet-Dh-gJv"/>
                         <outlet property="scrollView" destination="Iuh-v7-eYD" id="ErX-BB-sFq"/>
+                        <outlet property="smsEmailView" destination="QqU-S5-u9t" id="Phm-jq-9Y2"/>
                         <outlet property="teamView" destination="24f-mi-FOr" id="mwL-4S-o7B"/>
                         <outlet property="topBackgroundImageView" destination="oYk-Vb-yw1" id="UNd-M6-YO1"/>
                     </connections>
@@ -436,7 +442,12 @@
     </scenes>
     <resources>
         <image name="DefaultBackground" width="320" height="480"/>
+        <image name="DefaultBackground" width="320" height="480"/>
+        <image name="DefaultBackground" width="320" height="480"/>
         <image name="People - White Logo" width="174" height="70"/>
+        <image name="People - White Logo" width="174" height="70"/>
+        <image name="People - White Logo" width="174" height="70"/>
+        <image name="get" width="98" height="10"/>
         <image name="get" width="98" height="10"/>
         <image name="ico-dos-sociallinks" width="23" height="23"/>
         <image name="ico-pass-normal" width="25" height="25"/>

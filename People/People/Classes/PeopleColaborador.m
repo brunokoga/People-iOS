@@ -15,7 +15,7 @@
     return [self.currentProjects allKeys];
 }
 
-- (NSArray *)pastProjecstNames
+- (NSArray *)pastProjectsNames
 {
     return [self.pastProjects allKeys];
     
