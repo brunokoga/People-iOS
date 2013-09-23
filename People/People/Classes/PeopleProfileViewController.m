@@ -61,7 +61,10 @@
 {
     [self.projectsView setPastProjects:self.colaborador.pastProjectsNames
                        currentProjects:self.colaborador.currentProjectsNames];
-    [self.scrollView setContentSize:CGSizeMake(320.0, [self.projectsView totalHeight] + 300.0)];
+    
+    CGFloat offset = 400.0;
+    if (self.view.window.frame.size.height == 568.0) offset = 300.0;
+    [self.scrollView setContentSize:CGSizeMake(320.0, [self.projectsView totalHeight] + offset)];
 
 
 }
