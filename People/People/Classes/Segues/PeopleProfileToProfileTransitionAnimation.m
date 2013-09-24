@@ -1,23 +1,24 @@
 //
-//  PeopleModalTransition.m
+//  PeopleProfileToProfileTransitionAnimation.m
 //  People
 //
 //  Created by Bruno Koga on 9/24/13.
 //  Copyright (c) 2013 CI&T. All rights reserved.
 //
 
-#import "PeopleModalTransition.h"
+#import "PeopleProfileToProfileTransitionAnimation.h"
 
-@interface PeopleModalTransition ()
+@interface PeopleProfileToProfileTransitionAnimation ()
+
+@property (nonatomic) UINavigationControllerOperation operation;
 @end
+@implementation PeopleProfileToProfileTransitionAnimation
 
-@implementation PeopleModalTransition
-
-- (id)init
+- (id)initForOperation:(UINavigationControllerOperation)operation
 {
     self = [super init];
     if (self) {
-        _isPresenting = YES;
+        _operation = operation;
     }
     return self;
 }
@@ -26,9 +27,10 @@
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
-    if (self.isPresenting) {
+
+    if (self.operation == UINavigationControllerOperationPush) {
         [self animatePresentationTransition:transitionContext];
-    } else {
+    } else if (self.operation == UINavigationControllerOperationPop) {
         [self animateDismissalTransition:transitionContext];
     }
 }
@@ -43,9 +45,9 @@
     toViewController.view.frame = CGRectZero;
     toViewController.view.center = fromViewController.view.center;
     [transitionView addSubview:toViewController.view];
-
+    
     void (^animationBlock)(void) = ^{
-
+        
         toViewController.view.frame = fromViewController.view.frame;
     };
     void (^completionBlock)(BOOL) = ^(BOOL finished) {
@@ -59,7 +61,7 @@
                         options:0
                      animations:animationBlock
                      completion:completionBlock];
-
+    
 }
 
 - (void)animateDismissalTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
@@ -71,12 +73,12 @@
     UIView *transitionView = [transitionContext containerView];
     [transitionView addSubview:toViewController.view];
     [transitionView addSubview:fromViewController.view];
-//    toViewController.view.alpha = 0.0f;
+    //    toViewController.view.alpha = 0.0f;
     
     void (^animationBlock)(void) = ^{
         fromViewController.view.frame = CGRectMake(toViewController.view.center.x,
-                                         toViewController.view.center.y,
-                                         0, 0);
+                                                   toViewController.view.center.y,
+                                                   0, 0);
     };
     void (^completionBlock)(BOOL) = ^(BOOL finished) {
         [fromViewController.view removeFromSuperview];
@@ -89,7 +91,7 @@
                         options:0
                      animations:animationBlock
                      completion:completionBlock];
-
+    
 }
 
 @end

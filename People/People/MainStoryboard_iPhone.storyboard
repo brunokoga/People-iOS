@@ -302,7 +302,7 @@
         <!--People Profile View Controller-->
         <scene sceneID="c1a-oQ-rhT">
             <objects>
-                <viewController id="xww-W7-HJf" customClass="PeopleProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PeopleProfileViewController" id="xww-W7-HJf" customClass="PeopleProfileViewController" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8AV-Nv-8Ev">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

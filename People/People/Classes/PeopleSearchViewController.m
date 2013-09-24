@@ -139,6 +139,10 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
 
 #pragma mark TableView Delegate
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.searchTextfield resignFirstResponder];
+}
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     PeopleSearchTableViewHeader *headerView = nil;

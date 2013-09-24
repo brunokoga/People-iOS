@@ -10,6 +10,7 @@
 #import "PeopleListToProfileTransitionAnimation.h"
 #import "PeopleSearchViewController.h"
 #import "PeopleProfileViewController.h"
+#import "PeopleProfileToProfileTransitionAnimation.h"
 
 @implementation PeopleNavigationControllerDelegate
 
@@ -31,6 +32,12 @@
     {
         [navigationController setNavigationBarHidden:YES animated:YES];
         animator = [PeopleListToProfileTransitionAnimation new];
+    }
+    else if ([fromVC isKindOfClass:[PeopleProfileViewController class]] &&
+             [toVC isKindOfClass:[PeopleProfileViewController class]])
+    {
+//        [navigationController setNavigationBarHidden:YES animated:YES];
+        animator = [[PeopleProfileToProfileTransitionAnimation alloc] initForOperation:operation];
     }
     
     return animator;
