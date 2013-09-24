@@ -47,6 +47,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.projectsView setHidden:YES];
     [self populate];
     self.modalTransitionDelegate = [[PeopleModalTransitionDelegate alloc] init];
 	// Do any additional setup after loading the view.
@@ -77,13 +78,14 @@
  */
 - (void)populateProjectsView
 {
+
     [self.projectsView setPastProjects:self.colaborador.pastProjectsNames
                        currentProjects:self.colaborador.currentProjectsNames];
     
     CGFloat offset = 400.0;
     if (self.view.window.frame.size.height == 568.0) offset = 300.0;
     [self.scrollView setContentSize:CGSizeMake(320.0, [self.projectsView totalHeight] + offset)];
-
+        [self.projectsView setHidden:NO];
 
 }
 
