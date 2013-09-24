@@ -45,4 +45,10 @@
     
     return  returnAttributedString;
 }
+
+- (NSString *)ciandtEmail
+{
+    NSString *string = [self stringByAppendingString:@"@ciandt.com"];
+    return string;
+}
 @end

@@ -51,4 +51,17 @@
                                 forState:UIControlStateNormal];
 }
 
+- (void)setSMSTarget:(id)target action:(SEL)action
+{
+    [self.smsButton addTarget:target
+                         action:action
+               forControlEvents:UIControlEventTouchUpInside];
+}
+- (void)setEmailTarget:(id)target action:(SEL)action
+{
+    [self.emailButton addTarget:target
+                         action:action
+               forControlEvents:UIControlEventTouchUpInside];
+}
+
 @end

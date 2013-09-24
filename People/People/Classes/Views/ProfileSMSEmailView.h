@@ -11,4 +11,8 @@
 @interface ProfileSMSEmailView : BKXibView
 
 @property (nonatomic, strong) NSAttributedString *emailAttributedString;
+
+- (void)setSMSTarget:(id)target action:(SEL)action;
+- (void)setEmailTarget:(id)target action:(SEL)action;
+
 @end

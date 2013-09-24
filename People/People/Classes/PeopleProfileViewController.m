@@ -17,6 +17,9 @@
 #import "PeopleHTTPClient.h"
 #import "ProfileSMSEmailView.h"
 #import "NSString+PhoneNumberFormatter.h"
+#import "PeopleMailViewController.h"
+#import "PeopleMessagesViewController.h"
+#import "NSString+PhoneNumberFormatter.h"
 
 //FIXME: remove this
 #import "PeopleJSONParser.h"
@@ -60,6 +63,11 @@
 {
     NSAttributedString *emailAttributedString = [self.colaborador.login ciandtEmailWithFocusOnLogin];
     [self.smsEmailView setEmailAttributedString:emailAttributedString];
+    [self.smsEmailView setEmailTarget:self
+                               action:@selector(presentMailViewControllerToEmail)];
+    
+    [self.smsEmailView setSMSTarget:self
+                               action:@selector(presentMessagesViewControllerToNumber)];
 }
 /*
  This is called after the colaborador profile is reached
@@ -275,6 +283,64 @@
 
 }
 
+- (void)presentMessagesViewControllerToNumber
+{
+    [self presentMessagesViewControllerToNumber:self.colaborador.phone];
+}
 
+- (void)presentMessagesViewControllerToNumber:(NSNumber *)number
+{
+    if ([MFMessageComposeViewController canSendText])
+    {
+        // Email Content
+        NSString *messageBody = @"iOS programming is so fun!";
+        // To address
+        NSArray *toRecipents = @[number];
+        
+        
+        
+        
+        PeopleMessagesViewController *messagesViewController = [[PeopleMessagesViewController alloc] init];
+        
+        [messagesViewController setRecipients:toRecipents];
+        [messagesViewController setBody:messageBody];
+        [self presentViewController:messagesViewController
+                           animated:YES
+                         completion:NULL];
+    } else
+    {
+        //TODO: show error message that cannot send email;        
+    }
+}
+
+- (void)presentMailViewControllerToEmail
+{
+    [self presentMailViewControllerToEmail:[self.colaborador.login ciandtEmail]];
+}
+
+- (void)presentMailViewControllerToEmail:(NSString *)email
+{
+    if ([MFMailComposeViewController canSendMail])
+    {
+        NSString *emailTitle = @"TITLE";
+        // Email Content
+        NSString *messageBody = @"BODY";
+        // To address
+        NSArray *toRecipents = @[email];
+        
+        PeopleMailViewController *mailViewController = [[PeopleMailViewController alloc] init];
+        [mailViewController setSubject:emailTitle];
+        [mailViewController setMessageBody:messageBody isHTML:NO];
+        [mailViewController setToRecipients:toRecipents];
+        
+        // Present mail view controller on screen
+        [self presentViewController:mailViewController
+                           animated:YES
+                         completion:NULL];
+    } else {
+        //TODO: show error message that cannot send email;
+    }
+
+}
 
 @end

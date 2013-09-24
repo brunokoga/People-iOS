@@ -13,4 +13,5 @@
 - (NSString *)phoneNumberFormat;
 
 - (NSAttributedString *)ciandtEmailWithFocusOnLogin;
+- (NSString *)ciandtEmail;
 @end
