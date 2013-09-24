@@ -64,7 +64,12 @@
     NSDictionary *projectsDictionary = responseDictionary[@"projects"];
     colaborador.currentProjects = projectsDictionary[@"current"];
     colaborador.pastProjects = projectsDictionary[@"past"];
-    colaborador.teammates = [NSSet setWithArray:[responseDictionary[@"teammates"] allValues]];
+
+    if ([responseDictionary[@"teammates"] isKindOfClass:[NSDictionary class]]) {
+        colaborador.teammates = [NSSet setWithArray:[responseDictionary[@"teammates"] allValues]];
+    } else {
+        colaborador.teammates = [NSSet set];
+    }
     
     NSArray *socialNetworksArray = [responseDictionary[@"employee_sociallinks"] allObjects];
     NSMutableDictionary *socialNetworks = [NSMutableDictionary dictionary];

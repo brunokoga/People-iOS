@@ -25,7 +25,7 @@
 //FIXME: remove this
 #import "PeopleJSONParser.h"
 
-@interface PeopleProfileViewController ()
+@interface PeopleProfileViewController () <UIAlertViewDelegate>
 @property(nonatomic, strong, readwrite) IBOutlet UIView *containerView;
 @property(nonatomic, strong, readwrite) IBOutlet UIView *contentView;
 
@@ -125,6 +125,12 @@
 {
     [self.phoneNumbersView.phone1Button setPhoneNumber:self.colaborador.phone];
     [self.phoneNumbersView.phone2Button setPhoneNumber:self.colaborador.mobile];
+    
+    [self.phoneNumbersView.phone1Button addTarget:self
+                                           action:@selector(phone1ButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+
+    [self.phoneNumbersView.phone2Button addTarget:self
+                                           action:@selector(phone2ButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
 
 }
 
@@ -353,6 +359,50 @@
         //TODO: show error message that cannot send email;
     }
 
+}
+
+- (void)phone1ButtonTouched:(id)sender
+{
+    [self displayAlertViewToCallNumber:[self.colaborador.phone stringValue]];
+}
+
+- (void)phone2ButtonTouched:(id)sender
+{
+    [self displayAlertViewToCallNumber:[self.colaborador.mobile stringValue]];
+}
+
+- (void)displayAlertViewToCallNumber:(NSString *)number
+{
+    NSString *telString = [@"tel://" stringByAppendingString:number];
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:telString]])
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@""
+                                                            message:number
+                                                           delegate:self
+                                                  cancelButtonTitle:NSLocalizedString(@"Cancel", @"")
+                                                  otherButtonTitles:NSLocalizedString(@"Call", @""), nil];
+        alertView.tag = [number integerValue];
+        [alertView show];
+    }
+}
+
+#pragma mark - UIAlertView Delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0: //Cancel
+            break;
+        case 1: //Call
+        {
+            NSString *number = [NSString stringWithFormat:@"%d", alertView.tag];
+            NSString *telString = [@"tel://" stringByAppendingString:number];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:telString]];
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 @end
