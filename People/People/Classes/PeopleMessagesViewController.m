@@ -7,6 +7,7 @@
 //
 
 #import "PeopleMessagesViewController.h"
+#import "PeopleBasicTheme.h"
 
 @interface PeopleMessagesViewController ()
 
@@ -32,7 +33,19 @@
 - (void)setup
 {
     self.messageComposeDelegate = self;
+    [self configureNavigationBar];
 }
+
+- (void)configureNavigationBar
+{
+    [self.navigationBar setTintColor:[UIColor whiteColor]];
+    
+    NSMutableDictionary *navigationBarTitleAttributes = [NSMutableDictionary dictionary];
+    [navigationBarTitleAttributes setValue:[PeopleBasicTheme peopleFontMediumWithSize:24.0] forKey:NSFontAttributeName];
+    [navigationBarTitleAttributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+    [self.navigationBar setTitleTextAttributes:navigationBarTitleAttributes];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -49,6 +62,7 @@
 {
     return UIStatusBarStyleLightContent;
 }
+
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
 {
     switch (result)

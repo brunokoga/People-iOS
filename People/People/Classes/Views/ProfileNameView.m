@@ -28,6 +28,11 @@
 
 - (void)setup
 {
+    [self configureFonts];
+}
+
+- (void)configureFonts
+{
     UIFont *baseFont = [PeopleBasicTheme peopleFontBookWithSize:self.baseLabel.font.pointSize];
     [self.baseLabel setFont:baseFont];
     
@@ -36,7 +41,7 @@
     
     UIFont *roleFont = [PeopleBasicTheme peopleFontBookWithSize:self.roleLabel.font.pointSize];
     [self.roleLabel setFont:roleFont];
-
+    
     UIFont *nameFont = [PeopleBasicTheme peopleFontBookWithSize:self.nameLabel.font.pointSize];
     [self.nameLabel setFont:nameFont];
 }

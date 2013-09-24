@@ -20,6 +20,7 @@
 #import "PeopleMailViewController.h"
 #import "PeopleMessagesViewController.h"
 #import "NSString+PhoneNumberFormatter.h"
+#import "PeopleModalTransitionDelegate.h"
 
 //FIXME: remove this
 #import "PeopleJSONParser.h"
@@ -37,6 +38,7 @@
 @property (weak, nonatomic) IBOutlet ProfileTeamView *teamView;
 @property (weak, nonatomic) IBOutlet ProfileProjectsView *projectsView;
 @property (weak, nonatomic) IBOutlet ProfileSMSEmailView *smsEmailView;
+@property (strong, nonatomic) PeopleModalTransitionDelegate *modalTransitionDelegate;
 
 @end
 
@@ -46,6 +48,7 @@
 {
     [super viewDidLoad];
     [self populate];
+    self.modalTransitionDelegate = [[PeopleModalTransitionDelegate alloc] init];
 	// Do any additional setup after loading the view.
 }
 
@@ -130,6 +133,7 @@
     self.nameView.nameLabel.text = self.colaborador.name;
     self.nameView.roleLabel.text = self.colaborador.role;
     self.nameView.baseLabel.text = self.colaborador.location;
+    self.nameView.buildingLabel.text = self.colaborador.building;
 }
 
 
@@ -293,14 +297,16 @@
     if ([MFMessageComposeViewController canSendText])
     {
         // Email Content
-        NSString *messageBody = @"iOS programming is so fun!";
+        NSString *messageBody = @"";
         // To address
-        NSArray *toRecipents = @[number];
-        
-        
+        NSString *numberString = [number stringValue];
+        NSArray *toRecipents = @[numberString];
         
         
         PeopleMessagesViewController *messagesViewController = [[PeopleMessagesViewController alloc] init];
+        messagesViewController.transitioningDelegate = self.modalTransitionDelegate;
+        messagesViewController.modalPresentationStyle = UIModalPresentationCustom;
+
         
         [messagesViewController setRecipients:toRecipents];
         [messagesViewController setBody:messageBody];
@@ -322,9 +328,9 @@
 {
     if ([MFMailComposeViewController canSendMail])
     {
-        NSString *emailTitle = @"TITLE";
+        NSString *emailTitle = @"";
         // Email Content
-        NSString *messageBody = @"BODY";
+        NSString *messageBody = NSLocalizedString(@"Sent from People for iOS",@"Footer message on email body");
         // To address
         NSArray *toRecipents = @[email];
         
@@ -333,10 +339,16 @@
         [mailViewController setMessageBody:messageBody isHTML:NO];
         [mailViewController setToRecipients:toRecipents];
         
+
         // Present mail view controller on screen
+        
+        mailViewController.transitioningDelegate = self.modalTransitionDelegate;
+        mailViewController.modalPresentationStyle = UIModalPresentationCustom;
+
         [self presentViewController:mailViewController
                            animated:YES
                          completion:NULL];
+        
     } else {
         //TODO: show error message that cannot send email;
     }

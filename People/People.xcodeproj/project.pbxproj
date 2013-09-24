@@ -73,6 +73,8 @@
 		D3A9D8181798A08000F05FD5 /* PeopleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D8171798A08000F05FD5 /* PeopleBaseViewController.m */; };
 		D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81B1798A0C300F05FD5 /* PeopleInitialViewController.m */; };
 		D3DA46D8179D8C170061809D /* PeopleRegularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DA46D7179D8C170061809D /* PeopleRegularButton.m */; };
+		D3DC7AB117F1E99400EF2023 /* PeopleModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DC7AB017F1E99400EF2023 /* PeopleModalTransition.m */; };
+		D3DC7AB417F1EF6C00EF2023 /* PeopleModalTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DC7AB317F1EF6C00EF2023 /* PeopleModalTransitionDelegate.m */; };
 		D3DEC63017EFCD910065D8B3 /* ProfileSMSEmailView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DEC62F17EFCD910065D8B3 /* ProfileSMSEmailView.m */; };
 		D3DEC63217EFCDF00065D8B3 /* ProfileSMSEmailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DEC63117EFCDF00065D8B3 /* ProfileSMSEmailView.xib */; };
 		D3E1D68117DE45B300155E8F /* ProfilePhoneNumbersView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1D68017DE45B300155E8F /* ProfilePhoneNumbersView.m */; };
@@ -204,6 +206,10 @@
 		D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PeoplePreferences.m; path = Classes/PeoplePreferences.m; sourceTree = "<group>"; };
 		D3DA46D6179D8C170061809D /* PeopleRegularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleRegularButton.h; path = People/Classes/PeopleRegularButton.h; sourceTree = "<group>"; };
 		D3DA46D7179D8C170061809D /* PeopleRegularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleRegularButton.m; path = People/Classes/PeopleRegularButton.m; sourceTree = "<group>"; };
+		D3DC7AAF17F1E99400EF2023 /* PeopleModalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleModalTransition.h; path = Classes/Segues/PeopleModalTransition.h; sourceTree = "<group>"; };
+		D3DC7AB017F1E99400EF2023 /* PeopleModalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleModalTransition.m; path = Classes/Segues/PeopleModalTransition.m; sourceTree = "<group>"; };
+		D3DC7AB217F1EF6C00EF2023 /* PeopleModalTransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleModalTransitionDelegate.h; path = Classes/Segues/PeopleModalTransitionDelegate.h; sourceTree = "<group>"; };
+		D3DC7AB317F1EF6C00EF2023 /* PeopleModalTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleModalTransitionDelegate.m; path = Classes/Segues/PeopleModalTransitionDelegate.m; sourceTree = "<group>"; };
 		D3DEC62E17EFCD910065D8B3 /* ProfileSMSEmailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileSMSEmailView.h; path = People/Classes/Views/ProfileSMSEmailView.h; sourceTree = "<group>"; };
 		D3DEC62F17EFCD910065D8B3 /* ProfileSMSEmailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileSMSEmailView.m; path = People/Classes/Views/ProfileSMSEmailView.m; sourceTree = "<group>"; };
 		D3DEC63117EFCDF00065D8B3 /* ProfileSMSEmailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileSMSEmailView.xib; path = People/Classes/Views/ProfileSMSEmailView.xib; sourceTree = "<group>"; };
@@ -556,6 +562,10 @@
 				D35E032017F1084A00EA340B /* PeopleMailViewController.m */,
 				D35E032217F10A0C00EA340B /* PeopleMessagesViewController.h */,
 				D35E032317F10A0C00EA340B /* PeopleMessagesViewController.m */,
+				D3DC7AB217F1EF6C00EF2023 /* PeopleModalTransitionDelegate.h */,
+				D3DC7AB317F1EF6C00EF2023 /* PeopleModalTransitionDelegate.m */,
+				D3DC7AAF17F1E99400EF2023 /* PeopleModalTransition.h */,
+				D3DC7AB017F1E99400EF2023 /* PeopleModalTransition.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -805,10 +815,12 @@
 				D38B348C179898BB00E2AF26 /* PeopleAppDelegate.m in Sources */,
 				D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */,
 				D3E1D68917DE47F900155E8F /* ProfilePictureView.m in Sources */,
+				D3DC7AB417F1EF6C00EF2023 /* PeopleModalTransitionDelegate.m in Sources */,
 				D3E1D69017DE558900155E8F /* PeopleCircularImageView.m in Sources */,
 				D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */,
 				D34C56DD179AF4A200706AFF /* PeopleValidation.m in Sources */,
 				D38A430917DE427600434161 /* ProfileNameView.m in Sources */,
+				D3DC7AB117F1E99400EF2023 /* PeopleModalTransition.m in Sources */,
 				D3A30841179C4AA70010FE51 /* PeopleTableViewCell.m in Sources */,
 				D3E1D68417DE470A00155E8F /* BKXibView.m in Sources */,
 				D39FCCCC17ECDAD8004B0284 /* PeopleButton.m in Sources */,

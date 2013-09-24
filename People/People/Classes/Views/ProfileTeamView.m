@@ -22,9 +22,13 @@
 
 - (void)setup
 {
+    [self configureFonts];
+}
+
+- (void)configureFonts
+{
     UIFont *teamLabelFont = [PeopleBasicTheme peopleFontBookWithSize:self.teamLabel.font.pointSize];
     [self.teamLabel setFont:teamLabelFont];
-
 }
 
 - (void)setTeamCount:(NSInteger)count

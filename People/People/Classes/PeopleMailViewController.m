@@ -7,6 +7,7 @@
 //
 
 #import "PeopleMailViewController.h"
+#import "PeopleBasicTheme.h"
 
 @interface PeopleMailViewController ()
 
@@ -31,6 +32,22 @@
 - (void)setup
 {
     self.mailComposeDelegate = self;
+    [self configureNavigationBar];
+}
+
+- (void)configureNavigationBar
+{
+    [self.navigationBar setTintColor:[UIColor whiteColor]];
+    
+    NSMutableDictionary *navigationBarTitleAttributes = [NSMutableDictionary dictionary];
+    [navigationBarTitleAttributes setValue:[PeopleBasicTheme peopleFontMediumWithSize:24.0] forKey:NSFontAttributeName];
+    [navigationBarTitleAttributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+    [self.navigationBar setTitleTextAttributes:navigationBarTitleAttributes];
+    NSLog(@"%@", [self viewControllers]);
+
+    //removing the navigation's bar shadow
+    //    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+
 }
 - (void)viewDidLoad
 {

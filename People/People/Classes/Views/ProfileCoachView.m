@@ -39,7 +39,11 @@
 {
     [super setup];
     [self.pictureView setBackgroundColor:[UIColor grayColor]];
+    [self configureFonts];
+}
 
+- (void)configureFonts
+{
     UIFont *coachLabelFont = [PeopleBasicTheme peopleFontBookWithSize:self.coachLabel.font.pointSize];
     [self.coachLabel setFont:coachLabelFont];
     

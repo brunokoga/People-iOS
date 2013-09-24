@@ -17,6 +17,7 @@
 {
     [PeopleBasicTheme configureTheme];
     [PeopleInitialSetup initialSetup];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 
