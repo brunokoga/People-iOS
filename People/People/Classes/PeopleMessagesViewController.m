@@ -49,6 +49,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureNavigationBar];
 	// Do any additional setup after loading the view.
 }
 

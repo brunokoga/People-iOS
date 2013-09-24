@@ -304,12 +304,12 @@
         
         
         PeopleMessagesViewController *messagesViewController = [[PeopleMessagesViewController alloc] init];
+        [messagesViewController setRecipients:toRecipents];
+        [messagesViewController setBody:messageBody];
+        
         messagesViewController.transitioningDelegate = self.modalTransitionDelegate;
         messagesViewController.modalPresentationStyle = UIModalPresentationCustom;
 
-        
-        [messagesViewController setRecipients:toRecipents];
-        [messagesViewController setBody:messageBody];
         [self presentViewController:messagesViewController
                            animated:YES
                          completion:NULL];

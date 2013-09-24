@@ -331,13 +331,13 @@
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                     </button>
-                                                    <view clipsSubviews="YES" contentMode="center" id="V4R-NM-eH7" customClass="ProfilePictureView">
-                                                        <rect key="frame" x="113" y="16" width="94" height="94"/>
+                                                    <view contentMode="scaleToFill" id="f41-Lg-HsC" customClass="ProfileNameView">
+                                                        <rect key="frame" x="0.0" y="100" width="320" height="100"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </view>
-                                                    <view contentMode="scaleToFill" id="f41-Lg-HsC" customClass="ProfileNameView">
-                                                        <rect key="frame" x="0.0" y="100" width="320" height="100"/>
+                                                    <view clipsSubviews="YES" contentMode="center" id="V4R-NM-eH7" customClass="ProfilePictureView">
+                                                        <rect key="frame" x="113" y="16" width="94" height="94"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </view>
@@ -442,7 +442,12 @@
     </scenes>
     <resources>
         <image name="DefaultBackground" width="320" height="480"/>
+        <image name="DefaultBackground" width="320" height="480"/>
+        <image name="DefaultBackground" width="320" height="480"/>
         <image name="People - White Logo" width="174" height="70"/>
+        <image name="People - White Logo" width="174" height="70"/>
+        <image name="People - White Logo" width="174" height="70"/>
+        <image name="get" width="98" height="10"/>
         <image name="get" width="98" height="10"/>
         <image name="ico-dos-sociallinks" width="23" height="23"/>
         <image name="ico-pass-normal" width="25" height="25"/>

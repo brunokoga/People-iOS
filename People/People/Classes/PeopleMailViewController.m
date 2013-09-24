@@ -43,11 +43,6 @@
     [navigationBarTitleAttributes setValue:[PeopleBasicTheme peopleFontMediumWithSize:24.0] forKey:NSFontAttributeName];
     [navigationBarTitleAttributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     [self.navigationBar setTitleTextAttributes:navigationBarTitleAttributes];
-    NSLog(@"%@", [self viewControllers]);
-
-    //removing the navigation's bar shadow
-    //    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
-
 }
 - (void)viewDidLoad
 {
