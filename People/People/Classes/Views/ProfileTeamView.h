@@ -14,4 +14,6 @@
 - (void)setImage:(UIImage *)image
         forIndex:(NSInteger)index;
 
+- (void)setAction:(SEL)action target:(id)target forButtonAtIndex:(NSInteger)index;
+
 @end

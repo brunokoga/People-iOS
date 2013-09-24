@@ -125,5 +125,16 @@
     [self createTeamMemberViewsWithCount:count];
 }
 
+- (void)setAction:(SEL)action target:(id)target forButtonAtIndex:(NSInteger)index
+{
+    if ([self.teamMemberViews count] > index)
+    {
+        PeopleCircularButton *button = (PeopleCircularButton *)[self.teamMemberViews objectAtIndex:index];
+        button.tag = index;
+        [button addTarget:target
+                   action:action
+         forControlEvents:UIControlEventTouchUpInside];
+    }
+}
 
 @end

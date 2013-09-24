@@ -116,11 +116,20 @@
         [[PeopleServices sharedServices] photoForUser:login
                                               success:^(UIImage *image) {
                                                   [self.teamView setImage:image forIndex:i];
+                                                  [self.teamView setAction:@selector(teamButtonTouched:) target:self forButtonAtIndex:i];
                                               } failure:^(NSError *error) {
                                                   
                                               }];
     }
     
+}
+
+- (void)teamButtonTouched:(id)sender
+{
+    UIButton *button = (UIButton *)sender;
+    NSString *login = [self.teamView teamMemberNames][button.tag];
+
+    //TODO: open Profile
 }
 
 - (void)populatePhoneView
