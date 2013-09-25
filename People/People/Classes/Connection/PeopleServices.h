@@ -30,4 +30,8 @@
              success:(void(^)(UIImage *image))success
              failure:(void(^)(NSError *error))failure;
 
+- (void)profileForUser:(NSString *)user
+               success:(void (^)(PeopleColaborador *colarabor))success
+               failure:(void (^)(NSError *error))failure;
+
 @end

@@ -8,7 +8,7 @@
 
 #import "PeopleInitialSetup.h"
 #import "PeoplePreferences.h"
-#import "PeopleHTTPClient.h"
+#import "PeopleHTTPSessionManager.h"
 
 @implementation PeopleInitialSetup
 
@@ -22,8 +22,8 @@
     NSString *username = [PeoplePreferences username];
     NSString *password = [PeoplePreferences password];
     
-    [[PeopleHTTPClient sharedClient] setUsername:username
-                                        password:password];
+    [[PeopleHTTPSessionManager sharedManager] setUsername:username
+                                                 password:password];
 }
 
 @end
