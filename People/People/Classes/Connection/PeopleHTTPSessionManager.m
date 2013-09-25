@@ -8,6 +8,7 @@
 
 #import "PeopleHTTPSessionManager.h"
 #import <FormatterKit/TTTURLRequestFormatter.h>
+#import <AFNetworkActivityIndicatorManager.h>
 
 @implementation PeopleHTTPSessionManager
 
@@ -34,6 +35,7 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
 {
     self.requestSerializer = [AFJSONRequestSerializer serializer];
     self.responseSerializer = [AFImageResponseSerializer serializer];
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     return [super initWithBaseURL:url];
 }
 
