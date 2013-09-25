@@ -112,6 +112,7 @@
 		AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchTableViewCell.m; path = Classes/PeopleSearchTableViewCell.m; sourceTree = "<group>"; };
 		AA96C0D517F28D5100593DE8 /* PeopleHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleHTTPSessionManager.h; sourceTree = "<group>"; };
 		AA96C0D617F28D5100593DE8 /* PeopleHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleHTTPSessionManager.m; sourceTree = "<group>"; };
+		AA96C0D917F294D900593DE8 /* PeopleProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PeopleProfileViewController.h; path = Classes/PeopleProfileViewController.h; sourceTree = "<group>"; };
 		B1B65C1B01294229848DAD83 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		D304D7D117DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleListToProfileTransitionAnimation.h; path = Classes/Segues/PeopleListToProfileTransitionAnimation.h; sourceTree = "<group>"; };
 		D304D7D217DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleListToProfileTransitionAnimation.m; path = Classes/Segues/PeopleListToProfileTransitionAnimation.m; sourceTree = "<group>"; };
@@ -362,6 +363,7 @@
 		D3816AD217A962A3004C0FFC /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				AA96C0D917F294D900593DE8 /* PeopleProfileViewController.h */,
 				474CF5BB17AB202900834C4F /* PeopleProfileViewController.m */,
 			);
 			name = Profile;
