@@ -1,24 +1,24 @@
 //
-//  PeopleHTTPClient.h
+//  PeopleHTTPSessionManager.h
 //  People
 //
-//  Created by Bruno Koga on 4/27/13.
-//  Copyright (c) 2013 Ci&T. All rights reserved.
+//  Created by Christian Sampaio on 9/25/13.
+//  Copyright (c) 2013 CI&T. All rights reserved.
 //
 
-#import <AFNetworking/AFHTTPClient.h>
+#import "AFHTTPSessionManager.h"
 
 typedef enum PeopleConnectionError {
     ErrorOperationCouldntBePerformed = 256,
     ErrorCouldntCreate = 3840
 } PeopleConnectionError;
 
-typedef void (^PeopleRequestOperationBlockSuccess) (NSHTTPURLResponse *response, id responseObject);
+typedef void (^PeopleRequestOperationBlockSuccess) (NSURLSessionDataTask *task, id responseObject);
 typedef void (^PeopleRequestOperationBlockFailure) (NSError *error);
 
-@interface PeopleHTTPClient : AFHTTPClient
+@interface PeopleHTTPSessionManager : AFHTTPSessionManager
 
-+ (instancetype)sharedClient;
++ (instancetype)sharedManager;
 
 #pragma mark - Authentication
 

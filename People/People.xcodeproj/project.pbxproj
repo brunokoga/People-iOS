@@ -13,6 +13,8 @@
 		47B9180C17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B9180A17A875AD0051FFBE /* PeopleSearchTableViewHeader.m */; };
 		9AED62FE459640D98CC80172 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAB2C557C6B42DE9192D9C5 /* libPods.a */; };
 		AA73A0F617A62A4E00229CE3 /* PeopleSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */; };
+		AA96C0D717F28D5100593DE8 /* PeopleHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA96C0D617F28D5100593DE8 /* PeopleHTTPSessionManager.m */; };
+		AA96C0D817F28D5100593DE8 /* PeopleHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA96C0D617F28D5100593DE8 /* PeopleHTTPSessionManager.m */; };
 		D304D7D317DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D304D7D217DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m */; };
 		D304D7D617DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D304D7D517DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m */; };
 		D313890517E8A2B200CF8CD7 /* PeoplePhoneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D313890417E8A2B200CF8CD7 /* PeoplePhoneButton.m */; };
@@ -56,7 +58,6 @@
 		D38B34A1179898BB00E2AF26 /* PeopleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D38B34A0179898BB00E2AF26 /* PeopleTests.m */; };
 		D38B34AB1798991200E2AF26 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38B34AA1798991200E2AF26 /* MainStoryboard_iPhone.storyboard */; };
 		D398D6B917A9968600120394 /* PeopleNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D398D6B817A9968600120394 /* PeopleNavigationController.m */; };
-		D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBE61799B30C00E9D0C5 /* PeopleHTTPClient.m */; };
 		D39DDBEA1799B42900E9D0C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39DDBE91799B42900E9D0C5 /* Security.framework */; };
 		D39DDBEC1799B43000E9D0C5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39DDBEB1799B43000E9D0C5 /* MobileCoreServices.framework */; };
 		D39DDBF21799B90600E9D0C5 /* PeopleBasicTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D39DDBF11799B90600E9D0C5 /* PeopleBasicTheme.m */; };
@@ -109,6 +110,8 @@
 		47B9180A17A875AD0051FFBE /* PeopleSearchTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchTableViewHeader.m; path = Classes/PeopleSearchTableViewHeader.m; sourceTree = "<group>"; };
 		AA73A0F417A62A4E00229CE3 /* PeopleSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchTableViewCell.h; path = Classes/PeopleSearchTableViewCell.h; sourceTree = "<group>"; };
 		AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchTableViewCell.m; path = Classes/PeopleSearchTableViewCell.m; sourceTree = "<group>"; };
+		AA96C0D517F28D5100593DE8 /* PeopleHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleHTTPSessionManager.h; sourceTree = "<group>"; };
+		AA96C0D617F28D5100593DE8 /* PeopleHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleHTTPSessionManager.m; sourceTree = "<group>"; };
 		B1B65C1B01294229848DAD83 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		D304D7D117DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleListToProfileTransitionAnimation.h; path = Classes/Segues/PeopleListToProfileTransitionAnimation.h; sourceTree = "<group>"; };
 		D304D7D217DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleListToProfileTransitionAnimation.m; path = Classes/Segues/PeopleListToProfileTransitionAnimation.m; sourceTree = "<group>"; };
@@ -120,7 +123,6 @@
 		D313890717E8AD7700CF8CD7 /* NSNumber+PhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+PhoneNumberFormatter.m"; path = "Classes/Components/NSNumber+PhoneNumberFormatter.m"; sourceTree = "<group>"; };
 		D313890917E8B67F00CF8CD7 /* NSString+PhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+PhoneNumberFormatter.h"; path = "Classes/Components/NSString+PhoneNumberFormatter.h"; sourceTree = "<group>"; };
 		D313890A17E8B67F00CF8CD7 /* NSString+PhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+PhoneNumberFormatter.m"; path = "Classes/Components/NSString+PhoneNumberFormatter.m"; sourceTree = "<group>"; };
-		D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleProfileViewController.h; path = "/Users/koga/Projects/People-iOS/People/People/Classes/PeopleProfileViewController.h"; sourceTree = "<absolute>"; };
 		D327A4C917989A8D0042FF8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D3291739179A217D00140214 /* PeopleColaboradorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleColaboradorTests.m; sourceTree = "<group>"; };
 		D34C56D7179AEBE500706AFF /* search_generic1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search_generic1.json; sourceTree = "<group>"; };
@@ -173,8 +175,6 @@
 		D38B34AA1798991200E2AF26 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		D398D6B717A9968600120394 /* PeopleNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleNavigationController.h; path = Classes/PeopleNavigationController.h; sourceTree = "<group>"; };
 		D398D6B817A9968600120394 /* PeopleNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleNavigationController.m; path = Classes/PeopleNavigationController.m; sourceTree = "<group>"; };
-		D39DDBE51799B30C00E9D0C5 /* PeopleHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleHTTPClient.h; sourceTree = "<group>"; };
-		D39DDBE61799B30C00E9D0C5 /* PeopleHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleHTTPClient.m; sourceTree = "<group>"; };
 		D39DDBE91799B42900E9D0C5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D39DDBEB1799B43000E9D0C5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D39DDBEF1799B8E700E9D0C5 /* PeopleTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleTheme.h; path = Classes/PeopleTheme.h; sourceTree = "<group>"; };
@@ -362,7 +362,6 @@
 		D3816AD217A962A3004C0FFC /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				D31FEBF917A20769007F4712 /* PeopleProfileViewController.h */,
 				474CF5BB17AB202900834C4F /* PeopleProfileViewController.m */,
 			);
 			name = Profile;
@@ -463,8 +462,8 @@
 		D39DDBE41799B30C00E9D0C5 /* Connection */ = {
 			isa = PBXGroup;
 			children = (
-				D39DDBE51799B30C00E9D0C5 /* PeopleHTTPClient.h */,
-				D39DDBE61799B30C00E9D0C5 /* PeopleHTTPClient.m */,
+				AA96C0D517F28D5100593DE8 /* PeopleHTTPSessionManager.h */,
+				AA96C0D617F28D5100593DE8 /* PeopleHTTPSessionManager.m */,
 				D39DDBF41799C57D00E9D0C5 /* PeopleServices.h */,
 				D39DDBF51799C57D00E9D0C5 /* PeopleServices.m */,
 			);
@@ -804,13 +803,13 @@
 				D39DDC001799C6F800E9D0C5 /* PeopleColaborador.m in Sources */,
 				D3A3083E179C438D0010FE51 /* PeopleTableViewDataSource.m in Sources */,
 				AA73A0F617A62A4E00229CE3 /* PeopleSearchTableViewCell.m in Sources */,
-				D39DDBE71799B30C00E9D0C5 /* PeopleHTTPClient.m in Sources */,
 				D398D6B917A9968600120394 /* PeopleNavigationController.m in Sources */,
 				D3E1D6A117E0C56C00155E8F /* ProfileProjectsView.m in Sources */,
 				D304D7D317DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m in Sources */,
 				D3E1D69B17E0C54A00155E8F /* ProfileCoachView.m in Sources */,
 				D3A9D81C1798A0C300F05FD5 /* PeopleInitialViewController.m in Sources */,
 				474CF5BC17AB202900834C4F /* PeopleProfileViewController.m in Sources */,
+				AA96C0D717F28D5100593DE8 /* PeopleHTTPSessionManager.m in Sources */,
 				D3A30845179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m in Sources */,
 				D38B348C179898BB00E2AF26 /* PeopleAppDelegate.m in Sources */,
 				D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */,
@@ -837,6 +836,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D329173A179A217D00140214 /* PeopleColaboradorTests.m in Sources */,
+				AA96C0D817F28D5100593DE8 /* PeopleHTTPSessionManager.m in Sources */,
 				D34C56DF179AF6CC00706AFF /* PeopleValidationTest.m in Sources */,
 				D35F4BCF17F0AF9D00ACB5E9 /* NSString+PhoneNumberFormatterTest.m in Sources */,
 				D38B34A1179898BB00E2AF26 /* PeopleTests.m in Sources */,

@@ -14,16 +14,12 @@
 #import "ProfileCoachView.h"
 #import "ProfileTeamView.h"
 #import "ProfileProjectsView.h"
-#import "PeopleHTTPClient.h"
 #import "ProfileSMSEmailView.h"
 #import "NSString+PhoneNumberFormatter.h"
 #import "PeopleMailViewController.h"
 #import "PeopleMessagesViewController.h"
 #import "NSString+PhoneNumberFormatter.h"
 #import "PeopleModalTransitionDelegate.h"
-
-//FIXME: remove this
-#import "PeopleJSONParser.h"
 
 @interface PeopleProfileViewController () <UIAlertViewDelegate>
 @property(nonatomic, strong, readwrite) IBOutlet UIView *containerView;
@@ -263,23 +259,18 @@
 {
     _colaborador = colaborador;
     self.title = colaborador.login;
-    PeopleHTTPClient *httpClient = [PeopleHTTPClient sharedClient];
+    PeopleServices *services = [PeopleServices sharedServices];
     
-    [httpClient profileForUser:colaborador.login
-                       success:^(NSHTTPURLResponse *response, id responseObject) {
-
-                           PeopleJSONParser *jsonParser = [[PeopleJSONParser alloc] init];
-                           PeopleColaborador *colaboradorProfile = [jsonParser colaboradorFromProfileResponse:responseObject];
-                           
-                           self.colaborador.teammates = colaboradorProfile.teammates;
-                           self.colaborador.currentProjects = colaboradorProfile.currentProjects;
-                           self.colaborador.pastProjects = colaboradorProfile.pastProjects;
-                           [self populateTeamView];
-                           [self populateProjectsView];
-
-                       } failure:^(NSError *error) {
-                       }];
-
+    [services profileForUser:colaborador.login
+                     success:^(PeopleColaborador *colaboradorProfile) {
+                         self.colaborador.teammates = colaboradorProfile.teammates;
+                         self.colaborador.currentProjects = colaboradorProfile.currentProjects;
+                         self.colaborador.pastProjects = colaboradorProfile.pastProjects;
+                         [self populateTeamView];
+                         [self populateProjectsView];
+                     } failure:^(NSError *error) {
+                         
+                     }];
     
 }
 

@@ -1,18 +1,17 @@
 //
-//  PeopleHTTPClient.m
+//  PeopleHTTPSessionManager.m
 //  People
 //
-//  Created by Bruno Koga on 4/27/13.
-//  Copyright (c) 2013 Ci&T. All rights reserved.
+//  Created by Christian Sampaio on 9/25/13.
+//  Copyright (c) 2013 CI&T. All rights reserved.
 //
 
-#import "PeopleHTTPClient.h"
+#import "PeopleHTTPSessionManager.h"
 #import <FormatterKit/TTTURLRequestFormatter.h>
-#import <AFNetworking/AFHTTPRequestOperation.h>
 
-@implementation PeopleHTTPClient
+@implementation PeopleHTTPSessionManager
 
-+ (instancetype)sharedClient
++ (instancetype)sharedManager
 {
     static dispatch_once_t once;
     static id sharedInstance;
@@ -25,27 +24,33 @@
 
 static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
 
-
 + (NSURL *)baseURL
 {
     NSURL *baseURL = [NSURL URLWithString:kPeopleBaseURL];
     return  baseURL;
 }
 
-- (void)enqueueHTTPRequestOperation:(AFHTTPRequestOperation *)operation
+- (instancetype)initWithBaseURL:(NSURL *)url
 {
-#ifdef DEBUG
-    NSLog(@"%@\n\n", [TTTURLRequestFormatter cURLCommandFromURLRequest:operation.request]);
-#endif
-    [super enqueueHTTPRequestOperation:operation];
+    self.requestSerializer = [AFJSONRequestSerializer serializer];
+    self.responseSerializer = [AFImageResponseSerializer serializer];
+    return [super initWithBaseURL:url];
 }
+
+//- (void)enqueueHTTPRequestOperation:(AFHTTPRequestOperation *)operation
+//{
+//#ifdef DEBUG
+//    NSLog(@"%@\n\n", [TTTURLRequestFormatter cURLCommandFromURLRequest:operation.request]);
+//#endif
+//    [super enqueueHTTPRequestOperation:operation];
+//}
 
 #pragma mark - Authentication
 
 - (void)setUsername:(NSString *)username
            password:(NSString *)password
 {
-    AFHTTPSerializer *serializer = [self serializer];
+    AFHTTPRequestSerializer *serializer = self.requestSerializer;
     [serializer clearAuthorizationHeader];
     [serializer setAuthorizationHeaderFieldWithUsername:username
                                                password:password];
@@ -69,11 +74,11 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
     [self GET:loginProfileUser
    parameters:nil
       success:success
-      failure:^(NSError *error) {
+      failure:^(NSURLSessionDataTask *task, NSError *error) {
           
           // if there is an error, we reset the password
-
-          AFHTTPSerializer *serializer = [self serializer];
+          
+          AFHTTPRequestSerializer *serializer = self.requestSerializer;
           [serializer clearAuthorizationHeader];
           failure(error);
       }];
@@ -81,7 +86,7 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
 
 - (void)logout
 {
-    [[self serializer] clearAuthorizationHeader];
+    [self.requestSerializer clearAuthorizationHeader];
 }
 
 #pragma mark - Endpoints
@@ -115,11 +120,13 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
            failure:(PeopleRequestOperationBlockFailure)failure
 {
     NSString *searchEndpoint = [self searchEndpointForTerm:term];
-
+    
     [self GET:searchEndpoint
    parameters:nil
       success:success
-      failure:failure];
+      failure:^(NSURLSessionDataTask *task, NSError *error) {
+          failure(error);
+      }];
 }
 
 - (void)profileForUser:(NSString *)user
@@ -131,27 +138,23 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
     [self GET:profileEndpoint
    parameters:nil
       success:success
-      failure:failure];
-}
+      failure:^(NSURLSessionDataTask *task, NSError *error) {
+          failure(error);
+      }];}
 
 - (void)photoForUser:(NSString *)user
-               success:(PeopleRequestOperationBlockSuccess)success
-               failure:(PeopleRequestOperationBlockFailure)failure
+             success:(PeopleRequestOperationBlockSuccess)success
+             failure:(PeopleRequestOperationBlockFailure)failure
 {
     NSString *photoEndpoint = [self photoEndpointForUser:user];
     
     [self GET:photoEndpoint
    parameters:nil
       success:success
-      failure:failure];
+      failure:^(NSURLSessionDataTask *task, NSError *error) {
+          failure(error);
+      }];
 }
 
-#pragma mark - Utilities
-
-- (AFHTTPSerializer *)serializer
-{
-    AFHTTPSerializer *serializer = (AFHTTPSerializer *)[self requestSerializer];
-    return serializer;
-}
 
 @end
