@@ -28,9 +28,11 @@
     self.collaboratorPhoneLabel.font = [PeopleBasicTheme peopleFontBookWithSize:self.collaboratorPhoneLabel.font.pointSize];
     self.collaboratorLoginLabel.font = [PeopleBasicTheme peopleFontBookWithSize:self.collaboratorLoginLabel.font.pointSize];
     self.collaboratorCellphoneLabel.font = [PeopleBasicTheme peopleFontBookWithSize:self.collaboratorCellphoneLabel.font.pointSize];
-    
-    self.layer.borderColor = [[UIColor grayColor] CGColor];
-    self.layer.borderWidth = 1.0f;
+    self.collaboratorNameLabel.textColor = [PeopleBasicTheme peopleColor2Primary];
+    self.collaboratorRoleLabel.textColor = [PeopleBasicTheme peopleColor2Primary];
+    self.collaboratorPhoneLabel.textColor = [PeopleBasicTheme peopleColor2Primary];
+    self.collaboratorLoginLabel.textColor = [PeopleBasicTheme peopleColor2Primary];
+    self.collaboratorCellphoneLabel.textColor = [PeopleBasicTheme peopleColor2Primary];
     
     self.imageView.backgroundColor = [UIColor clearColor];
 }
@@ -41,19 +43,19 @@
     self.collaboratorRoleLabel.text = collaborator.role;
     self.collaboratorLoginLabel.text = collaborator.login;
     
-    self.collaboratorPhoneLabel.text = @"";
+    self.collaboratorPhoneLabel.text = @"--";
     if (! [collaborator.phone isEqualToNumber:@(0)])
     {
         self.collaboratorPhoneLabel.text = [collaborator.phone formattedPhoneNumberString];
     }
     
-    self.collaboratorCellphoneLabel.text = @"";
+    self.collaboratorCellphoneLabel.text = @"--";
     if (! [collaborator.mobile isEqualToNumber:@(0)])
     {
         self.collaboratorCellphoneLabel.text = [collaborator.mobile formattedPhoneNumberString];
     }
     
-    //    [self addButtonsWithCollaborator:collaborator];
+//    [self addButtonsWithCollaborator:collaborator];
 }
 
 - (void)addButtonsWithCollaborator:(PeopleColaborador *)collaborator
