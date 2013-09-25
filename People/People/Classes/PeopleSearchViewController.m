@@ -85,17 +85,17 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [[PeopleServices sharedServices] colaboradoresForSearchTerm:self.searchTextfield.text
-                                                        success:^(NSArray *colaboradores) {
-                                                            self.resultCollaborators = [colaboradores copy];
-                                                            
-                                                            dispatch_async(dispatch_get_main_queue(), ^{
-                                                                                                                            [self.resultTableView reloadData];
-                                                            });
-                                                            
-                                                        } failure:^(NSError *error) {
-                                                            //handle error
-                                                        }];
+    [PeopleServices colaboradoresForSearchTerm:self.searchTextfield.text
+                                       success:^(NSArray *colaboradores) {
+                                           self.resultCollaborators = [colaboradores copy];
+                                           
+                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                               [self.resultTableView reloadData];
+                                           });
+                                           
+                                       } failure:^(NSError *error) {
+                                           //handle error
+                                       }];
     [textField resignFirstResponder];
     return YES;
 }
@@ -124,15 +124,15 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
     [cell updateLabelsWithCollaborator:collaborator];
     cell.tag = indexPath.row;
     cell.image = nil;
-    [[PeopleServices sharedServices] photoForUser:collaborator.login
-                                          success:^(UIImage *image) {
-                                              if (cell.tag == indexPath.row)
-                                              {
-                                                  cell.image = image;
-                                              }
-                                          } failure:^(NSError *error) {
-                                              
-                                          }];
+    [PeopleServices photoForUser:collaborator.login
+                         success:^(UIImage *image) {
+                             if (cell.tag == indexPath.row)
+                             {
+                                 cell.image = image;
+                             }
+                         } failure:^(NSError *error) {
+                             
+                         }];
 
     return cell;
 }

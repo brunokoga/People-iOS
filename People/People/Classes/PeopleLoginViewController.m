@@ -131,8 +131,7 @@
 - (void)loginWithUsername:(NSString *)username password:(NSString *)password
 {
     self.loginButton.enabled = NO;
-    PeopleServices *sharedServices = [PeopleServices sharedServices];
-    [sharedServices loginWithUsername:username
+    [PeopleServices loginWithUsername:username
                              password:password
                               success:^(PeopleColaborador *colaborador) {
                                   [self performLoginSucceededOperationsWithColaborador:colaborador];

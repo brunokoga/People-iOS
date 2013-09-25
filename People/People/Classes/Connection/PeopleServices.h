@@ -7,27 +7,30 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PeopleColaborador.h"
+
+@class PeopleColaborador;
 
 @interface PeopleServices : NSObject
 
-+ (instancetype)sharedServices;
-
-- (void)loginWithUsername:(NSString *)user
++ (void)loginWithUsername:(NSString *)user
                  password:(NSString *)password
                   success:(void(^)(PeopleColaborador *colaborador))success
                   failure:(void(^)(NSError *error))failure;
 
-- (void)colaboradoresForSearchTerm:(NSString *)searchTerm
++ (void)colaboradoresForSearchTerm:(NSString *)searchTerm
                            success:(void(^)(NSArray *colaboradores))success
                            failure:(void(^)(NSError *error))failure;
 
-- (void)colaboradorProfileForLogin:(NSString *)login
++ (void)colaboradorProfileForLogin:(NSString *)login
                            success:(void(^)(PeopleColaborador *colaborador))success
                            failure:(void(^)(NSError *error))failure;
 
-- (void)photoForUser:(NSString *)user
++ (void)photoForUser:(NSString *)user
              success:(void(^)(UIImage *image))success
              failure:(void(^)(NSError *error))failure;
+
++ (void)profileForUser:(NSString *)user
+               success:(void (^)(PeopleColaborador *colarabor))success
+               failure:(void (^)(NSError *error))failure;
 
 @end

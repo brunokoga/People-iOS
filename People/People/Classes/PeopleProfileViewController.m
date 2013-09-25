@@ -14,16 +14,12 @@
 #import "ProfileCoachView.h"
 #import "ProfileTeamView.h"
 #import "ProfileProjectsView.h"
-#import "PeopleHTTPClient.h"
 #import "ProfileSMSEmailView.h"
 #import "NSString+PhoneNumberFormatter.h"
 #import "PeopleMailViewController.h"
 #import "PeopleMessagesViewController.h"
 #import "NSString+PhoneNumberFormatter.h"
 #import "PeopleModalTransitionDelegate.h"
-
-//FIXME: remove this
-#import "PeopleJSONParser.h"
 
 @interface PeopleProfileViewController () <UIAlertViewDelegate>
 @property(nonatomic, strong, readwrite) IBOutlet UIView *containerView;
@@ -91,12 +87,12 @@
 
 - (void)populateCoachView
 {
-    [[PeopleServices sharedServices] photoForUser:self.colaborador.managerLogin
-                                          success:^(UIImage *image) {
-                                              [self.coachView setCoachPicture:image];
-                                          } failure:^(NSError *error) {
-                                              
-                                          }];
+    [PeopleServices photoForUser:self.colaborador.managerLogin
+                         success:^(UIImage *image) {
+                             [self.coachView setCoachPicture:image];
+                         } failure:^(NSError *error) {
+                             
+                         }];
     
     [self.coachView setCoachName:self.colaborador.managerLogin];
 
@@ -113,13 +109,12 @@
     for (int i = 0; i < [teamMembers count]; i++)
     {
         NSString *login = teamMembers[i];
-        [[PeopleServices sharedServices] photoForUser:login
-                                              success:^(UIImage *image) {
-                                                  [self.teamView setImage:image forIndex:i];
-                                                  [self.teamView setAction:@selector(teamButtonTouched:) target:self forButtonAtIndex:i];
-                                              } failure:^(NSError *error) {
-                                                  
-                                              }];
+        [PeopleServices photoForUser:login
+                             success:^(UIImage *image) {
+                                 [self.teamView setImage:image forIndex:i];
+                             } failure:^(NSError *error) {
+                                 
+                             }];
     }
     
 }
@@ -297,36 +292,28 @@
 {
     _colaborador = colaborador;
     self.title = colaborador.login;
-    PeopleHTTPClient *httpClient = [PeopleHTTPClient sharedClient];
     
-    [httpClient profileForUser:colaborador.login
-                       success:^(NSHTTPURLResponse *response, id responseObject) {
-
-                           PeopleJSONParser *jsonParser = [[PeopleJSONParser alloc] init];
-                           PeopleColaborador *colaboradorProfile = [jsonParser colaboradorFromProfileResponse:responseObject];
-                           
-                           self.colaborador.teammates = colaboradorProfile.teammates;
-                           self.colaborador.currentProjects = colaboradorProfile.currentProjects;
-                           self.colaborador.pastProjects = colaboradorProfile.pastProjects;
-                           [self populateTeamView];
-                           [self populateProjectsView];
-
-                       } failure:^(NSError *error) {
-                       }];
-
+    [PeopleServices profileForUser:colaborador.login
+                           success:^(PeopleColaborador *colaboradorProfile) {
+                               self.colaborador.teammates = colaboradorProfile.teammates;
+                               self.colaborador.currentProjects = colaboradorProfile.currentProjects;
+                               self.colaborador.pastProjects = colaboradorProfile.pastProjects;
+                               [self populateTeamView];
+                               [self populateProjectsView];
+                           } failure:^(NSError *error) {
+                               
+                           }];
     
 }
 
 - (void)downloadAndSetImage
 {
-    [[PeopleServices sharedServices] photoForUser:self.colaborador.login
-                                          success:^(UIImage *image) {
-                                              self.pictureView.image = image;
-                                          } failure:^(NSError *error) {
-                                              
-                                          }];
-    
-
+    [PeopleServices photoForUser:self.colaborador.login
+                         success:^(UIImage *image) {
+                             self.pictureView.image = image;
+                         } failure:^(NSError *error) {
+                             
+                         }];
 }
 
 - (void)presentMessagesViewControllerToNumber
