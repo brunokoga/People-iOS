@@ -12,17 +12,7 @@
 
 @implementation PeopleServices
 
-+ (instancetype)sharedServices
-{
-    static dispatch_once_t once;
-    static id sharedInstance;
-    dispatch_once(&once, ^{
-        sharedInstance = [[self alloc] init];
-    });
-    return sharedInstance;
-}
-
-- (void)colaboradoresForSearchTerm:(NSString *)searchTerm
++ (void)colaboradoresForSearchTerm:(NSString *)searchTerm
                            success:(void(^)(NSArray *colaboradores))success
                            failure:(void(^)(NSError *error))failure
 {
@@ -40,7 +30,7 @@
                 }];
 }
 
-- (void)colaboradorProfileForLogin:(NSString *)login
++ (void)colaboradorProfileForLogin:(NSString *)login
                            success:(void(^)(PeopleColaborador *colaborador))success
                            failure:(void(^)(NSError *error))failure
 {
@@ -58,7 +48,7 @@
                     }];
 }
 
-- (void)loginWithUsername:(NSString *)user
++ (void)loginWithUsername:(NSString *)user
                  password:(NSString *)password
                   success:(void(^)(PeopleColaborador *colaborador))success
                   failure:(void(^)(NSError *error))failure
@@ -86,7 +76,7 @@
                        }];
 }
 
-- (void)photoForUser:(NSString *)user
++ (void)photoForUser:(NSString *)user
              success:(void(^)(UIImage *image))success
              failure:(void(^)(NSError *error))failure
 {
@@ -100,7 +90,7 @@
                   }];
 }
 
-- (void)profileForUser:(NSString *)user
++ (void)profileForUser:(NSString *)user
                success:(void (^)(PeopleColaborador *))success
                failure:(void (^)(NSError *))failure
 {

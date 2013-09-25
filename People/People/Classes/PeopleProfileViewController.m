@@ -87,12 +87,12 @@
 
 - (void)populateCoachView
 {
-    [[PeopleServices sharedServices] photoForUser:self.colaborador.managerLogin
-                                          success:^(UIImage *image) {
-                                              [self.coachView setCoachPicture:image];
-                                          } failure:^(NSError *error) {
-                                              
-                                          }];
+    [PeopleServices photoForUser:self.colaborador.managerLogin
+                         success:^(UIImage *image) {
+                             [self.coachView setCoachPicture:image];
+                         } failure:^(NSError *error) {
+                             
+                         }];
     
     [self.coachView setCoachName:self.colaborador.managerLogin];
 
@@ -109,12 +109,12 @@
     for (int i = 0; i < [teamMembers count]; i++)
     {
         NSString *login = teamMembers[i];
-        [[PeopleServices sharedServices] photoForUser:login
-                                              success:^(UIImage *image) {
-                                                  [self.teamView setImage:image forIndex:i];
-                                              } failure:^(NSError *error) {
-                                                  
-                                              }];
+        [PeopleServices photoForUser:login
+                             success:^(UIImage *image) {
+                                 [self.teamView setImage:image forIndex:i];
+                             } failure:^(NSError *error) {
+                                 
+                             }];
     }
     
 }
@@ -259,31 +259,28 @@
 {
     _colaborador = colaborador;
     self.title = colaborador.login;
-    PeopleServices *services = [PeopleServices sharedServices];
     
-    [services profileForUser:colaborador.login
-                     success:^(PeopleColaborador *colaboradorProfile) {
-                         self.colaborador.teammates = colaboradorProfile.teammates;
-                         self.colaborador.currentProjects = colaboradorProfile.currentProjects;
-                         self.colaborador.pastProjects = colaboradorProfile.pastProjects;
-                         [self populateTeamView];
-                         [self populateProjectsView];
-                     } failure:^(NSError *error) {
-                         
-                     }];
+    [PeopleServices profileForUser:colaborador.login
+                           success:^(PeopleColaborador *colaboradorProfile) {
+                               self.colaborador.teammates = colaboradorProfile.teammates;
+                               self.colaborador.currentProjects = colaboradorProfile.currentProjects;
+                               self.colaborador.pastProjects = colaboradorProfile.pastProjects;
+                               [self populateTeamView];
+                               [self populateProjectsView];
+                           } failure:^(NSError *error) {
+                               
+                           }];
     
 }
 
 - (void)downloadAndSetImage
 {
-    [[PeopleServices sharedServices] photoForUser:self.colaborador.login
-                                          success:^(UIImage *image) {
-                                              self.pictureView.image = image;
-                                          } failure:^(NSError *error) {
-                                              
-                                          }];
-    
-
+    [PeopleServices photoForUser:self.colaborador.login
+                         success:^(UIImage *image) {
+                             self.pictureView.image = image;
+                         } failure:^(NSError *error) {
+                             
+                         }];
 }
 
 - (void)presentMessagesViewControllerToNumber

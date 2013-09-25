@@ -39,13 +39,13 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
     return [super initWithBaseURL:url];
 }
 
-//- (void)enqueueHTTPRequestOperation:(AFHTTPRequestOperation *)operation
-//{
-//#ifdef DEBUG
-//    NSLog(@"%@\n\n", [TTTURLRequestFormatter cURLCommandFromURLRequest:operation.request]);
-//#endif
-//    [super enqueueHTTPRequestOperation:operation];
-//}
+- (NSURLSessionDataTask *)dataTaskWithRequest:(NSURLRequest *)request completionHandler:(void (^)(NSURLResponse *, id, NSError *))completionHandler
+{
+#ifdef DEBUG
+    NSLog(@"%@\n\n", [TTTURLRequestFormatter cURLCommandFromURLRequest:request]);
+#endif
+    return [super dataTaskWithRequest:request completionHandler:completionHandler];
+}
 
 #pragma mark - Authentication
 
