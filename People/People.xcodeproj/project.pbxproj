@@ -40,7 +40,6 @@
 		D371D2B21798A554009C9D9E /* PeoplePreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A9D81E1798A3AD00F05FD5 /* PeoplePreferences.m */; };
 		D371D2B81798AA8C009C9D9E /* PeoplePreferencesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2B71798AA8C009C9D9E /* PeoplePreferencesTest.m */; };
 		D371D2BB1798B8DF009C9D9E /* PeopleLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BA1798B8DF009C9D9E /* PeopleLoginViewController.m */; };
-		D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */; };
 		D371D2C11798B8FF009C9D9E /* PeopleTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BD1798B8ED009C9D9E /* PeopleTutorialViewController.m */; };
 		D38A430417DE0C4B00434161 /* PeopleInitialSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = D38A430317DE0C4B00434161 /* PeopleInitialSetup.m */; };
 		D38A430617DE41D500434161 /* ProfileNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38A430517DE41D500434161 /* ProfileNameView.xib */; };
@@ -152,8 +151,8 @@
 		D371D2BA1798B8DF009C9D9E /* PeopleLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleLoginViewController.m; path = Classes/PeopleLoginViewController.m; sourceTree = "<group>"; };
 		D371D2BC1798B8ED009C9D9E /* PeopleTutorialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PeopleTutorialViewController.h; path = Classes/PeopleTutorialViewController.h; sourceTree = "<group>"; };
 		D371D2BD1798B8ED009C9D9E /* PeopleTutorialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PeopleTutorialViewController.m; path = Classes/PeopleTutorialViewController.m; sourceTree = "<group>"; };
-		D371D2BE1798B8FC009C9D9E /* PeopleSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchViewController.h; path = Classes/PeopleSearchViewController.h; sourceTree = "<group>"; };
-		D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchViewController.m; path = Classes/PeopleSearchViewController.m; sourceTree = "<group>"; };
+		D371D2BE1798B8FC009C9D9E /* PeopleSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchViewController.h; path = "/Users/christian/xCodeProjects/People-iOS/People/People/Classes/PeopleSearchViewController.h"; sourceTree = "<absolute>"; };
+		D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchViewController.m; path = "/Users/christian/xCodeProjects/People-iOS/People/People/Classes/PeopleSearchViewController.m"; sourceTree = "<absolute>"; };
 		D38A430217DE0C4B00434161 /* PeopleInitialSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialSetup.h; path = Classes/PeopleInitialSetup.h; sourceTree = "<group>"; };
 		D38A430317DE0C4B00434161 /* PeopleInitialSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleInitialSetup.m; path = Classes/PeopleInitialSetup.m; sourceTree = "<group>"; };
 		D38A430517DE41D500434161 /* ProfileNameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileNameView.xib; path = People/Classes/Views/ProfileNameView.xib; sourceTree = "<group>"; };
@@ -555,8 +554,6 @@
 				D371D2BA1798B8DF009C9D9E /* PeopleLoginViewController.m */,
 				D371D2BC1798B8ED009C9D9E /* PeopleTutorialViewController.h */,
 				D371D2BD1798B8ED009C9D9E /* PeopleTutorialViewController.m */,
-				D371D2BE1798B8FC009C9D9E /* PeopleSearchViewController.h */,
-				D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */,
 				D3816AD217A962A3004C0FFC /* Profile */,
 				D398D6B717A9968600120394 /* PeopleNavigationController.h */,
 				D398D6B817A9968600120394 /* PeopleNavigationController.m */,
@@ -819,7 +816,6 @@
 				AA96C0D717F28D5100593DE8 /* PeopleHTTPSessionManager.m in Sources */,
 				D3A30845179C4AFD0010FE51 /* PeopleTableViewCell+ConfigureForColaborador.m in Sources */,
 				D38B348C179898BB00E2AF26 /* PeopleAppDelegate.m in Sources */,
-				D371D2C01798B8FC009C9D9E /* PeopleSearchViewController.m in Sources */,
 				D3E1D68917DE47F900155E8F /* ProfilePictureView.m in Sources */,
 				D3DC7AB417F1EF6C00EF2023 /* PeopleModalTransitionDelegate.m in Sources */,
 				D3E1D69017DE558900155E8F /* PeopleCircularImageView.m in Sources */,

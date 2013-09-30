@@ -131,23 +131,23 @@
 
 - (void)openProfileForColaboradorWithLogin:(NSString *)login
 {
-    [[PeopleServices sharedServices] colaboradoresForSearchTerm:login
-                                                         success:^(NSArray *colaboradores) {
-                                                             PeopleColaborador *colaborador = colaboradores[0];
-                                                             
-                                                             
-                                                             
-                                                             PeopleProfileViewController *profileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PeopleProfileViewController"];
-                                                             [profileViewController setColaborador:colaborador];
-                                                             
-                                                             dispatch_async(dispatch_get_main_queue(), ^{
-                                                                 [self.navigationController pushViewController:profileViewController animated:YES];
-
-                                                             });
-                                                             
-                                                         } failure:^(NSError *error) {
-                                                             //handle error
-                                                         }];
+    [PeopleServices colaboradoresForSearchTerm:login
+                                       success:^(NSArray *colaboradores) {
+                                           PeopleColaborador *colaborador = colaboradores[0];
+                                           
+                                           
+                                           
+                                           PeopleProfileViewController *profileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PeopleProfileViewController"];
+                                           [profileViewController setColaborador:colaborador];
+                                           
+                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                               [self.navigationController pushViewController:profileViewController animated:YES];
+                                               
+                                           });
+                                           
+                                       } failure:^(NSError *error) {
+                                           //handle error
+                                       }];
 
     
 }
