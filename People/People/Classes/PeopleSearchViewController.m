@@ -122,6 +122,7 @@ static NSString * const kPeopleSearchToProfileSegueIdentifier = @"Search to Prof
     }
     PeopleColaborador *collaborator = self.resultCollaborators[indexPath.row];
     [cell updateLabelsWithCollaborator:collaborator];
+    [cell addButtonsWithCollaborator:collaborator container:self];
     cell.tag = indexPath.row;
     cell.image = nil;
     [PeopleServices photoForUser:collaborator.login
