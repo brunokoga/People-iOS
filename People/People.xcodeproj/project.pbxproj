@@ -12,9 +12,13 @@
 		47B9180B17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B9180A17A875AD0051FFBE /* PeopleSearchTableViewHeader.m */; };
 		47B9180C17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B9180A17A875AD0051FFBE /* PeopleSearchTableViewHeader.m */; };
 		9AED62FE459640D98CC80172 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAB2C557C6B42DE9192D9C5 /* libPods.a */; };
+		AA1B35EA17FC5ED500714414 /* PeopleContactServices.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1B35E917FC5ED500714414 /* PeopleContactServices.m */; };
+		AA1B35EB17FC5ED500714414 /* PeopleContactServices.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1B35E917FC5ED500714414 /* PeopleContactServices.m */; };
 		AA73A0F617A62A4E00229CE3 /* PeopleSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */; };
 		AA96C0D717F28D5100593DE8 /* PeopleHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA96C0D617F28D5100593DE8 /* PeopleHTTPSessionManager.m */; };
 		AA96C0D817F28D5100593DE8 /* PeopleHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA96C0D617F28D5100593DE8 /* PeopleHTTPSessionManager.m */; };
+		AAC262FC17FA391A00B2C0FE /* PeopleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */; };
+		AAC262FD17FA391A00B2C0FE /* PeopleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */; };
 		D304D7D317DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D304D7D217DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m */; };
 		D304D7D617DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D304D7D517DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m */; };
 		D313890517E8A2B200CF8CD7 /* PeoplePhoneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D313890417E8A2B200CF8CD7 /* PeoplePhoneButton.m */; };
@@ -108,6 +112,8 @@
 		474CF5BB17AB202900834C4F /* PeopleProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleProfileViewController.m; path = Classes/PeopleProfileViewController.m; sourceTree = "<group>"; };
 		47B9180917A875AD0051FFBE /* PeopleSearchTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchTableViewHeader.h; path = Classes/PeopleSearchTableViewHeader.h; sourceTree = "<group>"; };
 		47B9180A17A875AD0051FFBE /* PeopleSearchTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchTableViewHeader.m; path = Classes/PeopleSearchTableViewHeader.m; sourceTree = "<group>"; };
+		AA1B35E817FC5ED500714414 /* PeopleContactServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleContactServices.h; path = Classes/PeopleContactServices.h; sourceTree = "<group>"; };
+		AA1B35E917FC5ED500714414 /* PeopleContactServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleContactServices.m; path = Classes/PeopleContactServices.m; sourceTree = "<group>"; };
 		AA73A0F417A62A4E00229CE3 /* PeopleSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchTableViewCell.h; path = Classes/PeopleSearchTableViewCell.h; sourceTree = "<group>"; };
 		AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchTableViewCell.m; path = Classes/PeopleSearchTableViewCell.m; sourceTree = "<group>"; };
 		AA96C0D517F28D5100593DE8 /* PeopleHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -278,6 +284,15 @@
 			name = Header;
 			sourceTree = "<group>";
 		};
+		AA1B35E717FC5E9000714414 /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+				AA1B35E817FC5ED500714414 /* PeopleContactServices.h */,
+				AA1B35E917FC5ED500714414 /* PeopleContactServices.m */,
+			);
+			name = "Business Logic";
+			sourceTree = "<group>";
+		};
 		AA73A0E517A61CAE00229CE3 /* SearchViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +425,7 @@
 		D38B3481179898BB00E2AF26 /* People */ = {
 			isa = PBXGroup;
 			children = (
+				AA1B35E717FC5E9000714414 /* Business Logic */,
 				D31FEBFC17A208A9007F4712 /* UI Components */,
 				D3BDA94B17E7A2E40075E574 /* Settings and Setup */,
 				D39DDC031799C73300E9D0C5 /* Entities */,
@@ -822,8 +838,10 @@
 				D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */,
 				D34C56DD179AF4A200706AFF /* PeopleValidation.m in Sources */,
 				D38A430917DE427600434161 /* ProfileNameView.m in Sources */,
+				AAC262FC17FA391A00B2C0FE /* PeopleSearchViewController.m in Sources */,
 				D3DC7AB117F1E99400EF2023 /* PeopleModalTransition.m in Sources */,
 				D3A30841179C4AA70010FE51 /* PeopleTableViewCell.m in Sources */,
+				AA1B35EA17FC5ED500714414 /* PeopleContactServices.m in Sources */,
 				D3E1D68417DE470A00155E8F /* BKXibView.m in Sources */,
 				D39FCCCC17ECDAD8004B0284 /* PeopleButton.m in Sources */,
 				D313890B17E8B67F00CF8CD7 /* NSString+PhoneNumberFormatter.m in Sources */,
@@ -840,12 +858,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D329173A179A217D00140214 /* PeopleColaboradorTests.m in Sources */,
+				AA1B35EB17FC5ED500714414 /* PeopleContactServices.m in Sources */,
 				AA96C0D817F28D5100593DE8 /* PeopleHTTPSessionManager.m in Sources */,
 				D34C56DF179AF6CC00706AFF /* PeopleValidationTest.m in Sources */,
 				D35F4BCF17F0AF9D00ACB5E9 /* NSString+PhoneNumberFormatterTest.m in Sources */,
 				D38B34A1179898BB00E2AF26 /* PeopleTests.m in Sources */,
 				474CF5BD17AB202900834C4F /* PeopleProfileViewController.m in Sources */,
 				47B9180C17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */,
+				AAC262FD17FA391A00B2C0FE /* PeopleSearchViewController.m in Sources */,
 				D371D2B81798AA8C009C9D9E /* PeoplePreferencesTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

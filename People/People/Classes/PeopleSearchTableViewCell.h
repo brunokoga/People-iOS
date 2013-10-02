@@ -21,5 +21,6 @@
 @property (nonatomic, strong) UIImage *image;
 
 - (void)updateLabelsWithCollaborator:(PeopleColaborador *)collaborator;
+- (void)addButtonsWithCollaborator:(PeopleColaborador *)collaborator container:(UIViewController *)container;
 
 @end
