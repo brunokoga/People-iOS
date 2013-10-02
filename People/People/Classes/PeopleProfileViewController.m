@@ -20,6 +20,7 @@
 #import "PeopleMessagesViewController.h"
 #import "NSString+PhoneNumberFormatter.h"
 #import "PeopleModalTransitionDelegate.h"
+#import "PeopleContactServices.h"
 
 @interface PeopleProfileViewController () <UIAlertViewDelegate>
 @property(nonatomic, strong, readwrite) IBOutlet UIView *containerView;
@@ -318,114 +319,26 @@
 
 - (void)presentMessagesViewControllerToNumber
 {
-    [self presentMessagesViewControllerToNumber:self.colaborador.phone];
-}
-
-- (void)presentMessagesViewControllerToNumber:(NSNumber *)number
-{
-    if ([MFMessageComposeViewController canSendText])
-    {
-        // Email Content
-        NSString *messageBody = @"";
-        // To address
-        NSString *numberString = [number stringValue];
-        NSArray *toRecipents = @[numberString];
-        
-        
-        PeopleMessagesViewController *messagesViewController = [[PeopleMessagesViewController alloc] init];
-        [messagesViewController setRecipients:toRecipents];
-        [messagesViewController setBody:messageBody];
-        
-        messagesViewController.transitioningDelegate = self.modalTransitionDelegate;
-        messagesViewController.modalPresentationStyle = UIModalPresentationCustom;
-
-        [self presentViewController:messagesViewController
-                           animated:YES
-                         completion:NULL];
-    } else
-    {
-        //TODO: show error message that cannot send email;        
-    }
+    NSString *recipient = [self.colaborador.mobile stringValue];
+    [[PeopleContactServices sharedServices] presentSMSComposerOnViewController:self
+                                                                withRecipients:@[recipient]];
 }
 
 - (void)presentMailViewControllerToEmail
 {
-    [self presentMailViewControllerToEmail:[self.colaborador.login ciandtEmail]];
-}
-
-- (void)presentMailViewControllerToEmail:(NSString *)email
-{
-    if ([MFMailComposeViewController canSendMail])
-    {
-        NSString *emailTitle = @"";
-        // Email Content
-        NSString *messageBody = NSLocalizedString(@"Sent from People for iOS",@"Footer message on email body");
-        // To address
-        NSArray *toRecipents = @[email];
-        
-        PeopleMailViewController *mailViewController = [[PeopleMailViewController alloc] init];
-        [mailViewController setSubject:emailTitle];
-        [mailViewController setMessageBody:messageBody isHTML:NO];
-        [mailViewController setToRecipients:toRecipents];
-        
-
-        // Present mail view controller on screen
-        
-        mailViewController.transitioningDelegate = self.modalTransitionDelegate;
-        mailViewController.modalPresentationStyle = UIModalPresentationCustom;
-
-        [self presentViewController:mailViewController
-                           animated:YES
-                         completion:NULL];
-        
-    } else {
-        //TODO: show error message that cannot send email;
-    }
-
+    NSString *recipient = [self.colaborador.login ciandtEmail];
+    [[PeopleContactServices sharedServices] presentEmailComposerOnViewController:self
+                                                                  withRecipients:@[recipient]];
 }
 
 - (void)phone1ButtonTouched:(id)sender
 {
-    [self displayAlertViewToCallNumber:[self.colaborador.phone stringValue]];
+    [[PeopleContactServices sharedServices] callPhoneNumber:self.colaborador.phone];
 }
 
 - (void)phone2ButtonTouched:(id)sender
 {
-    [self displayAlertViewToCallNumber:[self.colaborador.mobile stringValue]];
-}
-
-- (void)displayAlertViewToCallNumber:(NSString *)number
-{
-    NSString *telString = [@"tel://" stringByAppendingString:number];
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:telString]])
-    {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@""
-                                                            message:number
-                                                           delegate:self
-                                                  cancelButtonTitle:NSLocalizedString(@"Cancel", @"")
-                                                  otherButtonTitles:NSLocalizedString(@"Call", @""), nil];
-        alertView.tag = [number integerValue];
-        [alertView show];
-    }
-}
-
-#pragma mark - UIAlertView Delegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    switch (buttonIndex) {
-        case 0: //Cancel
-            break;
-        case 1: //Call
-        {
-            NSString *number = [NSString stringWithFormat:@"%d", alertView.tag];
-            NSString *telString = [@"tel://" stringByAppendingString:number];
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:telString]];
-            break;
-        }
-        default:
-            break;
-    }
+    [[PeopleContactServices sharedServices] callPhoneNumber:self.colaborador.mobile];
 }
 
 @end

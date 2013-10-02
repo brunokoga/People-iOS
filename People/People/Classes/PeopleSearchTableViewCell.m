@@ -12,6 +12,8 @@
 #import <PeopleSwipeTableViewCell/MCSwipeTableViewCell.h>
 #import "PeopleCircularImageView.h"
 #import "NSNumber+PhoneNumberFormatter.h"
+#import "NSString+PhoneNumberFormatter.h"
+#import "PeopleContactServices.h"
 
 @interface PeopleSearchTableViewCell()
 
@@ -54,27 +56,47 @@
     {
         self.collaboratorCellphoneLabel.text = [collaborator.mobile formattedPhoneNumberString];
     }
-    
-//    [self addButtonsWithCollaborator:collaborator];
 }
 
-- (void)addButtonsWithCollaborator:(PeopleColaborador *)collaborator
+- (void)addButtonsWithCollaborator:(PeopleColaborador *)collaborator container:(UIViewController *)container
 {
+    [self clearBackgroundButtons];
+    
     self.leftMenuColor = [PeopleBasicTheme peopleColor2Secondary];
     if (self.collaboratorPhoneLabel.text.length)
     {
-        [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-phone-normal"] toCellSide:MCSwipeTableViewCellSideLeft];
+        [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-phone-normal"]
+             toCellSide:MCSwipeTableViewCellSideLeft
+             touchBlock:^(UIButton *button) {
+                 [[PeopleContactServices sharedServices] callPhoneNumber:collaborator.phone];
+        }];
     }
     
     if (self.collaboratorCellphoneLabel.text.length)
     {
-        [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-mobile-normal"] toCellSide:MCSwipeTableViewCellSideLeft];
-        [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-sms-normal"] toCellSide:MCSwipeTableViewCellSideLeft];
+        [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-mobile-normal"]
+             toCellSide:MCSwipeTableViewCellSideLeft
+             touchBlock:^(UIButton *button) {
+                 [[PeopleContactServices sharedServices] callPhoneNumber:collaborator.mobile];
+             }];
+        [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-sms-normal"]
+             toCellSide:MCSwipeTableViewCellSideLeft
+             touchBlock:^(UIButton *button) {
+                 NSString *recipient = [collaborator.mobile stringValue];
+                 [[PeopleContactServices sharedServices] presentSMSComposerOnViewController:container
+                                                                             withRecipients:@[recipient]];
+             }];
     }
     
-    if (collaborator.email.length)
+    if (collaborator.login.length)
     {
-        [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-mail-normal"] toCellSide:MCSwipeTableViewCellSideLeft];
+        [self addButton:[self buttonForMenuWithImageName:@"ico-swipe-mail-normal"]
+             toCellSide:MCSwipeTableViewCellSideLeft
+             touchBlock:^(UIButton *button) {
+                 NSString *recipient = [collaborator.login ciandtEmail];
+                 [[PeopleContactServices sharedServices] presentEmailComposerOnViewController:container
+                                                                               withRecipients:@[recipient]];
+             }];
     }
     
 }
@@ -100,7 +122,5 @@
     self.collaboratorImageView.backgroundColor = backgroundColor;
     
 }
-
-
 
 @end
