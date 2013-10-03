@@ -17,8 +17,7 @@
 		AA73A0F617A62A4E00229CE3 /* PeopleSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA73A0F517A62A4E00229CE3 /* PeopleSearchTableViewCell.m */; };
 		AA96C0D717F28D5100593DE8 /* PeopleHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA96C0D617F28D5100593DE8 /* PeopleHTTPSessionManager.m */; };
 		AA96C0D817F28D5100593DE8 /* PeopleHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AA96C0D617F28D5100593DE8 /* PeopleHTTPSessionManager.m */; };
-		AAC262FC17FA391A00B2C0FE /* PeopleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */; };
-		AAC262FD17FA391A00B2C0FE /* PeopleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */; };
+		D30471FD17FDF61B00F3F504 /* PeopleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30471FC17FDF61B00F3F504 /* PeopleSearchViewController.m */; };
 		D304D7D317DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D304D7D217DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m */; };
 		D304D7D617DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D304D7D517DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m */; };
 		D313890517E8A2B200CF8CD7 /* PeoplePhoneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D313890417E8A2B200CF8CD7 /* PeoplePhoneButton.m */; };
@@ -120,6 +119,8 @@
 		AA96C0D617F28D5100593DE8 /* PeopleHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleHTTPSessionManager.m; sourceTree = "<group>"; };
 		AA96C0D917F294D900593DE8 /* PeopleProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PeopleProfileViewController.h; path = Classes/PeopleProfileViewController.h; sourceTree = "<group>"; };
 		B1B65C1B01294229848DAD83 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D30471FB17FDF61B00F3F504 /* PeopleSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchViewController.h; path = Classes/PeopleSearchViewController.h; sourceTree = "<group>"; };
+		D30471FC17FDF61B00F3F504 /* PeopleSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchViewController.m; path = Classes/PeopleSearchViewController.m; sourceTree = "<group>"; };
 		D304D7D117DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleListToProfileTransitionAnimation.h; path = Classes/Segues/PeopleListToProfileTransitionAnimation.h; sourceTree = "<group>"; };
 		D304D7D217DD3BEA0068C13C /* PeopleListToProfileTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleListToProfileTransitionAnimation.m; path = Classes/Segues/PeopleListToProfileTransitionAnimation.m; sourceTree = "<group>"; };
 		D304D7D417DD3D8A0068C13C /* PeopleNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleNavigationControllerDelegate.h; path = Classes/PeopleNavigationControllerDelegate.h; sourceTree = "<group>"; };
@@ -157,8 +158,6 @@
 		D371D2BA1798B8DF009C9D9E /* PeopleLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleLoginViewController.m; path = Classes/PeopleLoginViewController.m; sourceTree = "<group>"; };
 		D371D2BC1798B8ED009C9D9E /* PeopleTutorialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PeopleTutorialViewController.h; path = Classes/PeopleTutorialViewController.h; sourceTree = "<group>"; };
 		D371D2BD1798B8ED009C9D9E /* PeopleTutorialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PeopleTutorialViewController.m; path = Classes/PeopleTutorialViewController.m; sourceTree = "<group>"; };
-		D371D2BE1798B8FC009C9D9E /* PeopleSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleSearchViewController.h; path = "/Users/christian/xCodeProjects/People-iOS/People/People/Classes/PeopleSearchViewController.h"; sourceTree = "<absolute>"; };
-		D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleSearchViewController.m; path = "/Users/christian/xCodeProjects/People-iOS/People/People/Classes/PeopleSearchViewController.m"; sourceTree = "<absolute>"; };
 		D38A430217DE0C4B00434161 /* PeopleInitialSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleInitialSetup.h; path = Classes/PeopleInitialSetup.h; sourceTree = "<group>"; };
 		D38A430317DE0C4B00434161 /* PeopleInitialSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleInitialSetup.m; path = Classes/PeopleInitialSetup.m; sourceTree = "<group>"; };
 		D38A430517DE41D500434161 /* ProfileNameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileNameView.xib; path = People/Classes/Views/ProfileNameView.xib; sourceTree = "<group>"; };
@@ -305,8 +304,8 @@
 		AA73A0E617A61CC400229CE3 /* Container */ = {
 			isa = PBXGroup;
 			children = (
-				D371D2BE1798B8FC009C9D9E /* PeopleSearchViewController.h */,
-				D371D2BF1798B8FC009C9D9E /* PeopleSearchViewController.m */,
+				D30471FB17FDF61B00F3F504 /* PeopleSearchViewController.h */,
+				D30471FC17FDF61B00F3F504 /* PeopleSearchViewController.m */,
 			);
 			name = Container;
 			sourceTree = "<group>";
@@ -814,6 +813,7 @@
 				D35E032417F10A0C00EA340B /* PeopleMessagesViewController.m in Sources */,
 				D313890517E8A2B200CF8CD7 /* PeoplePhoneButton.m in Sources */,
 				D371D2B21798A554009C9D9E /* PeoplePreferences.m in Sources */,
+				D30471FD17FDF61B00F3F504 /* PeopleSearchViewController.m in Sources */,
 				D38B3488179898BB00E2AF26 /* main.m in Sources */,
 				47B9180B17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */,
 				D304D7D617DD3D8A0068C13C /* PeopleNavigationControllerDelegate.m in Sources */,
@@ -838,7 +838,6 @@
 				D39DDC041799C91E00E9D0C5 /* PeopleColaborador+PopulateFromServiceResponse.m in Sources */,
 				D34C56DD179AF4A200706AFF /* PeopleValidation.m in Sources */,
 				D38A430917DE427600434161 /* ProfileNameView.m in Sources */,
-				AAC262FC17FA391A00B2C0FE /* PeopleSearchViewController.m in Sources */,
 				D3DC7AB117F1E99400EF2023 /* PeopleModalTransition.m in Sources */,
 				D3A30841179C4AA70010FE51 /* PeopleTableViewCell.m in Sources */,
 				AA1B35EA17FC5ED500714414 /* PeopleContactServices.m in Sources */,
@@ -865,7 +864,6 @@
 				D38B34A1179898BB00E2AF26 /* PeopleTests.m in Sources */,
 				474CF5BD17AB202900834C4F /* PeopleProfileViewController.m in Sources */,
 				47B9180C17A875AD0051FFBE /* PeopleSearchTableViewHeader.m in Sources */,
-				AAC262FD17FA391A00B2C0FE /* PeopleSearchViewController.m in Sources */,
 				D371D2B81798AA8C009C9D9E /* PeoplePreferencesTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
