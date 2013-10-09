@@ -15,10 +15,18 @@
 + (instancetype)sharedManager
 {
     static dispatch_once_t once;
-    static id sharedInstance;
+    static PeopleHTTPSessionManager *sharedInstance;
     dispatch_once(&once, ^{
         NSURL *baseURL = [self baseURL];
         sharedInstance = [[self alloc] initWithBaseURL:baseURL];
+        
+        // Adding chained response serializers (images and json)
+        AFCompoundResponseSerializer *responseSerializer = [AFCompoundResponseSerializer compoundSerializerWithResponseSerializers:@[[AFJSONResponseSerializer serializer], [AFImageResponseSerializer serializer]]];
+        
+        sharedInstance.responseSerializer = responseSerializer;
+
+                                                            
+         [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     });
     return sharedInstance;
 }
@@ -33,9 +41,7 @@ static NSString * const kPeopleBaseURL = @"https://people.cit.com.br/";
 
 - (instancetype)initWithBaseURL:(NSURL *)url
 {
-    self.requestSerializer = [AFJSONRequestSerializer serializer];
-    self.responseSerializer = [AFImageResponseSerializer serializer];
-    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+ 
     return [super initWithBaseURL:url];
 }
 

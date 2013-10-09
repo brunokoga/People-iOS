@@ -83,7 +83,7 @@
     PeopleHTTPSessionManager *session = [PeopleHTTPSessionManager sharedManager];
     [session photoForUser:user
                   success:^(NSURLSessionDataTask *task, id responseObject) {
-                      UIImage *responseImage = [UIImage imageWithData:responseObject];
+                      UIImage *responseImage = (UIImage *)responseObject;
                       success(responseImage);
                   } failure:^(NSError *error) {
                       failure(error);
